@@ -199,6 +199,166 @@ def build_player_style_lookup(player_meta: pd.DataFrame) -> dict[str, dict[str, 
     return registry
 
 
+def build_dashboard_player_style_lookup() -> dict[str, dict[str, str]]:
+    auction_pool = add_player_valuation_columns(load_auction_pool("2026"), season="2026")
+    player_meta = auction_pool.sort_values(["player_name"]).drop_duplicates("player_name").copy()
+    player_meta["style_note"] = ""
+    override_meta = pd.DataFrame(
+        [
+            {
+                "player_name": name,
+                "bat_style": values.get("bat_style", ""),
+                "bowl_style": values.get("bowl_style", ""),
+                "style_note": values.get("style_note", ""),
+            }
+            for name, values in MANUAL_STYLE_OVERRIDES.items()
+        ]
+    )
+    player_meta = pd.concat(
+        [player_meta[["player_name", "bat_style", "bowl_style", "style_note"]], override_meta],
+        ignore_index=True,
+    )
+    return build_player_style_lookup(player_meta)
+
+
+def compute_batter_style_profile(
+    player: str,
+    summary_row: pd.Series,
+    phase_profile: dict[str, dict[str, float]],
+    pace_spin_rows: pd.DataFrame,
+    pressure_rows: pd.DataFrame,
+    player_style_lookup: dict[str, dict[str, str]],
+) -> dict[str, str]:
+    hand = player_style_lookup.get(normalize_name(player), {}).get("bat_style", "")
+    phase_scores = {phase: float(phase_profile.get(phase, {}).get("impact_pct", 0.0)) for phase in PHASE_ORDER}
+    top_phase = max(phase_scores, key=phase_scores.get) if phase_scores else "middle"
+    top_phase_score = phase_scores.get(top_phase, 0.0)
+    if top_phase_score < 55:
+        phase_identity = "balanced phase profile"
+    elif top_phase == "powerplay":
+        phase_identity = "powerplay aggressor"
+    elif top_phase == "middle":
+        phase_identity = "middle-overs stabilizer"
+    else:
+        phase_identity = "death overs finisher"
+
+    pace_sr = (
+        safe_float(pace_spin_rows.loc[pace_spin_rows["bowl_family"] == "Pace", "strike_rate"].mean())
+        if not pace_spin_rows.empty
+        else 0.0
+    )
+    spin_sr = (
+        safe_float(pace_spin_rows.loc[pace_spin_rows["bowl_family"] == "Spin", "strike_rate"].mean())
+        if not pace_spin_rows.empty
+        else 0.0
+    )
+    if pace_sr and spin_sr:
+        if pace_sr - spin_sr >= 12:
+            pace_spin_bias = "stronger against pace"
+        elif spin_sr - pace_sr >= 12:
+            pace_spin_bias = "stronger against spin"
+        else:
+            pace_spin_bias = "balanced against pace and spin"
+    else:
+        pace_spin_bias = "limited pace-spin split sample"
+
+    if summary_row["strike_rate"] >= 140:
+        scoring_style = "high-tempo boundary hitter"
+    elif summary_row["strike_rate"] <= 118 and summary_row["dismissal_rate"] <= 0.05:
+        scoring_style = "accumulator"
+    else:
+        scoring_style = "mixed scorer"
+
+    high_pressure_sr = safe_float(
+        pressure_rows.loc[pressure_rows["pressure_state"] == "High Pressure", "strike_rate"].mean()
+    )
+    standard_sr = safe_float(pressure_rows.loc[pressure_rows["pressure_state"] == "Standard", "strike_rate"].mean())
+    if high_pressure_sr and standard_sr:
+        if high_pressure_sr - standard_sr >= 8:
+            pressure_trait = "lifts scoring under pressure"
+        elif standard_sr - high_pressure_sr >= 8:
+            pressure_trait = "less explosive under pressure"
+        else:
+            pressure_trait = "stable across pressure states"
+    else:
+        pressure_trait = "limited pressure sample"
+
+    return {
+        "handedness": hand or "Unknown",
+        "phase_identity": phase_identity,
+        "scoring_style": scoring_style,
+        "pace_spin_bias": pace_spin_bias,
+        "pressure_trait": pressure_trait,
+        "style_note": player_style_lookup.get(normalize_name(player), {}).get("style_note", ""),
+    }
+
+
+def compute_bowler_style_profile(
+    player: str,
+    summary_row: pd.Series,
+    phase_profile: dict[str, dict[str, float]],
+    hand_rows: pd.DataFrame,
+    pressure_rows: pd.DataFrame,
+    player_style_lookup: dict[str, dict[str, str]],
+) -> dict[str, str]:
+    raw_style = player_style_lookup.get(normalize_name(player), {}).get("bowl_style", "")
+    family = bowl_family_from_style(raw_style) or "Unknown"
+    phase_scores = {phase: float(phase_profile.get(phase, {}).get("impact_pct", 0.0)) for phase in PHASE_ORDER}
+    top_phase = max(phase_scores, key=phase_scores.get) if phase_scores else "middle"
+    top_phase_score = phase_scores.get(top_phase, 0.0)
+    if top_phase_score < 55:
+        phase_identity = "utility overs option"
+    elif top_phase == "powerplay":
+        phase_identity = "new-ball specialist"
+    elif top_phase == "middle":
+        phase_identity = "middle-overs controller"
+    else:
+        phase_identity = "death overs specialist"
+
+    if summary_row["economy"] <= 7.4 and summary_row["wicket_rate"] <= 0.045:
+        attack_profile = "control bowler"
+    elif summary_row["wicket_rate"] >= 0.055:
+        attack_profile = "wicket-taking threat"
+    else:
+        attack_profile = "balanced operator"
+
+    lhb_econ = safe_float(hand_rows.loc[hand_rows["batter_hand"] == "LHB", "economy"].mean())
+    rhb_econ = safe_float(hand_rows.loc[hand_rows["batter_hand"] == "RHB", "economy"].mean())
+    if lhb_econ and rhb_econ:
+        if rhb_econ - lhb_econ >= 0.75:
+            handedness_bias = "better against left-hand batters"
+        elif lhb_econ - rhb_econ >= 0.75:
+            handedness_bias = "better against right-hand batters"
+        else:
+            handedness_bias = "neutral by batter handedness"
+    else:
+        handedness_bias = "limited handedness split sample"
+
+    high_pressure_econ = safe_float(
+        pressure_rows.loc[pressure_rows["pressure_state"] == "High Pressure", "economy"].mean()
+    )
+    standard_econ = safe_float(pressure_rows.loc[pressure_rows["pressure_state"] == "Standard", "economy"].mean())
+    if high_pressure_econ and standard_econ:
+        if standard_econ - high_pressure_econ >= 0.6:
+            pressure_trait = "sharpens under pressure"
+        elif high_pressure_econ - standard_econ >= 0.6:
+            pressure_trait = "more hittable under pressure"
+        else:
+            pressure_trait = "steady across pressure states"
+    else:
+        pressure_trait = "limited pressure sample"
+
+    return {
+        "bowling_family": family,
+        "bowling_style": raw_style or "Unknown style",
+        "phase_identity": phase_identity,
+        "attack_profile": attack_profile,
+        "handedness_bias": handedness_bias,
+        "pressure_trait": pressure_trait,
+        "style_note": player_style_lookup.get(normalize_name(player), {}).get("style_note", ""),
+    }
+
+
 def ensure_auction_outputs() -> None:
     required_paths = [DATA_DIR / "league_auction_mc_summary_2026.csv", DATA_DIR / "league_auction_simulation_2026_events.csv"]
     team_codes = sorted(resolve_team_configs("2026").keys())
@@ -291,14 +451,18 @@ def build_overview_payload() -> dict:
 
 def build_auction_payload() -> dict:
     teams_payload = {}
+    auction_pool = add_player_valuation_columns(load_auction_pool("2026"), season="2026")
     league_summary_df = pd.read_csv(DATA_DIR / "league_auction_mc_summary_2026.csv")
     if "mc_top_target" in league_summary_df.columns:
         league_summary_df["mc_top_target"] = league_summary_df["mc_top_target"].fillna("").map(canonical_player_name).replace({"": None})
     league_summary = league_summary_df.to_dict("records")
     league_events = pd.read_csv(DATA_DIR / "league_auction_simulation_2026_events.csv")
+    league_events_mc = pd.read_csv(DATA_DIR / "league_auction_simulation_2026_events_mc.csv")
     for col in ["player_name", "winner", "runner_up"]:
         if col in league_events.columns:
             league_events[col] = league_events[col].fillna("").map(canonical_player_name).replace({"": None})
+        if col in league_events_mc.columns:
+            league_events_mc[col] = league_events_mc[col].fillna("").map(canonical_player_name).replace({"": None})
     replay_events = league_events.copy()
     replay_events["sequence_no"] = range(1, len(replay_events) + 1)
     filtered_events = league_events[
@@ -314,6 +478,51 @@ def build_auction_payload() -> dict:
         ]
     ].copy()
     filtered_events = filtered_events.sort_values(["set_no", "final_price"], ascending=[True, False]).head(200)
+
+    mc_runs = max(int(league_events_mc["run_id"].nunique()), 1)
+    market_stats = (
+        league_events_mc.groupby(["player_name", "role_bucket"])
+        .agg(
+            expected_price=("final_price", "mean"),
+            price_std=("final_price", "std"),
+            times_sold=("run_id", "nunique"),
+        )
+        .reset_index()
+    )
+    market_stats["purchase_share"] = market_stats["times_sold"] / mc_runs
+
+    role_market_df = auction_pool.copy()
+    role_market_df["player_name"] = role_market_df["player_name"].map(canonical_player_name)
+    role_market_df = role_market_df.merge(market_stats, on=["player_name", "role_bucket"], how="left")
+    role_market_df["expected_price"] = role_market_df["expected_price"].fillna(role_market_df["reserve_price"])
+    role_market_df["price_std"] = role_market_df["price_std"].fillna(0.0)
+    role_market_df["purchase_share"] = role_market_df["purchase_share"].fillna(0.0)
+    role_market_df["value_surplus"] = role_market_df["base_ceiling"] - role_market_df["expected_price"]
+    role_market_df["quality_gap_from_top"] = role_market_df.groupby("role_bucket")["quality_score"].transform("max") - role_market_df["quality_score"]
+    role_market_df = role_market_df.sort_values(["role_bucket", "quality_score", "value_surplus"], ascending=[True, False, False])
+
+    role_market = {
+        role: frame[
+            [
+                "player_name",
+                "role_bucket",
+                "reserve_price",
+                "expected_price",
+                "price_std",
+                "quality_score",
+                "base_ceiling",
+                "value_surplus",
+                "purchase_share",
+                "quality_gap_from_top",
+                "is_overseas",
+            ]
+        ]
+        .head(20)
+        .round({"reserve_price": 2, "expected_price": 2, "price_std": 2, "quality_score": 4, "base_ceiling": 2, "value_surplus": 2, "purchase_share": 3, "quality_gap_from_top": 4})
+        .to_dict("records")
+        for role, frame in role_market_df.groupby("role_bucket")
+    }
+
     for team_code in sorted(resolve_team_configs("2026").keys()):
         slug = team_code.lower()
         buys = pd.read_csv(DATA_DIR / f"{slug}_auction_simulated_buys_2026.csv")
@@ -338,6 +547,14 @@ def build_auction_payload() -> dict:
         "league_events": filtered_events.to_dict("records"),
         "replay_events": replay_events.to_dict("records"),
         "teams": teams_payload,
+        "role_market": {
+            "roles": sorted(role_market.keys()),
+            "options_by_role": role_market,
+            "methodology": (
+                "Role-market boards use league-wide Monte Carlo auction events to estimate expected clearing prices by player, "
+                "then compare those prices with each player's model ceiling to measure value surplus and the quality drop-off within a role."
+            ),
+        },
     }
 
 
@@ -398,12 +615,22 @@ def percentile_map(series: pd.Series, ascending: bool = True) -> dict[str, float
 def build_player_payload() -> dict:
     ball = pd.read_csv(DATA_DIR / "ipl_ball_by_ball.csv", parse_dates=["date"])
     ball["run_value"] = ball["runs_total"] - ball["runs_total"].mean()
+    player_style_lookup = build_dashboard_player_style_lookup()
+    ball["batter_norm"] = ball["batter"].map(normalize_name)
+    ball["bowler_norm"] = ball["bowler"].map(normalize_name)
+    ball["batter_hand"] = ball["batter_norm"].map(lambda key: player_style_lookup.get(key, {}).get("bat_style", "")).replace({"": None})
+    ball["bowler_style"] = ball["bowler_norm"].map(lambda key: player_style_lookup.get(key, {}).get("bowl_style", "")).replace({"": None})
+    ball["bowl_family"] = ball["bowler_style"].map(bowl_family_from_style)
+    ball["pressure_state"] = (
+        (ball["balls_remaining"] <= 30) | (ball["innings_wickets_cum"] >= 5)
+    ).map({True: "High Pressure", False: "Standard"})
 
     batter_base = (
         ball.groupby("batter")
         .agg(
             runs=("runs_batter", "sum"),
             balls=("legal_ball", "sum"),
+            dismissals=("wicket", "sum"),
             last_year=("date", lambda values: int(pd.to_datetime(values).dt.year.max())),
             matches=("match_id", "nunique"),
             run_value=("run_value", "sum"),
@@ -412,6 +639,7 @@ def build_player_payload() -> dict:
         .rename(columns={"batter": "player"})
     )
     batter_base["strike_rate"] = (batter_base["runs"] / batter_base["balls"].clip(lower=1)) * 100
+    batter_base["dismissal_rate"] = batter_base["dismissals"] / batter_base["balls"].clip(lower=1)
     batter_base["wins_added"] = batter_base["run_value"] / 15.0
 
     bowler_base = (
@@ -428,7 +656,42 @@ def build_player_payload() -> dict:
         .rename(columns={"bowler": "player"})
     )
     bowler_base["economy"] = bowler_base["runs"] / (bowler_base["balls"].clip(lower=1) / 6.0)
+    bowler_base["wicket_rate"] = bowler_base["wickets"] / bowler_base["balls"].clip(lower=1)
     bowler_base["wins_added"] = -bowler_base["run_value"] / 15.0
+
+    matchup_ball = ball[ball["bowl_family"].notna()].copy()
+    batter_vs_style = (
+        matchup_ball.groupby(["batter", "bowl_family"])
+        .agg(runs=("runs_batter", "sum"), balls=("legal_ball", "sum"), dismissals=("wicket", "sum"))
+        .reset_index()
+    )
+    batter_vs_style = batter_vs_style[batter_vs_style["balls"] >= 20].copy()
+    batter_vs_style["strike_rate"] = (batter_vs_style["runs"] / batter_vs_style["balls"].clip(lower=1)) * 100.0
+
+    hand_ball = ball[ball["batter_hand"].isin(["LHB", "RHB"])].copy()
+    bowler_vs_hand = (
+        hand_ball.groupby(["bowler", "batter_hand", "phase"])
+        .agg(runs=("runs_total", "sum"), balls=("legal_ball", "sum"), wickets=("wicket", "sum"))
+        .reset_index()
+    )
+    bowler_vs_hand = bowler_vs_hand[bowler_vs_hand["balls"] >= 18].copy()
+    bowler_vs_hand["economy"] = bowler_vs_hand["runs"] / (bowler_vs_hand["balls"].clip(lower=1) / 6.0)
+
+    pressure_batting = (
+        ball.groupby(["batter", "pressure_state"])
+        .agg(runs=("runs_batter", "sum"), balls=("legal_ball", "sum"), dismissals=("wicket", "sum"))
+        .reset_index()
+    )
+    pressure_batting = pressure_batting[pressure_batting["balls"] >= 20].copy()
+    pressure_batting["strike_rate"] = (pressure_batting["runs"] / pressure_batting["balls"].clip(lower=1)) * 100.0
+
+    pressure_bowling = (
+        ball.groupby(["bowler", "pressure_state"])
+        .agg(runs=("runs_total", "sum"), balls=("legal_ball", "sum"), wickets=("wicket", "sum"))
+        .reset_index()
+    )
+    pressure_bowling = pressure_bowling[pressure_bowling["balls"] >= 18].copy()
+    pressure_bowling["economy"] = pressure_bowling["runs"] / (pressure_bowling["balls"].clip(lower=1) / 6.0)
 
     batter_phase_frames = {phase: pd.read_csv(path) for phase, path in PHASE_FILES["batting"].items()}
     bowler_phase_frames = {phase: pd.read_csv(path) for phase, path in PHASE_FILES["bowling"].items()}
@@ -458,6 +721,22 @@ def build_player_payload() -> dict:
     bowler_workload_pct = percentile_map(bowler_base.set_index("player")["balls"], ascending=True)
     bowler_wicket_pct = percentile_map(bowler_base.set_index("player")["wickets"], ascending=True)
     bowler_control_pct = percentile_map(bowler_base.set_index("player")["economy"], ascending=False)
+
+    batter_phase_profiles: dict[str, dict[str, dict[str, float]]] = {}
+    bowler_phase_profiles: dict[str, dict[str, dict[str, float]]] = {}
+    for phase in PHASE_ORDER:
+        bat_frame = batter_phase_frames[phase].copy()
+        bowl_frame = bowler_phase_frames[phase].copy()
+        bat_frame["impact_pct"] = bat_frame["impact_score"].rank(pct=True) * 100.0
+        bowl_frame["impact_pct"] = bowl_frame["impact_score"].rank(pct=True) * 100.0
+        for _, phase_row in bat_frame.iterrows():
+            batter_phase_profiles.setdefault(canonical_player_name(str(phase_row["batter"])), {})[phase] = {
+                "impact_pct": round(float(phase_row["impact_pct"]), 2)
+            }
+        for _, phase_row in bowl_frame.iterrows():
+            bowler_phase_profiles.setdefault(canonical_player_name(str(phase_row["bowler"])), {})[phase] = {
+                "impact_pct": round(float(phase_row["impact_pct"]), 2)
+            }
 
     batter_profiles = {}
     for _, row in batter_base.sort_values("runs", ascending=False).iterrows():
@@ -503,6 +782,14 @@ def build_player_payload() -> dict:
                 {"axis": "Wins Added", "value": batter_win_pct.get(player, 0.0)},
             ],
         }
+        batter_profiles[display_player]["style"] = compute_batter_style_profile(
+            display_player,
+            row,
+            batter_phase_profiles.get(display_player, {}),
+            batter_vs_style[batter_vs_style["batter"] == player],
+            pressure_batting[pressure_batting["batter"] == player],
+            player_style_lookup,
+        )
 
     bowler_profiles = {}
     for _, row in bowler_base.sort_values("wickets", ascending=False).iterrows():
@@ -550,6 +837,121 @@ def build_player_payload() -> dict:
                 {"axis": "Control", "value": bowler_control_pct.get(player, 0.0)},
             ],
         }
+        bowler_profiles[display_player]["style"] = compute_bowler_style_profile(
+            display_player,
+            row,
+            bowler_phase_profiles.get(display_player, {}),
+            bowler_vs_hand[bowler_vs_hand["bowler"] == player],
+            pressure_bowling[pressure_bowling["bowler"] == player],
+            player_style_lookup,
+        )
+
+    def similarity_reason(primary_style: dict[str, str], other_style: dict[str, str], keys: list[str], fallback: str) -> str:
+        shared = []
+        labels = {
+            "handedness": "same handedness",
+            "phase_identity": "same phase role",
+            "scoring_style": "similar scoring style",
+            "pace_spin_bias": "similar pace-spin profile",
+            "bowling_family": "same bowling family",
+            "attack_profile": "similar attack profile",
+            "handedness_bias": "similar handedness matchup profile",
+            "pressure_trait": "similar pressure response",
+        }
+        for key in keys:
+            if primary_style.get(key) and primary_style.get(key) == other_style.get(key):
+                shared.append(labels.get(key, key.replace("_", " ")))
+        return ", ".join(shared[:2]) if shared else fallback
+
+    def batter_similarity(profile: dict, other: dict) -> tuple[float, str]:
+        radar_diff = sum(
+            abs(float(a["value"]) - float(b["value"]))
+            for a, b in zip(profile["radar"], other["radar"], strict=False)
+        ) / max(len(profile["radar"]), 1)
+        style = profile["style"]
+        other_style = other["style"]
+        score = 92 - 1.1 * radar_diff
+        if style.get("handedness") == other_style.get("handedness") and style.get("handedness") != "Unknown":
+            score += 2
+        if style.get("phase_identity") == other_style.get("phase_identity"):
+            score += 3
+        if style.get("scoring_style") == other_style.get("scoring_style"):
+            score += 2
+        if style.get("pace_spin_bias") == other_style.get("pace_spin_bias"):
+            score += 2
+        if style.get("pressure_trait") == other_style.get("pressure_trait"):
+            score += 1
+        score = max(0.0, min(98.0, score))
+        reason = similarity_reason(
+            style,
+            other_style,
+            ["phase_identity", "scoring_style", "pace_spin_bias", "pressure_trait", "handedness"],
+            "closest overall batting profile by phase and scoring pattern",
+        )
+        return round(score, 1), reason
+
+    def bowler_similarity(profile: dict, other: dict) -> tuple[float, str]:
+        radar_diff = sum(
+            abs(float(a["value"]) - float(b["value"]))
+            for a, b in zip(profile["radar"], other["radar"], strict=False)
+        ) / max(len(profile["radar"]), 1)
+        style = profile["style"]
+        other_style = other["style"]
+        score = 92 - 1.1 * radar_diff
+        if style.get("bowling_family") == other_style.get("bowling_family") and style.get("bowling_family") != "Unknown":
+            score += 3
+        if style.get("phase_identity") == other_style.get("phase_identity"):
+            score += 3
+        if style.get("attack_profile") == other_style.get("attack_profile"):
+            score += 2
+        if style.get("handedness_bias") == other_style.get("handedness_bias"):
+            score += 1
+        if style.get("pressure_trait") == other_style.get("pressure_trait"):
+            score += 1
+        score = max(0.0, min(98.0, score))
+        reason = similarity_reason(
+            style,
+            other_style,
+            ["phase_identity", "attack_profile", "bowling_family", "handedness_bias", "pressure_trait"],
+            "closest overall bowling profile by phase, control, and wicket shape",
+        )
+        return round(score, 1), reason
+
+    for profile in batter_profiles.values():
+        comps = []
+        for other in batter_profiles.values():
+            if other["player"] == profile["player"]:
+                continue
+            score, reason = batter_similarity(profile, other)
+            comps.append(
+                {
+                    "player": other["player"],
+                    "similarity_score": score,
+                    "reason": reason,
+                    "impact_score": other["summary"]["impact_score"],
+                    "wins_added": other["summary"]["wins_added"],
+                    "phase_identity": other["style"]["phase_identity"],
+                }
+            )
+        profile["comps"] = sorted(comps, key=lambda item: (-item["similarity_score"], -item["impact_score"]))[:5]
+
+    for profile in bowler_profiles.values():
+        comps = []
+        for other in bowler_profiles.values():
+            if other["player"] == profile["player"]:
+                continue
+            score, reason = bowler_similarity(profile, other)
+            comps.append(
+                {
+                    "player": other["player"],
+                    "similarity_score": score,
+                    "reason": reason,
+                    "impact_score": other["summary"]["impact_score"],
+                    "wins_added": other["summary"]["wins_added"],
+                    "phase_identity": other["style"]["phase_identity"],
+                }
+            )
+        profile["comps"] = sorted(comps, key=lambda item: (-item["similarity_score"], -item["impact_score"]))[:5]
 
     top_batter_impact = (
         pd.DataFrame(
@@ -623,6 +1025,13 @@ def build_player_payload() -> dict:
                     "run values, and wins added is approximated using 15 runs about 1 win. In the current codebase, the implemented proxy uses "
                     "run_value = runs_total - mean(runs_total) and wins_added = run_value_sum / 15. This is best read as a tractable wins-added proxy, "
                     "not yet a fully structural win-probability model."
+                ),
+            },
+            "player_comps": {
+                "title": "Player Comps Construction",
+                "text": (
+                    "Player comps combine three layers: phase radar shape, derived style labels, and pressure-trait alignment. "
+                    "Similarity scores therefore reflect not just aggregate output, but whether two players score or control innings in similar windows."
                 ),
             },
         },

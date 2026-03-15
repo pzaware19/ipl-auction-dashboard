@@ -23,6 +23,7 @@
     playerSummary: document.getElementById("player-summary"),
     playerMethodology: document.getElementById("player-methodology"),
     wpaCards: document.getElementById("wpa-cards"),
+    playerComps: document.getElementById("player-comps"),
     auctionTeamSelect: document.getElementById("auction-team-select"),
     rrBuysTable: document.getElementById("rr-buys-table"),
     mcTargetCards: document.getElementById("mc-target-cards"),
@@ -30,6 +31,10 @@
     eventTeamFilter: document.getElementById("event-team-filter"),
     eventsTable: document.getElementById("events-table"),
     spendBars: document.getElementById("spend-bars"),
+    roleMarketSelect: document.getElementById("role-market-select"),
+    roleMarketTable: document.getElementById("role-market-table"),
+    roleDropoffBars: document.getElementById("role-dropoff-bars"),
+    roleMarketNote: document.getElementById("role-market-note"),
     teamSelect: document.getElementById("team-select"),
     teamPowerBars: document.getElementById("team-power-bars"),
     teamSummary: document.getElementById("team-summary"),
@@ -43,6 +48,12 @@
 
   function formatDecimal(value, digits = 2) {
     return Number(value).toFixed(digits);
+  }
+
+  function humanizeRole(value) {
+    return String(value || "")
+      .replaceAll("_", " ")
+      .replace(/\b\w/g, (char) => char.toUpperCase());
   }
 
   function setOptions(select, values, formatter) {
@@ -390,6 +401,27 @@
         <p>This is the player's aggregate run-value contribution in the current implementation, before converting to wins.</p>
       </div>
     `;
+
+    const compSections = [profile, compareProfile].filter(Boolean).map((selectedProfile) => {
+      const comps = selectedProfile.comps || [];
+      return `
+        <div class="metric-card">
+          <h5>${selectedProfile.player}</h5>
+          <p>Closest scouting and replacement matches based on phase shape, style labels, and pressure traits.</p>
+          ${comps
+            .map(
+              (comp) => `
+                <div class="summary-line">
+                  <span>${comp.player}<br /><small>${comp.reason}</small></span>
+                  <strong>${formatDecimal(comp.similarity_score, 1)}<small>%</small></strong>
+                </div>
+              `
+            )
+            .join("")}
+        </div>
+      `;
+    });
+    els.playerComps.innerHTML = compSections.join("");
   }
 
   function renderMethodology() {
@@ -409,6 +441,8 @@
     const teamCodes = Object.keys(data.auction.teams);
     setOptions(els.auctionTeamSelect, teamCodes, (code) => code);
     els.auctionTeamSelect.addEventListener("change", renderAuctionTeam);
+    setOptions(els.roleMarketSelect, data.auction.role_market.roles || [], humanizeRole);
+    els.roleMarketSelect.addEventListener("change", renderRoleMarket);
 
     [els.eventRoleFilter, els.eventTeamFilter].forEach((el) => el.addEventListener("change", renderEventsTable));
     renderAuctionTeam();
@@ -463,6 +497,7 @@
       alt: true,
       formatter: (value) => `${formatDecimal(value)} Cr`,
     });
+    renderRoleMarket();
   }
 
   function renderEventsTable() {
@@ -486,6 +521,44 @@
       ],
       rows
     );
+  }
+
+  function renderRoleMarket() {
+    const role = els.roleMarketSelect.value || (data.auction.role_market.roles || [])[0];
+    const teamCode = els.auctionTeamSelect.value;
+    const shareMap = (data.scenario.teams[teamCode] && data.scenario.teams[teamCode].mc_share_map) || {};
+    const rows = ((data.auction.role_market.options_by_role || {})[role] || []).map((row) => ({
+      ...row,
+      team_share: Number(shareMap[row.player_name] || 0),
+    }));
+
+    renderTable(
+      els.roleMarketTable,
+      [
+        { key: "player_name", label: "Player" },
+        { key: "expected_price", label: "Exp. Price", render: (value) => `${formatDecimal(value)} Cr` },
+        { key: "quality_score", label: "Quality", render: (value) => formatDecimal(value, 2) },
+        { key: "value_surplus", label: "Value Surplus", render: (value) => `${value >= 0 ? "+" : ""}${formatDecimal(value)} Cr` },
+        { key: "purchase_share", label: "League Buy %", render: (value) => `${formatDecimal(value * 100, 1)}%` },
+        { key: "team_share", label: `${teamCode} Buy %`, render: (value) => `${formatDecimal(value * 100, 1)}%` },
+      ],
+      rows.slice(0, 10)
+    );
+
+    renderBars(els.roleDropoffBars, rows.slice(0, 12), "quality_score", "player_name", {
+      compact: true,
+      formatter: (value, row) => `${formatDecimal(value, 2)} | ${formatDecimal(row.expected_price)} Cr`,
+      alt: true,
+    });
+
+    if (rows.length >= 2) {
+      const top = rows[0].quality_score;
+      const tenth = rows[Math.min(9, rows.length - 1)].quality_score;
+      const drop = Number(top) - Number(tenth);
+      els.roleMarketNote.textContent = `${humanizeRole(role)} drops by ${formatDecimal(drop, 2)} quality points from the top option to the 10th-ranked option.`;
+    } else {
+      els.roleMarketNote.textContent = data.auction.role_market.methodology;
+    }
   }
 
   function initTeamMap() {
