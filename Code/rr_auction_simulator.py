@@ -684,6 +684,10 @@ DISPLAY_NAME_FIXES = {
     "ravi bishnoi": "Ravi Bishnoi",
     "rahul chahar": "Rahul Chahar",
     "adam milne": "Adam Milne",
+    "rg sharma": "Rohit Sharma",
+    "r sharma": "Rohit Sharma",
+    "sr tendulkar": "Sachin Tendulkar",
+    "r dravid": "Rahul Dravid",
 }
 
 

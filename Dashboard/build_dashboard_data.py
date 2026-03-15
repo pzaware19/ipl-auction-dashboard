@@ -55,9 +55,9 @@ PHASE_ORDER = ["powerplay", "middle", "death"]
 ACTIVE_CUTOFF_YEAR = 2025
 
 MANUAL_STYLE_OVERRIDES = {
-    "MS Dhoni": {"bat_style": "RHB", "bowl_style": ""},
+    "MS Dhoni": {"bat_style": "RHB", "bowl_style": "", "style_note": "wicketkeeper-finisher with elite game awareness and late-innings boundary access"},
     "Sanju Samson": {"bat_style": "RHB", "bowl_style": ""},
-    "Ruturaj Gaikwad": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN"},
+    "Ruturaj Gaikwad": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "top-order timer who builds tempo through clean down-the-ground strokeplay"},
     "Shivam Dube": {"bat_style": "LHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
     "Noor Ahmad": {"bat_style": "RHB", "bowl_style": "LEFT ARM WRIST SPIN"},
     "Nathan Ellis": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
@@ -65,7 +65,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Mukesh Choudhary": {"bat_style": "RHB", "bowl_style": "LEFT ARM FAST MEDIUM"},
     "Syed Khaleel Ahmed": {"bat_style": "RHB", "bowl_style": "LEFT ARM FAST MEDIUM"},
     "Dewald Brevis": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
-    "KL Rahul": {"bat_style": "RHB", "bowl_style": ""},
+    "KL Rahul": {"bat_style": "RHB", "bowl_style": "", "style_note": "top-order anchor with a measured start and strong range once set"},
     "Axar Patel": {"bat_style": "LHB", "bowl_style": "LEFT ARM SLOW ORTHODOX"},
     "Kuldeep Yadav": {"bat_style": "LHB", "bowl_style": "LEFT ARM WRIST SPIN"},
     "Mitchell Starc": {"bat_style": "LHB", "bowl_style": "LEFT ARM FAST"},
@@ -74,7 +74,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Mukesh Kumar": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
     "Nitish Rana": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Dushmantha Chameera": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
-    "Jos Buttler": {"bat_style": "RHB", "bowl_style": ""},
+    "Jos Buttler": {"bat_style": "RHB", "bowl_style": "", "style_note": "explosive top-order hitter who punishes pace and accelerates quickly"},
     "Kagiso Rabada": {"bat_style": "LHB", "bowl_style": "RIGHT ARM FAST"},
     "Mohammad Siraj": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Rashid Khan": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
@@ -87,7 +87,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Sunil Narine": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Varun Chakaravarthy": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
     "Harshit Rana": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
-    "Ajinkya Rahane": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM"},
+    "Ajinkya Rahane": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM", "style_note": "classical top-order batter who relies on timing and placement more than brute power"},
     "Rinku Singh": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Rovman Powell": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM FAST"},
     "Vaibhav Arora": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
@@ -102,7 +102,8 @@ MANUAL_STYLE_OVERRIDES = {
     "Mohsin Khan": {"bat_style": "LHB", "bowl_style": "LEFT ARM FAST MEDIUM"},
     "Jasprit Bumrah": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Hardik Pandya": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
-    "Rohit Sharma": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN"},
+    "Rohit Sharma": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "tempo-setting opener who is strongest when he can dominate pace with pull and pickup shots"},
+    "RG Sharma": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "tempo-setting opener who is strongest when he can dominate pace with pull and pickup shots"},
     "Suryakumar Yadav": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Tilak Verma": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Trent Boult": {"bat_style": "RHB", "bowl_style": "LEFT ARM FAST MEDIUM"},
@@ -120,7 +121,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Yuzvendra Chahal": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
     "Harpreet Brar": {"bat_style": "LHB", "bowl_style": "LEFT ARM SLOW ORTHODOX"},
     "Azmatullah Omarzai": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM FAST"},
-    "Virat Kohli": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM"},
+    "Virat Kohli": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM", "style_note": "high-control top-order batter built on chasing tempo, gap hitting, and low-risk accumulation"},
     "Bhuvneshwar Kumar": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
     "Josh Hazlewood": {"bat_style": "LHB", "bowl_style": "RIGHT ARM FAST MEDIUM"},
     "Phil Salt": {"bat_style": "RHB", "bowl_style": ""},
@@ -129,7 +130,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Krunal Pandya": {"bat_style": "LHB", "bowl_style": "LEFT ARM SLOW ORTHODOX"},
     "Nuwan Thushara": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Yash Dayal": {"bat_style": "RHB", "bowl_style": "LEFT ARM FAST MEDIUM"},
-    "Yashaswi Jaiswal": {"bat_style": "LHB", "bowl_style": ""},
+    "Yashaswi Jaiswal": {"bat_style": "LHB", "bowl_style": "", "style_note": "left-hand powerplay aggressor who likes to get on top of pace early"},
     "Jofra Archer": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Ravindra Jadeja": {"bat_style": "LHB", "bowl_style": "LEFT ARM SLOW ORTHODOX"},
     "Riyan Parag": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
@@ -141,7 +142,7 @@ MANUAL_STYLE_OVERRIDES = {
     "Kwena Maphaka": {"bat_style": "LHB", "bowl_style": "LEFT ARM FAST"},
     "Donovan Ferreira": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN"},
     "Vaibhav Suryavanshi": {"bat_style": "LHB", "bowl_style": ""},
-    "Travis Head": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN"},
+    "Travis Head": {"bat_style": "LHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "left-hand attacker who looks to break games open in the powerplay"},
     "Pat Cummins": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Heinrich Klaasen": {"bat_style": "RHB", "bowl_style": ""},
     "Ishan Kishan": {"bat_style": "LHB", "bowl_style": ""},
@@ -150,8 +151,12 @@ MANUAL_STYLE_OVERRIDES = {
     "Nitish Kumar Reddy": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM FAST"},
     "Brydon Carse": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
     "Kamindu Mendis": {"bat_style": "LHB", "bowl_style": "LEFT ARM ORTHODOX"},
-    "Jasprit Bumrah": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST"},
-    "CV Varun": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN"},
+    "Jasprit Bumrah": {"bat_style": "RHB", "bowl_style": "RIGHT ARM FAST", "style_note": "elite pace bowler built on yorkers, seam control, and death-overs problem-solving"},
+    "CV Varun": {"bat_style": "RHB", "bowl_style": "RIGHT ARM LEG SPIN", "style_note": "mystery spin operator who squeezes middle overs through pace variation and angle"},
+    "Sachin Tendulkar": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM", "style_note": "all-time great top-order batter built on balance, timing, and complete shot range"},
+    "SR Tendulkar": {"bat_style": "RHB", "bowl_style": "RIGHT ARM MEDIUM", "style_note": "all-time great top-order batter built on balance, timing, and complete shot range"},
+    "Rahul Dravid": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "classical defensive anchor and Test legend who prized control, judgment, and crease occupation"},
+    "R Dravid": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "classical defensive anchor and Test legend who prized control, judgment, and crease occupation"},
 }
 
 
@@ -172,6 +177,7 @@ def build_player_style_lookup(player_meta: pd.DataFrame) -> dict[str, dict[str, 
         canonical_name = canonical_player_name(raw_name)
         bat_style = str(row.get("bat_style", "") or "").strip()
         bowl_style = str(row.get("bowl_style", "") or "").strip()
+        style_note = str(row.get("style_note", "") or "").strip()
         keys = {
             normalize_name(raw_name),
             normalize_name(canonical_name),
@@ -183,11 +189,13 @@ def build_player_style_lookup(player_meta: pd.DataFrame) -> dict[str, dict[str, 
         for key in keys:
             if not key:
                 continue
-            entry = registry.setdefault(key, {"bat_style": "", "bowl_style": ""})
+            entry = registry.setdefault(key, {"bat_style": "", "bowl_style": "", "style_note": ""})
             if bat_style and not entry["bat_style"]:
                 entry["bat_style"] = bat_style
             if bowl_style and not entry["bowl_style"]:
                 entry["bowl_style"] = bowl_style
+            if style_note and not entry["style_note"]:
+                entry["style_note"] = style_note
     return registry
 
 
@@ -724,11 +732,17 @@ def build_matchup_payload() -> dict:
     )
     override_meta = pd.DataFrame(
         [
-            {"player_name": name, "bat_style": values.get("bat_style", ""), "bowl_style": values.get("bowl_style", "")}
+            {
+                "player_name": name,
+                "bat_style": values.get("bat_style", ""),
+                "bowl_style": values.get("bowl_style", ""),
+                "style_note": values.get("style_note", ""),
+            }
             for name, values in MANUAL_STYLE_OVERRIDES.items()
         ]
     )
-    player_meta = pd.concat([player_meta[["player_name", "bat_style", "bowl_style"]], override_meta], ignore_index=True)
+    player_meta["style_note"] = ""
+    player_meta = pd.concat([player_meta[["player_name", "bat_style", "bowl_style", "style_note"]], override_meta], ignore_index=True)
     player_style_lookup = build_player_style_lookup(player_meta)
 
     ball = ball.copy()
@@ -909,6 +923,7 @@ def build_matchup_payload() -> dict:
             "scoring_style": scoring_style,
             "pace_spin_bias": pace_spin_bias,
             "pressure_trait": pressure_trait,
+            "style_note": player_style_lookup.get(normalize_name(player), {}).get("style_note", ""),
         }
 
     bowler_context = bowler_overall.copy()
@@ -971,6 +986,7 @@ def build_matchup_payload() -> dict:
             "attack_profile": bowling_style,
             "handedness_bias": handedness_bias,
             "pressure_trait": pressure_trait,
+            "style_note": player_style_lookup.get(normalize_name(player), {}).get("style_note", ""),
         }
 
     bowler_options = sorted(

@@ -138,6 +138,7 @@
           <div class="summary-line"><span>Phase identity</span><strong>${batterStyle.phase_identity || "Unknown"}</strong></div>
           <div class="summary-line"><span>Scoring style</span><strong>${batterStyle.scoring_style || "Unknown"}</strong></div>
           <div class="summary-line"><span>Pace / spin</span><strong>${batterStyle.pace_spin_bias || "Unknown"}</strong></div>
+          <div class="summary-line"><span>Descriptor</span><strong>${batterStyle.style_note || "Derived from ball-by-ball profile"}</strong></div>
         </div>
         <div class="compare-card">
           <h5>${bowler} Style Context</h5>
@@ -145,6 +146,7 @@
           <div class="summary-line"><span>Style</span><strong>${bowlerStyle.bowling_style || "Unknown"}</strong></div>
           <div class="summary-line"><span>Phase identity</span><strong>${bowlerStyle.phase_identity || "Unknown"}</strong></div>
           <div class="summary-line"><span>Attack profile</span><strong>${bowlerStyle.attack_profile || "Unknown"}</strong></div>
+          <div class="summary-line"><span>Descriptor</span><strong>${bowlerStyle.style_note || "Derived from ball-by-ball profile"}</strong></div>
         </div>
       </div>
       <div class="compare-grid">
@@ -170,9 +172,11 @@
   function buildCommentatorCall(batter, bowler, totalH2H, phaseContest, strongestBatter, strongestBowler, batterStyle, bowlerStyle) {
     const batterEdges = phaseContest.filter((row) => row.winner === "Batter");
     const bowlerEdges = phaseContest.filter((row) => row.winner === "Bowler");
-    const styleLead = `${batter} profiles as a ${batterStyle.handedness || "unknown-hand"} ${batterStyle.phase_identity || "batter"}, while ${bowler} arrives as a ${String(
-      bowlerStyle.phase_identity || "bowler"
-    ).toLowerCase()} with a ${String(bowlerStyle.attack_profile || "balanced profile").toLowerCase()}.`;
+    const batterDescriptor = batterStyle.style_note || `${batterStyle.handedness || "unknown-hand"} ${batterStyle.phase_identity || "batter"}`;
+    const bowlerDescriptor = bowlerStyle.style_note || `${String(bowlerStyle.phase_identity || "bowler").toLowerCase()} with a ${String(
+      bowlerStyle.attack_profile || "balanced profile"
+    ).toLowerCase()}`;
+    const styleLead = `${batter} comes in as ${batterDescriptor}, while ${bowler} shapes this duel as ${bowlerDescriptor}.`;
     const h2hLine = totalH2H
       ? `${bowler} has already removed ${batter} ${totalH2H.dismissals} time${totalH2H.dismissals === 1 ? "" : "s"} in ${totalH2H.balls} balls, so there is real duel evidence here rather than just broad profile strength.`
       : `There is no direct ball-by-ball record for this exact pair, so the call leans more on each player's phase profile than on head-to-head history.`;
@@ -345,11 +349,11 @@
         <h5>Style Context</h5>
         <p>${batter} is profiled as a ${batterStyle.phase_identity || "batter"} with a ${String(
           batterStyle.scoring_style || "mixed scoring profile"
-        ).toLowerCase()} and a tendency that is ${String(batterStyle.pace_spin_bias || "split-neutral").toLowerCase()}. ${bowler} is profiled as a ${String(
+        ).toLowerCase()} and a tendency that is ${String(batterStyle.pace_spin_bias || "split-neutral").toLowerCase()}. ${batterStyle.style_note ? `${batterStyle.style_note}. ` : ""}${bowler} is profiled as a ${String(
           bowlerStyle.phase_identity || "bowler"
         ).toLowerCase()} with a ${String(bowlerStyle.attack_profile || "balanced attack profile").toLowerCase()} and is ${String(
           bowlerStyle.handedness_bias || "neutral by handedness"
-        ).toLowerCase()}.</p>
+        ).toLowerCase()}. ${bowlerStyle.style_note || ""}</p>
       </div>
       <div class="insight-card">
         <h5>Why The Matchup Matters</h5>
@@ -371,7 +375,7 @@
         : `${batter}'s best route is ${titlePhase(strongestBatter.phase)}, while ${bowler}'s control zone is ${titlePhase(strongestBowler.phase)}. That phase split is exactly what a captain or analyst would game-plan around.`;
     const styleLine = `${batter}'s profile leans ${String(batterStyle.pace_spin_bias || "balanced").toLowerCase()}, while ${bowler} is a ${String(
       bowlerStyle.bowling_family || "mixed"
-    ).toLowerCase()} option whose identity is ${String(bowlerStyle.phase_identity || "phase-flexible").toLowerCase()}.`;
+    ).toLowerCase()} option whose identity is ${String(bowlerStyle.phase_identity || "phase-flexible").toLowerCase()}. ${batterStyle.style_note ? `${batterStyle.style_note}. ` : ""}${bowlerStyle.style_note || ""}`;
     const h2hLine = totalH2H
       ? `The head-to-head sample adds context: ${totalH2H.runs} runs off ${totalH2H.balls} balls at ${formatDecimal(totalH2H.strike_rate)} with ${totalH2H.dismissals} dismissals.`
       : `There is no direct duel sample, so tactical interpretation depends more on the broader phase record.`;
