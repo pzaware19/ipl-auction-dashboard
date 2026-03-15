@@ -695,11 +695,8 @@ def build_matchup_payload() -> dict:
 
     bowler_options = sorted(
         {
-            *bowler_vs_hand["bowler"].dropna().tolist(),
-            *pressure_bowling["bowler"].dropna().tolist(),
-            *head_to_head_total["bowler"].dropna().tolist(),
-            *list(bowler_phase_profiles.keys()),
-            *death_bowling["bowler"].dropna().tolist(),
+            canonical_player_name(str(name))
+            for name in ball["bowler"].dropna().astype(str).unique().tolist()
         }
     )
 
