@@ -421,7 +421,9 @@
         </div>
       `;
     });
-    els.playerComps.innerHTML = compSections.join("");
+    if (els.playerComps) {
+      els.playerComps.innerHTML = compSections.join("");
+    }
   }
 
   function renderMethodology() {
@@ -441,8 +443,10 @@
     const teamCodes = Object.keys(data.auction.teams);
     setOptions(els.auctionTeamSelect, teamCodes, (code) => code);
     els.auctionTeamSelect.addEventListener("change", renderAuctionTeam);
-    setOptions(els.roleMarketSelect, data.auction.role_market.roles || [], humanizeRole);
-    els.roleMarketSelect.addEventListener("change", renderRoleMarket);
+    if (els.roleMarketSelect) {
+      setOptions(els.roleMarketSelect, data.auction.role_market.roles || [], humanizeRole);
+      els.roleMarketSelect.addEventListener("change", renderRoleMarket);
+    }
 
     [els.eventRoleFilter, els.eventTeamFilter].forEach((el) => el.addEventListener("change", renderEventsTable));
     renderAuctionTeam();
@@ -497,7 +501,9 @@
       alt: true,
       formatter: (value) => `${formatDecimal(value)} Cr`,
     });
-    renderRoleMarket();
+    if (els.roleMarketSelect && els.roleMarketTable && els.roleDropoffBars) {
+      renderRoleMarket();
+    }
   }
 
   function renderEventsTable() {
@@ -524,6 +530,9 @@
   }
 
   function renderRoleMarket() {
+    if (!els.roleMarketSelect || !els.roleMarketTable || !els.roleDropoffBars || !els.roleMarketNote) {
+      return;
+    }
     const role = els.roleMarketSelect.value || (data.auction.role_market.roles || [])[0];
     const teamCode = els.auctionTeamSelect.value;
     const shareMap = (data.scenario.teams[teamCode] && data.scenario.teams[teamCode].mc_share_map) || {};
