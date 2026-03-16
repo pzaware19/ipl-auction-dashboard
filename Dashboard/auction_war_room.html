@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Auction War Room</title>
+    <link rel="stylesheet" href="./styles.css?v=ipl-theme-13" />
+  </head>
+  <body>
+    <main class="replay-shell">
+      <section class="replay-header">
+        <div>
+          <p class="eyebrow">Front Office Screen</p>
+          <h1>Auction War Room</h1>
+          <p>
+            Run a live shortlist board with purse pressure, role gaps, target surplus, and rival threat signals in one place.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./index.html" rel="noopener noreferrer">Back To Main Dashboard</a>
+          </div>
+        </div>
+        <div class="replay-badge">
+          <span>Live Strategy</span>
+          <strong>Shortlist + Rival Pressure</strong>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Controls</p>
+            <h3>Set The Franchise War Room</h3>
+          </div>
+          <div class="control-row">
+            <label>
+              Franchise
+              <select id="war-room-team"></select>
+            </label>
+            <label>
+              Role Focus
+              <select id="war-room-role"></select>
+            </label>
+            <label>
+              Bucket
+              <select id="war-room-bucket"></select>
+            </label>
+            <label>
+              Add Player
+              <input id="war-room-player" list="war-room-player-options" placeholder="Search target to bucket" />
+              <datalist id="war-room-player-options"></datalist>
+            </label>
+            <button class="action-button button-only" id="war-room-add">Add To Bucket</button>
+          </div>
+        </div>
+        <div id="war-room-cards" class="replay-card-grid"></div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid wide-left">
+          <div class="tile">
+            <div class="tile-header">
+              <h4>Top Targets By Value Surplus</h4>
+              <span class="pill accent">Live team-specific target board</span>
+            </div>
+            <div class="table-wrap">
+              <table id="war-room-targets"></table>
+            </div>
+          </div>
+          <div class="tile">
+            <h4>Shortlist Buckets</h4>
+            <div id="war-room-shortlists" class="bucket-grid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid">
+          <div class="tile">
+            <h4>Role Gaps Live</h4>
+            <div id="war-room-role-gaps" class="metric-stack"></div>
+          </div>
+          <div class="tile">
+            <h4>Rival Threat Monitor</h4>
+            <div id="war-room-rivals" class="metric-stack"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./data/dashboard_data.js?v=ipl-theme-13"></script>
+    <script src="./auction_war_room.js?v=ipl-theme-13"></script>
+  </body>
+</html>

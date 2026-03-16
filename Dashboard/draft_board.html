@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Draft Board</title>
+    <link rel="stylesheet" href="./styles.css?v=ipl-theme-13" />
+  </head>
+  <body>
+    <main class="replay-shell">
+      <section class="replay-header">
+        <div>
+          <p class="eyebrow">Master Board</p>
+          <h1>Draft Board / Big Board</h1>
+          <p>
+            Screen the 2026 auction pool by quality, expected price, buy probability, surplus, role, age, experience, and active status.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./index.html" rel="noopener noreferrer">Back To Main Dashboard</a>
+          </div>
+        </div>
+        <div class="replay-badge">
+          <span>Master Market View</span>
+          <strong>Sortable Big Board</strong>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Controls</p>
+            <h3>Build The Board</h3>
+          </div>
+          <div class="control-row">
+            <label>
+              Franchise
+              <select id="draft-team"></select>
+            </label>
+            <label>
+              Horizon
+              <select id="draft-horizon"></select>
+            </label>
+            <label>
+              Role
+              <select id="draft-role"></select>
+            </label>
+            <label>
+              Market Filter
+              <select id="draft-market"></select>
+            </label>
+            <label>
+              Sort By
+              <select id="draft-sort"></select>
+            </label>
+          </div>
+        </div>
+        <div id="draft-headline-cards" class="replay-card-grid"></div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid wide-left">
+          <div class="tile">
+            <h4>Master Board</h4>
+            <div class="table-wrap">
+              <table id="draft-table"></table>
+            </div>
+          </div>
+          <div class="tile">
+            <h4>Board Shape</h4>
+            <div id="draft-bars" class="bar-chart"></div>
+            <div id="draft-note" class="muted"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./data/dashboard_data.js?v=ipl-theme-13"></script>
+    <script src="./draft_board.js?v=ipl-theme-13"></script>
+  </body>
+</html>

@@ -1367,10 +1367,40 @@ def build_scenario_payload() -> dict:
     states = build_team_states(team_configs)
     auction_pool = add_player_valuation_columns(load_auction_pool("2026"), season="2026")
     league_events = pd.read_csv(DATA_DIR / "league_auction_simulation_2026_events.csv")
+    league_events_mc = pd.read_csv(DATA_DIR / "league_auction_simulation_2026_events_mc.csv")
+    ball = pd.read_csv(DATA_DIR / "ipl_ball_by_ball.csv", usecols=["batter", "bowler", "date"])
+    batter_last_year = (
+        ball.groupby("batter")["date"]
+        .max()
+        .rename(index=canonical_player_name)
+        .groupby(level=0)
+        .max()
+        .map(lambda value: int(pd.to_datetime(value).year))
+        .to_dict()
+    )
+    bowler_last_year = (
+        ball.groupby("bowler")["date"]
+        .max()
+        .rename(index=canonical_player_name)
+        .groupby(level=0)
+        .max()
+        .map(lambda value: int(pd.to_datetime(value).year))
+        .to_dict()
+    )
+    player_last_year = {**batter_last_year}
+    for player, year in bowler_last_year.items():
+        player_last_year[player] = max(year, player_last_year.get(player, 0))
 
     event_lookup = (
         league_events.assign(player_name=league_events["player_name"].map(canonical_player_name)).drop_duplicates("player_name")
         .set_index("player_name")[["winner", "final_price", "runner_up", "set_no"]]
+        .to_dict("index")
+    )
+    market_lookup = (
+        league_events_mc.assign(player_name=league_events_mc["player_name"].map(canonical_player_name))
+        .groupby("player_name")
+        .agg(expected_price=("final_price", "mean"), purchase_share=("run_id", "nunique"))
+        .assign(purchase_share=lambda frame: frame["purchase_share"] / max(int(league_events_mc["run_id"].nunique()), 1))
         .to_dict("index")
     )
 
@@ -1378,6 +1408,7 @@ def build_scenario_payload() -> dict:
     for _, row in auction_pool.iterrows():
         player_name = canonical_player_name(str(row["player_name"]))
         rep = event_lookup.get(player_name, {})
+        market = market_lookup.get(player_name, {})
         players.append(
             {
                 "player_name": player_name,
@@ -1388,10 +1419,21 @@ def build_scenario_payload() -> dict:
                 "set_no": safe_int(rep.get("set_no", row["set_no"])),
                 "winner": rep.get("winner"),
                 "final_price": None if pd.isna(rep.get("final_price")) else round(float(rep.get("final_price")), 2),
+                "expected_price": round(float(market.get("expected_price", row["reserve_price"])), 2),
+                "purchase_share": round(float(market.get("purchase_share", 0.0)), 3),
                 "runner_up": rep.get("runner_up"),
                 "is_overseas": bool(row["is_overseas"]),
                 "bowl_family": bowl_family_from_style(row.get("bowl_style")),
                 "bat_hand": str(row.get("bat_style") or "").upper() or None,
+                "age": safe_int(row.get("Age")),
+                "ipl_matches": safe_int(row.get("ipl_matches")),
+                "t20_caps": safe_int(row.get("t20_caps")),
+                "capped_flag": int(safe_float(row.get("capped_flag"))),
+                "prev_ipl_2025": int(safe_float(row.get("prev_ipl_2025"))),
+                "active_flag": bool(
+                    player_last_year.get(player_name, 0) >= ACTIVE_CUTOFF_YEAR or safe_float(row.get("prev_ipl_2025")) > 0
+                ),
+                "last_year": safe_int(player_last_year.get(player_name, 0)),
             }
         )
 
