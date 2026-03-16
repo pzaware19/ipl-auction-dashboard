@@ -211,6 +211,316 @@ MANUAL_STYLE_OVERRIDES = {
     "R Dravid": {"bat_style": "RHB", "bowl_style": "RIGHT ARM OFF SPIN", "style_note": "classical defensive anchor and Test legend who prized control, judgment, and crease occupation"},
 }
 
+FINAL_SQUADS_2026 = {
+    "CSK": [
+        {"player": "Ruturaj Gaikwad", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "MS Dhoni", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Dewald Brevis", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Ayush Mhatre", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Urvil Patel", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Anshul Kamboj", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Jamie Overton", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Ramakrishna Ghosh", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Shivam Dube", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Khaleel Ahmed", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Noor Ahmad", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Mukesh Choudhary", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Nathan Ellis", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Shreyas Gopal", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Gurjapneet Singh", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Sanju Samson", "acquisition": "Trade", "role": "Wicketkeeper", "price": None},
+        {"player": "Akeal Hosein", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Prashant Veer", "acquisition": "Auction", "role": "All-rounder", "price": 14.20},
+        {"player": "Kartik Sharma", "acquisition": "Auction", "role": "Wicketkeeper", "price": 14.20},
+        {"player": "Matthew Short", "acquisition": "Auction", "role": "All-rounder", "price": 1.50},
+        {"player": "Aman Khan", "acquisition": "Auction", "role": "All-rounder", "price": 0.40},
+        {"player": "Sarfaraz Khan", "acquisition": "Auction", "role": "Batter", "price": 0.75},
+        {"player": "Rahul Chahar", "acquisition": "Auction", "role": "Bowler", "price": 1.00},
+        {"player": "Matt Henry", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Zak Foulkes", "acquisition": "Auction", "role": "All-rounder", "price": 0.75},
+    ],
+    "DC": [
+        {"player": "KL Rahul", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Karun Nair", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Abhishek Porel", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Tristan Stubbs", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Axar Patel", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Sameer Rizvi", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Ashutosh Sharma", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Vipraj Nigam", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Ajay Mandal", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Tripurana Vijay", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Madhav Tiwari", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Mitchell Starc", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "T. Natarajan", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Mukesh Kumar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Dushmantha Chameera", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Kuldeep Yadav", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Nitish Rana", "acquisition": "Trade", "role": "Batter", "price": None},
+        {"player": "Auqib Dar", "acquisition": "Auction", "role": "All-rounder", "price": 8.40},
+        {"player": "Ben Duckett", "acquisition": "Auction", "role": "Wicketkeeper", "price": 2.00},
+        {"player": "David Miller", "acquisition": "Auction", "role": "Batter", "price": 2.00},
+        {"player": "Pathum Nissanka", "acquisition": "Auction", "role": "Batter", "price": 4.00},
+        {"player": "Lungi Ngidi", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Sahil Parakh", "acquisition": "Auction", "role": "Batter", "price": 0.30},
+        {"player": "Prithvi Shaw", "acquisition": "Auction", "role": "Batter", "price": 0.75},
+        {"player": "Kyle Jamieson", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+    ],
+    "GT": [
+        {"player": "Shubman Gill", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Sai Sudharsan", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Kumar Kushagra", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Anuj Rawat", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Jos Buttler", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Nishant Sindhu", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Glenn Phillips", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Washington Sundar", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Mohd. Arshad Khan", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Shahrukh Khan", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Rahul Tewatia", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Kagiso Rabada", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Mohammad Siraj", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Prasidh Krishna", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Ishant Sharma", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Gurnoor Singh Brar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Rashid Khan", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Manav Suthar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "R. Sai Kishore", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Jayant Yadav", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Ashok Sharma", "acquisition": "Auction", "role": "Bowler", "price": 0.90},
+        {"player": "Jason Holder", "acquisition": "Auction", "role": "All-rounder", "price": 7.00},
+        {"player": "Tom Banton", "acquisition": "Auction", "role": "Batter", "price": 2.00},
+        {"player": "Luke Wood", "acquisition": "Auction", "role": "Bowler", "price": 0.75},
+        {"player": "Prithviraj Yarra", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+    ],
+    "KKR": [
+        {"player": "Ajinkya Rahane", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Rinku Singh", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Angkrish Raghuvanshi", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Manish Pandey", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Rovman Powell", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Anukul Roy", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Ramandeep Singh", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Vaibhav Arora", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Sunil Narine", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Varun Chakaravarthy", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Harshit Rana", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Umran Malik", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Cameron Green", "acquisition": "Auction", "role": "All-rounder", "price": 25.20},
+        {"player": "Matheesha Pathirana", "acquisition": "Auction", "role": "Bowler", "price": 18.00},
+        {"player": "Finn Allen", "acquisition": "Auction", "role": "Wicketkeeper", "price": 2.00},
+        {"player": "Tejasvi Singh", "acquisition": "Auction", "role": "Wicketkeeper", "price": 3.00},
+        {"player": "Prashant Solanki", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Kartik Tyagi", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Rahul Tripathi", "acquisition": "Auction", "role": "Batter", "price": 0.75},
+        {"player": "Tim Seifert", "acquisition": "Auction", "role": "Wicketkeeper", "price": 1.50},
+        {"player": "Sarthak Ranjan", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Daksh Kamra", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Akash Deep", "acquisition": "Auction", "role": "Bowler", "price": 1.00},
+        {"player": "Rachin Ravindra", "acquisition": "Auction", "role": "All-rounder", "price": 2.00},
+        {"player": "Blessing Muzarabani", "acquisition": "Replacement", "role": "Bowler", "price": None},
+    ],
+    "LSG": [
+        {"player": "Rishabh Pant", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Ayush Badoni", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Abdul Samad", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Aiden Markram", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Himmat Singh", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Matthew Breetzke", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Nicholas Pooran", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Mitchell Marsh", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Shahbaz Ahmed", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Arshin Kulkarni", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Mayank Yadav", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Avesh Khan", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Mohsin Khan", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Manimaran Siddharth", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Digvesh Rathi", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Prince Yadav", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Akash Singh", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Arjun Tendulkar", "acquisition": "Trade", "role": "Bowler", "price": None},
+        {"player": "Md Shami", "acquisition": "Trade", "role": "Bowler", "price": None},
+        {"player": "Anrich Nortje", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Wanindu Hasaranga", "acquisition": "Auction", "role": "All-rounder", "price": 2.00},
+        {"player": "Mukul Choudhary", "acquisition": "Auction", "role": "Wicketkeeper", "price": 2.60},
+        {"player": "Naman Tiwari", "acquisition": "Auction", "role": "All-rounder", "price": 1.00},
+        {"player": "Akshat Raghuwanshi", "acquisition": "Auction", "role": "Batter", "price": 2.20},
+        {"player": "Josh Inglis", "acquisition": "Auction", "role": "Batter", "price": 8.60},
+    ],
+    "MI": [
+        {"player": "Rohit Sharma", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Suryakumar Yadav", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Robin Minz", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Ryan Rickelton", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Tilak Verma", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Hardik Pandya", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Naman Dhir", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Mitchell Santner", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Will Jacks", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Corbin Bosch", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Raj Angad Bawa", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Trent Boult", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Jasprit Bumrah", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Deepak Chahar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Ashwani Kumar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Raghu Sharma", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Allah Ghazanfar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Mayank Markande", "acquisition": "Trade", "role": "Bowler", "price": None},
+        {"player": "Shardul Thakur", "acquisition": "Trade", "role": "All-rounder", "price": None},
+        {"player": "Sherfane Rutherford", "acquisition": "Trade", "role": "Batter", "price": None},
+        {"player": "Quinton De Kock", "acquisition": "Auction", "role": "Wicketkeeper", "price": 1.00},
+        {"player": "Atharva Ankolekar", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Mohammad Izhar", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Danish Malewar", "acquisition": "Auction", "role": "Batter", "price": 0.30},
+        {"player": "Mayank Rawat", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+    ],
+    "PBKS": [
+        {"player": "Shreyas Iyer", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Nehal Wadhera", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Vishnu Vinod", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Harnoor Pannu", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Pyla Avinash", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Prabhsimran Singh", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Shashank Singh", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Marcus Stoinis", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Harpreet Brar", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Marco Jansen", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Azmatullah Omarzai", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Priyansh Arya", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Musheer Khan", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Suryansh Shedge", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Mitch Owen", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Arshdeep Singh", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Yuzvendra Chahal", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Vyshak Vijaykumar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Yash Thakur", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Xavier Bartlett", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Lockie Ferguson", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Cooper Connolly", "acquisition": "Auction", "role": "All-rounder", "price": 3.00},
+        {"player": "Ben Dwarshuis", "acquisition": "Auction", "role": "All-rounder", "price": 4.40},
+        {"player": "Vishal Nishad", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Pravin Dubey", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+    ],
+    "RR": [
+        {"player": "Shubham Dubey", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Vaibhav Suryavanshi", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Lhuan-Dre Pretorious", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Shimron Hetmyer", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Yashaswi Jaiswal", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Dhruv Jurel", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Riyan Parag", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Yudhvir Charak", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Jofra Archer", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Tushar Deshpande", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Sandeep Sharma", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Kwena Maphaka", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Nandre Burger", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Ravindra Jadeja", "acquisition": "Trade", "role": "All-rounder", "price": None},
+        {"player": "Sam Curran", "acquisition": "Trade", "role": "All-rounder", "price": None},
+        {"player": "Donovan Ferreira", "acquisition": "Trade", "role": "Wicketkeeper", "price": None},
+        {"player": "Ravi Bishnoi", "acquisition": "Auction", "role": "Bowler", "price": 7.20},
+        {"player": "Sushant Mishra", "acquisition": "Auction", "role": "Bowler", "price": 0.90},
+        {"player": "Vignesh Puthur", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Yash Raj Punja", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Ravi Singh", "acquisition": "Auction", "role": "Wicketkeeper", "price": 0.95},
+        {"player": "Brijesh Sharma", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Aman Rao", "acquisition": "Auction", "role": "Batter", "price": 0.30},
+        {"player": "Adam Milne", "acquisition": "Auction", "role": "Bowler", "price": 2.40},
+        {"player": "Kuldeep Sen", "acquisition": "Auction", "role": "Bowler", "price": 0.75},
+    ],
+    "RCB": [
+        {"player": "Rajat Patidar", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Virat Kohli", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Tim David", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Devdutt Padikkal", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Phil Salt", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Jitesh Sharma", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Krunal Pandya", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Jacob Bethell", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Romario Shepherd", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Swapnil Singh", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Josh Hazlewood", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Bhuvneshwar Kumar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Rasikh Dar", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Yash Dayal", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Suyash Sharma", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Nuwan Thushara", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Abhinandan Singh", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Venkatesh Iyer", "acquisition": "Auction", "role": "All-rounder", "price": 7.00},
+        {"player": "Jacob Duffy", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Mangesh Yadav", "acquisition": "Auction", "role": "All-rounder", "price": 5.20},
+        {"player": "Satvik Deswal", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Jordan Cox", "acquisition": "Auction", "role": "Batter", "price": 0.75},
+        {"player": "Kanishk Chouhan", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Vihaan Malhotra", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Vicky Ostwal", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+    ],
+    "SRH": [
+        {"player": "Travis Head", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Abhishek Sharma", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Aniket Verma", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Smaran Ravichandaran", "acquisition": "Retained", "role": "Batter", "price": None},
+        {"player": "Ishan Kishan", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Heinrich Klaasen", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
+        {"player": "Nitish Kumar Reddy", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Harsh Dubey", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Kamindu Mendis", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Harshal Patel", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Brydon Carse", "acquisition": "Retained", "role": "All-rounder", "price": None},
+        {"player": "Pat Cummins", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Jaydev Unadkat", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Eshan Malinga", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Zeeshan Ansari", "acquisition": "Retained", "role": "Bowler", "price": None},
+        {"player": "Shivang Kumar", "acquisition": "Auction", "role": "All-rounder", "price": 0.30},
+        {"player": "Salil Arora", "acquisition": "Auction", "role": "Wicketkeeper", "price": 1.50},
+        {"player": "Krains Fuletra", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Praful Hinge", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Amit Kumar", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Onkar Tarmale", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Sakib Hussain", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Liam Livingstone", "acquisition": "Auction", "role": "All-rounder", "price": 13.00},
+        {"player": "Shivam Mavi", "acquisition": "Auction", "role": "Bowler", "price": 0.75},
+        {"player": "Jack Edwards", "acquisition": "Auction", "role": "All-rounder", "price": 3.00},
+    ],
+}
+
+MATCH_SCHEDULE_2026 = [
+    {"date": "2026-03-28", "home": "RCB", "away": "SRH", "start": "7:30 PM", "venue": "Bengaluru"},
+    {"date": "2026-03-29", "home": "MI", "away": "KKR", "start": "7:30 PM", "venue": "Mumbai"},
+    {"date": "2026-03-30", "home": "RR", "away": "CSK", "start": "7:30 PM", "venue": "Guwahati"},
+    {"date": "2026-03-31", "home": "PBKS", "away": "GT", "start": "7:30 PM", "venue": "Mullanpur"},
+    {"date": "2026-04-01", "home": "LSG", "away": "DC", "start": "7:30 PM", "venue": "Lucknow"},
+    {"date": "2026-04-02", "home": "KKR", "away": "SRH", "start": "7:30 PM", "venue": "Kolkata"},
+    {"date": "2026-04-03", "home": "CSK", "away": "PBKS", "start": "7:30 PM", "venue": "Chennai"},
+    {"date": "2026-04-04", "home": "DC", "away": "MI", "start": "3:30 PM", "venue": "Delhi"},
+    {"date": "2026-04-04", "home": "GT", "away": "RR", "start": "7:30 PM", "venue": "Ahmedabad"},
+    {"date": "2026-04-05", "home": "SRH", "away": "LSG", "start": "3:30 PM", "venue": "Hyderabad"},
+    {"date": "2026-04-05", "home": "RCB", "away": "CSK", "start": "7:30 PM", "venue": "Bengaluru"},
+    {"date": "2026-04-06", "home": "KKR", "away": "PBKS", "start": "7:30 PM", "venue": "Kolkata"},
+    {"date": "2026-04-07", "home": "RR", "away": "MI", "start": "7:30 PM", "venue": "Guwahati"},
+    {"date": "2026-04-08", "home": "DC", "away": "GT", "start": "7:30 PM", "venue": "Delhi"},
+    {"date": "2026-04-09", "home": "KKR", "away": "LSG", "start": "7:30 PM", "venue": "Kolkata"},
+    {"date": "2026-04-10", "home": "RR", "away": "RCB", "start": "7:30 PM", "venue": "Guwahati"},
+    {"date": "2026-04-11", "home": "PBKS", "away": "SRH", "start": "3:30 PM", "venue": "Mullanpur"},
+    {"date": "2026-04-11", "home": "CSK", "away": "DC", "start": "7:30 PM", "venue": "Chennai"},
+    {"date": "2026-04-12", "home": "LSG", "away": "GT", "start": "3:30 PM", "venue": "Lucknow"},
+    {"date": "2026-04-12", "home": "MI", "away": "RCB", "start": "7:30 PM", "venue": "Mumbai"},
+]
+
+CITY_ALIASES = {
+    "bengaluru": "bengaluru",
+    "bangalore": "bengaluru",
+    "mumbai": "mumbai",
+    "guwahati": "guwahati",
+    "mullanpur": "mullanpur",
+    "lucknow": "lucknow",
+    "kolkata": "kolkata",
+    "chennai": "chennai",
+    "delhi": "delhi",
+    "ahmedabad": "ahmedabad",
+    "hyderabad": "hyderabad",
+}
+
 
 def compact_initials_key(name: str) -> str:
     norm = normalize_name(name)
@@ -1919,6 +2229,344 @@ def build_matchup_payload() -> dict:
     }
 
 
+def build_match_planning_payload(players_payload: dict) -> dict:
+    ball = pd.read_csv(DATA_DIR / "ipl_ball_by_ball.csv", parse_dates=["date"])
+    ball["season_year"] = ball["date"].dt.year
+    ball["batter_name"] = ball["batter"].map(canonical_player_name)
+    ball["bowler_name"] = ball["bowler"].map(canonical_player_name)
+    ball["location_key"] = (
+        ball["city"]
+        .fillna(ball["venue"])
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .map(lambda value: CITY_ALIASES.get(value, value))
+    )
+
+    active_batters = {
+        name: profile
+        for name, profile in players_payload["batter_profiles"].items()
+        if int(profile["summary"].get("last_year", 0)) >= ACTIVE_CUTOFF_YEAR
+    }
+    active_bowlers = {
+        name: profile
+        for name, profile in players_payload["bowler_profiles"].items()
+        if int(profile["summary"].get("last_year", 0)) >= ACTIVE_CUTOFF_YEAR
+    }
+
+    venue_phase = (
+        ball.groupby(["location_key", "phase"])
+        .agg(runs=("runs_total", "sum"), balls=("legal_ball", "sum"), wickets=("wicket", "sum"))
+        .reset_index()
+    )
+    venue_phase["run_rate"] = venue_phase["runs"] / (venue_phase["balls"].clip(lower=1) / 6.0)
+    venue_phase["wicket_rate"] = venue_phase["wickets"] / venue_phase["balls"].clip(lower=1)
+
+    innings_totals = (
+        ball.groupby(["match_id", "innings", "location_key"])
+        .agg(total=("innings_runs_cum", "max"))
+        .reset_index()
+    )
+    venue_innings = innings_totals.groupby("location_key").agg(avg_total=("total", "mean"), innings_count=("total", "size")).reset_index()
+
+    venue_batting = (
+        ball[ball["batter_name"].isin(active_batters)]
+        .groupby(["location_key", "batter_name"])
+        .agg(runs=("runs_batter", "sum"), balls=("legal_ball", "sum"), matches=("match_id", "nunique"))
+        .reset_index()
+    )
+    venue_batting = venue_batting[venue_batting["balls"] >= 20].copy()
+    venue_batting["strike_rate"] = venue_batting["runs"] / venue_batting["balls"].clip(lower=1) * 100.0
+    venue_batting["impact_proxy"] = venue_batting["runs"] + 0.6 * venue_batting["balls"]
+
+    venue_bowling = (
+        ball[ball["bowler_name"].isin(active_bowlers)]
+        .groupby(["location_key", "bowler_name"])
+        .agg(runs=("runs_total", "sum"), balls=("legal_ball", "sum"), wickets=("wicket", "sum"), matches=("match_id", "nunique"))
+        .reset_index()
+    )
+    venue_bowling = venue_bowling[venue_bowling["balls"] >= 18].copy()
+    venue_bowling["economy"] = venue_bowling["runs"] / (venue_bowling["balls"].clip(lower=1) / 6.0)
+    venue_bowling["impact_proxy"] = 25.0 * venue_bowling["wickets"] - venue_bowling["runs"] / 6.0
+
+    venue_profiles = {}
+    for venue in sorted({item["venue"] for item in MATCH_SCHEDULE_2026}):
+        venue_key = CITY_ALIASES.get(venue.strip().lower(), venue.strip().lower())
+        phase_rows = venue_phase[venue_phase["location_key"] == venue_key]
+        innings_row = venue_innings[venue_innings["location_key"] == venue_key]
+        top_bat = (
+            venue_batting[venue_batting["location_key"] == venue_key]
+            .sort_values(["impact_proxy", "strike_rate"], ascending=[False, False])
+            .head(5)[["batter_name", "strike_rate", "matches", "balls"]]
+            .round({"strike_rate": 1})
+            .rename(columns={"batter_name": "player"})
+            .to_dict("records")
+        )
+        top_bowl = (
+            venue_bowling[venue_bowling["location_key"] == venue_key]
+            .sort_values(["impact_proxy", "wickets"], ascending=[False, False])
+            .head(5)[["bowler_name", "economy", "wickets", "matches"]]
+            .round({"economy": 2})
+            .rename(columns={"bowler_name": "player"})
+            .to_dict("records")
+        )
+        venue_profiles[venue] = {
+            "avg_total": round(float(innings_row["avg_total"].iloc[0]), 1) if not innings_row.empty else None,
+            "innings_count": int(innings_row["innings_count"].iloc[0]) if not innings_row.empty else 0,
+            "phase_conditions": phase_rows[["phase", "run_rate", "wicket_rate"]].round({"run_rate": 2, "wicket_rate": 3}).to_dict("records"),
+            "top_batters": top_bat,
+            "top_bowlers": top_bowl,
+        }
+
+    team_profiles = {}
+
+    def active_team_profiles(team_code: str) -> dict:
+        squad = FINAL_SQUADS_2026[team_code]
+        active_players = []
+        no_sample = []
+        for entry in squad:
+            player = canonical_player_name(entry["player"])
+            batter = active_batters.get(player)
+            bowler = active_bowlers.get(player)
+            if batter or bowler:
+                active_players.append(
+                    {
+                        "player": player,
+                        "role": entry["role"],
+                        "acquisition": entry["acquisition"],
+                        "price": entry["price"],
+                        "batter": batter,
+                        "bowler": bowler,
+                    }
+                )
+            else:
+                no_sample.append(player)
+        return {"active_players": active_players, "no_sample": no_sample}
+
+    for team_code in FINAL_SQUADS_2026:
+        team_profiles[team_code] = active_team_profiles(team_code)
+
+    def team_phase_snapshot(team_code: str) -> dict[str, float]:
+        active_players = team_profiles[team_code]["active_players"]
+        batting_scores = {phase: [] for phase in PHASE_ORDER}
+        bowling_scores = {phase: [] for phase in PHASE_ORDER}
+        wins_added = []
+        for row in active_players:
+            if row["batter"]:
+                wins_added.append(float(row["batter"]["summary"].get("wins_added", 0.0)))
+                for phase in PHASE_ORDER:
+                    batting_scores[phase].append(float(row["batter"]["phase_details"].get(phase, {}).get("impact_score", 0.0)))
+            if row["bowler"]:
+                wins_added.append(float(row["bowler"]["summary"].get("wins_added", 0.0)))
+                for phase in PHASE_ORDER:
+                    bowling_scores[phase].append(float(row["bowler"]["phase_details"].get(phase, {}).get("impact_score", 0.0)))
+        return {
+            "bat_powerplay": round(sum(sorted(batting_scores["powerplay"], reverse=True)[:3]), 2),
+            "bat_middle": round(sum(sorted(batting_scores["middle"], reverse=True)[:3]), 2),
+            "bat_death": round(sum(sorted(batting_scores["death"], reverse=True)[:3]), 2),
+            "bowl_powerplay": round(sum(sorted(bowling_scores["powerplay"], reverse=True)[:3]), 2),
+            "bowl_middle": round(sum(sorted(bowling_scores["middle"], reverse=True)[:3]), 2),
+            "bowl_death": round(sum(sorted(bowling_scores["death"], reverse=True)[:3]), 2),
+            "wins_added_total": round(sum(sorted(wins_added, reverse=True)[:8]), 2),
+            "active_count": len(active_players),
+            "no_sample_count": len(team_profiles[team_code]["no_sample"]),
+        }
+
+    snapshots = {team_code: team_phase_snapshot(team_code) for team_code in FINAL_SQUADS_2026}
+
+    def top_team_players(team_code: str, kind: str, limit: int = 4) -> list[dict]:
+        active_players = team_profiles[team_code]["active_players"]
+        rows = []
+        for row in active_players:
+            profile = row["batter"] if kind == "batting" else row["bowler"]
+            if not profile:
+                continue
+            summary = profile["summary"]
+            rows.append(
+                {
+                    "player": row["player"],
+                    "role": row["role"],
+                    "impact_score": round(float(summary.get("impact_score", 0.0)), 2),
+                    "wins_added": round(float(summary.get("wins_added", 0.0)), 2),
+                    "style_note": profile["style"].get("style_note", ""),
+                    "phase_identity": profile["style"].get("phase_identity", ""),
+                }
+            )
+        rows.sort(key=lambda item: (item["impact_score"], item["wins_added"]), reverse=True)
+        return rows[:limit]
+
+    def phase_label(key: str) -> str:
+        return {
+            "bat_powerplay": "powerplay batting",
+            "bat_middle": "middle-overs batting",
+            "bat_death": "death batting",
+            "bowl_powerplay": "powerplay bowling",
+            "bowl_middle": "middle-overs bowling",
+            "bowl_death": "death bowling",
+        }[key]
+
+    def build_swot(team_code: str, opponent_code: str, venue: str) -> dict[str, list[str]]:
+        team = snapshots[team_code]
+        opponent = snapshots[opponent_code]
+        top_batters = top_team_players(team_code, "batting", limit=3)
+        top_bowlers = top_team_players(team_code, "bowling", limit=3)
+        strongest_key = max(
+            ["bat_powerplay", "bat_middle", "bat_death", "bowl_powerplay", "bowl_middle", "bowl_death"],
+            key=lambda key: team[key],
+        )
+        weakest_key = min(
+            ["bat_powerplay", "bat_middle", "bat_death", "bowl_powerplay", "bowl_middle", "bowl_death"],
+            key=lambda key: team[key],
+        )
+        opponent_best = max(
+            ["bat_powerplay", "bat_middle", "bat_death", "bowl_powerplay", "bowl_middle", "bowl_death"],
+            key=lambda key: opponent[key],
+        )
+        venue_profile = venue_profiles.get(venue, {})
+        venue_bat_names = {row["player"] for row in venue_profile.get("top_batters", [])}
+        venue_bowl_names = {row["player"] for row in venue_profile.get("top_bowlers", [])}
+        venue_hits = [row["player"] for row in top_batters + top_bowlers if row["player"] in venue_bat_names or row["player"] in venue_bowl_names]
+        strengths = []
+        if top_batters:
+            strengths.append(
+                f"Active batting engine is led by {', '.join(row['player'] for row in top_batters[:2])}, giving {team_code} its best read in {phase_label(strongest_key)}."
+            )
+        if top_bowlers:
+            strengths.append(
+                f"Bowling control comes from {', '.join(row['player'] for row in top_bowlers[:2])}, with the strongest defensive edge in {phase_label(max(['bowl_powerplay','bowl_middle','bowl_death'], key=lambda key: team[key]))}."
+            )
+        strengths.append(
+            f"Active-core wins-added base is {team['wins_added_total']:.2f}, which gives {team_code} a stable contribution floor from proven 2025 performers."
+        )
+
+        weaknesses = [
+            f"The weakest active phase read is {phase_label(weakest_key)}, so {team_code} may need tactical cover there.",
+            f"{team['no_sample_count']} squad members have no active-sample evidence in the dashboard, which raises uncertainty beyond the established core.",
+        ]
+        if len(team_profiles[team_code]["active_players"]) < 12:
+            weaknesses.append("The active-data pool is shallow relative to the full squad, so bench options are less evidence-backed.")
+        else:
+            weaknesses.append("There is still a gap between squad depth and trusted active evidence, especially for fringe auction additions.")
+
+        opportunities = [
+            f"{team_code} should press its {phase_label(strongest_key)} edge against {opponent_code}'s softer {phase_label(min(['bat_powerplay','bat_middle','bat_death','bowl_powerplay','bowl_middle','bowl_death'], key=lambda key: opponent[key]))} profile.",
+        ]
+        if venue_profile.get("avg_total") is not None:
+            pace_phase = next((row for row in venue_profile.get("phase_conditions", []) if row["phase"] == "powerplay"), None)
+            if pace_phase and pace_phase["run_rate"] >= 9.0:
+                opportunities.append(f"{venue} has rewarded early scoring, so {team_code} can attack the powerplay before the game slows down.")
+            else:
+                opportunities.append(f"{venue} has not been a pure run-glut venue, so {team_code} can win by owning control phases rather than chasing only boundary pressure.")
+        if venue_hits:
+            opportunities.append(f"Venue history gives extra confidence to {', '.join(venue_hits[:2])} at {venue}.")
+        else:
+            opportunities.append(f"There is no dominant venue specialist in the active sample, so {team_code} can lean more on overall phase quality than ground-specific superstition.")
+
+        threats = [
+            f"{opponent_code}'s biggest live edge is {phase_label(opponent_best)}, which is the phase {team_code} needs to contain most carefully.",
+        ]
+        opp_batters = top_team_players(opponent_code, "batting", limit=2)
+        opp_bowlers = top_team_players(opponent_code, "bowling", limit=2)
+        if opp_batters:
+            threats.append(f"Opposition batting threat is driven by {', '.join(row['player'] for row in opp_batters)}, so powerplay and set-batter control matter.")
+        if opp_bowlers:
+            threats.append(f"{', '.join(row['player'] for row in opp_bowlers)} can flip the innings with ball in hand if {team_code} lets the matchup drift into their best phase.")
+
+        return {"strengths": strengths[:3], "weaknesses": weaknesses[:3], "opportunities": opportunities[:3], "threats": threats[:3]}
+
+    def build_tactics(team_code: str, opponent_code: str, venue: str) -> list[str]:
+        team = snapshots[team_code]
+        opponent = snapshots[opponent_code]
+        top_batters = top_team_players(team_code, "batting", limit=2)
+        top_bowlers = top_team_players(team_code, "bowling", limit=2)
+        plans = []
+        strongest_bat = max(["bat_powerplay", "bat_middle", "bat_death"], key=lambda key: team[key])
+        strongest_bowl = max(["bowl_powerplay", "bowl_middle", "bowl_death"], key=lambda key: team[key])
+        if top_batters:
+            plans.append(f"Batting plan: funnel the innings through {top_batters[0]['player']} and {top_batters[1]['player'] if len(top_batters) > 1 else top_batters[0]['player']} to maximize {phase_label(strongest_bat)}.")
+        if top_bowlers:
+            plans.append(f"Bowling plan: use {top_bowlers[0]['player']} to control {phase_label(strongest_bowl)} and keep {opponent_code}'s scoring windows compressed.")
+        venue_profile = venue_profiles.get(venue, {})
+        avg_total = venue_profile.get("avg_total")
+        if avg_total and avg_total >= 180:
+            plans.append(f"Venue plan: {venue} has historically produced {avg_total:.0f}-plus innings, so batting intent must stay proactive rather than preservation-heavy.")
+        else:
+            plans.append(f"Venue plan: {venue} is not purely a free-scoring venue in the sample, so fielding and phase control can create separation.")
+        return plans[:3]
+
+    matches = []
+    for idx, match in enumerate(MATCH_SCHEDULE_2026, start=1):
+        home = match["home"]
+        away = match["away"]
+        venue = match["venue"]
+        venue_profile = venue_profiles.get(venue, {"avg_total": None, "innings_count": 0, "phase_conditions": [], "top_batters": [], "top_bowlers": []})
+        matches.append(
+            {
+                "match_id": idx,
+                "label": f"{home} vs {away}",
+                "date": match["date"],
+                "start": match["start"],
+                "venue": venue,
+                "home": home,
+                "away": away,
+                "venue_profile": venue_profile,
+                "home_analysis": {
+                    "swot": build_swot(home, away, venue),
+                    "tactics": build_tactics(home, away, venue),
+                    "top_batters": top_team_players(home, "batting"),
+                    "top_bowlers": top_team_players(home, "bowling"),
+                    "active_count": snapshots[home]["active_count"],
+                },
+                "away_analysis": {
+                    "swot": build_swot(away, home, venue),
+                    "tactics": build_tactics(away, home, venue),
+                    "top_batters": top_team_players(away, "batting"),
+                    "top_bowlers": top_team_players(away, "bowling"),
+                    "active_count": snapshots[away]["active_count"],
+                },
+            }
+        )
+
+    teams = {
+        team_code: {
+            "squad": [
+                {
+                    "player": canonical_player_name(row["player"]),
+                    "acquisition": row["acquisition"],
+                    "role": row["role"],
+                    "price": row["price"],
+                    "active_flag": bool(
+                        canonical_player_name(row["player"]) in active_batters
+                        or canonical_player_name(row["player"]) in active_bowlers
+                    ),
+                }
+                for row in squad
+            ],
+            "active_count": snapshots[team_code]["active_count"],
+            "no_sample_count": snapshots[team_code]["no_sample_count"],
+        }
+        for team_code, squad in FINAL_SQUADS_2026.items()
+    }
+
+    return {
+        "matches": matches,
+        "teams": teams,
+        "methodology": {
+            "summary": (
+                "Match Planning combines final 2026 squads with active-player phase impact, skill radar context, wins-added proxies, and venue-level IPL evidence. "
+                "Only players with active 2025-tagged evidence are used for the quantitative SWOT and tactical recommendations."
+            ),
+            "swot": (
+                "Strengths and weaknesses are built from team-level active phase snapshots. Opportunities and threats compare each team's strongest active phase windows "
+                "with the opponent's softest or strongest phase windows, then layer in venue conditions."
+            ),
+            "venue": (
+                "Venue cards summarize historical run rates, wicket rates, average innings totals, and the strongest active performers at that ground from the ball-by-ball archive."
+            ),
+        },
+    }
+
+
 def build_story_payload() -> dict:
     return {
         "hero_title": "IPL Auction Intelligence League Hub",
@@ -1945,14 +2593,16 @@ def build_story_payload() -> dict:
 
 def main() -> None:
     ensure_auction_outputs()
+    players_payload = build_player_payload()
     payload = {
         "overview": build_overview_payload(),
         "phase_rankings": build_phase_payload(),
         "auction": build_auction_payload(),
         "teams": build_team_payload(),
-        "players": build_player_payload(),
+        "players": players_payload,
         "scenario": build_scenario_payload(),
         "matchups": build_matchup_payload(),
+        "match_planning": build_match_planning_payload(players_payload),
         "story": build_story_payload(),
     }
     js = "window.DASHBOARD_DATA = " + json.dumps(payload, indent=2) + ";\n"

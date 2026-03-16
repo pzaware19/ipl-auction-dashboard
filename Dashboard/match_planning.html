@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL 2026 Match-by-Match Planning</title>
+    <link rel="stylesheet" href="./styles.css?v=ipl-theme-14" />
+  </head>
+  <body>
+    <main class="replay-shell">
+      <section class="replay-header">
+        <div>
+          <p class="eyebrow">Season Planning</p>
+          <h1>IPL 2026 Match-by-Match Planning</h1>
+          <p>
+            Match-by-match active-player SWOT, tactical recommendations, and stadium context for the opening IPL 2026 schedule.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./index.html" rel="noopener noreferrer">Back To Main Dashboard</a>
+          </div>
+        </div>
+        <div class="replay-badge">
+          <span>2026 Fixtures</span>
+          <strong>SWOT + Venue + Tactics</strong>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Controls</p>
+            <h3>Select Match</h3>
+          </div>
+          <div class="control-row">
+            <label>
+              Match
+              <select id="match-select"></select>
+            </label>
+            <label>
+              Team Lens
+              <select id="match-team-lens"></select>
+            </label>
+          </div>
+        </div>
+        <div id="match-headline-cards" class="replay-card-grid"></div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid">
+          <div class="tile">
+            <h4>Venue Intelligence</h4>
+            <div id="venue-summary" class="metric-stack"></div>
+          </div>
+          <div class="tile">
+            <h4>Stadium Specialists</h4>
+            <div class="tool-grid">
+              <div>
+                <h5>Batters</h5>
+                <div id="venue-top-batters" class="metric-stack"></div>
+              </div>
+              <div>
+                <h5>Bowlers</h5>
+                <div id="venue-top-bowlers" class="metric-stack"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid">
+          <div class="tile">
+            <h4 id="home-team-title"></h4>
+            <div id="home-team-analysis" class="insight-stack"></div>
+          </div>
+          <div class="tile">
+            <h4 id="away-team-title"></h4>
+            <div id="away-team-analysis" class="insight-stack"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="tool-grid">
+          <div class="tile">
+            <h4>Team SWOT</h4>
+            <div id="match-swot" class="tool-grid"></div>
+          </div>
+          <div class="tile">
+            <h4>Recommended Match Plan</h4>
+            <div id="match-tactics" class="insight-stack"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./data/dashboard_data.js?v=ipl-theme-14"></script>
+    <script src="./match_planning.js?v=ipl-theme-14"></script>
+  </body>
+</html>
