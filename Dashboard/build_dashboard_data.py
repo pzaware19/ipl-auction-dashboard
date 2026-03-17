@@ -2234,6 +2234,9 @@ def build_match_planning_payload(players_payload: dict) -> dict:
     ball["season_year"] = ball["date"].dt.year
     ball["batter_name"] = ball["batter"].map(canonical_player_name)
     ball["bowler_name"] = ball["bowler"].map(canonical_player_name)
+    ball["pressure_state"] = (
+        (ball["balls_remaining"] <= 30) | (ball["innings_wickets_cum"] >= 5)
+    ).map({True: "High Pressure", False: "Standard"})
     ball["location_key"] = (
         ball["city"]
         .fillna(ball["venue"])
@@ -2289,6 +2292,42 @@ def build_match_planning_payload(players_payload: dict) -> dict:
     venue_bowling["economy"] = venue_bowling["runs"] / (venue_bowling["balls"].clip(lower=1) / 6.0)
     venue_bowling["impact_proxy"] = 25.0 * venue_bowling["wickets"] - venue_bowling["runs"] / 6.0
 
+    venue_pressure_batting = (
+        ball[(ball["batter_name"].isin(active_batters)) & (ball["pressure_state"] == "High Pressure")]
+        .groupby(["location_key", "batter_name"])
+        .agg(runs=("runs_batter", "sum"), balls=("legal_ball", "sum"), dismissals=("wicket", "sum"), matches=("match_id", "nunique"))
+        .reset_index()
+    )
+    venue_pressure_batting = venue_pressure_batting[venue_pressure_batting["balls"] >= 12].copy()
+    venue_pressure_batting["strike_rate"] = (
+        venue_pressure_batting["runs"] / venue_pressure_batting["balls"].clip(lower=1) * 100.0
+    )
+    venue_pressure_batting["dismissal_rate"] = (
+        venue_pressure_batting["dismissals"] / venue_pressure_batting["balls"].clip(lower=1)
+    )
+    venue_pressure_batting["pressure_score"] = (
+        venue_pressure_batting["runs"]
+        + 0.35 * venue_pressure_batting["balls"]
+        - 45.0 * venue_pressure_batting["dismissal_rate"]
+    )
+
+    venue_pressure_bowling = (
+        ball[(ball["bowler_name"].isin(active_bowlers)) & (ball["pressure_state"] == "High Pressure")]
+        .groupby(["location_key", "bowler_name"])
+        .agg(runs=("runs_total", "sum"), balls=("legal_ball", "sum"), wickets=("wicket", "sum"), matches=("match_id", "nunique"))
+        .reset_index()
+    )
+    venue_pressure_bowling = venue_pressure_bowling[venue_pressure_bowling["balls"] >= 12].copy()
+    venue_pressure_bowling["economy"] = (
+        venue_pressure_bowling["runs"] / (venue_pressure_bowling["balls"].clip(lower=1) / 6.0)
+    )
+    venue_pressure_bowling["wicket_rate"] = (
+        venue_pressure_bowling["wickets"] / venue_pressure_bowling["balls"].clip(lower=1)
+    )
+    venue_pressure_bowling["pressure_score"] = (
+        28.0 * venue_pressure_bowling["wickets"] - venue_pressure_bowling["economy"] * 3.5
+    )
+
     venue_profiles = {}
     for venue in sorted({item["venue"] for item in MATCH_SCHEDULE_2026}):
         venue_key = CITY_ALIASES.get(venue.strip().lower(), venue.strip().lower())
@@ -2297,7 +2336,7 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         top_bat = (
             venue_batting[venue_batting["location_key"] == venue_key]
             .sort_values(["impact_proxy", "strike_rate"], ascending=[False, False])
-            .head(5)[["batter_name", "strike_rate", "matches", "balls"]]
+            .head(5)[["batter_name", "runs", "strike_rate", "matches"]]
             .round({"strike_rate": 1})
             .rename(columns={"batter_name": "player"})
             .to_dict("records")
@@ -2310,12 +2349,30 @@ def build_match_planning_payload(players_payload: dict) -> dict:
             .rename(columns={"bowler_name": "player"})
             .to_dict("records")
         )
+        pressure_bat = (
+            venue_pressure_batting[venue_pressure_batting["location_key"] == venue_key]
+            .sort_values(["pressure_score", "strike_rate"], ascending=[False, False])
+            .head(5)[["batter_name", "runs", "strike_rate", "matches"]]
+            .round({"strike_rate": 1})
+            .rename(columns={"batter_name": "player"})
+            .to_dict("records")
+        )
+        pressure_bowl = (
+            venue_pressure_bowling[venue_pressure_bowling["location_key"] == venue_key]
+            .sort_values(["pressure_score", "wickets"], ascending=[False, False])
+            .head(5)[["bowler_name", "wickets", "economy", "matches"]]
+            .round({"economy": 2})
+            .rename(columns={"bowler_name": "player"})
+            .to_dict("records")
+        )
         venue_profiles[venue] = {
             "avg_total": round(float(innings_row["avg_total"].iloc[0]), 1) if not innings_row.empty else None,
             "innings_count": int(innings_row["innings_count"].iloc[0]) if not innings_row.empty else 0,
             "phase_conditions": phase_rows[["phase", "run_rate", "wicket_rate"]].round({"run_rate": 2, "wicket_rate": 3}).to_dict("records"),
             "top_batters": top_bat,
             "top_bowlers": top_bowl,
+            "pressure_batters": pressure_bat,
+            "pressure_bowlers": pressure_bowl,
         }
 
     team_profiles = {}

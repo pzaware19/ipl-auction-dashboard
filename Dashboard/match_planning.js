@@ -7,6 +7,8 @@
     venueSummary: document.getElementById("venue-summary"),
     venueTopBatters: document.getElementById("venue-top-batters"),
     venueTopBowlers: document.getElementById("venue-top-bowlers"),
+    venuePressureBatters: document.getElementById("venue-pressure-batters"),
+    venuePressureBowlers: document.getElementById("venue-pressure-bowlers"),
     homeTitle: document.getElementById("home-team-title"),
     awayTitle: document.getElementById("away-team-title"),
     homeAnalysis: document.getElementById("home-team-analysis"),
@@ -125,7 +127,7 @@
         <div class="metric-card">
           <h5>${row.player}</h5>
           <strong>${formatDecimal(row.strike_rate, 1)}</strong>
-          <p>${row.matches} matches · ${row.balls} balls at this venue.</p>
+          <p>${row.runs} runs · ${row.matches} matches at this venue.</p>
         </div>
       `
     );
@@ -137,6 +139,28 @@
           <h5>${row.player}</h5>
           <strong>${formatDecimal(row.economy, 2)}</strong>
           <p>${row.wickets} wickets · ${row.matches} matches at this venue.</p>
+        </div>
+      `
+    );
+    renderList(
+      els.venuePressureBatters,
+      match.venue_profile.pressure_batters || [],
+      (row) => `
+        <div class="metric-card">
+          <h5>${row.player}</h5>
+          <strong>${formatDecimal(row.strike_rate, 1)}</strong>
+          <p>${row.runs} runs · ${row.matches} matches in high-pressure overs here.</p>
+        </div>
+      `
+    );
+    renderList(
+      els.venuePressureBowlers,
+      match.venue_profile.pressure_bowlers || [],
+      (row) => `
+        <div class="metric-card">
+          <h5>${row.player}</h5>
+          <strong>${formatDecimal(row.economy, 2)}</strong>
+          <p>${row.wickets} wickets · ${row.matches} matches in high-pressure overs here.</p>
         </div>
       `
     );
