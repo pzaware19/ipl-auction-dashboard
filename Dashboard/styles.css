@@ -166,7 +166,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.72rem;
-  color: var(--accent);
+  color: var(--cq-accent-secondary);
   font-weight: 700;
 }
 
@@ -871,11 +871,23 @@ input[list] {
 }
 
 .replay-header {
-  padding: 28px 30px;
+  padding: 34px 34px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   align-items: start;
+  position: relative;
+  overflow: hidden;
+}
+
+.replay-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, var(--cq-team-glow), transparent 30%),
+    linear-gradient(135deg, rgba(45,212,191,0.04), rgba(245,184,64,0.04));
 }
 
 .replay-header h1,
@@ -885,8 +897,12 @@ input[list] {
 }
 
 .replay-header h1 {
-  margin: 8px 0 10px;
-  font-size: clamp(2rem, 4vw, 3.1rem);
+  margin: 10px 0 12px;
+  font-size: clamp(2.3rem, 4.6vw, 3.7rem);
+  line-height: 0.98;
+  text-transform: uppercase;
+  color: var(--cq-text-inverse);
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.24);
 }
 
 .replay-header p {
@@ -894,6 +910,7 @@ input[list] {
   color: var(--cq-text-inverse-muted);
   line-height: 1.6;
   max-width: 760px;
+  font-size: 1.02rem;
 }
 
 .replay-badge {
@@ -904,6 +921,20 @@ input[list] {
   color: var(--cq-text-inverse);
   display: grid;
   gap: 8px;
+  border: 1px solid rgba(245, 184, 64, 0.18);
+  box-shadow: 0 18px 34px rgba(8, 16, 20, 0.26);
+}
+
+.replay-badge span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+.replay-badge strong {
+  font-size: 1.04rem;
+  line-height: 1.2;
 }
 
 .replay-panel {
