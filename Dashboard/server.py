@@ -17,6 +17,13 @@ ROOT = Path(__file__).resolve().parents[1]
 DASHBOARD_DIR = ROOT / "Dashboard"
 sys.path.insert(0, str(ROOT))
 
+# ── Auth config ────────────────────────────────────────────────────────────────
+_ACCESS_CODE    = os.environ.get("RR_ACCESS_CODE", "royals2026")
+_COOKIE_NAME    = "rr_auth"
+_COOKIE_VALUE   = "creaseiq_ok"
+# Paths served without authentication
+_PUBLIC_PATHS   = {"/rr_login.html", "/favicon.ico"}
+
 from Code.rr_auction_simulator import (
     add_player_valuation_columns,
     build_team_states,
@@ -412,55 +419,102 @@ class DashboardHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(DASHBOARD_DIR), **kwargs)
 
+    # ── Auth helpers ───────────────────────────────────────────────────────────
+    def _is_authenticated(self) -> bool:
+        cookie_header = self.headers.get("Cookie", "")
+        for part in cookie_header.split(";"):
+            k, _, v = part.strip().partition("=")
+            if k.strip() == _COOKIE_NAME and v.strip() == _COOKIE_VALUE:
+                return True
+        return False
+
+    def _redirect_to_login(self) -> None:
+        self.send_response(HTTPStatus.FOUND)
+        self.send_header("Location", "/rr_login.html")
+        self.end_headers()
+
+    def _send_json(self, status: HTTPStatus, data: dict) -> None:
+        body = json.dumps(data).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(body)))
+        self.end_headers()
+        self.wfile.write(body)
+
+    # ── GET ────────────────────────────────────────────────────────────────────
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
-        if parsed.path == "/api/live-score":
+        path = parsed.path.rstrip("/") or "/rr_login.html"
+
+        # Root → login
+        if path == "":
+            path = "/rr_login.html"
+
+        # Always serve the login page without auth
+        if path in _PUBLIC_PATHS:
+            super().do_GET()
+            return
+
+        # Everything else requires a valid cookie
+        if not self._is_authenticated():
+            self._redirect_to_login()
+            return
+
+        if path == "/api/live-score":
             try:
-                response = fetch_live_score()
-                body = json.dumps(response).encode("utf-8")
-                self.send_response(HTTPStatus.OK)
-                self.send_header("Content-Type", "application/json; charset=utf-8")
-                self.send_header("Content-Length", str(len(body)))
-                self.end_headers()
-                self.wfile.write(body)
+                self._send_json(HTTPStatus.OK, fetch_live_score())
             except Exception as exc:  # noqa: BLE001
-                body = json.dumps({"error": str(exc)}).encode("utf-8")
-                self.send_response(HTTPStatus.BAD_REQUEST)
-                self.send_header("Content-Type", "application/json; charset=utf-8")
-                self.send_header("Content-Length", str(len(body)))
-                self.end_headers()
-                self.wfile.write(body)
+                self._send_json(HTTPStatus.BAD_REQUEST, {"error": str(exc)})
         else:
             super().do_GET()
 
+    # ── POST ───────────────────────────────────────────────────────────────────
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
-        if parsed.path not in {"/api/run-scenario", "/api/match-brief", "/api/live-score"}:
+        allowed = {"/api/run-scenario", "/api/match-brief", "/api/live-score", "/api/auth"}
+        if parsed.path not in allowed:
             self.send_error(HTTPStatus.NOT_FOUND, "Unknown API endpoint")
             return
+
         try:
             content_length = int(self.headers.get("Content-Length", "0"))
             raw_body = self.rfile.read(content_length)
             payload = json.loads(raw_body.decode("utf-8") or "{}")
+
+            # Auth endpoint — no cookie required
+            if parsed.path == "/api/auth":
+                if payload.get("code") == _ACCESS_CODE:
+                    body = json.dumps({"ok": True}).encode("utf-8")
+                    self.send_response(HTTPStatus.OK)
+                    self.send_header("Content-Type", "application/json; charset=utf-8")
+                    # HttpOnly + SameSite=Strict keeps the cookie off JS and same-origin only
+                    self.send_header(
+                        "Set-Cookie",
+                        f"{_COOKIE_NAME}={_COOKIE_VALUE}; Path=/; SameSite=Strict; HttpOnly",
+                    )
+                    self.send_header("Content-Length", str(len(body)))
+                    self.end_headers()
+                    self.wfile.write(body)
+                else:
+                    self._send_json(HTTPStatus.UNAUTHORIZED, {"ok": False})
+                return
+
+            # All other API endpoints require auth
+            if not self._is_authenticated():
+                self._send_json(HTTPStatus.UNAUTHORIZED, {"error": "Not authenticated"})
+                return
+
             if parsed.path == "/api/run-scenario":
                 response = build_scenario_response(payload)
             elif parsed.path == "/api/live-score":
                 response = fetch_live_score()
             else:
                 response = build_match_brief_response(payload)
-            body = json.dumps(response).encode("utf-8")
-            self.send_response(HTTPStatus.OK)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            self.wfile.write(body)
+
+            self._send_json(HTTPStatus.OK, response)
+
         except Exception as exc:  # noqa: BLE001
-            body = json.dumps({"error": str(exc)}).encode("utf-8")
-            self.send_response(HTTPStatus.BAD_REQUEST)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.send_header("Content-Length", str(len(body)))
-            self.end_headers()
-            self.wfile.write(body)
+            self._send_json(HTTPStatus.BAD_REQUEST, {"error": str(exc)})
 
 
 def main() -> None:
