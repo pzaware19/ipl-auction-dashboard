@@ -40,13 +40,14 @@ from Code.rr_auction_simulator import (
 )
 
 
-def ensure_dashboard_data() -> None:
+def ensure_dashboard_data(force: bool = False) -> None:
     data_path = DASHBOARD_DIR / "data" / "dashboard_data.js"
     if data_path.exists():
         return
-    # Only rebuild if not running as a Render web service (build step should have done it).
-    # On Render, attempting to rebuild at startup would exceed the startup health-check timeout.
-    if os.environ.get("RENDER"):
+    # Skip startup rebuilds on Render to avoid health-check timeouts, but allow
+    # an explicit forced rebuild for authenticated runtime requests when the
+    # generated payload is unexpectedly missing.
+    if os.environ.get("RENDER") and not force:
         print(
             "WARNING: dashboard_data.js missing on Render — skipping runtime rebuild. "
             "Re-deploy to trigger a fresh build.",
@@ -59,7 +60,7 @@ def ensure_dashboard_data() -> None:
 
 
 def load_dashboard_payload() -> dict:
-    ensure_dashboard_data()
+    ensure_dashboard_data(force=True)
     data_path = DASHBOARD_DIR / "data" / "dashboard_data.js"
     raw = data_path.read_text(encoding="utf-8")
     prefix = "window.DASHBOARD_DATA = "
@@ -613,6 +614,14 @@ class DashboardHandler(SimpleHTTPRequestHandler):
         # Everything else requires a valid cookie
         if not self._is_authenticated():
             self._redirect_to_login()
+            return
+
+        if path == "/data/dashboard_data.js":
+            try:
+                ensure_dashboard_data(force=True)
+                super().do_GET()
+            except Exception as exc:  # noqa: BLE001
+                self.send_error(HTTPStatus.SERVICE_UNAVAILABLE, f"dashboard data unavailable: {exc}")
             return
 
         if path == "/api/live-score":
