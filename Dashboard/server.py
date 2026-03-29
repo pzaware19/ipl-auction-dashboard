@@ -3,7 +3,9 @@ from __future__ import annotations
 import copy
 import json
 import os
+import smtplib
 import time
+from email.mime.text import MIMEText
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -21,8 +23,10 @@ sys.path.insert(0, str(ROOT))
 _ACCESS_CODE    = os.environ.get("RR_ACCESS_CODE", "royals2026")
 _COOKIE_NAME    = "rr_auth"
 _COOKIE_VALUE   = "creaseiq_ok"
-# Paths served without authentication
-_PUBLIC_PATHS   = {"/", "/index.html", "/rr_login.html", "/favicon.ico"}
+# Paths served without authentication (GET)
+_PUBLIC_PATHS      = {"/", "/index.html", "/rr_login.html", "/favicon.ico"}
+# POST endpoints that don't require auth
+_PUBLIC_POST_PATHS = {"/api/auth", "/api/demo-request"}
 
 from Code.rr_auction_simulator import (
     add_player_valuation_columns,
@@ -415,6 +419,51 @@ def fetch_live_score() -> dict:
     return result
 
 
+_NOTIFY_EMAIL = "zpiyushrd19@gmail.com"
+
+
+def handle_demo_request(payload: dict) -> dict:
+    """Log a demo request and attempt to email a notification."""
+    name  = str(payload.get("name",  "")).strip()[:120]
+    email = str(payload.get("email", "")).strip()[:200]
+    team  = str(payload.get("team",  "")).strip()[:120]
+    note  = str(payload.get("note",  "")).strip()[:500]
+
+    if not name or not email:
+        raise ValueError("name and email are required")
+
+    # Always log — visible in Render dashboard logs
+    print(
+        f"[DEMO REQUEST] name={name!r} email={email!r} team={team!r} note={note!r}",
+        flush=True,
+    )
+
+    # Attempt email notification if Gmail app password is configured
+    gmail_user     = os.environ.get("GMAIL_USER", "").strip()
+    gmail_password = os.environ.get("GMAIL_APP_PASSWORD", "").strip()
+    if gmail_user and gmail_password:
+        try:
+            body = (
+                f"New CreaseIQ demo request\n\n"
+                f"Name:  {name}\n"
+                f"Email: {email}\n"
+                f"Team:  {team or '(not specified)'}\n"
+                f"Note:  {note or '(none)'}\n"
+            )
+            msg = MIMEText(body)
+            msg["Subject"] = f"CreaseIQ demo request — {name}"
+            msg["From"]    = gmail_user
+            msg["To"]      = _NOTIFY_EMAIL
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+                smtp.login(gmail_user, gmail_password)
+                smtp.sendmail(gmail_user, _NOTIFY_EMAIL, msg.as_string())
+        except Exception as exc:  # noqa: BLE001
+            # Email failure is non-fatal — request is already logged above
+            print(f"[DEMO REQUEST] email notification failed: {exc}", flush=True)
+
+    return {"ok": True}
+
+
 class DashboardHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(DASHBOARD_DIR), **kwargs)
@@ -471,7 +520,7 @@ class DashboardHandler(SimpleHTTPRequestHandler):
     # ── POST ───────────────────────────────────────────────────────────────────
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
-        allowed = {"/api/run-scenario", "/api/match-brief", "/api/live-score", "/api/auth"}
+        allowed = {"/api/run-scenario", "/api/match-brief", "/api/live-score", "/api/auth", "/api/demo-request"}
         if parsed.path not in allowed:
             self.send_error(HTTPStatus.NOT_FOUND, "Unknown API endpoint")
             return
@@ -480,6 +529,11 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             content_length = int(self.headers.get("Content-Length", "0"))
             raw_body = self.rfile.read(content_length)
             payload = json.loads(raw_body.decode("utf-8") or "{}")
+
+            # Demo request — no cookie required (public landing page)
+            if parsed.path == "/api/demo-request":
+                self._send_json(HTTPStatus.OK, handle_demo_request(payload))
+                return
 
             # Auth endpoint — no cookie required
             if parsed.path == "/api/auth":

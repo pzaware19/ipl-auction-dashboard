@@ -582,6 +582,158 @@
       margin: 0;
     }
 
+    /* ── MODAL ────────────────────────────────────────────────────────── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(6,8,26,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .modal-overlay.open { display: flex; }
+
+    .modal {
+      background: var(--card);
+      border: 1px solid rgba(232,23,93,0.25);
+      border-radius: 20px;
+      padding: 44px 40px;
+      width: 100%;
+      max-width: 460px;
+      position: relative;
+      box-shadow: 0 0 80px rgba(232,23,93,0.1), 0 32px 80px rgba(0,0,0,0.6);
+    }
+
+    .modal::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--pink), #14336B);
+      border-radius: 20px 20px 0 0;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px; right: 20px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+
+    .modal-close:hover { color: var(--text); }
+
+    .modal h2 {
+      font-size: 1.3rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .modal-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .form-field {
+      margin-bottom: 16px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 7px;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: var(--pink);
+      box-shadow: 0 0 0 3px rgba(232,23,93,0.12);
+    }
+
+    .form-input::placeholder { color: rgba(123,141,184,0.5); }
+
+    textarea.form-input {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 13px;
+      background: linear-gradient(135deg, var(--pink), var(--pink-d));
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(232,23,93,0.3);
+      transition: all 0.2s;
+      margin-top: 8px;
+    }
+
+    .form-submit:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(232,23,93,0.45); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .form-success .success-icon { font-size: 2.4rem; margin-bottom: 12px; }
+
+    .form-success h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .form-success p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .form-error {
+      display: none;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: rgba(232,23,93,0.08);
+      border: 1px solid rgba(232,23,93,0.2);
+      color: #FF6B9D;
+      font-size: 0.8rem;
+    }
+
     /* ── RESPONSIVE ───────────────────────────────────────────────────── */
     @media (max-width: 640px) {
       nav { padding: 0 20px; }
@@ -590,10 +742,47 @@
       .section { padding: 56px 20px; }
       .stat-item { padding: 20px 24px; }
       footer { padding: 28px 20px; flex-direction: column; align-items: flex-start; }
+      .modal { padding: 32px 24px; }
     }
   </style>
 </head>
 <body>
+
+<!-- ── DEMO REQUEST MODAL ────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal">
+    <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+    <div id="modal-form-wrap">
+      <h2 id="modal-title">Request Franchise Demo</h2>
+      <p class="modal-sub">Tell us about your franchise and we'll send you private access to the full platform.</p>
+      <form id="demo-form" novalidate>
+        <div class="form-field">
+          <label class="form-label" for="f-name">Your Name *</label>
+          <input class="form-input" id="f-name" type="text" placeholder="Anil Kumble" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="f-email">Email Address *</label>
+          <input class="form-input" id="f-email" type="email" placeholder="you@franchise.com" required />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="f-team">Franchise / Organisation</label>
+          <input class="form-input" id="f-team" type="text" placeholder="e.g. Mumbai Indians, ESPNcricinfo, ..." />
+        </div>
+        <div class="form-field">
+          <label class="form-label" for="f-note">What are you looking for? (optional)</label>
+          <textarea class="form-input" id="f-note" placeholder="Auction prep, matchup scouting, salary analysis..."></textarea>
+        </div>
+        <button class="form-submit" type="submit" id="demo-submit">Send Request →</button>
+        <div class="form-error" id="form-error"></div>
+      </form>
+    </div>
+    <div class="form-success" id="form-success">
+      <div class="success-icon">✅</div>
+      <h3>Request received</h3>
+      <p>We'll review your request and send you private demo access within 24 hours.</p>
+    </div>
+  </div>
+</div>
 
 <!-- ── NAV ──────────────────────────────────────────────────────────────── -->
 <nav>
@@ -604,7 +793,7 @@
   <div class="nav-right">
     <a class="nav-link" href="#modules">Modules</a>
     <a class="nav-link" href="#franchise">For Franchises</a>
-    <a class="nav-link" href="mailto:zpiyushrd19@gmail.com">Contact</a>
+    <a class="nav-link" href="#" onclick="openDemoModal();return false;">Contact</a>
     <a class="nav-cta" href="./rr_login.html">Live Demo →</a>
   </div>
 </nav>
@@ -619,7 +808,7 @@
     and match-by-match tactical planning in one platform.
   </p>
   <div class="hero-actions">
-    <a class="btn-primary" href="mailto:zpiyushrd19@gmail.com?subject=CreaseIQ%20Franchise%20Demo%20Request&body=Hi%20Piyush%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20CreaseIQ%20for%20our%20franchise.%0A%0ATeam%3A%20%0ARole%3A%20%0A">
+    <a class="btn-primary" href="#" onclick="openDemoModal();return false;">
       Request Franchise Demo
     </a>
     <a class="btn-secondary" href="./rr_login.html">
@@ -869,7 +1058,7 @@
   <h2>Ready to see it for your franchise?</h2>
   <p>Takes 20 minutes. No setup. Platform is live today.</p>
   <div class="cta-stack">
-    <a class="btn-primary" href="mailto:zpiyushrd19@gmail.com?subject=CreaseIQ%20Franchise%20Demo%20Request&body=Hi%20Piyush%2C%0A%0AI%27d%20like%20to%20learn%20more%20about%20CreaseIQ%20for%20our%20franchise.%0A%0ATeam%3A%20%0ARole%3A%20%0A">
+    <a class="btn-primary" href="#" onclick="openDemoModal();return false;">
       Request Franchise Demo
     </a>
     <a class="btn-secondary" href="./rr_login.html">See RR Demo Live →</a>
@@ -891,5 +1080,62 @@
   </p>
 </footer>
 
+<script>
+  function openDemoModal() {
+    document.getElementById("demo-modal").classList.add("open");
+    document.getElementById("f-name").focus();
+  }
+
+  function closeDemoModal() {
+    document.getElementById("demo-modal").classList.remove("open");
+  }
+
+  document.getElementById("modal-close").addEventListener("click", closeDemoModal);
+  document.getElementById("demo-modal").addEventListener("click", function(e) {
+    if (e.target === this) closeDemoModal();
+  });
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") closeDemoModal();
+  });
+
+  document.getElementById("demo-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const name  = document.getElementById("f-name").value.trim();
+    const email = document.getElementById("f-email").value.trim();
+    const team  = document.getElementById("f-team").value.trim();
+    const note  = document.getElementById("f-note").value.trim();
+    const errEl = document.getElementById("form-error");
+    const btn   = document.getElementById("demo-submit");
+
+    errEl.style.display = "none";
+
+    if (!name || !email) {
+      errEl.textContent = "Please fill in your name and email.";
+      errEl.style.display = "block";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+
+    try {
+      const res  = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, team, note }),
+      });
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || "Server error");
+
+      document.getElementById("modal-form-wrap").style.display = "none";
+      document.getElementById("form-success").style.display    = "block";
+    } catch (err) {
+      errEl.textContent = "Something went wrong. Email us directly at zpiyushrd19@gmail.com";
+      errEl.style.display = "block";
+      btn.disabled = false;
+      btn.textContent = "Send Request →";
+    }
+  });
+</script>
 </body>
 </html>
