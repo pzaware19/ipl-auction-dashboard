@@ -22,7 +22,7 @@ _ACCESS_CODE    = os.environ.get("RR_ACCESS_CODE", "royals2026")
 _COOKIE_NAME    = "rr_auth"
 _COOKIE_VALUE   = "creaseiq_ok"
 # Paths served without authentication
-_PUBLIC_PATHS   = {"/rr_login.html", "/favicon.ico"}
+_PUBLIC_PATHS   = {"/", "/index.html", "/rr_login.html", "/favicon.ico"}
 
 from Code.rr_auction_simulator import (
     add_player_valuation_columns,
@@ -444,13 +444,13 @@ class DashboardHandler(SimpleHTTPRequestHandler):
     # ── GET ────────────────────────────────────────────────────────────────────
     def do_GET(self) -> None:
         parsed = urlparse(self.path)
-        path = parsed.path.rstrip("/") or "/rr_login.html"
+        path = parsed.path
 
-        # Root → login
-        if path == "":
-            path = "/rr_login.html"
+        # Normalise root
+        if path in ("", "/"):
+            path = "/index.html"
 
-        # Always serve the login page without auth
+        # Always serve public pages without auth
         if path in _PUBLIC_PATHS:
             super().do_GET()
             return
