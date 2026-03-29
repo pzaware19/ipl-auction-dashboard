@@ -66,7 +66,7 @@
         (row) => `
           <div class="metric-card">
             <h5>${row.player}</h5>
-            <strong>${formatDecimal(row.impact_score)}</strong>
+            <strong>Core Score ${formatDecimal(row.core_score ?? row.impact_score)}</strong>
             <p>${row.role} · wins added ${formatDecimal(row.wins_added)} · ${row.phase_identity || kind}${row.selection_probability !== undefined ? ` · sel ${formatDecimal(row.selection_probability, 2)}` : ""}</p>
           </div>
         `
@@ -249,6 +249,7 @@
     els.homeTitle.textContent = `${focusCode} Focused Active Core`;
     els.awayTitle.textContent = `${oppositionCode} Opposition Active Core`;
     els.homeAnalysis.innerHTML = `
+      <p class="muted">Sorted by CreaseIQ Core Score: phase impact + volume/control + wins added, adjusted for role and availability.</p>
       <div class="insight-card">
         <h5>Top Batters</h5>
         <div class="metric-stack">${playerCards(focus.top_batters || [], "batting")}</div>
@@ -259,6 +260,7 @@
       </div>
     `;
     els.awayAnalysis.innerHTML = `
+      <p class="muted">Sorted by CreaseIQ Core Score: phase impact + volume/control + wins added, adjusted for role and availability.</p>
       <div class="insight-card">
         <h5>Top Batters</h5>
         <div class="metric-stack">${playerCards(opposition.top_batters || [], "batting")}</div>
