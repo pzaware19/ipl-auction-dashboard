@@ -3273,23 +3273,23 @@ def build_salary_value_payload(players_payload: dict) -> dict:
 
 def build_story_payload() -> dict:
     return {
-        "hero_title": "IPL Auction Intelligence League Hub",
+        "hero_title": "CreaseIQ Decision Intelligence Platform",
         "hero_subtitle": (
-            "A business-intelligence style dashboard for phase-based player value, "
-            "team-level auction strategy, and a shared league-wide Monte Carlo auction simulation."
+            "A product-layer control surface for phase intelligence, matchup scouting, "
+            "auction strategy, salary valuation, and match-planning workflows."
         ),
         "sections": [
             {
-                "title": "Phase Analytics",
-                "text": "Track powerplay, middle, and death specialists using Bayesian-adjusted impact signals from the ball-by-ball model.",
+                "title": "On-Field Intelligence",
+                "text": "Track powerplay, middle, and death specialists with Bayesian-adjusted impact signals, matchup diagnostics, and condition-based scouting views.",
             },
             {
-                "title": "League Auction Strategy",
-                "text": "See how reserve prices, role scarcity, walk-away caps, and retained cores shape bidding logic inside one shared league auction rather than disconnected team counterfactuals.",
+                "title": "Front-Office Planning",
+                "text": "Use shared-auction simulation, draft boards, war room views, and salary-value diagnostics to think like an IPL strategy desk rather than a static dashboard user.",
             },
             {
-                "title": "Sequential Risk",
-                "text": "Compare single-path auction outcomes with 500 randomized within-set simulations for every franchise to understand order sensitivity.",
+                "title": "Product Layer",
+                "text": "CreaseIQ is designed as a framework-light, payload-first analytics product where each module acts as a focused decision workflow for analysts, scouts, and operators.",
             },
         ],
     }
