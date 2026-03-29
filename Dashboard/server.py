@@ -199,6 +199,79 @@ def build_match_brief_response(payload: dict) -> dict:
     opposition = match["away_analysis"] if team_lens == match["home"] else match["home_analysis"]
     opposition_code = match["away"] if team_lens == match["home"] else match["home"]
 
+    def trim_players(rows: list[dict], limit: int = 4) -> list[dict]:
+        trimmed: list[dict] = []
+        for row in (rows or [])[:limit]:
+            trimmed.append(
+                {
+                    "player": row.get("player", ""),
+                    "role": row.get("role", ""),
+                    "core_score": row.get("core_score"),
+                    "wins_added": row.get("wins_added"),
+                    "phase_identity": row.get("phase_identity", ""),
+                    "selection_probability": row.get("selection_probability"),
+                    "availability_status": row.get("availability_status", "available"),
+                }
+            )
+        return trimmed
+
+    def trim_flagged(rows: list[dict], limit: int = 4) -> list[dict]:
+        trimmed: list[dict] = []
+        for row in (rows or [])[:limit]:
+            trimmed.append(
+                {
+                    "player": row.get("player", ""),
+                    "status": row.get("status", ""),
+                    "selection_probability": row.get("selection_probability"),
+                    "note": row.get("note", ""),
+                    "confidence": row.get("confidence", ""),
+                    "source_date": row.get("source_date", ""),
+                }
+            )
+        return trimmed
+
+    compact_focus = {
+        "summary": {
+            "active_count": focus.get("active_count"),
+            "projected_active_count": focus.get("projected_active_count"),
+            "team_strength": focus.get("team_strength"),
+        },
+        "top_batters": trim_players(focus.get("top_batters", [])),
+        "top_bowlers": trim_players(focus.get("top_bowlers", [])),
+        "availability": {
+            "summary_line": (focus.get("availability") or {}).get("summary_line", ""),
+            "projected_available_xi": (focus.get("availability") or {}).get("projected_available_xi"),
+            "flagged_players": trim_flagged((focus.get("availability") or {}).get("flagged_players", [])),
+        },
+        "swot": focus.get("swot", {}),
+        "tactics": focus.get("tactics", {}),
+    }
+
+    compact_opposition = {
+        "summary": {
+            "active_count": opposition.get("active_count"),
+            "projected_active_count": opposition.get("projected_active_count"),
+            "team_strength": opposition.get("team_strength"),
+        },
+        "top_batters": trim_players(opposition.get("top_batters", [])),
+        "top_bowlers": trim_players(opposition.get("top_bowlers", [])),
+        "availability": {
+            "summary_line": (opposition.get("availability") or {}).get("summary_line", ""),
+            "projected_available_xi": (opposition.get("availability") or {}).get("projected_available_xi"),
+            "flagged_players": trim_flagged((opposition.get("availability") or {}).get("flagged_players", [])),
+        },
+        "swot": opposition.get("swot", {}),
+        "tactics": opposition.get("tactics", {}),
+    }
+
+    compact_venue = {
+        "avg_total": match["venue_profile"].get("avg_total"),
+        "innings_count": match["venue_profile"].get("innings_count"),
+        "phase_conditions": (match["venue_profile"].get("phase_conditions") or [])[:3],
+        "top_batters": (match["venue_profile"].get("top_batters") or [])[:3],
+        "top_bowlers": (match["venue_profile"].get("top_bowlers") or [])[:3],
+    }
+
     context = {
         "match": {
             "label": match["label"],
@@ -208,10 +281,12 @@ def build_match_brief_response(payload: dict) -> dict:
             "team_lens": team_lens,
             "opposition": opposition_code,
         },
-        "venue_profile": match["venue_profile"],
-        "focus_team": focus,
-        "opposition_team": opposition,
-        "methodology": planning.get("methodology", {}),
+        "venue_profile": compact_venue,
+        "focus_team": compact_focus,
+        "opposition_team": compact_opposition,
+        "methodology": {
+            "summary": (planning.get("methodology", {}) or {}).get("summary", ""),
+        },
     }
 
     # Enrich context with live toss + playing XI when available.
@@ -220,6 +295,19 @@ def build_match_brief_response(payload: dict) -> dict:
     match_context = fetch_match_context()
     if match_context:
         context["live_match_context"] = match_context
+
+    live_context_signature = json.dumps(match_context or {}, sort_keys=True, ensure_ascii=True, separators=(",", ":"))
+    cache_key = (match_id, team_lens, model, live_context_signature)
+    cached = _match_brief_cache.get(cache_key)
+    now = time.time()
+    if cached and now - float(cached.get("ts", 0.0)) < _MATCH_BRIEF_TTL:
+        return {
+            "match_id": match_id,
+            "team_lens": team_lens,
+            "model": model,
+            "brief": cached["brief"],
+            "cached": True,
+        }
 
     system_prompt = (
         "You are a high-level IPL strategy analyst writing a match brief for a front-office decision-support dashboard. "
@@ -239,14 +327,15 @@ def build_match_brief_response(payload: dict) -> dict:
     )
 
     user_content = (
-        "Write a fixture-specific match brief for the selected team lens using this context:\n"
-        + json.dumps(context, ensure_ascii=True)
+        "Write a fixture-specific match brief for the selected team lens using this compact context. "
+        "Favor short, information-dense bullets and avoid repeating the same player names unnecessarily.\n"
+        + json.dumps(context, ensure_ascii=True, separators=(",", ":"))
     )
 
     body = {
         "model": model,
-        "max_tokens": 2048,
-        "temperature": 0.3,
+        "max_tokens": 900,
+        "temperature": 0.2,
         "messages": [
             {"role": "system", "content": system_prompt},
             {"role": "user",   "content": user_content},
@@ -305,12 +394,14 @@ def build_match_brief_response(payload: dict) -> dict:
             "layer_note": "",
         }
 
-    return {
+    response_payload = {
         "match_id": match_id,
         "team_lens": team_lens,
         "model": model,
         "brief": brief,
     }
+    _match_brief_cache[cache_key] = {"ts": now, "brief": brief}
+    return response_payload
 
 
 def build_bid_ladder_debug(
@@ -402,6 +493,8 @@ _LIVE_CACHE_TTL = 180  # 3 minutes — fits 100 calls/day free tier across a ful
 # is called ~6 times per match day on the free CricAPI tier.
 _match_context_cache: dict = {"match_id": None, "ts": 0.0, "data": None}
 _MATCH_CONTEXT_TTL = 3600  # 1 hour
+_match_brief_cache: dict[tuple[int, str, str, str], dict] = {}
+_MATCH_BRIEF_TTL = 1800  # 30 minutes
 
 
 def fetch_live_score() -> dict:
