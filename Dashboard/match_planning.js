@@ -9,6 +9,10 @@
     venueTopBowlers: document.getElementById("venue-top-bowlers"),
     venuePressureBatters: document.getElementById("venue-pressure-batters"),
     venuePressureBowlers: document.getElementById("venue-pressure-bowlers"),
+    focusAvailabilityTitle: document.getElementById("focus-availability-title"),
+    oppositionAvailabilityTitle: document.getElementById("opposition-availability-title"),
+    focusAvailability: document.getElementById("focus-availability"),
+    oppositionAvailability: document.getElementById("opposition-availability"),
     homeTitle: document.getElementById("home-team-title"),
     awayTitle: document.getElementById("away-team-title"),
     homeAnalysis: document.getElementById("home-team-analysis"),
@@ -63,11 +67,63 @@
           <div class="metric-card">
             <h5>${row.player}</h5>
             <strong>${formatDecimal(row.impact_score)}</strong>
-            <p>${row.role} · wins added ${formatDecimal(row.wins_added)} · ${row.phase_identity || kind}</p>
+            <p>${row.role} · wins added ${formatDecimal(row.wins_added)} · ${row.phase_identity || kind}${row.selection_probability !== undefined ? ` · sel ${formatDecimal(row.selection_probability, 2)}` : ""}</p>
           </div>
         `
       )
       .join("");
+  }
+
+  function availabilityLabel(status) {
+    return {
+      available: "Available",
+      doubtful: "Doubtful",
+      ruled_out: "Ruled Out",
+      managed: "Managed",
+      overseas_unavailable: "Overseas Unavailable",
+      unknown: "Unknown",
+    }[status] || "Unknown";
+  }
+
+  function availabilityCard(title, availability) {
+    const flagged = availability?.flagged_players || [];
+    const likelyXi = availability?.likely_xi || [];
+    const statusCounts = availability?.status_counts || {};
+    const summary = availability?.summary_line || "No Layer 3 availability intelligence loaded yet.";
+    const flagsHtml = flagged.length
+      ? flagged
+          .slice(0, 4)
+          .map((row) => {
+            const sourceBits = [row.confidence, row.source_date].filter(Boolean).join(" · ");
+            return `<li><strong>${row.player}</strong> · ${availabilityLabel(row.status)} · sel ${formatDecimal(row.selection_probability, 2)}${row.note ? ` · ${row.note}` : ""}${sourceBits ? ` <span class="muted">(${sourceBits})</span>` : ""}</li>`;
+          })
+          .join("")
+      : `<li>No current flagged player statuses in the Layer 3 registry.</li>`;
+    const xiHtml = likelyXi.length
+      ? likelyXi
+          .slice(0, 6)
+          .map((row) => `<li><strong>${row.player}</strong> · ${row.role} · sel ${formatDecimal(row.selection_probability, 2)}${row.locked ? ` · ${row.lock_reason || "Locked"}` : ""}</li>`)
+          .join("")
+      : `<li>No projected XI available yet.</li>`;
+    return `
+      <div class="insight-card">
+        <h5>${title}</h5>
+        <p>${summary}</p>
+        <p class="muted">
+          XI confidence ${availability?.projected_available_xi || 0}/11 · explicit flags ${flagged.length}
+          · doubtful ${statusCounts.doubtful || 0} · managed ${statusCounts.managed || 0}
+          · ruled out ${statusCounts.ruled_out || 0}
+        </p>
+      </div>
+      <div class="insight-card">
+        <h5>Likely XI Watch</h5>
+        <ul>${xiHtml}</ul>
+      </div>
+      <div class="insight-card">
+        <h5>Selection Signals</h5>
+        <ul>${flagsHtml}</ul>
+      </div>
+    `;
   }
 
   function currentMatch() {
@@ -107,7 +163,7 @@
       <div class="replay-card">
         <h4>Team Lens</h4>
         <strong>${focusCode}</strong>
-        <p>${focus.active_count} active players with usable evidence in the squad view.</p>
+        <p>${focus.projected_active_count || focus.active_count} projected active players with usable evidence after availability weighting.</p>
       </div>
       <div class="replay-card">
         <h4>Average Total</h4>
@@ -176,6 +232,19 @@
         </div>
       `
     );
+
+    if (els.focusAvailabilityTitle) {
+      els.focusAvailabilityTitle.textContent = `${focusCode} Availability Intel`;
+    }
+    if (els.oppositionAvailabilityTitle) {
+      els.oppositionAvailabilityTitle.textContent = `${oppositionCode} Availability Intel`;
+    }
+    if (els.focusAvailability) {
+      els.focusAvailability.innerHTML = availabilityCard(`${focusCode} Match-Day Watch`, focus.availability || {});
+    }
+    if (els.oppositionAvailability) {
+      els.oppositionAvailability.innerHTML = availabilityCard(`${oppositionCode} Match-Day Watch`, opposition.availability || {});
+    }
 
     els.homeTitle.textContent = `${focusCode} Focused Active Core`;
     els.awayTitle.textContent = `${oppositionCode} Opposition Active Core`;

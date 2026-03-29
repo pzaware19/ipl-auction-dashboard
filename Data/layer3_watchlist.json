@@ -1,0 +1,62 @@
+[
+  {
+    "source_id": "ipl_official_news",
+    "name": "IPL Official News",
+    "source_type": "web",
+    "url": "https://www.iplt20.com/news",
+    "team_scope": ["RR", "CSK", "MI", "RCB", "GT", "DC", "KKR", "LSG", "PBKS", "SRH"],
+    "priority": "official",
+    "enabled": true,
+    "notes": "Primary official league news source."
+  },
+  {
+    "source_id": "rr_official_site",
+    "name": "Rajasthan Royals Official",
+    "source_type": "web",
+    "url": "",
+    "team_scope": ["RR"],
+    "priority": "official",
+    "enabled": false,
+    "notes": "Fill with RR official news or media URL."
+  },
+  {
+    "source_id": "cricbuzz_rr",
+    "name": "Cricbuzz RR News",
+    "source_type": "web",
+    "url": "",
+    "team_scope": ["RR"],
+    "priority": "major_media",
+    "enabled": false,
+    "notes": "Recommended for RR pre-match watchlist once exact URL is confirmed."
+  },
+  {
+    "source_id": "espncricinfo_rr",
+    "name": "ESPNcricinfo RR Coverage",
+    "source_type": "web",
+    "url": "",
+    "team_scope": ["RR"],
+    "priority": "major_media",
+    "enabled": false,
+    "notes": "Recommended for injuries, workload, and expected XI reporting."
+  },
+  {
+    "source_id": "sportstar_ipl",
+    "name": "Sportstar IPL",
+    "source_type": "web",
+    "url": "",
+    "team_scope": ["RR", "CSK", "MI", "RCB", "GT", "DC", "KKR", "LSG", "PBKS", "SRH"],
+    "priority": "major_media",
+    "enabled": false,
+    "notes": "League-wide media layer."
+  },
+  {
+    "source_id": "selected_reporters_manual",
+    "name": "Selected Reporters",
+    "source_type": "manual",
+    "url": "",
+    "team_scope": ["RR", "CSK", "MI", "RCB", "GT", "DC", "KKR", "LSG", "PBKS", "SRH"],
+    "priority": "beat_report",
+    "enabled": false,
+    "notes": "Use for curated handles or copied report text until a stronger feed exists."
+  }
+]

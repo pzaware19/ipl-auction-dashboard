@@ -1152,6 +1152,27 @@
 
     <div class="section-divider"></div>
 
+    <!-- ── Availability Intel ───────────────────────────────────── -->
+    <section class="squad-section">
+      <div class="section-header" style="margin-bottom:20px;">
+        <div>
+          <p class="section-eyebrow">Layer 3 Availability Intel</p>
+          <h2 class="section-title">Next Match Selection Watch</h2>
+        </div>
+      </div>
+      <div class="squad-grid" id="availability-grid">
+        <div class="player-card">
+          <div class="player-name">Loading RR availability intel…</div>
+          <div class="player-role">Watchlist and team-status feed are being applied to the next RR fixture.</div>
+          <div class="player-salary">Layer 3</div>
+          <div class="player-salary-label">Selection probability + team news</div>
+          <span class="player-flag">Loading</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
     <!-- ── Squad Section ────────────────────────────────────────── -->
     <section class="squad-section">
       <div class="section-header" style="margin-bottom:20px;">
@@ -1242,7 +1263,7 @@
       </div>
     </footer>
 
-  <script src="./data/dashboard_data.js?v=rr-demo-1"></script>
+  <script src="./data/dashboard_data.js?v=rr-demo-2"></script>
   <script>
   (function () {
     const TEAM_NAMES = {
@@ -1276,6 +1297,78 @@
 
       // store for AI brief
       window._rrNextMatch = next;
+
+      renderAvailabilityIntel(next);
+    }
+
+    function availabilityBadge(status) {
+      const labels = {
+        available: "Available",
+        doubtful: "Doubtful",
+        ruled_out: "Ruled Out",
+        managed: "Managed",
+        overseas_unavailable: "Overseas Unavailable",
+        unknown: "Unknown",
+      };
+      return labels[status] || "Unknown";
+    }
+
+    function renderAvailabilityIntel(match) {
+      const grid = document.getElementById("availability-grid");
+      const layer = window.DASHBOARD_DATA?.match_planning?.availability_layer || {};
+      if (!grid || !match) return;
+
+      const rrAnalysis = match.home === "RR" ? match.home_analysis : match.away_analysis;
+      const oppCode = match.home === "RR" ? match.away : match.home;
+      const oppAnalysis = match.home === "RR" ? match.away_analysis : match.home_analysis;
+
+      function cardHtml(teamCode, analysis) {
+        const availability = analysis?.availability || {};
+        const flagged = availability.flagged_players || [];
+        const likelyXi = availability.likely_xi || [];
+        const statusCounts = availability.status_counts || {};
+        const flaggedHtml = flagged.length
+          ? flagged.slice(0, 3).map((row) => `
+              <div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.08);">
+                <div class="player-name" style="font-size:0.98rem;">${row.player}</div>
+                <div class="player-role">${availabilityBadge(row.status)} · sel ${Number(row.selection_probability || 0).toFixed(2)}${row.note ? ` · ${row.note}` : ""}</div>
+                <div class="player-salary-label">${[row.confidence, row.source_date].filter(Boolean).join(" · ") || "Structured Layer 3 intel"}</div>
+              </div>
+            `).join("")
+          : `<div class="player-role" style="margin-top:12px;">No current flagged availability items. Default squad projection remains intact.</div>`;
+        const xiNames = likelyXi.slice(0, 4).map((row) => row.player).join(" · ") || "No projected XI yet";
+        return `
+          <div class="player-card">
+            <div class="player-name">${teamCode} Match-Day View</div>
+            <div class="player-role">${availability.summary_line || "No Layer 3 availability summary available yet."}</div>
+            <div class="player-salary">${availability.projected_available_xi || 0}/11</div>
+            <div class="player-salary-label">High-confidence projected starters</div>
+            <span class="player-flag">${flagged.length} flags</span>
+            <div class="player-role" style="margin-top:12px;">Likely XI core: ${xiNames}</div>
+            <div class="player-salary-label" style="margin-top:8px;">Doubtful ${statusCounts.doubtful || 0} · Managed ${statusCounts.managed || 0} · Ruled out ${statusCounts.ruled_out || 0}</div>
+            ${flaggedHtml}
+          </div>
+        `;
+      }
+
+      const metaLine = layer.watchlist_enabled_count
+        ? `${layer.watchlist_enabled_count} watchlist source${layer.watchlist_enabled_count === 1 ? "" : "s"} enabled${layer.latest_ingest_at ? ` · last ingest ${layer.latest_ingest_at.slice(0, 10)}` : ""}`
+        : "Layer 3 watchlist configured but no active sources are enabled yet.";
+
+      grid.innerHTML = `
+        ${cardHtml("RR", rrAnalysis)}
+        ${cardHtml(oppCode, oppAnalysis)}
+        <div class="player-card">
+          <div class="player-name">Layer 3 Pipeline Status</div>
+          <div class="player-role">${metaLine}</div>
+          <div class="player-salary">${layer.registry_entry_count || 0}</div>
+          <div class="player-salary-label">Structured availability entries in registry</div>
+          <span class="player-flag">CreaseIQ Intel</span>
+          <div class="player-role" style="margin-top:12px;">
+            Layer 3 sits between historical modeling and live match state so RR briefings can respond to pre-match selection news, workload management, and late availability signals.
+          </div>
+        </div>
+      `;
     }
 
     // ── AI Match Brief ────────────────────────────────────────────

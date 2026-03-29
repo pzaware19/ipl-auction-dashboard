@@ -2269,6 +2269,208 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         for name, profile in players_payload["bowler_profiles"].items()
         if int(profile["summary"].get("last_year", 0)) >= ACTIVE_CUTOFF_YEAR
     }
+    layer3_watchlist = json.loads((DATA_DIR / "layer3_watchlist.json").read_text(encoding="utf-8")) if (DATA_DIR / "layer3_watchlist.json").exists() else []
+    layer3_inbox = json.loads((DATA_DIR / "layer3_source_inbox_2026.json").read_text(encoding="utf-8")) if (DATA_DIR / "layer3_source_inbox_2026.json").exists() else []
+    availability_registry_raw = json.loads((DATA_DIR / "team_availability_2026.json").read_text(encoding="utf-8")) if (DATA_DIR / "team_availability_2026.json").exists() else []
+
+    def default_selection_probability(status: str) -> float:
+        return {
+            "available": 1.0,
+            "managed": 0.7,
+            "doubtful": 0.45,
+            "overseas_unavailable": 0.0,
+            "ruled_out": 0.0,
+            "unknown": 0.8,
+        }.get(status, 0.85)
+
+    def normalize_availability_entry(entry: dict) -> dict:
+        status = str(entry.get("status") or "unknown").strip().lower()
+        if status not in {"available", "managed", "doubtful", "overseas_unavailable", "ruled_out", "unknown"}:
+            status = "unknown"
+        player = canonical_player_name(str(entry.get("player") or "").strip())
+        team = str(entry.get("team") or "").upper().strip()
+        raw_probability = entry.get("selection_probability")
+        if raw_probability in (None, ""):
+            selection_probability = default_selection_probability(status)
+        else:
+            try:
+                selection_probability = float(raw_probability)
+            except (TypeError, ValueError):
+                selection_probability = default_selection_probability(status)
+        selection_probability = max(0.0, min(1.0, selection_probability))
+        replacements = [
+            canonical_player_name(str(player_name))
+            for player_name in entry.get("replacement_candidates", []) or []
+            if str(player_name).strip()
+        ]
+        return {
+            "player": player,
+            "team": team,
+            "status": status,
+            "selection_probability": selection_probability,
+            "confidence": str(entry.get("confidence") or "unknown"),
+            "source": str(entry.get("best_source") or entry.get("source") or ""),
+            "source_date": str(entry.get("source_date") or ""),
+            "expected_absence_window": entry.get("expected_absence_window"),
+            "replacement_candidates": replacements,
+            "note": str(entry.get("note") or "").strip(),
+        }
+
+    availability_lookup: dict[tuple[str, str], dict] = {}
+    availability_by_team: dict[str, list[dict]] = {}
+    for raw in availability_registry_raw:
+        normalized = normalize_availability_entry(raw)
+        if not normalized["player"] or not normalized["team"]:
+            continue
+        availability_lookup[(normalized["team"], normalized["player"])] = normalized
+        availability_by_team.setdefault(normalized["team"], []).append(normalized)
+
+    enabled_watchlist = [row for row in layer3_watchlist if row.get("enabled")]
+    latest_layer3_fetch = max(
+        (str(row.get("fetched_at") or "") for row in layer3_inbox if row.get("fetched_at")),
+        default="",
+    )
+
+    def availability_payload(team_code: str, player: str) -> dict:
+        row = availability_lookup.get((team_code, player))
+        if row:
+            return {
+                "availability_status": row["status"],
+                "selection_probability": row["selection_probability"],
+                "availability_confidence": row["confidence"],
+                "availability_source": row["source"],
+                "availability_source_date": row["source_date"],
+                "availability_note": row["note"],
+                "expected_absence_window": row["expected_absence_window"],
+                "replacement_candidates": row["replacement_candidates"],
+                "availability_explicit": True,
+            }
+        return {
+            "availability_status": "available",
+            "selection_probability": 1.0,
+            "availability_confidence": "default",
+            "availability_source": "",
+            "availability_source_date": "",
+            "availability_note": "",
+            "expected_absence_window": None,
+            "replacement_candidates": [],
+            "availability_explicit": False,
+        }
+
+    def squad_strength(row: dict) -> float:
+        player = row["player"]
+        batter = active_batters.get(player)
+        bowler = active_bowlers.get(player)
+        locked_bonus = 5.0 if player in LOCKED_XI_PLAYERS.get(row["team"], {}) else 0.0
+        batting_value = 0.0
+        bowling_value = 0.0
+        if batter:
+            batting_value = (
+                0.65 * float(batter["summary"].get("impact_score", 0.0))
+                + 3.2 * float(batter["summary"].get("wins_added", 0.0))
+            )
+        if bowler:
+            bowling_value = (
+                0.65 * float(bowler["summary"].get("impact_score", 0.0))
+                + 3.2 * float(bowler["summary"].get("wins_added", 0.0))
+            )
+        evidence_bonus = 1.25 if batter or bowler else 0.0
+        return max(batting_value, bowling_value) + evidence_bonus + locked_bonus
+
+    def acquisition_weight(acquisition: str) -> float:
+        return {
+            "Retained": 1.0,
+            "Trade": 0.96,
+            "Auction": 0.88,
+            "Replacement": 0.8,
+        }.get(acquisition, 0.9)
+
+    def build_likely_xi(team_code: str, roster_rows: list[dict]) -> list[dict]:
+        selected: list[dict] = []
+        selected_names: set[str] = set()
+        role_targets = [("Wicketkeeper", 1), ("Batter", 3), ("All-rounder", 2), ("Bowler", 4)]
+
+        def add_row(row: dict) -> bool:
+            if row["player"] in selected_names:
+                return False
+            if row["selection_probability"] <= 0.05:
+                return False
+            selected.append(row)
+            selected_names.add(row["player"])
+            return True
+
+        locked_players = LOCKED_XI_PLAYERS.get(team_code, {})
+        locked_rows = [
+            row for row in roster_rows
+            if row["player"] in locked_players and row["selection_probability"] > 0.05
+        ]
+        locked_rows.sort(
+            key=lambda row: (
+                row["selection_probability"],
+                squad_strength(row),
+            ),
+            reverse=True,
+        )
+        for row in locked_rows:
+            add_row(row)
+
+        def role_count(role: str) -> int:
+            return sum(1 for row in selected if row["role"] == role)
+
+        for role, minimum in role_targets:
+            candidates = [
+                row for row in roster_rows
+                if row["role"] == role and row["selection_probability"] > 0.05 and row["player"] not in selected_names
+            ]
+            candidates.sort(
+                key=lambda row: (
+                    row["selection_probability"],
+                    squad_strength(row),
+                    acquisition_weight(row["acquisition"]),
+                ),
+                reverse=True,
+            )
+            while role_count(role) < minimum and candidates and len(selected) < 11:
+                add_row(candidates.pop(0))
+
+        remaining = [
+            row for row in roster_rows
+            if row["player"] not in selected_names and row["selection_probability"] > 0.05
+        ]
+        remaining.sort(
+            key=lambda row: (
+                row["selection_probability"],
+                squad_strength(row),
+                acquisition_weight(row["acquisition"]),
+            ),
+            reverse=True,
+        )
+        for row in remaining:
+            if len(selected) >= 11:
+                break
+            add_row(row)
+
+        selected.sort(
+            key=lambda row: (
+                row["selection_probability"],
+                squad_strength(row),
+                acquisition_weight(row["acquisition"]),
+            ),
+            reverse=True,
+        )
+        return [
+            {
+                "player": row["player"],
+                "role": row["role"],
+                "status": row["availability_status"],
+                "selection_probability": round(float(row["selection_probability"]), 2),
+                "confidence": row["availability_confidence"],
+                "note": row["availability_note"],
+                "locked": row["player"] in LOCKED_XI_PLAYERS.get(team_code, {}),
+                "lock_reason": LOCKED_XI_PLAYERS.get(team_code, {}).get(row["player"]),
+            }
+            for row in selected[:11]
+        ]
 
     venue_phase = (
         ball.groupby(["location_key", "phase"])
@@ -2394,10 +2596,21 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         squad = FINAL_SQUADS_2026[team_code]
         active_players = []
         no_sample = []
+        roster_rows = []
         for entry in squad:
             player = canonical_player_name(entry["player"])
             batter = active_batters.get(player)
             bowler = active_bowlers.get(player)
+            availability = availability_payload(team_code, player)
+            roster_entry = {
+                "team": team_code,
+                "player": player,
+                "role": entry["role"],
+                "acquisition": entry["acquisition"],
+                "price": entry["price"],
+                **availability,
+            }
+            roster_rows.append(roster_entry)
             if batter or bowler:
                 active_players.append(
                     {
@@ -2407,11 +2620,55 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                         "price": entry["price"],
                         "batter": batter,
                         "bowler": bowler,
+                        **availability,
                     }
                 )
             else:
-                no_sample.append(player)
-        return {"active_players": active_players, "no_sample": no_sample}
+                no_sample.append(
+                    {
+                        "player": player,
+                        "availability_status": availability["availability_status"],
+                        "selection_probability": availability["selection_probability"],
+                    }
+                )
+        flagged_players = [
+            {
+                "player": row["player"],
+                "role": row["role"],
+                "status": row["availability_status"],
+                "selection_probability": round(float(row["selection_probability"]), 2),
+                "confidence": row["availability_confidence"],
+                "source": row["availability_source"],
+                "source_date": row["availability_source_date"],
+                "expected_absence_window": row["expected_absence_window"],
+                "replacement_candidates": row["replacement_candidates"],
+                "note": row["availability_note"],
+            }
+            for row in roster_rows
+            if row["availability_explicit"]
+            and (
+                row["availability_status"] != "available"
+                or row["availability_note"]
+                or row["selection_probability"] < 0.995
+            )
+        ]
+        flagged_players.sort(
+            key=lambda row: (
+                row["status"] in {"ruled_out", "overseas_unavailable"},
+                row["status"] == "doubtful",
+                row["status"] == "managed",
+                1.0 - row["selection_probability"],
+            ),
+            reverse=True,
+        )
+        likely_xi = build_likely_xi(team_code, roster_rows)
+        return {
+            "active_players": active_players,
+            "roster_rows": roster_rows,
+            "no_sample": no_sample,
+            "flagged_players": flagged_players,
+            "likely_xi": likely_xi,
+        }
 
     for team_code in FINAL_SQUADS_2026:
         team_profiles[team_code] = active_team_profiles(team_code)
@@ -2439,14 +2696,17 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         bowling_scores = {phase: [] for phase in PHASE_ORDER}
         wins_added = []
         for row in active_players:
+            availability_weight = float(row.get("selection_probability", 1.0))
+            if availability_weight <= 0.05:
+                continue
             if row["batter"]:
-                wins_added.append(float(row["batter"]["summary"].get("wins_added", 0.0)))
+                wins_added.append(float(row["batter"]["summary"].get("wins_added", 0.0)) * availability_weight)
                 for phase in PHASE_ORDER:
-                    batting_scores[phase].append(float(row["batter"]["phase_details"].get(phase, {}).get("impact_score", 0.0)))
+                    batting_scores[phase].append(float(row["batter"]["phase_details"].get(phase, {}).get("impact_score", 0.0)) * availability_weight)
             if row["bowler"]:
-                wins_added.append(float(row["bowler"]["summary"].get("wins_added", 0.0)))
+                wins_added.append(float(row["bowler"]["summary"].get("wins_added", 0.0)) * availability_weight)
                 for phase in PHASE_ORDER:
-                    bowling_scores[phase].append(float(row["bowler"]["phase_details"].get(phase, {}).get("impact_score", 0.0)))
+                    bowling_scores[phase].append(float(row["bowler"]["phase_details"].get(phase, {}).get("impact_score", 0.0)) * availability_weight)
         return {
             "bat_powerplay": round(sum(sorted(batting_scores["powerplay"], reverse=True)[:3]), 2),
             "bat_middle": round(sum(sorted(batting_scores["middle"], reverse=True)[:3]), 2),
@@ -2456,7 +2716,9 @@ def build_match_planning_payload(players_payload: dict) -> dict:
             "bowl_death": round(sum(sorted(bowling_scores["death"], reverse=True)[:3]), 2),
             "wins_added_total": round(sum(sorted(wins_added, reverse=True)[:8]), 2),
             "active_count": len(active_players),
+            "projected_active_count": sum(1 for row in active_players if float(row.get("selection_probability", 1.0)) >= 0.5),
             "no_sample_count": len(team_profiles[team_code]["no_sample"]),
+            "availability_flag_count": len(team_profiles[team_code]["flagged_players"]),
         }
 
     snapshots = {team_code: team_phase_snapshot(team_code) for team_code in FINAL_SQUADS_2026}
@@ -2510,14 +2772,6 @@ def build_match_planning_payload(players_payload: dict) -> dict:
             "Wicketkeeper": 0.15,
         }.get(role, 0.7)
 
-    def acquisition_weight(acquisition: str) -> float:
-        return {
-            "Retained": 1.0,
-            "Trade": 0.96,
-            "Auction": 0.88,
-            "Replacement": 0.8,
-        }.get(acquisition, 0.9)
-
     def matchup_edge(batter_profile: dict, bowler_profile: dict, batter_name: str, bowler_name: str) -> float:
         batter_best = top_phase(batter_profile, "batting")
         bowler_best = top_phase(bowler_profile, "bowling")
@@ -2537,6 +2791,9 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         opponent_batters = [row for row in opponent_active if row["batter"]]
         rows = []
         for row in active_players:
+            selection_probability = float(row.get("selection_probability", 1.0))
+            if selection_probability <= 0.05:
+                continue
             profile = row["batter"] if kind == "batting" else row["bowler"]
             if not profile:
                 continue
@@ -2570,7 +2827,7 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     + 0.14 * radar.get("Wickets", 0.0)
                 )
                 role_component = bowling_role_weight(row["role"]) * acquisition_weight(row["acquisition"])
-            game_score = role_component * (base_component + 8.0 * matchup_component + 5.0 * venue_component)
+            game_score = selection_probability * role_component * (base_component + 8.0 * matchup_component + 5.0 * venue_component)
             rows.append(
                 {
                     "player": row["player"],
@@ -2583,6 +2840,9 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     "venue_boost": round(venue_component, 2),
                     "matchup_score": round(matchup_component, 2),
                     "role_weight": round(role_component, 2),
+                    "selection_probability": round(selection_probability, 2),
+                    "availability_status": row.get("availability_status", "available"),
+                    "availability_note": row.get("availability_note", ""),
                 }
             )
         rows.sort(key=lambda item: (item["game_score"], item["impact_score"], item["wins_added"]), reverse=True)
@@ -2592,13 +2852,16 @@ def build_match_planning_payload(players_payload: dict) -> dict:
         active_players = team_profiles[team_code]["active_players"]
         rows = []
         for row in active_players:
+            selection_probability = float(row.get("selection_probability", 1.0))
+            if selection_probability <= 0.05:
+                continue
             profile = row["batter"] if kind == "batting" else row["bowler"]
             if not profile:
                 continue
             radar = radar_lookup(profile)
             summary = profile["summary"]
             if kind == "batting":
-                core_score = batting_role_weight(row["role"]) * acquisition_weight(row["acquisition"]) * (
+                core_score = selection_probability * batting_role_weight(row["role"]) * acquisition_weight(row["acquisition"]) * (
                     0.3 * radar.get("PP Impact", 0.0)
                     + 0.26 * radar.get("Middle Impact", 0.0)
                     + 0.16 * radar.get("Death Impact", 0.0)
@@ -2606,7 +2869,7 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     + 0.14 * radar.get("Wins Added", 0.0)
                 )
             else:
-                core_score = bowling_role_weight(row["role"]) * acquisition_weight(row["acquisition"]) * (
+                core_score = selection_probability * bowling_role_weight(row["role"]) * acquisition_weight(row["acquisition"]) * (
                     0.24 * radar.get("PP Impact", 0.0)
                     + 0.28 * radar.get("Middle Impact", 0.0)
                     + 0.2 * radar.get("Death Impact", 0.0)
@@ -2621,10 +2884,39 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     "impact_score": round(float(summary.get("impact_score", 0.0)), 2),
                     "wins_added": round(float(summary.get("wins_added", 0.0)), 2),
                     "phase_identity": profile["style"].get("phase_identity", ""),
+                    "selection_probability": round(selection_probability, 2),
+                    "availability_status": row.get("availability_status", "available"),
                 }
             )
         rows.sort(key=lambda item: (item["core_score"], item["wins_added"]), reverse=True)
         return rows[:limit]
+
+    def availability_summary(team_code: str) -> dict:
+        roster_rows = team_profiles[team_code]["roster_rows"]
+        flagged_players = team_profiles[team_code]["flagged_players"]
+        likely_xi = team_profiles[team_code]["likely_xi"]
+        status_counts = {
+            "ruled_out": 0,
+            "doubtful": 0,
+            "managed": 0,
+            "overseas_unavailable": 0,
+        }
+        for row in roster_rows:
+            status = row["availability_status"]
+            if status in status_counts:
+                status_counts[status] += 1
+        projected_strength = round(sum(row["selection_probability"] for row in likely_xi), 2)
+        return {
+            "flagged_players": flagged_players[:6],
+            "likely_xi": likely_xi,
+            "status_counts": status_counts,
+            "projected_available_xi": sum(1 for row in likely_xi if row["selection_probability"] >= 0.8),
+            "projected_xi_strength": projected_strength,
+            "summary_line": (
+                f"{team_code} projects {sum(1 for row in likely_xi if row['selection_probability'] >= 0.8)}/11 high-confidence starters "
+                f"with {len(flagged_players)} explicit Layer 3 watch items."
+            ),
+        }
 
     def phase_label(key: str) -> str:
         return {
@@ -2769,6 +3061,8 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     "top_batters": rank_team_players(home, "batting", venue, away),
                     "top_bowlers": rank_team_players(home, "bowling", venue, away),
                     "active_count": snapshots[home]["active_count"],
+                    "projected_active_count": snapshots[home]["projected_active_count"],
+                    "availability": availability_summary(home),
                 },
                 "away_analysis": {
                     "swot": build_swot(away, home, venue),
@@ -2776,6 +3070,8 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                     "top_batters": rank_team_players(away, "batting", venue, home),
                     "top_bowlers": rank_team_players(away, "bowling", venue, home),
                     "active_count": snapshots[away]["active_count"],
+                    "projected_active_count": snapshots[away]["projected_active_count"],
+                    "availability": availability_summary(away),
                 },
             }
         )
@@ -2792,11 +3088,14 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                         canonical_player_name(row["player"]) in active_batters
                         or canonical_player_name(row["player"]) in active_bowlers
                     ),
+                    **availability_payload(team_code, canonical_player_name(row["player"])),
                 }
                 for row in squad
             ],
             "active_count": snapshots[team_code]["active_count"],
+            "projected_active_count": snapshots[team_code]["projected_active_count"],
             "no_sample_count": snapshots[team_code]["no_sample_count"],
+            "availability": availability_summary(team_code),
         }
         for team_code, squad in FINAL_SQUADS_2026.items()
     }
@@ -2804,17 +3103,35 @@ def build_match_planning_payload(players_payload: dict) -> dict:
     return {
         "matches": matches,
         "teams": teams,
+        "availability_layer": {
+            "watchlist_enabled_count": len(enabled_watchlist),
+            "watchlist_sources": [
+                {
+                    "source_id": row["source_id"],
+                    "name": row["name"],
+                    "priority": row.get("priority", "major_media"),
+                    "team_scope": row.get("team_scope", []),
+                }
+                for row in enabled_watchlist
+            ],
+            "registry_entry_count": len(availability_lookup),
+            "latest_ingest_at": latest_layer3_fetch,
+        },
         "methodology": {
             "summary": (
-                "Match Planning combines final 2026 squads with active-player phase impact, skill radar context, wins-added proxies, and venue-level IPL evidence. "
-                "Only players with active 2025-tagged evidence are used for the quantitative SWOT and tactical recommendations."
+                "Match Planning combines final 2026 squads with active-player phase impact, skill radar context, wins-added proxies, venue-level IPL evidence, "
+                "and Layer 3 availability intelligence. Only players with active 2025-tagged evidence are used for the quantitative SWOT and tactical recommendations."
             ),
             "swot": (
-                "Strengths and weaknesses are built from team-level active phase snapshots. Opportunities and threats compare each team's strongest active phase windows "
-                "with the opponent's softest or strongest phase windows, then layer in venue conditions."
+                "Strengths and weaknesses are built from team-level active phase snapshots, weighted by Layer 3 selection probability where availability intel exists. "
+                "Opportunities and threats compare each team's strongest active phase windows with the opponent's softest or strongest phase windows, then layer in venue conditions."
             ),
             "venue": (
                 "Venue cards summarize historical run rates, wicket rates, average innings totals, and the strongest active performers at that ground from the ball-by-ball archive."
+            ),
+            "availability": (
+                "Layer 3 availability intel comes from the semi-automated watchlist pipeline. Explicit player-status entries can mark players as available, doubtful, managed, ruled out, or overseas-unavailable, "
+                "and those states adjust projected starters plus the weighted tactical model before the Groq briefing layer runs."
             ),
         },
     }
