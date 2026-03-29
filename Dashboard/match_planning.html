@@ -3,26 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IPL 2026 Match-by-Match Planning</title>
-    <link rel="stylesheet" href="./styles.css?v=ipl-theme-19" />
+    <title>CreaseIQ · Match-by-Match Planning</title>
+    <link rel="stylesheet" href="./styles.css?v=ipl-theme-22" />
     <style id="rr-mode-styles"></style>
   </head>
-  <body>
-    <div id="rr-topbar" style="display:none; align-items:center; justify-content:space-between; padding:10px 32px; background:linear-gradient(90deg,#0C1230,#14336B); border-bottom:1px solid rgba(232,23,93,0.3); position:sticky; top:0; z-index:50;">
-      <div style="display:flex; align-items:center; gap:14px;">
-        <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#E8175D,#B5144A);display:flex;align-items:center;justify-content:center;font-weight:900;color:white;font-size:0.85rem;box-shadow:0 0 14px rgba(232,23,93,0.4);">RR</div>
-        <span style="color:#EEF2FF;font-weight:700;font-size:0.88rem;">Rajasthan Royals · Match Intelligence</span>
+  <body data-team-theme="rr">
+    <div id="rr-topbar" class="product-topbar" style="display:none;">
+      <div class="product-topbar__brand">
+        <div class="product-topbar__logo">RR</div>
+        <span class="product-topbar__title">Rajasthan Royals · Match Intelligence</span>
       </div>
-      <div style="display:flex;align-items:center;gap:16px;">
-        <span id="rr-next-match-label" style="font-size:0.78rem;color:#7B8DB8;"></span>
-        <a href="./rr_hub.html" style="padding:7px 16px;border-radius:999px;background:rgba(232,23,93,0.15);border:1px solid rgba(232,23,93,0.3);color:#FF4B82;text-decoration:none;font-size:0.78rem;font-weight:700;">← RR Hub</a>
+      <div class="product-topbar__meta">
+        <span id="rr-next-match-label" class="product-topbar__label"></span>
+        <a href="./rr_hub.html" class="product-topbar__back">← RR Hub</a>
       </div>
     </div>
 
     <main class="replay-shell">
       <section class="replay-header">
         <div>
-          <p class="eyebrow" id="page-eyebrow">Season Planning</p>
+          <p class="eyebrow" id="page-eyebrow">CreaseIQ Planning Desk</p>
           <h1 id="page-title">IPL 2026 Match-by-Match Planning</h1>
           <p id="page-desc">
             Match-by-match active-player SWOT, tactical recommendations, and stadium context for the IPL 2026 schedule.
@@ -116,7 +116,7 @@
       </section>
     </main>
 
-    <script src="./data/dashboard_data.js?v=rr-demo-1"></script>
-    <script src="./match_planning.js?v=rr-demo-1"></script>
+    <script src="./data/dashboard_data.js?v=ipl-theme-22"></script>
+    <script src="./match_planning.js?v=ipl-theme-22"></script>
   </body>
 </html>
