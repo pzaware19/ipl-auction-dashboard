@@ -15,7 +15,9 @@
     awayAnalysis: document.getElementById("away-team-analysis"),
     swot: document.getElementById("match-swot"),
     tactics: document.getElementById("match-tactics"),
+    aiStatus: document.getElementById("match-ai-status"),
   };
+  let latestBriefRequest = 0;
 
   function formatDecimal(value, digits = 2) {
     return Number(value || 0).toFixed(digits);
@@ -40,6 +42,16 @@
       <div class="insight-card">
         <h5>${title}</h5>
         <ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>
+      </div>
+    `;
+  }
+
+  function tacticCard(title, items) {
+    const rows = Array.isArray(items) ? items : [items];
+    return `
+      <div class="insight-card">
+        <h5>${title}</h5>
+        <ul>${rows.filter(Boolean).map((item) => `<li>${item}</li>`).join("")}</ul>
       </div>
     `;
   }
@@ -188,7 +200,7 @@
       </div>
     `;
 
-    els.swot.innerHTML = `
+    const fallbackSwotHtml = `
       <div class="insight-stack">
         ${swotCard(`${els.lens.value} Strengths`, focus.swot.strengths || [])}
         ${swotCard(`${els.lens.value} Weaknesses`, focus.swot.weaknesses || [])}
@@ -198,8 +210,9 @@
         ${swotCard(`${els.lens.value} Threats`, focus.swot.threats || [])}
       </div>
     `;
+    els.swot.innerHTML = fallbackSwotHtml;
 
-    els.tactics.innerHTML = `
+    const fallbackTacticsHtml = `
       <div class="insight-card">
         <h5>${els.lens.value} Tactical Plan</h5>
         <ul>${(focus.tactics || []).map((item) => `<li>${item}</li>`).join("")}</ul>
@@ -213,6 +226,75 @@
         <p>${data.methodology.summary}</p>
       </div>
     `;
+    els.tactics.innerHTML = fallbackTacticsHtml;
+
+    if (els.aiStatus) {
+      els.aiStatus.textContent = "Generating Groq tactical brief from Layer 1 historical intelligence and Layer 2 live context…";
+    }
+
+    const requestId = ++latestBriefRequest;
+
+    fetch("/api/match-brief", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ match_id: match.match_id, team_lens: focusCode }),
+    })
+      .then(async (resp) => {
+        if (!resp.ok) {
+          const err = await resp.json().catch(() => ({ error: resp.statusText }));
+          throw new Error(err.error || resp.statusText);
+        }
+        return resp.json();
+      })
+      .then((payload) => {
+        if (!payload || !payload.brief) return;
+        if (requestId !== latestBriefRequest) return;
+        const brief = payload.brief;
+        const aiSwot = brief.team_swot || {};
+        const aiPlan = brief.tactical_plan || {};
+
+        if (
+          (aiSwot.strengths || []).length ||
+          (aiSwot.weaknesses || []).length ||
+          (aiSwot.opportunities || []).length ||
+          (aiSwot.threats || []).length
+        ) {
+          els.swot.innerHTML = `
+            <div class="insight-stack">
+              ${swotCard(`${focusCode} Strengths`, aiSwot.strengths || [])}
+              ${swotCard(`${focusCode} Weaknesses`, aiSwot.weaknesses || [])}
+            </div>
+            <div class="insight-stack">
+              ${swotCard(`${focusCode} Opportunities`, aiSwot.opportunities || [])}
+              ${swotCard(`${focusCode} Threats`, aiSwot.threats || [])}
+            </div>
+          `;
+        }
+
+        els.tactics.innerHTML = `
+          ${tacticCard(`${focusCode} Batting Plan`, aiPlan.batting_plan || brief.recommended_plan || [])}
+          ${tacticCard(`${focusCode} Bowling Plan`, aiPlan.bowling_plan || brief.tactical_edges || [])}
+          ${tacticCard("Venue Plan", aiPlan.venue_plan || [brief.venue_read].filter(Boolean))}
+          ${tacticCard("Opposition Watch", aiPlan.opposition_watch || brief.matchup_watch || [])}
+          <div class="insight-card">
+            <h5>Method Note</h5>
+            <p>${aiPlan.method_note || brief.layer_note || data.methodology.summary}</p>
+          </div>
+        `;
+
+        if (els.aiStatus) {
+          els.aiStatus.textContent =
+            brief.layer_note ||
+            "Groq tactical brief loaded. Layer 1 uses historical ball-by-ball intelligence; Layer 2 adds live match context when available.";
+        }
+      })
+      .catch((error) => {
+        if (els.aiStatus) {
+          els.aiStatus.textContent = `Using structured fallback brief. Live Groq summary unavailable: ${error.message}`;
+        }
+        els.swot.innerHTML = fallbackSwotHtml;
+        els.tactics.innerHTML = fallbackTacticsHtml;
+      });
   }
 
   // ── URL param: ?team=RR filters to that franchise ──────────────

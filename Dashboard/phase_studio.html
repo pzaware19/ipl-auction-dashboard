@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreaseIQ · Phase Studio</title>
+    <link rel="stylesheet" href="./styles.css?v=ipl-theme-24" />
+  </head>
+  <body data-team-theme="rr">
+    <main class="replay-shell">
+      <section class="replay-header">
+        <div>
+          <p class="eyebrow">CreaseIQ Phase Engine</p>
+          <h1>Phase Studio</h1>
+          <p>
+            Compare batting and bowling impact across powerplay, middle overs, and death overs with searchable leaderboards,
+            Bayesian shrinkage, and quick player comparison.
+          </p>
+          <div class="hero-actions">
+            <a class="action-button" href="./rr_hub.html" rel="noopener noreferrer">Back To RR Hub</a>
+          </div>
+        </div>
+        <div class="replay-badge">
+          <span>Phase Intelligence</span>
+          <strong>Impact + Search + Comparison</strong>
+        </div>
+      </section>
+
+      <section class="replay-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Controls</p>
+            <h3>Search Phase Leaders</h3>
+          </div>
+          <div class="control-row">
+            <label>
+              Horizon
+              <select id="phase-horizon"></select>
+            </label>
+            <label>
+              Discipline
+              <select id="phase-discipline"></select>
+            </label>
+            <label>
+              Phase
+              <select id="phase-phase"></select>
+            </label>
+            <label>
+              Search Player
+              <input id="phase-player-search" list="phase-player-options" placeholder="Start typing a player name" />
+              <datalist id="phase-player-options"></datalist>
+            </label>
+            <label>
+              Compare Player
+              <input id="phase-player-compare" list="phase-player-options" placeholder="Optional comparison player" />
+            </label>
+          </div>
+        </div>
+
+        <div class="phase-layout">
+          <div class="chart-panel">
+            <h4>Impact Leaderboard</h4>
+            <div id="phase-matchup" class="compare-grid"></div>
+            <div id="phase-bars" class="bar-chart"></div>
+          </div>
+          <div class="table-panel">
+            <h4>Detail Table</h4>
+            <div class="table-wrap">
+              <table id="phase-table"></table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./data/dashboard_data.js?v=ipl-theme-24"></script>
+    <script src="./phase_studio.js?v=ipl-theme-24"></script>
+  </body>
+</html>

@@ -227,8 +227,14 @@ def build_match_brief_response(payload: dict) -> dict:
         "Be specific, tactical, and cricket-literate. Prefer realistic role language such as opener, enforcer, anchor, death hitter, new-ball bowler, and middle-overs controller. "
         "The live_match_context key (if present) contains today's toss result and confirmed playing XI — "
         "use these to make the brief specific to today's actual conditions rather than speaking generically. "
-        "Return ONLY valid JSON with exactly these keys: headline, opening_call, why_this_matchup_is_live, tactical_edges, matchup_watch, venue_read, risk_flags, recommended_plan. "
+        "Return ONLY valid JSON with exactly these keys: "
+        "headline, opening_call, why_this_matchup_is_live, tactical_edges, matchup_watch, venue_read, risk_flags, recommended_plan, "
+        "team_swot, tactical_plan, layer_note. "
+        "team_swot must be an object with keys strengths, weaknesses, opportunities, threats; each value must be an array of 2 to 4 concise strings. "
+        "tactical_plan must be an object with keys batting_plan, bowling_plan, venue_plan, opposition_watch, method_note; "
+        "batting_plan, bowling_plan, venue_plan, opposition_watch must be arrays of 1 to 3 concise strings, and method_note must be a short string. "
         "Each of tactical_edges, matchup_watch, risk_flags, recommended_plan must be an array of 2 to 4 concise strings. "
+        "layer_note must be a short sentence describing Layer 1 historical intelligence and Layer 2 live context. "
         "No markdown, no explanation outside the JSON object."
     )
 
@@ -283,6 +289,20 @@ def build_match_brief_response(payload: dict) -> dict:
             "venue_read": "",
             "risk_flags": [],
             "recommended_plan": [],
+            "team_swot": {
+                "strengths": [],
+                "weaknesses": [],
+                "opportunities": [],
+                "threats": [],
+            },
+            "tactical_plan": {
+                "batting_plan": [],
+                "bowling_plan": [],
+                "venue_plan": [],
+                "opposition_watch": [],
+                "method_note": "",
+            },
+            "layer_note": "",
         }
 
     return {
