@@ -1,0 +1,97 @@
+name: Daily IPL Data Refresh
+
+on:
+  # 1:30 AM UTC = 7:00 AM IST — runs after Cricsheet publishes overnight match data
+  schedule:
+    - cron: '30 1 * * *'
+  # Allow manual trigger from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout with write access so we can push the updated data files
+      # -----------------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------------------------------------------------------
+      # 2. Set up Python
+      # -----------------------------------------------------------------------
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # -----------------------------------------------------------------------
+      # 3. Install dependencies
+      # -----------------------------------------------------------------------
+      - name: Install Python dependencies
+        run: pip install pandas openpyxl
+
+      # -----------------------------------------------------------------------
+      # 4. Run ingestion script
+      #    Exit code 0 → new matches found (proceed to rebuild + commit)
+      #    Exit code 2 → no new matches (skip commit)
+      #    Exit code 1 → unexpected error (step will fail)
+      # -----------------------------------------------------------------------
+      - name: Run Cricsheet 2026 ingest
+        id: ingest
+        # continue-on-error lets us inspect the exit code rather than aborting
+        # the job on exit code 2 (no new matches).
+        continue-on-error: true
+        run: |
+          python Code/ingest_cricsheet_2026.py
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      # -----------------------------------------------------------------------
+      # 5a. If new matches found: rebuild dashboard payload (fast CI mode)
+      # -----------------------------------------------------------------------
+      - name: Rebuild dashboard data
+        if: steps.ingest.outcome == 'success'
+        env:
+          LEAGUE_MC_ITERATIONS: '20'
+        run: python Dashboard/build_dashboard_data.py
+
+      # -----------------------------------------------------------------------
+      # 5b. If new matches found: commit and push updated data files
+      # -----------------------------------------------------------------------
+      - name: Commit updated data files
+        if: steps.ingest.outcome == 'success'
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+
+          git add \
+            Data/ipl_ball_by_ball.csv \
+            "Data/ipl_json/" \
+            Data/powerplay_batting_all_time.csv \
+            Data/middle_batting_all_time.csv \
+            Data/death_batting_all_time.csv \
+            Data/powerplay_bowling_all_time.csv \
+            Data/middle_bowling_all_time.csv \
+            Data/death_bowling_all_time.csv \
+            Data/powerplay_batting_active.csv \
+            Data/middle_batting_active.csv \
+            Data/death_batting_active.csv \
+            Data/powerplay_bowling_active.csv \
+            Data/middle_bowling_active.csv \
+            Data/death_bowling_active.csv
+
+          git commit -m "Auto-ingest: add 2026 IPL data from Cricsheet [skip ci]"
+          git push
+
+      # -----------------------------------------------------------------------
+      # 5c. If no new matches: just print a notice and exit cleanly
+      # -----------------------------------------------------------------------
+      - name: No new matches — skipping commit
+        if: steps.ingest.outcome == 'failure'
+        run: |
+          echo "Ingest script returned a non-zero exit code."
+          echo "If exit code was 2, this means no new 2026 matches were found — nothing to commit."
+          echo "If exit code was 1, check the ingest step logs for the actual error."

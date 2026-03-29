@@ -1,5 +1,6 @@
 """
 Generate RR Decision Intelligence Platform — Demo Documentation PDF
+Updated: March 2026 — includes AI match brief, Render deployment, full feature set
 """
 
 from reportlab.lib.pagesizes import A4
@@ -8,474 +9,670 @@ from reportlab.lib.units import mm
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import (
     SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle,
-    HRFlowable, KeepTogether
+    HRFlowable, KeepTogether, PageBreak
 )
 from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
 import os
 from datetime import date
 
-# ── Output path ──────────────────────────────────────────────────
 OUT = os.path.join(os.path.dirname(__file__), "RR_Demo_Platform_Documentation.pdf")
 
-# ── Brand colours ────────────────────────────────────────────────
-RR_PINK    = colors.HexColor("#E8175D")
-RR_BLUE    = colors.HexColor("#14336B")
-RR_NAVY    = colors.HexColor("#06081A")
-RR_GOLD    = colors.HexColor("#F7C948")
-RR_LIGHT   = colors.HexColor("#EEF2FF")
-RR_MUTED   = colors.HexColor("#7B8DB8")
-WHITE      = colors.white
-GREY_LINE  = colors.HexColor("#D1D5DB")
-DARK_TEXT  = colors.HexColor("#1E293B")
-GREEN_OK   = colors.HexColor("#10B981")
-RED_WARN   = colors.HexColor("#EF4444")
+# ── Brand colours ────────────────────────────────────────────────────────────
+RR_PINK   = colors.HexColor("#E8175D")
+RR_BLUE   = colors.HexColor("#14336B")
+RR_NAVY   = colors.HexColor("#06081A")
+RR_DARK2  = colors.HexColor("#0C1230")
+RR_LIGHT  = colors.HexColor("#EEF2FF")
+RR_MUTED  = colors.HexColor("#7B8DB8")
+WHITE     = colors.white
+GREY_LINE = colors.HexColor("#D1D5DB")
+DARK_TEXT = colors.HexColor("#1E293B")
+GREEN_OK  = colors.HexColor("#059669")
+RED_WARN  = colors.HexColor("#DC2626")
+AMBER     = colors.HexColor("#D97706")
+BG_PINK   = colors.HexColor("#FFF1F5")
+BG_GREEN  = colors.HexColor("#F0FDF4")
+BG_BLUE   = colors.HexColor("#F0F4FF")
+BG_ALT    = colors.HexColor("#F8F9FF")
 
 W, H = A4
-MARGIN = 18 * mm
+M = 18 * mm   # margin
 
-# ── Styles ───────────────────────────────────────────────────────
-def styles():
-    base = ParagraphStyle
-    return {
-        "cover_title": base("cover_title",
-            fontSize=32, textColor=WHITE, leading=36,
-            fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=6),
-        "cover_sub": base("cover_sub",
-            fontSize=13, textColor=RR_LIGHT, leading=18,
-            fontName="Helvetica", alignment=TA_CENTER, spaceAfter=4),
-        "cover_label": base("cover_label",
-            fontSize=8, textColor=RR_MUTED, leading=12,
-            fontName="Helvetica", alignment=TA_CENTER, spaceAfter=2,
-            letterSpacing=1.5),
-        "section_head": base("section_head",
-            fontSize=14, textColor=RR_PINK, leading=18,
-            fontName="Helvetica-Bold", spaceBefore=14, spaceAfter=6),
-        "sub_head": base("sub_head",
-            fontSize=10, textColor=RR_BLUE, leading=14,
-            fontName="Helvetica-Bold", spaceBefore=8, spaceAfter=4),
-        "body": base("body",
-            fontSize=9, textColor=DARK_TEXT, leading=14,
-            fontName="Helvetica", spaceAfter=4),
-        "body_bold": base("body_bold",
-            fontSize=9, textColor=DARK_TEXT, leading=14,
-            fontName="Helvetica-Bold", spaceAfter=4),
-        "muted": base("muted",
-            fontSize=8, textColor=RR_MUTED, leading=12,
-            fontName="Helvetica", spaceAfter=3),
-        "bullet": base("bullet",
-            fontSize=9, textColor=DARK_TEXT, leading=13,
-            fontName="Helvetica", leftIndent=12, spaceAfter=3,
-            bulletIndent=0),
-        "table_head": base("table_head",
-            fontSize=8, textColor=WHITE, leading=11,
-            fontName="Helvetica-Bold", alignment=TA_CENTER),
-        "table_cell": base("table_cell",
-            fontSize=8, textColor=DARK_TEXT, leading=11,
-            fontName="Helvetica", alignment=TA_LEFT),
-        "table_cell_c": base("table_cell_c",
-            fontSize=8, textColor=DARK_TEXT, leading=11,
-            fontName="Helvetica", alignment=TA_CENTER),
-        "footer": base("footer",
-            fontSize=7, textColor=RR_MUTED, leading=10,
-            fontName="Helvetica", alignment=TA_CENTER),
-        "pink_label": base("pink_label",
-            fontSize=7, textColor=RR_PINK, leading=10,
-            fontName="Helvetica-Bold", letterSpacing=1.2,
-            spaceAfter=2),
-    }
+# ── Style definitions ────────────────────────────────────────────────────────
+def _s(name, **kw):
+    return ParagraphStyle(name, **kw)
 
-S = styles()
+S = {
+    # Cover
+    "label_upper": _s("label_upper", fontSize=7.5, textColor=RR_MUTED,
+        fontName="Helvetica", alignment=TA_CENTER, spaceAfter=3, leading=11, letterSpacing=2),
+    "cover_team":  _s("cover_team", fontSize=13, textColor=RR_LIGHT,
+        fontName="Helvetica", alignment=TA_CENTER, spaceAfter=2, leading=17, letterSpacing=0.5),
+    "cover_title": _s("cover_title", fontSize=34, textColor=WHITE,
+        fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=4, leading=38),
+    "cover_title_accent": _s("cover_title_accent", fontSize=34, textColor=RR_PINK,
+        fontName="Helvetica-Bold", alignment=TA_CENTER, spaceAfter=4, leading=38),
+    "cover_sub":   _s("cover_sub", fontSize=11, textColor=RR_MUTED,
+        fontName="Helvetica", alignment=TA_CENTER, spaceAfter=3, leading=16),
+    "cover_badge": _s("cover_badge", fontSize=8, textColor=RR_MUTED,
+        fontName="Helvetica", alignment=TA_CENTER, spaceAfter=2, leading=12, letterSpacing=1.5),
+    # Body
+    "h1":     _s("h1", fontSize=13, textColor=RR_PINK, fontName="Helvetica-Bold",
+        spaceBefore=12, spaceAfter=5, leading=17),
+    "h2":     _s("h2", fontSize=10, textColor=RR_BLUE, fontName="Helvetica-Bold",
+        spaceBefore=7, spaceAfter=4, leading=14),
+    "body":   _s("body", fontSize=9, textColor=DARK_TEXT, fontName="Helvetica",
+        spaceAfter=4, leading=14),
+    "muted":  _s("muted", fontSize=8, textColor=RR_MUTED, fontName="Helvetica",
+        spaceAfter=3, leading=12),
+    "bullet": _s("bullet", fontSize=9, textColor=DARK_TEXT, fontName="Helvetica",
+        leftIndent=10, spaceAfter=3, leading=13),
+    # Table
+    "th":   _s("th",   fontSize=8, textColor=WHITE,     fontName="Helvetica-Bold",
+        alignment=TA_CENTER, leading=11),
+    "tc":   _s("tc",   fontSize=8, textColor=DARK_TEXT, fontName="Helvetica",
+        alignment=TA_LEFT, leading=11),
+    "tc_c": _s("tc_c", fontSize=8, textColor=DARK_TEXT, fontName="Helvetica",
+        alignment=TA_CENTER, leading=11),
+    # Footer
+    "footer": _s("footer", fontSize=7, textColor=RR_MUTED, fontName="Helvetica",
+        alignment=TA_CENTER, leading=10),
+    # Callout
+    "callout": _s("callout", fontSize=9, textColor=RR_BLUE, fontName="Helvetica-Bold",
+        spaceAfter=3, leading=13),
+}
 
-# ── Helper: pink rule ─────────────────────────────────────────────
-def pink_rule():
-    return HRFlowable(width="100%", thickness=1.5, color=RR_PINK, spaceAfter=6, spaceBefore=2)
+# ── Helpers ──────────────────────────────────────────────────────────────────
+def rule(color=RR_PINK, thickness=1.5):
+    return HRFlowable(width="100%", thickness=thickness, color=color,
+                      spaceAfter=5, spaceBefore=2)
 
 def grey_rule():
-    return HRFlowable(width="100%", thickness=0.5, color=GREY_LINE, spaceAfter=4, spaceBefore=4)
+    return HRFlowable(width="100%", thickness=0.4, color=GREY_LINE,
+                      spaceAfter=4, spaceBefore=4)
+
+def sp(h=3):
+    return Spacer(1, h * mm)
 
 def bullet(text):
     return Paragraph(f"• &nbsp; {text}", S["bullet"])
 
-# ── Table style factory ───────────────────────────────────────────
-def base_table_style(header_bg=RR_BLUE):
-    return TableStyle([
-        ("BACKGROUND",   (0,0), (-1,0),  header_bg),
-        ("TEXTCOLOR",    (0,0), (-1,0),  WHITE),
-        ("FONTNAME",     (0,0), (-1,0),  "Helvetica-Bold"),
-        ("FONTSIZE",     (0,0), (-1,0),  8),
-        ("ALIGN",        (0,0), (-1,0),  "CENTER"),
-        ("BOTTOMPADDING",(0,0), (-1,0),  6),
-        ("TOPPADDING",   (0,0), (-1,0),  6),
-        ("ROWBACKGROUNDS",(0,1),(-1,-1), [colors.white, colors.HexColor("#F8F9FF")]),
-        ("FONTNAME",     (0,1), (-1,-1), "Helvetica"),
-        ("FONTSIZE",     (0,1), (-1,-1), 8),
-        ("TOPPADDING",   (0,1), (-1,-1), 5),
-        ("BOTTOMPADDING",(0,1), (-1,-1), 5),
-        ("LEFTPADDING",  (0,0), (-1,-1), 7),
-        ("RIGHTPADDING", (0,0), (-1,-1), 7),
-        ("GRID",         (0,0), (-1,-1), 0.4, GREY_LINE),
-        ("VALIGN",       (0,0), (-1,-1), "MIDDLE"),
-    ])
+def tbl_style(hbg=RR_BLUE, alt=True):
+    cmds = [
+        ("BACKGROUND",    (0,0), (-1,0),  hbg),
+        ("TEXTCOLOR",     (0,0), (-1,0),  WHITE),
+        ("FONTNAME",      (0,0), (-1,0),  "Helvetica-Bold"),
+        ("FONTSIZE",      (0,0), (-1,0),  8),
+        ("ALIGN",         (0,0), (-1,0),  "CENTER"),
+        ("TOPPADDING",    (0,0), (-1,-1), 5),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 5),
+        ("LEFTPADDING",   (0,0), (-1,-1), 7),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 7),
+        ("GRID",          (0,0), (-1,-1), 0.35, GREY_LINE),
+        ("VALIGN",        (0,0), (-1,-1), "MIDDLE"),
+        ("FONTNAME",      (0,1), (-1,-1), "Helvetica"),
+        ("FONTSIZE",      (0,1), (-1,-1), 8),
+    ]
+    if alt:
+        cmds.append(("ROWBACKGROUNDS", (0,1), (-1,-1), [WHITE, BG_ALT]))
+    return TableStyle(cmds)
 
-# ── Cover page block ─────────────────────────────────────────────
-def cover_block():
-    elems = []
+# ── Cover page ───────────────────────────────────────────────────────────────
+def cover():
+    e = []
+    e.append(sp(6))
+    e.append(Paragraph("CONFIDENTIAL — DEMO DOCUMENTATION", S["label_upper"]))
+    e.append(sp(3))
 
-    # Navy banner background using Table trick
-    cover_data = [[""]]
-    cover_tbl = Table(cover_data, colWidths=[W - 2*MARGIN], rowHeights=[52*mm])
-    cover_tbl.setStyle(TableStyle([
-        ("BACKGROUND", (0,0), (-1,-1), RR_NAVY),
-        ("ROUNDEDCORNERS", [8]),
+    # ── Hero banner: dark navy card with both names large ──────────
+    hero_tbl = Table(
+        [[
+            Paragraph("RAJASTHAN ROYALS", _s("rr_hero",
+                fontSize=36, textColor=RR_PINK, fontName="Helvetica-Bold",
+                alignment=TA_CENTER, leading=40, spaceAfter=0)),
+        ]],
+        colWidths=[W - 2*M],
+    )
+    hero_tbl.setStyle(TableStyle([
+        ("BACKGROUND",    (0,0), (-1,-1), RR_NAVY),
+        ("TOPPADDING",    (0,0), (-1,-1), 18),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 4),
+        ("LEFTPADDING",   (0,0), (-1,-1), 14),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 14),
     ]))
+    e.append(hero_tbl)
 
-    # We'll just use spacer + paragraphs on top
-    elems.append(Spacer(1, 8*mm))
-    elems.append(Paragraph("CONFIDENTIAL DEMO DOCUMENTATION", S["cover_label"]))
-    elems.append(Spacer(1, 3*mm))
-    elems.append(Paragraph("Rajasthan Royals", S["cover_title"]))
-    elems.append(Paragraph("Decision Intelligence Platform", S["cover_sub"]))
-    elems.append(Spacer(1, 2*mm))
-    elems.append(Paragraph("IPL 2026 · Front-Office Analytics", S["cover_label"]))
-    elems.append(Spacer(1, 6*mm))
-    elems.append(pink_rule())
-    elems.append(Spacer(1, 3*mm))
+    dip_tbl = Table(
+        [[Paragraph("CreaseIQ · Decision Intelligence Platform", _s("dip_hero",
+            fontSize=22, textColor=WHITE, fontName="Helvetica-Bold",
+            alignment=TA_CENTER, leading=26))]],
+        colWidths=[W - 2*M],
+    )
+    dip_tbl.setStyle(TableStyle([
+        ("BACKGROUND",    (0,0), (-1,-1), RR_BLUE),
+        ("TOPPADDING",    (0,0), (-1,-1), 10),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 14),
+        ("LEFTPADDING",   (0,0), (-1,-1), 14),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 14),
+    ]))
+    e.append(dip_tbl)
 
-    # Meta row
+    e.append(sp(3))
+    e.append(Paragraph("IPL 2026  ·  Front-Office Analytics  ·  v1.1", S["cover_badge"]))
+    e.append(sp(6))
+    e.append(rule())
+    e.append(sp(3))
+
     meta = [
-        ["Prepared for", "Rajasthan Royals Analytics Team"],
-        ["Platform version", "RR Demo v1.0"],
-        ["Date", date.today().strftime("%B %d, %Y")],
-        ["Access URL", "http://[your-render-url]/rr_login.html"],
-        ["Access code", "royals2026"],
-        ["Data coverage", "IPL 2017–2025 · 1,169 matches · 350,000+ deliveries"],
+        ["Prepared for",   "Rajasthan Royals — Analytics & Performance Team"],
+        ["Platform",       "CreaseIQ · RR Decision Intelligence Platform v1.1"],
+        ["Date",           date.today().strftime("%B %d, %Y")],
+        ["Live URL",       "https://ipl-auction-dashboard-1.onrender.com/rr_login.html"],
+        ["Access code",    "royals2026"],
+        ["Data coverage",  "IPL 2017–2025 · 1,169 matches · 350,000+ deliveries"],
+        ["AI engine",      "Groq · Llama 3.3 70B — match brief generation"],
     ]
-    meta_tbl = Table(meta, colWidths=[50*mm, W - 2*MARGIN - 50*mm])
-    meta_tbl.setStyle(TableStyle([
-        ("FONTNAME",     (0,0), (0,-1), "Helvetica-Bold"),
-        ("FONTNAME",     (1,0), (1,-1), "Helvetica"),
-        ("FONTSIZE",     (0,0), (-1,-1), 9),
-        ("TEXTCOLOR",    (0,0), (0,-1), RR_BLUE),
-        ("TEXTCOLOR",    (1,0), (1,-1), DARK_TEXT),
-        ("BOTTOMPADDING",(0,0), (-1,-1), 5),
-        ("TOPPADDING",   (0,0), (-1,-1), 5),
-        ("LINEBELOW",    (0,0), (-1,-2), 0.3, GREY_LINE),
+    mt = Table(meta, colWidths=[48*mm, W - 2*M - 48*mm])
+    mt.setStyle(TableStyle([
+        ("FONTNAME",      (0,0), (0,-1), "Helvetica-Bold"),
+        ("FONTNAME",      (1,0), (1,-1), "Helvetica"),
+        ("FONTSIZE",      (0,0), (-1,-1), 9),
+        ("TEXTCOLOR",     (0,0), (0,-1), RR_BLUE),
+        ("TEXTCOLOR",     (1,0), (1,-1), DARK_TEXT),
+        ("TOPPADDING",    (0,0), (-1,-1), 5),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 5),
+        ("LINEBELOW",     (0,0), (-1,-2), 0.3, GREY_LINE),
     ]))
-    elems.append(meta_tbl)
-    elems.append(Spacer(1, 6*mm))
-    return elems
+    e.append(mt)
+    e.append(sp(8))
 
-# ── Section 1: What was built ────────────────────────────────────
-def section_what_built():
-    elems = []
-    elems.append(Paragraph("1. What Was Built", S["section_head"]))
-    elems.append(pink_rule())
-    elems.append(Paragraph(
-        "The RR Decision Intelligence Platform is a front-office analytics tool built specifically "
-        "for Rajasthan Royals. It converts publicly available ball-by-ball IPL data into "
-        "decision-grade intelligence covering auction strategy, in-season match planning, "
-        "player scouting, salary valuation, and matchup analysis.",
+    # Two-column summary cards
+    sum_left = (
+        "<b>What this is:</b> The <b>Rajasthan Royals Decision Intelligence Platform</b> is a "
+        "franchise-specific front-office analytics tool converting ball-by-ball IPL data into "
+        "prescriptive intelligence — auction strategy, match planning, salary valuation, "
+        "scouting, and AI-generated match briefs."
+    )
+    sum_right = (
+        "<b>Why RR:</b> RR discloses ₹15.79 Cr analytics spend (FY25, +18.7% YoY) with "
+        "52.8% going offshore. The <b>Decision Intelligence Platform</b> delivers domestic, "
+        "franchise-tailored intelligence at a fraction of that cost."
+    )
+    sum_tbl = Table(
+        [[Paragraph(sum_left, S["body"]), Paragraph(sum_right, S["body"])]],
+        colWidths=[(W - 2*M - 4*mm)/2, (W - 2*M - 4*mm)/2],
+        hAlign="LEFT"
+    )
+    sum_tbl.setStyle(TableStyle([
+        ("BACKGROUND",    (0,0), (0,0), BG_BLUE),
+        ("BACKGROUND",    (1,0), (1,0), BG_PINK),
+        ("VALIGN",        (0,0), (-1,-1), "TOP"),
+        ("TOPPADDING",    (0,0), (-1,-1), 8),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 8),
+        ("LEFTPADDING",   (0,0), (-1,-1), 8),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 8),
+        ("BOX",           (0,0), (0,0), 0.5, RR_BLUE),
+        ("BOX",           (1,0), (1,0), 0.5, RR_PINK),
+        ("ROUNDEDCORNERS", [4]),
+    ]))
+    e.append(sum_tbl)
+    e.append(sp(4))
+    return e
+
+# ── Section 1: Platform overview ─────────────────────────────────────────────
+def section_overview():
+    e = []
+    e.append(Paragraph("1. Decision Intelligence Platform — Overview", S["h1"]))
+    e.append(rule())
+    e.append(Paragraph(
+        "Nine integrated modules built on a single Python data pipeline. The payload is "
+        "pre-computed from Cricsheet ball-by-ball data and served as a JavaScript object — "
+        "keeping the front end fast and the quantitative backbone rigorous.",
         S["body"]))
-    elems.append(Spacer(1, 3*mm))
+    e.append(sp(2))
 
-    # Architecture table
     rows = [
-        ["Layer", "Description", "Status"],
-        ["Data Pipeline",     "build_dashboard_data.py generates the full JS payload from Cricsheet ball-by-ball CSVs", "✓ Live"],
-        ["RR Landing Hub",    "rr_hub.html — branded entry point with next-match card, fixture strip, squad overview", "✓ Live"],
-        ["Match Planning",    "Opponent-aware SWOT + phase tactical brief for all 14 RR 2026 fixtures", "✓ Live"],
-        ["Salary Value Lab",  "Fair salary vs contract for RR squad; Salary Value Index + gap in ₹Cr", "✓ Live"],
-        ["Matchup Intel",     "Ball-by-ball H2H batter vs bowler with direct dismissal weighting", "✓ Live"],
-        ["Auction War Room",  "Shared-league simulation; 500 Monte Carlo auction paths", "✓ Live"],
-        ["Batter Diagnostics","Phase/pressure/venue/bowling-family breakdown; no fake tracking claims", "✓ Live"],
-        ["Phase Studio",      "Bayesian-shrunk phase impact leaderboard — powerplay / middle / death", "✓ Live"],
-        ["Password Gate",     "rr_login.html — branded login with sessionStorage auth", "✓ Live"],
+        ["Module", "Purpose", "RR Mode", "Status"],
+        ["RR Hub",             "Branded landing page — next-match card, fixture strip, squad overview", "✓ Default", "✓ Live"],
+        ["Password Gate",      "Session auth — branded login card, shake animation, sessionStorage", "✓ Included", "✓ Live"],
+        ["AI Match Brief",     "Claude Sonnet 4.6 generates structured tactical brief from match data", "✓ Integrated", "✓ Live"],
+        ["Match Planning",     "Opponent-aware SWOT + phase tactics for all 14 RR 2026 fixtures", "✓ Auto-selects RR", "✓ Live"],
+        ["Salary Value Lab",   "Fair salary vs 2026 contract; SVI + value gap for full IPL player pool", "✓ Defaults RR squad", "✓ Live"],
+        ["Matchup Intelligence","Ball-by-ball H2H batter vs bowler with direct dismissal weighting", "✓ Accessible", "✓ Live"],
+        ["Auction War Room",   "Shared-league simulation with 500 Monte Carlo auction paths", "✓ Accessible", "✓ Live"],
+        ["Batter Diagnostics", "Phase/pressure/venue/bowling-family breakdown per batter", "✓ Accessible", "✓ Live"],
+        ["Phase Studio",       "Bayesian-shrunk phase impact leaderboard — PP / middle / death", "✓ Accessible", "✓ Live"],
     ]
-    tbl = Table(rows, colWidths=[38*mm, 100*mm, 22*mm])
-    style = base_table_style()
-    style.add("ALIGN", (2,1), (2,-1), "CENTER")
-    style.add("TEXTCOLOR", (2,1), (2,-1), GREEN_OK)
-    style.add("FONTNAME", (2,1), (2,-1), "Helvetica-Bold")
-    tbl.setStyle(style)
-    elems.append(tbl)
-    elems.append(Spacer(1, 4*mm))
-    return elems
+    cw = [34*mm, 82*mm, 26*mm, 18*mm]
+    t = Table(rows, colWidths=cw)
+    st = tbl_style()
+    for i in range(1, len(rows)):
+        st.add("TEXTCOLOR", (3,i), (3,i), GREEN_OK)
+        st.add("FONTNAME",  (3,i), (3,i), "Helvetica-Bold")
+        st.add("ALIGN",     (2,i), (3,i), "CENTER")
+        if i == 3:  # AI Match Brief — highlight
+            st.add("BACKGROUND", (0,i), (-1,i), BG_BLUE)
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(3))
 
-# ── Section 2: Demo access ────────────────────────────────────────
+    # Tech stack callout
+    tech_tbl = Table(
+        [[
+            Paragraph("<b>Data pipeline</b><br/>Python · Cricsheet CSVs · Bayesian shrinkage", S["muted"]),
+            Paragraph("<b>Front end</b><br/>Vanilla HTML/CSS/JS · No framework build overhead", S["muted"]),
+            Paragraph("<b>AI engine</b><br/>Claude Sonnet 4.6 (Anthropic API) · Structured JSON output", S["muted"]),
+            Paragraph("<b>Deployment</b><br/>Render.com · Auto-deploy on git push · Always-on free tier", S["muted"]),
+        ]],
+        colWidths=[(W - 2*M - 9*mm)/4]*4,
+    )
+    tech_tbl.setStyle(TableStyle([
+        ("BACKGROUND",    (0,0), (-1,-1), BG_ALT),
+        ("BOX",           (0,0), (-1,-1), 0.4, GREY_LINE),
+        ("INNERGRID",     (0,0), (-1,-1), 0.4, GREY_LINE),
+        ("TOPPADDING",    (0,0), (-1,-1), 6),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 6),
+        ("LEFTPADDING",   (0,0), (-1,-1), 7),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 7),
+        ("VALIGN",        (0,0), (-1,-1), "TOP"),
+    ]))
+    e.append(tech_tbl)
+    e.append(sp(4))
+    return e
+
+# ── Section 2: AI Match Brief ─────────────────────────────────────────────────
+def section_ai_brief():
+    e = []
+    e.append(Paragraph("2. AI Match Brief — Claude Sonnet 4.6", S["h1"]))
+    e.append(rule())
+    e.append(Paragraph(
+        "The platform integrates Anthropic's Claude Sonnet 4.6 to generate a fixture-specific "
+        "match brief on demand. When the analyst clicks 'Generate AI Match Brief' on the RR Hub, "
+        "the server assembles the full structured match context — venue profile, phase impact scores, "
+        "matchup evidence, active core players — and sends it to the Claude API. "
+        "The model returns a structured JSON object rendered directly in the hub.",
+        S["body"]))
+    e.append(sp(2))
+
+    e.append(Paragraph("Output Structure (8 fields, always populated)", S["h2"]))
+    fields = [
+        ["Field", "Content", "Example (RR vs CSK, Mar 30)"],
+        ["headline",               "One-sentence fixture framing", "\"RR's death-over control vs CSK's experience edge at Guwahati\""],
+        ["opening_call",           "Tactical recommendation sentence", "\"Bowl first — venue favours chase, Sandeep Sharma leads PP\""],
+        ["why_this_matchup_is_live","Key reason this fixture matters", "\"CSK's Dhoni unknown for 2026; RR's spin depth is untested\""],
+        ["tactical_edges",         "Array of 2–4 RR advantages", "[\"Sandeep vs Gaikwad — 3 dismissals in H2H\", ...]"],
+        ["matchup_watch",          "Array of critical player duels", "[\"Jaiswal vs Rahul Chahar\", ...]"],
+        ["venue_read",             "Venue-specific strategy note", "\"168.1 avg; set 165–170 or chase — avoid loose PP bowling\""],
+        ["risk_flags",             "Array of RR vulnerabilities", "[\"Parag's form gap mid-overs\", ...]"],
+        ["recommended_plan",       "Array of concrete action items", "[\"Open Archer over 1–3\", \"Use Bishnoi against Dhoni\", ...]"],
+    ]
+    cw = [36*mm, 44*mm, W - 2*M - 80*mm]
+    t = Table(fields, colWidths=cw)
+    st = tbl_style()
+    st.add("ALIGN", (0,1), (0,-1), "CENTER")
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(2))
+
+    e.append(Paragraph("Technical implementation", S["h2"]))
+    impl = [
+        "<b>Backend:</b> server.py assembles match context from the dashboard payload and POSTs to <i>api.anthropic.com/v1/messages</i>.",
+        "<b>Model:</b> claude-sonnet-4-6 with max_tokens=2048 — sized to complete the full JSON without truncation.",
+        "<b>Robustness:</b> Markdown code-fence stripping applied before JSON parsing; graceful fallback if parse fails.",
+        "<b>Prompt design:</b> System prompt enforces cricket-literate language (opener, enforcer, death hitter, new-ball bowler) and prohibits inventing statistics not present in the context.",
+        "<b>Latency:</b> Typically 4–8 seconds for a complete structured brief.",
+    ]
+    for i in impl:
+        e.append(bullet(i))
+    e.append(sp(4))
+    return e
+
+# ── Section 3: Demo access and walkthrough ───────────────────────────────────
 def section_access():
-    elems = []
-    elems.append(Paragraph("2. Demo Access & Flow", S["section_head"]))
-    elems.append(pink_rule())
+    e = []
+    e.append(Paragraph("3. Demo Access & Recommended Walkthrough", S["h1"]))
+    e.append(rule())
 
-    elems.append(Paragraph("Entry Point", S["sub_head"]))
-    elems.append(Paragraph(
-        "Send this single URL to the RR contact. Everything flows from here.", S["body"]))
-
-    access_data = [
+    e.append(Paragraph("Access Details", S["h2"]))
+    access = [
         ["Item", "Value"],
-        ["Login URL", "http://[your-render-url]/rr_login.html"],
-        ["Access Code", "royals2026"],
-        ["Session behaviour", "Persists for browser tab; clears on close"],
-        ["Wrong password", "Card shake animation + error message"],
-        ["Direct hub access", "Auto-redirects to login if no active session"],
+        ["Live URL",           "https://ipl-auction-dashboard-1.onrender.com/rr_login.html"],
+        ["Access code",        "royals2026"],
+        ["Session behaviour",  "Persists for browser tab — cleared on close"],
+        ["Wrong password",     "Card shake animation + error banner"],
+        ["Unauthenticated access", "Auto-redirect to login from any /rr_ page"],
     ]
-    tbl = Table(access_data, colWidths=[45*mm, W - 2*MARGIN - 45*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 4*mm))
+    t = Table(access, colWidths=[44*mm, W - 2*M - 44*mm])
+    t.setStyle(tbl_style())
+    e.append(t)
+    e.append(sp(3))
 
-    elems.append(Paragraph("Recommended Demo Walkthrough", S["sub_head"]))
+    e.append(Paragraph("10-Minute Demo Script", S["h2"]))
     steps = [
-        "<b>Step 1 — Login:</b> Open rr_login.html, enter 'royals2026'. Land on the RR-branded hub.",
-        "<b>Step 2 — Hub overview:</b> Show the next-match card (RR vs CSK, Mar 30, Guwahati) and full fixture strip.",
-        "<b>Step 3 — Match Planning:</b> Click 'Open Match Intelligence Brief'. Page auto-selects RR vs CSK, RR lens. Walk through SWOT, tactics (Sandeep Sharma vs CSK top-order), Guwahati venue profile (avg 168.1).",
-        "<b>Step 4 — Salary Value Lab:</b> Click 'Open Value Lab'. Defaults to RR squad with Jaiswal selected. Highlight Sandeep Sharma SVI 350 — paid ₹4 Cr, model fair value ₹14 Cr.",
-        "<b>Step 5 — Matchup Intelligence:</b> Show Jaiswal vs Rahul Chahar / Noor Ahmad head-to-head using ball-by-ball evidence.",
+        ("<b>0:00 — Login (30 sec)</b>",
+         "Open the live URL. Enter 'royals2026'. Land on the RR-branded hub with the RR monogram and IPL 2026 badge."),
+        ("<b>0:30 — Hub overview (2 min)</b>",
+         "Point to the Next Match card (RR vs CSK, Mar 30, Guwahati — auto-populated from the schedule). "
+         "Scroll through the fixture strip (all 14 RR 2026 fixtures with dates, opponents, venues). "
+         "Show the squad section summarising RR's active core."),
+        ("<b>2:30 — AI Match Brief (2 min)</b>",
+         "Click 'Generate AI Match Brief'. Wait 4–8 seconds. Walk through the rendered structured brief: "
+         "headline, opening call, tactical edges, matchup watch, risk flags, recommended plan. "
+         "Emphasise this is grounded in the structured match data — not hallucinated."),
+        ("<b>4:30 — Match Planning (2 min)</b>",
+         "Click 'Open Match Intelligence Brief'. Page auto-selects RR vs CSK, RR lens. "
+         "Walk through SWOT (Sandeep Sharma vs CSK top-order; Guwahati avg 168.1). "
+         "Switch lens to CSK to show opponent-awareness."),
+        ("<b>6:30 — Salary Value Lab (2 min)</b>",
+         "Click 'Open Value Lab'. Defaults to RR squad. Select Sandeep Sharma — SVI 350, "
+         "current salary ₹4 Cr, model fair value ₹14 Cr, gap +₹10 Cr. "
+         "Frame: 'The model tells you where the front office got value and where it didn't — before the next auction.'"),
+        ("<b>8:30 — Wrap (1.5 min)</b>",
+         "Switch to Matchup Intelligence, pull up Jaiswal vs Rahul Chahar head-to-head. "
+         "Close by explaining the data spine: 350,000+ Cricsheet deliveries, "
+         "Bayesian-shrunk phase metrics, shared auction simulation."),
     ]
-    for s in steps:
-        elems.append(bullet(s))
-    elems.append(Spacer(1, 4*mm))
-    return elems
+    step_rows = []
+    for label, desc in steps:
+        step_rows.append([Paragraph(label, S["tc"]), Paragraph(desc, S["tc"])])
+    st_tbl = Table(step_rows, colWidths=[36*mm, W - 2*M - 36*mm])
+    st_tbl.setStyle(TableStyle([
+        ("ROWBACKGROUNDS", (0,0), (-1,-1), [WHITE, BG_ALT]),
+        ("TOPPADDING",    (0,0), (-1,-1), 6),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 6),
+        ("LEFTPADDING",   (0,0), (-1,-1), 7),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 7),
+        ("GRID",          (0,0), (-1,-1), 0.35, GREY_LINE),
+        ("VALIGN",        (0,0), (-1,-1), "TOP"),
+    ]))
+    e.append(st_tbl)
+    e.append(sp(4))
+    return e
 
-# ── Section 3: RR Squad Salary Table ─────────────────────────────
+# ── Section 4: RR Squad Salary ───────────────────────────────────────────────
 def section_salary():
-    elems = []
-    elems.append(Paragraph("3. RR Squad — Salary Valuation Summary", S["section_head"]))
-    elems.append(pink_rule())
-    elems.append(Paragraph(
-        "Model-implied fair salary versus 2026 contract. Salary Value Index (SVI) = 100 × Fair / Current. "
-        "SVI > 100 means the player is undervalued relative to model output.",
+    e = []
+    e.append(Paragraph("4. RR Squad — Salary Valuation Snapshot", S["h1"]))
+    e.append(rule())
+    e.append(Paragraph(
+        "Model-implied fair salary versus 2026 IPL contract. "
+        "<b>Salary Value Index (SVI)</b> = 100 × Fair Salary / Current Salary. "
+        "SVI &gt; 100: undervalued relative to model output. SVI &lt; 100: overvalued.",
         S["body"]))
-    elems.append(Spacer(1, 2*mm))
+    e.append(sp(2))
 
     rows = [
-        ["Player", "Role", "Salary (₹Cr)", "Fair Value (₹Cr)", "Gap (₹Cr)", "SVI", "Verdict"],
-        ["Yashaswi Jaiswal",   "Opening Bat",     "18.0", "9.7",  "−8.3", "54",  "Overvalued"],
-        ["Ravindra Jadeja",    "All-Rounder",     "14.0", "14.1", "+0.1", "101", "Fair Value"],
-        ["Riyan Parag",        "Bat / Captain",   "14.0", "6.6",  "−7.4", "47",  "Overvalued"],
-        ["Dhruv Jurel",        "WK / Bat",        "14.0", "4.8",  "−9.2", "34",  "Overvalued"],
-        ["Jofra Archer",       "Pace",            "12.5", "9.6",  "−2.9", "77",  "Overvalued"],
-        ["Shimron Hetmyer",    "Bat",             "11.0", "13.4", "+2.4", "122", "Undervalued"],
-        ["Tushar Deshpande",   "Pace",            "6.5",  "4.1",  "−2.4", "63",  "Overvalued"],
-        ["Sandeep Sharma",     "Pace",            "4.0",  "14.0", "+10.0","350", "Undervalued ★"],
-        ["Sam Curran",         "All-Rounder",     "2.4",  "4.4",  "+2.0", "182", "Undervalued"],
-        ["Kwena Maphaka",      "Pace",            "1.5",  "1.4",  "−0.1", "94",  "Fair Value"],
-        ["Vaibhav Suryavanshi","Bat",             "1.1",  "1.4",  "+0.3", "127", "Fair Value"],
-        ["Donovan Ferreira",   "Bat",             "1.0",  "0.9",  "−0.1", "92",  "Fair Value"],
+        ["Player", "Role", "Salary\n(₹Cr)", "Fair\n(₹Cr)", "Gap\n(₹Cr)", "SVI", "Verdict"],
+        ["Yashaswi Jaiswal",    "Opening Bat",   "18.0", "9.7",  "−8.3", "54",  "Overvalued"],
+        ["Ravindra Jadeja",     "All-Rounder",   "14.0", "14.1", "+0.1", "101", "Fair Value"],
+        ["Riyan Parag",         "Bat / Captain", "14.0", "6.6",  "−7.4", "47",  "Overvalued"],
+        ["Dhruv Jurel",         "WK / Bat",      "14.0", "4.8",  "−9.2", "34",  "Overvalued"],
+        ["Jofra Archer",        "Pace",          "12.5", "9.6",  "−2.9", "77",  "Overvalued"],
+        ["Shimron Hetmyer",     "Bat",           "11.0", "13.4", "+2.4", "122", "Undervalued"],
+        ["Tushar Deshpande",    "Pace",          "6.5",  "4.1",  "−2.4", "63",  "Overvalued"],
+        ["Sandeep Sharma",      "Pace",          "4.0",  "14.0", "+10.0","350", "Undervalued ★"],
+        ["Sam Curran",          "All-Rounder",   "2.4",  "4.4",  "+2.0", "182", "Undervalued"],
+        ["Kwena Maphaka",       "Pace",          "1.5",  "1.4",  "−0.1", "94",  "Fair Value"],
+        ["Vaibhav Suryavanshi", "Bat",           "1.1",  "1.4",  "+0.3", "127", "Undervalued"],
+        ["Donovan Ferreira",    "Bat",           "1.0",  "0.9",  "−0.1", "92",  "Fair Value"],
     ]
-    col_w = [40*mm, 24*mm, 20*mm, 22*mm, 18*mm, 12*mm, 24*mm]
-    tbl = Table(rows, colWidths=col_w)
-    style = base_table_style(RR_BLUE)
-    # Colour verdict column
-    for i, row in enumerate(rows[1:], start=1):
-        verdict = row[6]
-        if "Undervalued" in verdict:
-            style.add("TEXTCOLOR", (6,i), (6,i), GREEN_OK)
-            style.add("FONTNAME",  (6,i), (6,i), "Helvetica-Bold")
-        elif "Overvalued" in verdict:
-            style.add("TEXTCOLOR", (6,i), (6,i), RED_WARN)
-        # Highlight Sandeep Sharma row
+    cw = [40*mm, 24*mm, 16*mm, 16*mm, 16*mm, 12*mm, 24*mm]
+    t = Table(rows, colWidths=cw)
+    st = tbl_style()
+    for i, row in enumerate(rows[1:], 1):
+        v = row[6]
+        if "Undervalued" in v:
+            st.add("TEXTCOLOR", (6,i), (6,i), GREEN_OK)
+            st.add("FONTNAME",  (6,i), (6,i), "Helvetica-Bold")
+        elif "Overvalued" in v:
+            st.add("TEXTCOLOR", (6,i), (6,i), RED_WARN)
         if "Sandeep" in row[0]:
-            style.add("BACKGROUND", (0,i), (-1,i), colors.HexColor("#F0FDF4"))
-    tbl.setStyle(style)
-    elems.append(tbl)
-    elems.append(Spacer(1, 2*mm))
-    elems.append(Paragraph(
-        "★ Sandeep Sharma (SVI 350) is the standout finding: RR contracted him at ₹4 Cr against a "
-        "model-implied fair value of ₹14 Cr — a +₹10 Cr surplus for RR. This is the demo's "
-        "strongest opening hook for a salary-valuation conversation.",
-        S["muted"]))
-    elems.append(Spacer(1, 4*mm))
-    return elems
+            st.add("BACKGROUND", (0,i), (-1,i), BG_GREEN)
+            st.add("FONTNAME",   (0,i), (-1,i), "Helvetica-Bold")
+        st.add("ALIGN", (2,i), (5,i), "CENTER")
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(2))
 
-# ── Section 4: RR 2026 Fixture Schedule ──────────────────────────
+    callout = Table(
+        [[Paragraph(
+            "★  Sandeep Sharma (SVI 350) is the demo's strongest hook: RR contracted him at ₹4 Cr "
+            "against a model-implied fair value of ₹14 Cr — a +₹10 Cr surplus for RR. "
+            "Opens any salary-efficiency or retention-value conversation naturally.",
+            S["body"])]],
+        colWidths=[W - 2*M]
+    )
+    callout.setStyle(TableStyle([
+        ("BACKGROUND",    (0,0), (-1,-1), BG_GREEN),
+        ("BOX",           (0,0), (-1,-1), 1, GREEN_OK),
+        ("TOPPADDING",    (0,0), (-1,-1), 8),
+        ("BOTTOMPADDING", (0,0), (-1,-1), 8),
+        ("LEFTPADDING",   (0,0), (-1,-1), 10),
+        ("RIGHTPADDING",  (0,0), (-1,-1), 10),
+    ]))
+    e.append(callout)
+    e.append(sp(4))
+    return e
+
+# ── Section 5: RR 2026 Fixture Schedule ──────────────────────────────────────
 def section_fixtures():
-    elems = []
-    elems.append(Paragraph("4. RR IPL 2026 — Full Fixture Schedule", S["section_head"]))
-    elems.append(pink_rule())
+    e = []
+    e.append(Paragraph("5. RR IPL 2026 — Full Fixture Schedule", S["h1"]))
+    e.append(rule())
+    e.append(Paragraph(
+        "All 14 RR fixtures are embedded in the platform payload. The hub auto-populates "
+        "the Next Match card and the match planning module auto-selects the next upcoming RR fixture.",
+        S["body"]))
+    e.append(sp(2))
 
     rows = [
-        ["#", "Date", "Opponent", "Venue", "City", "H/A", "Time"],
-        ["1",  "Mar 30", "CSK",  "Barsapara Stadium",            "Guwahati",  "Home Alt", "7:30 PM"],
-        ["2",  "Apr 4",  "GT",   "Narendra Modi Stadium",        "Ahmedabad", "Away",     "7:30 PM"],
-        ["3",  "Apr 7",  "MI",   "Barsapara Stadium",            "Guwahati",  "Home Alt", "7:30 PM"],
-        ["4",  "Apr 10", "RCB",  "Barsapara Stadium",            "Guwahati",  "Home Alt", "7:30 PM"],
-        ["5",  "Apr 13", "SRH",  "Rajiv Gandhi Intl Stadium",    "Hyderabad", "Away",     "7:30 PM"],
-        ["6",  "Apr 19", "KKR",  "Eden Gardens",                 "Kolkata",   "Away",     "3:30 PM"],
-        ["7",  "Apr 22", "LSG",  "BRSABVE Stadium",              "Lucknow",   "Away",     "7:30 PM"],
-        ["8",  "Apr 25", "SRH",  "Sawai Mansingh Stadium",       "Jaipur",    "Home",     "7:30 PM"],
-        ["9",  "Apr 28", "PBKS", "PCA Stadium",                  "Mullanpur", "Away",     "7:30 PM"],
-        ["10", "May 1",  "DC",   "Sawai Mansingh Stadium",       "Jaipur",    "Home",     "3:30 PM"],
-        ["11", "May 9",  "GT",   "Sawai Mansingh Stadium",       "Jaipur",    "Home",     "7:30 PM"],
-        ["12", "May 17", "DC",   "Arun Jaitley Stadium",         "Delhi",     "Away",     "7:30 PM"],
-        ["13", "May 19", "LSG",  "Sawai Mansingh Stadium",       "Jaipur",    "Home",     "7:30 PM"],
-        ["14", "May 24", "MI",   "Wankhede Stadium",             "Mumbai",    "Away",     "3:30 PM"],
+        ["#", "Date",   "Opponent", "Venue",                         "City",      "H/A",      "Time"],
+        ["1",  "Mar 30","CSK",      "Barsapara Stadium",              "Guwahati",  "Home Alt",  "7:30 PM"],
+        ["2",  "Apr 4", "GT",       "Narendra Modi Stadium",          "Ahmedabad", "Away",      "7:30 PM"],
+        ["3",  "Apr 7", "MI",       "Barsapara Stadium",              "Guwahati",  "Home Alt",  "7:30 PM"],
+        ["4",  "Apr 10","RCB",      "Barsapara Stadium",              "Guwahati",  "Home Alt",  "7:30 PM"],
+        ["5",  "Apr 13","SRH",      "Rajiv Gandhi Intl Stadium",      "Hyderabad", "Away",      "7:30 PM"],
+        ["6",  "Apr 19","KKR",      "Eden Gardens",                   "Kolkata",   "Away",      "3:30 PM"],
+        ["7",  "Apr 22","LSG",      "BRSABVE Stadium",                "Lucknow",   "Away",      "7:30 PM"],
+        ["8",  "Apr 25","SRH",      "Sawai Mansingh Stadium",         "Jaipur",    "Home",      "7:30 PM"],
+        ["9",  "Apr 28","PBKS",     "PCA Stadium",                    "Mullanpur", "Away",      "7:30 PM"],
+        ["10", "May 1", "DC",       "Sawai Mansingh Stadium",         "Jaipur",    "Home",      "3:30 PM"],
+        ["11", "May 9", "GT",       "Sawai Mansingh Stadium",         "Jaipur",    "Home",      "7:30 PM"],
+        ["12", "May 17","DC",       "Arun Jaitley Stadium",           "Delhi",     "Away",      "7:30 PM"],
+        ["13", "May 19","LSG",      "Sawai Mansingh Stadium",         "Jaipur",    "Home",      "7:30 PM"],
+        ["14", "May 24","MI",       "Wankhede Stadium",               "Mumbai",    "Away",      "3:30 PM"],
     ]
-    col_w = [8*mm, 16*mm, 14*mm, 52*mm, 22*mm, 18*mm, 18*mm]
-    tbl = Table(rows, colWidths=col_w)
-    style = base_table_style()
-    # Highlight match 1 (RR vs CSK — next match)
-    style.add("BACKGROUND", (0,1), (-1,1), colors.HexColor("#FFF1F5"))
-    style.add("FONTNAME",   (0,1), (-1,1), "Helvetica-Bold")
-    style.add("TEXTCOLOR",  (0,1), (-1,1), RR_PINK)
-    # Home badge colour
-    for i, row in enumerate(rows[1:], start=1):
+    cw = [8*mm, 15*mm, 14*mm, 52*mm, 22*mm, 18*mm, 18*mm]
+    t = Table(rows, colWidths=cw)
+    st = tbl_style()
+    # Highlight next match
+    st.add("BACKGROUND", (0,1), (-1,1), BG_PINK)
+    st.add("FONTNAME",   (0,1), (-1,1), "Helvetica-Bold")
+    st.add("TEXTCOLOR",  (0,1), (-1,1), RR_PINK)
+    # Home matches in green
+    for i, row in enumerate(rows[1:], 1):
         if row[5] == "Home":
-            style.add("TEXTCOLOR", (5,i), (5,i), GREEN_OK)
-            style.add("FONTNAME",  (5,i), (5,i), "Helvetica-Bold")
-    tbl.setStyle(style)
-    elems.append(tbl)
-    elems.append(Spacer(1, 2*mm))
-    elems.append(Paragraph(
-        "Highlighted row = next upcoming fixture (RR vs CSK, March 30). "
-        "Platform auto-selects this match when match_planning.html?team=RR is opened.",
+            st.add("TEXTCOLOR", (5,i), (5,i), GREEN_OK)
+            st.add("FONTNAME",  (5,i), (5,i), "Helvetica-Bold")
+        st.add("ALIGN", (0,i), (0,i), "CENTER")
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(2))
+    e.append(Paragraph(
+        "Highlighted row (pink) = next upcoming fixture auto-selected by the platform. "
+        "Home Alt = home game played at Guwahati while Sawai Mansingh is under renovation.",
         S["muted"]))
-    elems.append(Spacer(1, 4*mm))
-    return elems
+    e.append(sp(4))
+    return e
 
-# ── Section 5: Match Intelligence — RR vs CSK ────────────────────
+# ── Section 6: Match Intelligence — RR vs CSK ────────────────────────────────
 def section_match_intel():
-    elems = []
-    elems.append(Paragraph("5. Match Intelligence Brief — RR vs CSK (Mar 30)", S["section_head"]))
-    elems.append(pink_rule())
-
-    elems.append(Paragraph("Venue Profile — Barsapara Stadium, Guwahati", S["sub_head"]))
-    venue_data = [
-        ["Metric", "Value", "Note"],
-        ["Average innings total", "168.1", "Control venue — not a free-scoring ground"],
-        ["Innings in sample",     "10",    "Limited historical sample; treat as directional"],
-        ["Strategic implication", "—",     "Emphasise control, field placement, matchup discipline over blind acceleration"],
-    ]
-    tbl = Table(venue_data, colWidths=[45*mm, 22*mm, W - 2*MARGIN - 67*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 3*mm))
-
-    elems.append(Paragraph("RR Active Core — Key Players", S["sub_head"]))
-    core_data = [
-        ["Role",          "Player",              "Note"],
-        ["Lead bat",      "Yashaswi Jaiswal",    "Primary batting anchor; highest impact score in RR squad"],
-        ["No.2 bat",      "Riyan Parag",         "Second scoring pillar; captain — sets tempo"],
-        ["Finisher",      "Shimron Hetmyer",     "Death-overs specialist; undervalued (SVI 122)"],
-        ["Lead bowler",   "Sandeep Sharma",      "Opens bowling; strongest matchup vs CSK top-order. SVI 350."],
-        ["Pace threat",   "Jofra Archer",        "Powerplay wicket-taker; key vs Ruturaj Gaikwad"],
-        ["Spin",          "Ravi Bishnoi",        "Middle-overs spin anchor"],
-    ]
-    tbl = Table(core_data, colWidths=[28*mm, 42*mm, W - 2*MARGIN - 70*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 3*mm))
-
-    elems.append(Paragraph("CSK Threats to Watch", S["sub_head"]))
-    threat_data = [
-        ["Player",          "Threat",           "RR Counter"],
-        ["Rahul Chahar",    "Spin in middle overs vs RR batters", "Use Jaiswal as matchup lever in death batting"],
-        ["Noor Ahmad",      "Left-arm wrist spin — danger vs right-handers", "Left-hander Hetmyer at no.4/5 preferred"],
-        ["Ruturaj Gaikwad", "Consistent powerplay scorer", "Archer over-for-over in PP — primary wicket target"],
-        ["MS Dhoni",        "Death-overs finisher", "Bishnoi + Sandeep Sharma to cramp his off-side options"],
-    ]
-    tbl = Table(threat_data, colWidths=[36*mm, 60*mm, W - 2*MARGIN - 96*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 4*mm))
-    return elems
-
-# ── Section 6: Commercial context ────────────────────────────────
-def section_commercial():
-    elems = []
-    elems.append(Paragraph("6. Commercial Context", S["section_head"]))
-    elems.append(pink_rule())
-
-    elems.append(Paragraph("Why This Matters to RR", S["sub_head"]))
-    elems.append(Paragraph(
-        "Rajasthan Royals explicitly discloses 'Analytics and Trial Expenses' as a named line "
-        "item in their audited accounts (FY2025: ₹15.79 Crores, +18.7% YoY). "
-        "Over 52% of that spend goes to offshore vendors. "
-        "This platform offers a domestic, franchise-specific alternative at a fraction of that cost.",
+    e = []
+    e.append(Paragraph("6. Sample Match Intelligence — RR vs CSK (Mar 30)", S["h1"]))
+    e.append(rule())
+    e.append(Paragraph(
+        "Illustrative output from the Match Planning module for RR's first fixture. "
+        "This is the brief an analyst sees on opening match_planning.html?team=RR.",
         S["body"]))
-    elems.append(Spacer(1, 3*mm))
+    e.append(sp(2))
 
-    budget_data = [
-        ["Metric", "Value", "Source"],
-        ["RR analytics budget (FY25)", "₹15.79 Crores",  "Audited P&L — Royal Multisport Pvt Ltd"],
-        ["YoY growth",                 "+18.7%",          "FY24: ₹13.29 Cr → FY25: ₹15.79 Cr"],
-        ["Offshore share",             "52.8%",           "Note 33 — Foreign currency spend"],
-        ["Related-party vendor",       "₹1.91 Cr (Blenheim Chalcot IT)", "Note 29 — new in FY25"],
-        ["Suggested entry contract",   "₹50–150 Lakhs/season", "3–10% of current analytics budget"],
+    e.append(Paragraph("Venue Profile — Barsapara Stadium, Guwahati", S["h2"]))
+    venue = [
+        ["Metric", "Value", "Strategic Implication"],
+        ["Avg innings total",    "168.1",  "Control ground — target 165–172; not a 190+ venue"],
+        ["Matches in sample",    "10",     "Directional only; treat as moderate-confidence"],
+        ["Tactical read",        "—",      "Field placement discipline > blind acceleration; death bowling crucial"],
     ]
-    tbl = Table(budget_data, colWidths=[55*mm, 50*mm, W - 2*MARGIN - 105*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 3*mm))
+    t = Table(venue, colWidths=[42*mm, 20*mm, W - 2*M - 62*mm])
+    t.setStyle(tbl_style())
+    e.append(t)
+    e.append(sp(2))
 
-    elems.append(Paragraph("Pitch Positioning", S["sub_head"]))
+    e.append(Paragraph("RR Active Core", S["h2"]))
+    core = [
+        ["Role",         "Player",             "Relevance"],
+        ["Lead bat",     "Yashaswi Jaiswal",   "Primary anchor; highest impact score in RR squad; sets first-half platform"],
+        ["Captain/No.3", "Riyan Parag",        "Tempo setter; needs PP platform from Jaiswal"],
+        ["Finisher",     "Shimron Hetmyer",    "Death-overs specialist (overs 16–20); SVI 122 — undervalued retention pick"],
+        ["Lead bowler",  "Sandeep Sharma",     "Swing in PP; best matchup vs Gaikwad / Conway — open bowling"],
+        ["Pace threat",  "Jofra Archer",       "Powerplay wicket-taking; target: Ruturaj Gaikwad over 1–3"],
+        ["Spin anchor",  "Ravi Bishnoi",       "Middle-overs controller (overs 7–15); restricts CSK's Dhoni in death"],
+    ]
+    t = Table(core, colWidths=[26*mm, 40*mm, W - 2*M - 66*mm])
+    t.setStyle(tbl_style())
+    e.append(t)
+    e.append(sp(2))
+
+    e.append(Paragraph("CSK Threat Map", S["h2"]))
+    threats = [
+        ["CSK Player",      "Threat Type",                          "Recommended RR Counter"],
+        ["Ruturaj Gaikwad", "Consistent PP scorer; sets big totals", "Archer over 1–3; Sandeep Sharma swing in over 2"],
+        ["Rahul Chahar",    "Spin in middle overs vs RR right-handers","Deploy Jaiswal as left-side anchor in PP for later mismatch"],
+        ["Noor Ahmad",      "Left-arm wrist spin — traps right-handers","Promote Hetmyer (left-hand) to No.4 to break spin grip"],
+        ["MS Dhoni",        "Death-over finisher; disrupts plans",   "Bishnoi + Sandeep Sharma to cramp off-side options"],
+    ]
+    t = Table(threats, colWidths=[34*mm, 54*mm, W - 2*M - 88*mm])
+    t.setStyle(tbl_style())
+    e.append(t)
+    e.append(sp(4))
+    return e
+
+# ── Section 7: Commercial context ────────────────────────────────────────────
+def section_commercial():
+    e = []
+    e.append(Paragraph("7. Commercial Context", S["h1"]))
+    e.append(rule())
+
+    e.append(Paragraph("RR Analytics Budget — Verified from Audited Accounts", S["h2"]))
+    e.append(Paragraph(
+        "Rajasthan Royals (Royal Multisport Pvt Ltd) explicitly reports 'Analytics and Trial Expenses' "
+        "as a named line item. The data below is drawn from the FY2025 audited P&L.",
+        S["body"]))
+    e.append(sp(1))
+
+    budget = [
+        ["Metric",                    "Value",               "Source / Note"],
+        ["RR analytics budget FY25",  "₹15.79 Crores",       "Audited P&L — Royal Multisport Pvt Ltd"],
+        ["YoY growth",                "+18.7%",              "FY24: ₹13.29 Cr → FY25: ₹15.79 Cr"],
+        ["Offshore vendor share",     "52.8%",               "Note 33 — foreign currency analytics spend"],
+        ["Related-party tech vendor", "₹1.91 Cr",            "Note 29 — Blenheim Chalcot IT (new in FY25)"],
+        ["Suggested entry contract",  "₹50–150 Lakhs/season","3–10% of current analytics budget"],
+    ]
+    t = Table(budget, colWidths=[52*mm, 38*mm, W - 2*M - 90*mm])
+    st = tbl_style(RR_BLUE)
+    st.add("TEXTCOLOR", (1,5), (1,5), GREEN_OK)
+    st.add("FONTNAME",  (1,5), (1,5), "Helvetica-Bold")
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(3))
+
+    e.append(Paragraph("Pitch Positioning", S["h2"]))
     points = [
-        "Selling the <b>modeling layer and product surface</b>, not the underlying Cricsheet data — which RR already has access to.",
-        "Strongest entry modules: <b>Auction War Room + Salary Value Lab</b> (auction edge, RTM decisions) and <b>Match Planning</b> (in-season tactical prep).",
-        "Competitive moat: <b>decision-usefulness framing</b> — prescriptive intelligence, not descriptive stats.",
-        "Scalable: payloads rebuild from source; adding new modules or custom RR data feeds is straightforward.",
+        "Selling the <b>modelling layer and product surface</b>, not the underlying Cricsheet data — which RR already accesses.",
+        "Strongest entry modules: <b>Auction War Room + Salary Value Lab</b> (auction edge, RTM strategy) and <b>Match Planning + AI Brief</b> (weekly in-season tactical prep).",
+        "Competitive moat: <b>decision-usefulness framing</b> — prescriptive intelligence, not descriptive statistics.",
+        "Franchise-specific mode: all RR modules default to the RR squad, RR fixtures, and RR lens — not a generic cricket stats site.",
+        "Scalable: payloads rebuild from source data; custom RR proprietary feeds (GPS, wearables, internal scouting) can be ingested without re-architecting.",
     ]
     for p in points:
-        elems.append(bullet(p))
-    elems.append(Spacer(1, 4*mm))
-    return elems
+        e.append(bullet(p))
+    e.append(sp(3))
 
-# ── Section 7: Next steps ─────────────────────────────────────────
-def section_next():
-    elems = []
-    elems.append(Paragraph("7. Next Steps", S["section_head"]))
-    elems.append(pink_rule())
-
-    next_data = [
-        ["Priority", "Action",                          "Effort"],
-        ["1 — Immediate", "Deploy to Render (live URL to send RR)", "Low"],
-        ["2 — Week 1",    "Add bowler diagnostics (symmetric to batter scouting)", "Medium"],
-        ["3 — Week 1",    "Add PDF/PNG export for match briefs", "Low"],
-        ["4 — Week 2",    "Wire CricAPI for live scores on rr_hub.html", "Low"],
-        ["5 — Week 2",    "Polish UI to full commercial grade",  "Medium"],
-        ["6 — Outreach",  "LinkedIn cold outreach to RR Head of Analytics / Performance Analyst", "—"],
+    e.append(Paragraph("Objection Handling", S["h2"]))
+    obj = [
+        ["Likely Objection",                        "Response"],
+        ["\"We already have Cricsheet data\"",       "This sells the modelling and product layer: phase-shrunk metrics, auction simulation, matchup engine, AI brief synthesis."],
+        ["\"Our analysts build these internally\"",  "This takes 6 months to build to this quality. We can be live next match."],
+        ["\"The model is too simple\"",              "Every metric is explainable. Complexity can be added with your proprietary data on top."],
+        ["\"Cost is too high\"",                     "Entry at ₹50 Lakhs is 3% of your current analytics spend. Pilot on auction module only."],
     ]
-    tbl = Table(next_data, colWidths=[38*mm, 98*mm, 24*mm])
-    tbl.setStyle(base_table_style())
-    elems.append(tbl)
-    elems.append(Spacer(1, 4*mm))
-    return elems
+    t = Table(obj, colWidths=[62*mm, W - 2*M - 62*mm])
+    t.setStyle(tbl_style(RR_PINK))
+    e.append(t)
+    e.append(sp(4))
+    return e
 
-# ── Footer ────────────────────────────────────────────────────────
-def footer_para():
+# ── Section 8: Next steps ─────────────────────────────────────────────────────
+def section_next():
+    e = []
+    e.append(Paragraph("8. Roadmap & Next Steps", S["h1"]))
+    e.append(rule())
+
+    rows = [
+        ["Priority", "Action",                                          "Effort",  "Status"],
+        ["1 — Done",  "Deploy to Render (live URL live)",                "Low",    "✓ Complete"],
+        ["2 — Done",  "AI match brief (Claude Sonnet 4.6 integrated)",   "Medium", "✓ Complete"],
+        ["3 — Week 1","Live score widget on RR Hub (CricAPI)",           "Low",    "Queued"],
+        ["4 — Week 1","Bowler diagnostics (symmetric to batter module)", "Medium", "Queued"],
+        ["5 — Week 1","Match brief PDF/PNG export",                     "Low",    "Queued"],
+        ["6 — Week 2","Polish UI to full commercial grade",             "Medium", "Queued"],
+        ["7 — Outreach","Cold outreach — RR Head of Analytics / CTO",  "—",      "Ready"],
+    ]
+    cw = [34*mm, 88*mm, 18*mm, 20*mm]
+    t = Table(rows, colWidths=cw)
+    st = tbl_style()
+    for i in (1, 2):
+        st.add("TEXTCOLOR", (3,i), (3,i), GREEN_OK)
+        st.add("FONTNAME",  (3,i), (3,i), "Helvetica-Bold")
+        st.add("BACKGROUND",(0,i), (-1,i), BG_GREEN)
+    st.add("ALIGN", (2,1), (3,-1), "CENTER")
+    t.setStyle(st)
+    e.append(t)
+    e.append(sp(4))
+    return e
+
+# ── Footer ────────────────────────────────────────────────────────────────────
+def footer():
     return [
         grey_rule(),
         Paragraph(
-            f"Rajasthan Royals Decision Intelligence Platform · Demo Documentation · "
-            f"Prepared {date.today().strftime('%B %d, %Y')} · Confidential",
+            f"<b>Rajasthan Royals — Decision Intelligence Platform</b>  ·  Demo Documentation  ·  "
+            f"Prepared {date.today().strftime('%B %d, %Y')}  ·  Confidential",
             S["footer"]),
     ]
 
-# ── Build PDF ─────────────────────────────────────────────────────
+# ── Build ─────────────────────────────────────────────────────────────────────
 def build():
     doc = SimpleDocTemplate(
         OUT,
         pagesize=A4,
-        leftMargin=MARGIN, rightMargin=MARGIN,
-        topMargin=MARGIN,  bottomMargin=MARGIN,
+        leftMargin=M, rightMargin=M,
+        topMargin=M,  bottomMargin=M,
         title="RR Decision Intelligence Platform — Demo Documentation",
         author="Piyush Zaware",
         subject="Rajasthan Royals Analytics Demo",
     )
-
     story = []
-    story += cover_block()
-    story += section_what_built()
+    story += cover()
+    story += section_overview()
+    story += section_ai_brief()
     story += section_access()
     story += section_salary()
     story += section_fixtures()
     story += section_match_intel()
     story += section_commercial()
     story += section_next()
-    story += footer_para()
-
+    story += footer()
     doc.build(story)
     print(f"PDF written → {OUT}")
 

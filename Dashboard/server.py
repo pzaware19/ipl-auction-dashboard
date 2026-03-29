@@ -213,10 +213,19 @@ def build_match_brief_response(payload: dict) -> dict:
         "methodology": planning.get("methodology", {}),
     }
 
+    # Enrich context with live toss + playing XI when available.
+    # fetch_match_context() is cached for 1 hour so it adds at most ~6 CricAPI
+    # calls on a match day — safe within the free tier.
+    match_context = fetch_match_context()
+    if match_context:
+        context["live_match_context"] = match_context
+
     system_prompt = (
         "You are a high-level IPL strategy analyst writing a match brief for a front-office decision-support dashboard. "
         "Use only the provided structured data. Do not invent statistics, players, venue traits, or matchup claims not present in the context. "
         "Be specific, tactical, and cricket-literate. Prefer realistic role language such as opener, enforcer, anchor, death hitter, new-ball bowler, and middle-overs controller. "
+        "The live_match_context key (if present) contains today's toss result and confirmed playing XI — "
+        "use these to make the brief specific to today's actual conditions rather than speaking generically. "
         "Return ONLY valid JSON with exactly these keys: headline, opening_call, why_this_matchup_is_live, tactical_edges, matchup_watch, venue_read, risk_flags, recommended_plan. "
         "Each of tactical_edges, matchup_watch, risk_flags, recommended_plan must be an array of 2 to 4 concise strings. "
         "No markdown, no explanation outside the JSON object."
@@ -367,6 +376,12 @@ def build_bid_ladder_debug(
 _live_score_cache: dict = {"ts": 0.0, "data": None}
 _LIVE_CACHE_TTL = 180  # 3 minutes — fits 100 calls/day free tier across a full match
 
+# Match-context cache: stores playing XI and toss for the current RR fixture.
+# Refreshed at most once per hour (TTL = 3 600 s) so the match_info endpoint
+# is called ~6 times per match day on the free CricAPI tier.
+_match_context_cache: dict = {"match_id": None, "ts": 0.0, "data": None}
+_MATCH_CONTEXT_TTL = 3600  # 1 hour
+
 
 def fetch_live_score() -> dict:
     global _live_score_cache
@@ -417,6 +432,97 @@ def fetch_live_score() -> dict:
 
     _live_score_cache = {"ts": now, "data": result}
     return result
+
+
+def fetch_match_context() -> dict:
+    """
+    Fetch playing XI and toss details for the current RR fixture from CricAPI.
+
+    Uses a 1-hour cache keyed on the CricAPI match id so we call match_info
+    at most ~6 times per match day.  Any error returns an empty dict (non-fatal
+    — the match brief still works, just without live context).
+    """
+    global _match_context_cache
+
+    api_key = os.environ.get("CRICAPI_KEY", "").strip()
+    if not api_key:
+        return {}
+
+    now = time.time()
+
+    # Step 1: Resolve the RR match id from currentMatches (uses same live-score
+    # endpoint, which is already cached for 3 minutes independently).
+    live_url = f"https://api.cricapi.com/v1/currentMatches?apikey={api_key}&offset=0"
+    try:
+        with urlopen(Request(live_url, method="GET"), timeout=10) as resp:
+            current_payload = json.loads(resp.read().decode("utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        print(f"[match_context] currentMatches fetch failed: {exc}", flush=True)
+        return {}
+
+    matches = current_payload.get("data", [])
+    rr_match = next(
+        (m for m in matches if any("rajasthan" in t.lower() for t in m.get("teams", []))),
+        None,
+    )
+    if not rr_match:
+        return {}
+
+    match_id = rr_match.get("id")
+    if not match_id:
+        return {}
+
+    # Step 2: Return cached context if it is still fresh for this same match
+    if (
+        _match_context_cache["match_id"] == match_id
+        and _match_context_cache["data"] is not None
+        and now - _match_context_cache["ts"] < _MATCH_CONTEXT_TTL
+    ):
+        return _match_context_cache["data"]
+
+    # Step 3: Call match_info for the full playing XI and toss details
+    info_url = f"https://api.cricapi.com/v1/match_info?apikey={api_key}&id={match_id}"
+    try:
+        with urlopen(Request(info_url, method="GET"), timeout=10) as resp:
+            info_payload = json.loads(resp.read().decode("utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        print(f"[match_context] match_info fetch failed: {exc}", flush=True)
+        return {}
+
+    info_data = info_payload.get("data", {})
+    if not info_data:
+        return {}
+
+    toss_info   = info_data.get("tossResults", {}) or {}
+    toss_winner  = toss_info.get("tossWinner", "")
+    toss_decision = toss_info.get("decision", "")
+
+    # playing XI may live under "players" (list-of-dicts) or "playerInfo"
+    raw_players = info_data.get("players") or info_data.get("playerInfo") or {}
+    playing_xi: dict = {}
+    if isinstance(raw_players, dict):
+        # keys are team names, values are lists of player dicts or plain names
+        for team, player_list in raw_players.items():
+            if isinstance(player_list, list):
+                playing_xi[team] = [
+                    p.get("name", p) if isinstance(p, dict) else str(p)
+                    for p in player_list
+                ]
+    elif isinstance(raw_players, list):
+        # Some API versions return a flat list with a "team" field per player
+        for player in raw_players:
+            team = player.get("team", "Unknown")
+            playing_xi.setdefault(team, []).append(player.get("name", ""))
+
+    context_data: dict = {
+        "toss_winner":   toss_winner,
+        "toss_decision": toss_decision,
+        "playing_xi":    playing_xi,
+        "match_name":    info_data.get("name", rr_match.get("name", "")),
+    }
+
+    _match_context_cache = {"match_id": match_id, "ts": now, "data": context_data}
+    return context_data
 
 
 _NOTIFY_EMAIL = "zpiyushrd19@gmail.com"
