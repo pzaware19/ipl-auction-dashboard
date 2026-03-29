@@ -4,12 +4,14 @@ import argparse
 import json
 import os
 import re
+import time
 from collections import defaultdict
 from datetime import UTC, datetime
+from html import unescape
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse
+from urllib.parse import urljoin, urlparse
 from urllib.request import Request, urlopen
 from xml.etree import ElementTree as ET
 
@@ -44,6 +46,45 @@ STATUS_VALUES = {
     "unknown",
 }
 
+TEAM_NAMES = {
+    "RR": ["rajasthan royals", "royals"],
+    "CSK": ["chennai super kings", "super kings", "csk"],
+    "KKR": ["kolkata knight riders", "knight riders", "kkr"],
+    "MI": ["mumbai indians", "mi"],
+    "RCB": ["royal challengers bengaluru", "royal challengers bangalore", "rcb", "challengers"],
+    "LSG": ["lucknow super giants", "lsg", "super giants"],
+    "DC": ["delhi capitals", "dc", "capitals"],
+    "SRH": ["sunrisers hyderabad", "srh", "sunrisers"],
+    "GT": ["gujarat titans", "gt", "titans"],
+    "PBKS": ["punjab kings", "pbks", "kings"],
+}
+
+PLAYER_HINTS = {
+    "RR": ["yashasvi jaiswal", "riyan parag", "dhruv jurel", "ravindra jadeja", "jofra archer", "shimron hetmyer", "sandeep sharma", "ravi bishnoi"],
+    "CSK": ["ms dhoni", "ruturaj gaikwad", "sanju samson", "shivam dube", "noor ahmad", "rahul chahar", "nathan ellis"],
+    "KKR": ["ajinkya rahane", "sunil narine", "rinku singh", "matheesha pathirana", "cameron green"],
+    "MI": ["rohit sharma", "suryakumar yadav", "hardik pandya", "jasprit bumrah", "trent boult", "tilak verma"],
+    "RCB": ["virat kohli", "rajat patidar", "phil salt", "jitesh sharma", "josh hazlewood", "bhuvneshwar kumar"],
+    "LSG": ["rishabh pant", "nicholas pooran", "mitchell marsh", "mohammed shami", "mayank yadav", "wanindu hasaranga"],
+    "DC": ["kl rahul", "axar patel", "tristan stubbs", "mitchell starc", "kuldeep yadav", "nitish rana"],
+    "SRH": ["travis head", "abhishek sharma", "ishan kishan", "heinrich klaasen", "pat cummins", "liam livingstone"],
+    "GT": ["shubman gill", "sai sudharsan", "jos buttler", "rashid khan", "mohammed siraj", "prasidh krishna"],
+    "PBKS": ["shreyas iyer", "prabhsimran singh", "marco jansen", "arshdeep singh", "yuzvendra chahal", "marcus stoinis"],
+}
+
+AVAILABILITY_TERMS = [
+    "injury", "injured", "available", "availability", "unavailable", "miss", "missing",
+    "ruled out", "doubtful", "fit", "fitness", "recovery", "rehab", "replacement",
+    "squad", "playing xi", "expected xi", "selection", "rested", "workload", "managed",
+    "overseas", "returns", "returning", "captain", "training", "practice",
+]
+
+ARTICLE_HINTS = [
+    "injury", "injured", "miss", "missing", "replacement", "replaces", "rejoined",
+    "returns", "return", "ruled-out", "ruled-out", "ruled", "available", "availability",
+    "doubt", "fitness", "training", "squad", "match preview", "preview", "opener",
+]
+
 
 def utc_now_iso() -> str:
     return datetime.now(UTC).replace(microsecond=0).isoformat()
@@ -64,15 +105,94 @@ def strip_html(raw: str) -> str:
     raw = re.sub(r"<style.*?</style>", " ", raw, flags=re.DOTALL | re.IGNORECASE)
     raw = re.sub(r"<[^>]+>", " ", raw)
     raw = re.sub(r"\s+", " ", raw)
-    return raw.strip()
+    return unescape(raw).strip()
+
+
+def normalize_text(raw: str) -> str:
+    return re.sub(r"\s+", " ", unescape(str(raw or "")).lower()).strip()
+
+
+def source_scope_keywords(source: dict[str, Any]) -> list[str]:
+    keywords: list[str] = []
+    for team_code in source.get("team_scope", []) or []:
+        keywords.extend(TEAM_NAMES.get(str(team_code).upper(), []))
+        keywords.extend(PLAYER_HINTS.get(str(team_code).upper(), []))
+    keywords.extend(AVAILABILITY_TERMS)
+    return sorted({keyword for keyword in keywords if keyword})
+
+
+def relevance_score(text: str, source: dict[str, Any]) -> int:
+    lowered = normalize_text(text)
+    score = 0
+    for keyword in source_scope_keywords(source):
+        if keyword in lowered:
+            score += 1
+    return score
+
+
+def keep_relevant_text(raw_text: str, source: dict[str, Any]) -> str:
+    cleaned = strip_html(raw_text)
+    if not cleaned:
+        return ""
+    sentences = re.split(r"(?<=[\.\!\?])\s+", cleaned)
+    scored: list[tuple[int, str]] = []
+    for sentence in sentences:
+        trimmed = sentence.strip()
+        if len(trimmed) < 40:
+            continue
+        score = relevance_score(trimmed, source)
+        if score > 0:
+            scored.append((score, trimmed))
+    if not scored:
+        return cleaned[:12000]
+    scored.sort(key=lambda item: (item[0], len(item[1])), reverse=True)
+    selected: list[str] = []
+    total_chars = 0
+    for _, sentence in scored:
+        if sentence in selected:
+            continue
+        selected.append(sentence)
+        total_chars += len(sentence) + 1
+        if total_chars >= 9000 or len(selected) >= 40:
+            break
+    return " ".join(selected)[:12000]
+
+
+def normalize_replacement_candidates(value: Any) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, list):
+        raw = value
+    elif isinstance(value, str):
+        raw = re.split(r",|/|;| and ", value)
+    else:
+        raw = [value]
+    candidates: list[str] = []
+    for item in raw:
+        name = str(item).strip()
+        if not name:
+            continue
+        if len(name) == 1:
+            continue
+        if name not in candidates:
+            candidates.append(name)
+    return candidates
 
 
 def fetch_url(url: str) -> str:
     request = Request(
         url,
         headers={
-            "User-Agent": "CreaseIQ-Layer3-Intel/1.0 (+https://creaseiq.onrender.com)",
+            "User-Agent": (
+                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/123.0.0.0 Safari/537.36 CreaseIQ-Layer3-Intel/1.0"
+            ),
             "Accept": "text/html,application/xml,application/rss+xml,application/atom+xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Referer": "https://www.google.com/",
         },
     )
     with urlopen(request, timeout=30) as response:
@@ -99,7 +219,7 @@ def parse_rss_items(source: dict[str, Any], raw_text: str) -> list[dict[str, Any
               "title": title or source["name"],
               "url": link or source["url"],
               "published_at": pub_date,
-              "raw_text": strip_html(description),
+              "raw_text": keep_relevant_text(description, source),
           }
       )
     return items
@@ -108,7 +228,27 @@ def parse_rss_items(source: dict[str, Any], raw_text: str) -> list[dict[str, Any
 def parse_web_item(source: dict[str, Any], raw_text: str) -> list[dict[str, Any]]:
     title_match = re.search(r"<title>(.*?)</title>", raw_text, flags=re.IGNORECASE | re.DOTALL)
     title = strip_html(title_match.group(1)) if title_match else source["name"]
-    body = strip_html(raw_text)[:12000]
+    meta_blocks = re.findall(
+        r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        raw_text,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    extracted_meta = []
+    for block in meta_blocks[:8]:
+        try:
+            payload = json.loads(block.strip())
+        except Exception:
+            continue
+        queue = payload if isinstance(payload, list) else [payload]
+        for item in queue:
+            if not isinstance(item, dict):
+                continue
+            for key in ("headline", "description", "articleBody", "name"):
+                value = item.get(key)
+                if isinstance(value, str) and len(value.strip()) > 20:
+                    extracted_meta.append(value.strip())
+    combined = " ".join(extracted_meta) + " " + raw_text
+    body = keep_relevant_text(combined, source)
     return [
         {
             "title": title,
@@ -117,6 +257,91 @@ def parse_web_item(source: dict[str, Any], raw_text: str) -> list[dict[str, Any]
             "raw_text": body,
         }
     ]
+
+
+def candidate_article_links(source: dict[str, Any], raw_text: str) -> list[dict[str, str]]:
+    base_url = str(source.get("url") or "").strip()
+    base_host = urlparse(base_url).netloc.lower()
+    seen: set[str] = set()
+    candidates: list[dict[str, str]] = []
+
+    def add_candidate(url: str, title: str = "") -> None:
+        absolute = urljoin(base_url, url.strip())
+        parsed = urlparse(absolute)
+        if not parsed.scheme.startswith("http"):
+            return
+        if parsed.netloc.lower() != base_host:
+            return
+        cleaned = absolute.split("#", 1)[0]
+        lowered = cleaned.lower()
+        if cleaned in seen:
+            return
+        if any(token in lowered for token in ["/login", "/signup", "/shop", "/tickets", "/photos", "/videos", "/gallery", "/stats", "/fixtures", "/points-table", "/squad"]):
+            return
+        title_text = strip_html(title)
+        score = relevance_score(f"{title_text} {cleaned}", source)
+        score += sum(1 for hint in ARTICLE_HINTS if hint in f"{title_text} {cleaned}".lower())
+        if score <= 0:
+            return
+        seen.add(cleaned)
+        candidates.append({"url": cleaned, "title": title_text, "score": str(score)})
+
+    for match in re.finditer(r'<a[^>]+href=["\']([^"\']+)["\'][^>]*>(.*?)</a>', raw_text, flags=re.IGNORECASE | re.DOTALL):
+        href, title = match.group(1), match.group(2)
+        add_candidate(href, title)
+
+    for block in re.findall(r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>', raw_text, flags=re.IGNORECASE | re.DOTALL):
+        try:
+            payload = json.loads(block.strip())
+        except Exception:
+            continue
+        queue = payload if isinstance(payload, list) else [payload]
+        for item in queue:
+            if isinstance(item, dict):
+                possible = []
+                for key in ("url", "@id", "mainEntityOfPage"):
+                    value = item.get(key)
+                    if isinstance(value, str):
+                        possible.append(value)
+                    elif isinstance(value, dict) and isinstance(value.get("@id"), str):
+                        possible.append(value["@id"])
+                title = str(item.get("headline") or item.get("name") or "")
+                for url in possible:
+                    add_candidate(url, title)
+
+    candidates.sort(key=lambda row: int(row["score"]), reverse=True)
+    max_articles = int(source.get("max_articles", 4))
+    return candidates[:max_articles]
+
+
+def parse_article_date(raw_text: str) -> str:
+    for pattern in [
+        r"\b(\d{1,2}\s+[A-Za-z]{3,9},\s+\d{4})\b",
+        r"\b(\d{4}-\d{2}-\d{2})\b",
+    ]:
+        match = re.search(pattern, raw_text)
+        if match:
+            return match.group(1)
+    return ""
+
+
+def parse_web_items(source: dict[str, Any], raw_text: str) -> list[dict[str, Any]]:
+    items = parse_web_item(source, raw_text)
+    for link in candidate_article_links(source, raw_text):
+        try:
+            article_raw = fetch_url(link["url"])
+        except (HTTPError, URLError):
+            continue
+        except Exception:
+            continue
+        article_rows = parse_web_item({**source, "url": link["url"], "name": link["title"] or source["name"]}, article_raw)
+        if not article_rows:
+            continue
+        article = article_rows[0]
+        article["title"] = link["title"] or article["title"]
+        article["published_at"] = parse_article_date(article_raw) or article.get("published_at", "")
+        items.append(article)
+    return items
 
 
 def source_item_id(source_id: str, url: str, title: str) -> str:
@@ -146,14 +371,19 @@ def ingest_sources() -> list[dict[str, Any]]:
         try:
             raw_text = fetch_url(url)
         except (HTTPError, URLError) as exc:
-            print(f"[Layer3] fetch failed for {source['source_id']}: {exc}")
+            if not source.get("allow_403"):
+                print(f"[Layer3] fetch failed for {source['source_id']}: {exc}")
+            else:
+                print(f"[Layer3] fetch blocked for {source['source_id']}: {exc}")
             continue
         except Exception as exc:  # noqa: BLE001
             print(f"[Layer3] unexpected fetch failure for {source['source_id']}: {exc}")
             continue
 
-        parsed_items = parse_rss_items(source, raw_text) if looks_like_rss(raw_text) else parse_web_item(source, raw_text)
+        parsed_items = parse_rss_items(source, raw_text) if looks_like_rss(raw_text) else parse_web_items(source, raw_text)
         for row in parsed_items:
+            if not row["raw_text"] or relevance_score(f"{row['title']} {row['raw_text']}", source) == 0:
+                continue
             item_id = source_item_id(source["source_id"], row["url"], row["title"])
             if item_id in existing_ids:
                 continue
@@ -273,15 +503,21 @@ def extract_claims(limit: int | None = None) -> list[dict[str, Any]]:
                 "confidence": str(row.get("confidence") or item["priority"]).strip(),
                 "selection_probability": float(row.get("selection_probability") or 0),
                 "expected_absence_window": row.get("expected_absence_window"),
-                "replacement_candidates": row.get("replacement_candidates") or [],
+                "replacement_candidates": normalize_replacement_candidates(row.get("replacement_candidates")),
                 "note": str(row.get("note") or "").strip(),
                 "source_date": item.get("published_at") or item.get("fetched_at"),
                 "extracted_at": utc_now_iso(),
             }
+            if claim["status"] not in STATUS_VALUES:
+                claim["status"] = "unknown"
+            if claim["confidence"] not in PRIORITY_SCORE:
+                claim["confidence"] = item["priority"]
+            claim["selection_probability"] = max(0.0, min(1.0, claim["selection_probability"]))
             if claim["player"]:
                 claims.append(claim)
                 extracted.append(claim)
         item["status"] = "processed"
+        time.sleep(1.0)
 
     save_json(INBOX_PATH, inbox)
     save_json(CLAIMS_PATH, claims)
@@ -310,7 +546,7 @@ def resolve_registry() -> list[dict[str, Any]]:
         best = rows[0]
         replacement_candidates: list[str] = []
         for row in rows:
-            for candidate in row.get("replacement_candidates") or []:
+            for candidate in normalize_replacement_candidates(row.get("replacement_candidates")):
                 name = str(candidate).strip()
                 if name and name not in replacement_candidates:
                     replacement_candidates.append(name)
