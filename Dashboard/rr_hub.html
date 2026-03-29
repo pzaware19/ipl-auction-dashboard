@@ -666,6 +666,113 @@
         line-height: 1.5;
       }
 
+      /* ── Live Score Banner ───────────────────────────────────── */
+      .live-score-banner {
+        display: none;
+        background: linear-gradient(90deg, #06081A, #0C1E0C, #06081A);
+        border-bottom: 1px solid rgba(52, 211, 153, 0.3);
+        padding: 10px 40px;
+        align-items: center;
+        gap: 20px;
+        font-size: 0.82rem;
+      }
+
+      .live-score-banner.visible { display: flex; }
+
+      .live-score-banner.completed {
+        background: linear-gradient(90deg, #06081A, #1A0C0C, #06081A);
+        border-bottom-color: rgba(232, 23, 93, 0.3);
+      }
+
+      .live-badge {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.66rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #34D399;
+        flex-shrink: 0;
+      }
+
+      .live-badge.ended { color: var(--rr-muted); }
+
+      .live-dot-green {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #34D399;
+        animation: pulse-green 1.4s infinite;
+        flex-shrink: 0;
+      }
+
+      @keyframes pulse-green {
+        0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52,211,153,0.5); }
+        50% { opacity: 0.8; box-shadow: 0 0 0 5px transparent; }
+      }
+
+      .score-teams {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+
+      .score-inning {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+        white-space: nowrap;
+      }
+
+      .score-team-name {
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--rr-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .score-team-name.rr-team { color: var(--rr-pink-light); }
+
+      .score-runs {
+        font-family: var(--display);
+        font-size: 1.1rem;
+        font-weight: 900;
+        color: var(--rr-text);
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .score-overs {
+        font-size: 0.72rem;
+        color: var(--rr-muted);
+      }
+
+      .score-separator {
+        font-size: 0.7rem;
+        color: var(--rr-muted);
+      }
+
+      .score-status {
+        font-size: 0.78rem;
+        color: var(--rr-muted);
+        font-style: italic;
+        margin-left: auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 280px;
+      }
+
+      .score-updated {
+        font-size: 0.65rem;
+        color: rgba(123,141,184,0.6);
+        flex-shrink: 0;
+      }
+
       /* ── Divider ─────────────────────────────────────────────── */
       .section-divider {
         height: 1px;
@@ -715,6 +822,19 @@
         <span class="nav-season">IPL 2026</span>
       </div>
     </nav>
+
+    <!-- ── Live Score Banner ──────────────────────────────────────── -->
+    <div class="live-score-banner" id="live-score-banner">
+      <div class="live-badge" id="live-badge">
+        <span class="live-dot-green" id="live-dot"></span>
+        <span id="live-badge-text">LIVE</span>
+      </div>
+      <div class="score-teams" id="score-teams">
+        <!-- populated by JS -->
+      </div>
+      <div class="score-status" id="score-status"></div>
+      <div class="score-updated" id="score-updated"></div>
+    </div>
 
     <!-- ── Hero ─────────────────────────────────────────────────── -->
     <section class="hero">
@@ -1233,6 +1353,84 @@
 
     // Run on load
     populateNextMatch();
+
+    // ── Live Score Widget ─────────────────────────────────────────
+    const banner      = document.getElementById("live-score-banner");
+    const badgeEl     = document.getElementById("live-badge");
+    const badgeText   = document.getElementById("live-badge-text");
+    const liveDot     = document.getElementById("live-dot");
+    const scoreTeams  = document.getElementById("score-teams");
+    const scoreStatus = document.getElementById("score-status");
+    const scoreUpdated= document.getElementById("score-updated");
+
+    function isRRTeam(name) {
+      return name && name.toLowerCase().includes("rajasthan");
+    }
+
+    function renderLiveScore(data) {
+      if (!data || (!data.live && !data.completed)) {
+        banner.classList.remove("visible", "completed");
+        return;
+      }
+
+      banner.classList.add("visible");
+
+      if (data.completed) {
+        banner.classList.add("completed");
+        badgeEl.classList.add("ended");
+        badgeText.textContent = "RESULT";
+        liveDot.style.animation = "none";
+        liveDot.style.background = "var(--rr-muted)";
+      } else {
+        banner.classList.remove("completed");
+        badgeEl.classList.remove("ended");
+        badgeText.textContent = "LIVE";
+        liveDot.style.animation = "";
+        liveDot.style.background = "";
+      }
+
+      const teams = data.teams || [];
+      const scores = data.scores || [];
+
+      let html = "";
+      scores.forEach((s, i) => {
+        const teamGuess = teams[i] || s.inning.split(" Inning")[0];
+        const isRR = isRRTeam(teamGuess);
+        const nameClass = isRR ? "score-team-name rr-team" : "score-team-name";
+        const displayName = isRR
+          ? "RR"
+          : teamGuess.split(" ").map(w => w[0]).join("").slice(0, 4).toUpperCase();
+
+        html += `<div class="score-inning">
+          <span class="${nameClass}">${displayName}</span>
+          <span class="score-runs">${s.runs}/${s.wickets}</span>
+          <span class="score-overs">(${s.overs})</span>
+        </div>`;
+        if (i < scores.length - 1) {
+          html += `<span class="score-separator">·</span>`;
+        }
+      });
+
+      scoreTeams.innerHTML = html || `<span style="color:var(--rr-muted)">${data.name || "RR match in progress"}</span>`;
+      scoreStatus.textContent = data.status || "";
+      scoreUpdated.textContent = `Updated ${new Date().toLocaleTimeString("en-IN", { hour: "2-digit", minute: "2-digit" })}`;
+    }
+
+    async function pollLiveScore() {
+      try {
+        const resp = await fetch("/api/live-score");
+        if (resp.ok) {
+          const data = await resp.json();
+          renderLiveScore(data);
+        }
+      } catch (_) {
+        // fail silently — don't disrupt the rest of the hub
+      }
+    }
+
+    // Poll immediately then every 60 seconds
+    pollLiveScore();
+    setInterval(pollLiveScore, 60_000);
   })();
   </script>
 

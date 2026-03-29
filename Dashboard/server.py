@@ -3,6 +3,7 @@ from __future__ import annotations
 import copy
 import json
 import os
+import time
 from http import HTTPStatus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
@@ -340,13 +341,89 @@ def build_bid_ladder_debug(
     return {"player_name": debug_player, "not_found": True}
 
 
+_live_score_cache: dict = {"ts": 0.0, "data": None}
+_LIVE_CACHE_TTL = 60  # seconds
+
+
+def fetch_live_score() -> dict:
+    global _live_score_cache
+    now = time.time()
+    if _live_score_cache["data"] is not None and now - _live_score_cache["ts"] < _LIVE_CACHE_TTL:
+        return _live_score_cache["data"]
+
+    api_key = os.environ.get("CRICAPI_KEY", "").strip()
+    if not api_key:
+        return {"live": False, "error": "CRICAPI_KEY not configured"}
+
+    url = f"https://api.cricapi.com/v1/currentMatches?apikey={api_key}&offset=0"
+    try:
+        with urlopen(Request(url, method="GET"), timeout=10) as resp:
+            payload = json.loads(resp.read().decode("utf-8"))
+    except Exception as exc:
+        return {"live": False, "error": str(exc)}
+
+    matches = payload.get("data", [])
+    rr_match = next(
+        (m for m in matches
+         if any("rajasthan" in t.lower() for t in m.get("teams", []))),
+        None,
+    )
+
+    if not rr_match:
+        result: dict = {"live": False}
+    else:
+        started = rr_match.get("matchStarted", False)
+        ended   = rr_match.get("matchEnded", False)
+        result = {
+            "live":      started and not ended,
+            "completed": ended,
+            "name":      rr_match.get("name", ""),
+            "status":    rr_match.get("status", ""),
+            "venue":     rr_match.get("venue", ""),
+            "teams":     rr_match.get("teams", []),
+            "scores": [
+                {
+                    "inning":   s.get("inning", ""),
+                    "runs":     s.get("r", 0),
+                    "wickets":  s.get("w", 0),
+                    "overs":    s.get("o", 0),
+                }
+                for s in rr_match.get("score", [])
+            ],
+        }
+
+    _live_score_cache = {"ts": now, "data": result}
+    return result
+
+
 class DashboardHandler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(DASHBOARD_DIR), **kwargs)
 
+    def do_GET(self) -> None:
+        parsed = urlparse(self.path)
+        if parsed.path == "/api/live-score":
+            try:
+                response = fetch_live_score()
+                body = json.dumps(response).encode("utf-8")
+                self.send_response(HTTPStatus.OK)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+            except Exception as exc:  # noqa: BLE001
+                body = json.dumps({"error": str(exc)}).encode("utf-8")
+                self.send_response(HTTPStatus.BAD_REQUEST)
+                self.send_header("Content-Type", "application/json; charset=utf-8")
+                self.send_header("Content-Length", str(len(body)))
+                self.end_headers()
+                self.wfile.write(body)
+        else:
+            super().do_GET()
+
     def do_POST(self) -> None:
         parsed = urlparse(self.path)
-        if parsed.path not in {"/api/run-scenario", "/api/match-brief"}:
+        if parsed.path not in {"/api/run-scenario", "/api/match-brief", "/api/live-score"}:
             self.send_error(HTTPStatus.NOT_FOUND, "Unknown API endpoint")
             return
         try:
@@ -355,6 +432,8 @@ class DashboardHandler(SimpleHTTPRequestHandler):
             payload = json.loads(raw_body.decode("utf-8") or "{}")
             if parsed.path == "/api/run-scenario":
                 response = build_scenario_response(payload)
+            elif parsed.path == "/api/live-score":
+                response = fetch_live_score()
             else:
                 response = build_match_brief_response(payload)
             body = json.dumps(response).encode("utf-8")
