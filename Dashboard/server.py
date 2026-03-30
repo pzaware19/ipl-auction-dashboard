@@ -296,8 +296,21 @@ def build_match_brief_response(payload: dict) -> dict:
     if match_context:
         context["live_match_context"] = match_context
 
+    # Enrich context with live score so Groq knows about completed innings /
+    # innings-break chase scenarios.  fetch_live_score() has its own 3-minute
+    # cache so this adds negligible extra API cost.
+    live_score = fetch_live_score()
+    if live_score.get("scores"):
+        context["live_score"] = {
+            "status":  live_score.get("status", ""),
+            "scores":  live_score["scores"],
+        }
+
+    # Cache key includes both the XI context AND the current score state so
+    # an innings break (new completed-innings entry) triggers a fresh Groq call.
+    live_score_signature = json.dumps(live_score.get("scores", []), sort_keys=True, ensure_ascii=True, separators=(",", ":"))
     live_context_signature = json.dumps(match_context or {}, sort_keys=True, ensure_ascii=True, separators=(",", ":"))
-    cache_key = (match_id, team_lens, model, live_context_signature)
+    cache_key = (match_id, team_lens, model, live_context_signature, live_score_signature)
     cached = _match_brief_cache.get(cache_key)
     now = time.time()
     if cached and now - float(cached.get("ts", 0.0)) < _MATCH_BRIEF_TTL:
@@ -309,12 +322,45 @@ def build_match_brief_response(payload: dict) -> dict:
             "cached": True,
         }
 
+    # Detect innings-break / chase scenario: first innings complete when we have
+    # exactly one score entry with overs == 20 or wickets == 10.
+    scores = (live_score or {}).get("scores", [])
+    first_innings_done = any(
+        (float(s.get("overs", 0)) >= 19.6 or int(s.get("wickets", 0)) >= 10)
+        for s in scores
+    )
+    chase_target = None
+    if first_innings_done and scores:
+        # Pick the innings with the most runs as the completed batting innings
+        bat_innings = max(scores, key=lambda s: int(s.get("runs", 0)))
+        chase_target = int(bat_innings.get("runs", 0)) + 1  # runs needed
+
+    if chase_target:
+        chase_block = (
+            f"INNINGS BREAK / CHASE MODE: The first innings is complete. "
+            f"The target is {chase_target} runs. "
+            f"Switch entirely to a second-innings chase brief for the team_lens side. "
+            f"Use live_match_context.playing_xi as the confirmed batting lineup — name the actual openers, "
+            f"middle-order anchors, and death hitters from that XI. "
+            f"In tactical_plan.batting_plan give over-by-over pacing checkpoints "
+            f"(e.g. PP target, 10-over target, 15-over target) based on the required run rate. "
+            f"In tactical_plan.bowling_plan describe how the opposition will try to defend — "
+            f"name their key bowlers from the confirmed XI and how the batting side should attack them. "
+            f"recommended_plan must be chase-specific action points. "
+            f"Do not write a pre-match brief. Every sentence must assume the chase is about to begin. "
+        )
+    else:
+        chase_block = (
+            "The match has not yet started or is mid-first-innings. Write a pre-match or mid-innings tactical brief. "
+        )
+
     system_prompt = (
         "You are a high-level IPL strategy analyst writing a match brief for a front-office decision-support dashboard. "
         "Use only the provided structured data. Do not invent statistics, players, venue traits, or matchup claims not present in the context. "
         "Be specific, tactical, and cricket-literate. Prefer realistic role language such as opener, enforcer, anchor, death hitter, new-ball bowler, and middle-overs controller. "
         "The live_match_context key (if present) contains today's toss result and confirmed playing XI — "
         "use these to make the brief specific to today's actual conditions rather than speaking generically. "
+        + chase_block +
         "AVAILABILITY: Check focus_team.availability.flagged_players and opposition_team.availability.flagged_players. "
         "Any player with status ruled_out, overseas_unavailable, or selection_probability below 0.7 is a meaningful risk. "
         "Include the most impactful availability concerns in risk_flags (e.g. 'Sam Curran ruled out for RR — overseas seam depth reduced'). "
