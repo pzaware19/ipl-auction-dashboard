@@ -178,16 +178,28 @@
     "note": "replaced by Kulwant Khejroliya due to injury"
   },
   {
+    "player": "Sai Sudharsan",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "27 March, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Captain Shubman Gill confirmed that Sai Sudharsan will be his opening partner for the Titans in the TATA IPL 2026 season."
+  },
+  {
     "player": "Shubman Gill",
     "team": "GT",
     "status": "available",
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "2026-03-29T16:06:15+00:00",
+    "source_date": "27 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Captain of the team"
+    "note": "Captain Shubman Gill addressed the media in a pre-season press conference, indicating his availability for the TATA IPL 2026 season."
   },
   {
     "player": "Akash Deep",

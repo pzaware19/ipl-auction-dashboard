@@ -1681,5 +1681,39 @@
     "note": "Mentioned as part of the squad",
     "source_date": "30 Mar, 2026",
     "extracted_at": "2026-03-30T15:21:45+00:00"
+  },
+  {
+    "claim_id": "gt_official_site_captain_shubman_gill_head_coach_ashish_nehra_eye_tata_ipl_2026_glory_news_gujarat_titans_gt_tata_ipl_20_claim_1",
+    "source_item_id": "gt_official_site_captain_shubman_gill_head_coach_ashish_nehra_eye_tata_ipl_2026_glory_news_gujarat_titans_gt_tata_ipl_20",
+    "source_id": "gt_official_site",
+    "source_name": "Gujarat Titans Official",
+    "priority": "official",
+    "player": "Shubman Gill",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Captain Shubman Gill addressed the media in a pre-season press conference, indicating his availability for the TATA IPL 2026 season.",
+    "source_date": "27 March, 2026",
+    "extracted_at": "2026-03-30T17:57:30+00:00"
+  },
+  {
+    "claim_id": "gt_official_site_captain_shubman_gill_head_coach_ashish_nehra_eye_tata_ipl_2026_glory_news_gujarat_titans_gt_tata_ipl_20_claim_2",
+    "source_item_id": "gt_official_site_captain_shubman_gill_head_coach_ashish_nehra_eye_tata_ipl_2026_glory_news_gujarat_titans_gt_tata_ipl_20",
+    "source_id": "gt_official_site",
+    "source_name": "Gujarat Titans Official",
+    "priority": "official",
+    "player": "Sai Sudharsan",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Captain Shubman Gill confirmed that Sai Sudharsan will be his opening partner for the Titans in the TATA IPL 2026 season.",
+    "source_date": "27 March, 2026",
+    "extracted_at": "2026-03-30T17:57:30+00:00"
   }
 ]
