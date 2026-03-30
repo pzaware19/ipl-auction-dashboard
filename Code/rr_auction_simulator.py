@@ -436,6 +436,7 @@ NAME_FIXES = {
     "vg arora": "vaibhav arora",
     "vaibhav arora": "vaibhav arora",
     "varun chakaravarthy": "varun chakaravarthy",
+    "varun chakravarthy": "varun chakaravarthy",  # alternate spelling seen in news/layer3 sources
 
     # LSG
     "ak markram": "aiden markram",
@@ -640,6 +641,7 @@ DISPLAY_NAME_FIXES = {
     "sp narine": "Sunil Narine",
     "vaibhav arora": "Vaibhav Arora",
     "varun chakaravarthy": "Varun Chakaravarthy",
+    "varun chakravarthy": "Varun Chakaravarthy",
     "aiden markram": "Aiden Markram",
     "manimaran siddharth": "Manimaran Siddharth",
     "matthew breetzke": "Matthew Breetzke",

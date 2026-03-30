@@ -315,6 +315,10 @@ def build_match_brief_response(payload: dict) -> dict:
         "Be specific, tactical, and cricket-literate. Prefer realistic role language such as opener, enforcer, anchor, death hitter, new-ball bowler, and middle-overs controller. "
         "The live_match_context key (if present) contains today's toss result and confirmed playing XI — "
         "use these to make the brief specific to today's actual conditions rather than speaking generically. "
+        "AVAILABILITY: Check focus_team.availability.flagged_players and opposition_team.availability.flagged_players. "
+        "Any player with status ruled_out, overseas_unavailable, or selection_probability below 0.7 is a meaningful risk. "
+        "Include the most impactful availability concerns in risk_flags (e.g. 'Sam Curran ruled out for RR — overseas seam depth reduced'). "
+        "Adjust tactical recommendations to reflect the confirmed absence or uncertainty of flagged players. "
         "Return ONLY valid JSON with exactly these keys: "
         "headline, opening_call, why_this_matchup_is_live, tactical_edges, matchup_watch, venue_read, risk_flags, recommended_plan, "
         "team_swot, tactical_plan, layer_note. "
@@ -322,7 +326,7 @@ def build_match_brief_response(payload: dict) -> dict:
         "tactical_plan must be an object with keys batting_plan, bowling_plan, venue_plan, opposition_watch, method_note; "
         "batting_plan, bowling_plan, venue_plan, opposition_watch must be arrays of 1 to 3 concise strings, and method_note must be a short string. "
         "Each of tactical_edges, matchup_watch, risk_flags, recommended_plan must be an array of 2 to 4 concise strings. "
-        "layer_note must be a short sentence describing Layer 1 historical intelligence and Layer 2 live context. "
+        "layer_note must be a short sentence describing what Layer 3 availability flags (if any) were used alongside Layer 1 historical intelligence. "
         "No markdown, no explanation outside the JSON object."
     )
 

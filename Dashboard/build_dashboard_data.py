@@ -266,6 +266,8 @@ FINAL_SQUADS_2026 = {
         {"player": "Sahil Parakh", "acquisition": "Auction", "role": "Batter", "price": 0.30},
         {"player": "Prithvi Shaw", "acquisition": "Auction", "role": "Batter", "price": 0.75},
         {"player": "Kyle Jamieson", "acquisition": "Auction", "role": "Bowler", "price": 2.00},
+        {"player": "Sediqullah Atal", "acquisition": "Replacement", "role": "Batter", "price": None},
+        {"player": "Mustafizur Rahman", "acquisition": "Replacement", "role": "Bowler", "price": None},
     ],
     "GT": [
         {"player": "Shubman Gill", "acquisition": "Retained", "role": "Batter", "price": None},
@@ -293,6 +295,7 @@ FINAL_SQUADS_2026 = {
         {"player": "Tom Banton", "acquisition": "Auction", "role": "Batter", "price": 2.00},
         {"player": "Luke Wood", "acquisition": "Auction", "role": "Bowler", "price": 0.75},
         {"player": "Prithviraj Yarra", "acquisition": "Auction", "role": "Bowler", "price": 0.30},
+        {"player": "Kulwant Khejroliya", "acquisition": "Replacement", "role": "Bowler", "price": None},
     ],
     "KKR": [
         {"player": "Ajinkya Rahane", "acquisition": "Retained", "role": "Batter", "price": None},
@@ -320,6 +323,8 @@ FINAL_SQUADS_2026 = {
         {"player": "Akash Deep", "acquisition": "Auction", "role": "Bowler", "price": 1.00},
         {"player": "Rachin Ravindra", "acquisition": "Auction", "role": "All-rounder", "price": 2.00},
         {"player": "Blessing Muzarabani", "acquisition": "Replacement", "role": "Bowler", "price": None},
+        {"player": "Navdeep Saini", "acquisition": "Replacement", "role": "Bowler", "price": None},
+        {"player": "Saurabh Dubey", "acquisition": "Replacement", "role": "Bowler", "price": None},
     ],
     "LSG": [
         {"player": "Rishabh Pant", "acquisition": "Retained", "role": "Wicketkeeper", "price": None},
@@ -418,6 +423,7 @@ FINAL_SQUADS_2026 = {
         {"player": "Nandre Burger", "acquisition": "Retained", "role": "Bowler", "price": None},
         {"player": "Ravindra Jadeja", "acquisition": "Trade", "role": "All-rounder", "price": None},
         {"player": "Sam Curran", "acquisition": "Trade", "role": "All-rounder", "price": None},
+        {"player": "Dasun Shanaka", "acquisition": "Replacement", "role": "All-rounder", "price": None},
         {"player": "Donovan Ferreira", "acquisition": "Trade", "role": "Wicketkeeper", "price": None},
         {"player": "Ravi Bishnoi", "acquisition": "Auction", "role": "Bowler", "price": 7.20},
         {"player": "Sushant Mishra", "acquisition": "Auction", "role": "Bowler", "price": 0.90},
@@ -482,6 +488,7 @@ FINAL_SQUADS_2026 = {
         {"player": "Liam Livingstone", "acquisition": "Auction", "role": "All-rounder", "price": 13.00},
         {"player": "Shivam Mavi", "acquisition": "Auction", "role": "Bowler", "price": 0.75},
         {"player": "Jack Edwards", "acquisition": "Auction", "role": "All-rounder", "price": 3.00},
+        {"player": "David Payne", "acquisition": "Replacement", "role": "Bowler", "price": None},
     ],
 }
 
@@ -2415,10 +2422,7 @@ def build_match_planning_payload(players_payload: dict) -> dict:
             if row["player"] in locked_players and row["selection_probability"] > 0.05
         ]
         locked_rows.sort(
-            key=lambda row: (
-                row["selection_probability"],
-                squad_strength(row),
-            ),
+            key=lambda row: row["selection_probability"] * squad_strength(row),
             reverse=True,
         )
         for row in locked_rows:
@@ -2432,12 +2436,10 @@ def build_match_planning_payload(players_payload: dict) -> dict:
                 row for row in roster_rows
                 if row["role"] == role and row["selection_probability"] > 0.05 and row["player"] not in selected_names
             ]
+            # Sort by combined score so high-quality players with slightly reduced availability
+            # (e.g. sel=0.8 from layer3 flags) are not displaced by fringe players with default sel=1.0
             candidates.sort(
-                key=lambda row: (
-                    row["selection_probability"],
-                    squad_strength(row),
-                    acquisition_weight(row["acquisition"]),
-                ),
+                key=lambda row: row["selection_probability"] * squad_strength(row) * acquisition_weight(row["acquisition"]),
                 reverse=True,
             )
             while role_count(role) < minimum and candidates and len(selected) < 11:
@@ -2448,11 +2450,7 @@ def build_match_planning_payload(players_payload: dict) -> dict:
             if row["player"] not in selected_names and row["selection_probability"] > 0.05
         ]
         remaining.sort(
-            key=lambda row: (
-                row["selection_probability"],
-                squad_strength(row),
-                acquisition_weight(row["acquisition"]),
-            ),
+            key=lambda row: row["selection_probability"] * squad_strength(row) * acquisition_weight(row["acquisition"]),
             reverse=True,
         )
         for row in remaining:
