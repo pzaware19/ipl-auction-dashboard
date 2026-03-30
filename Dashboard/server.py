@@ -656,11 +656,32 @@ def handle_demo_request(payload: dict) -> dict:
     if not name or not email:
         raise ValueError("name and email are required")
 
+    import datetime as _dt
+
+    record = {
+        "ts":    _dt.datetime.utcnow().isoformat() + "Z",
+        "name":  name,
+        "email": email,
+        "team":  team,
+        "note":  note,
+    }
+
     # Always log — visible in Render dashboard logs
     print(
         f"[DEMO REQUEST] name={name!r} email={email!r} team={team!r} note={note!r}",
         flush=True,
     )
+
+    # Persist to disk so requests survive across restarts / can be audited
+    _requests_file = DASHBOARD_DIR.parent / "Data" / "demo_requests.json"
+    try:
+        existing: list = []
+        if _requests_file.exists():
+            existing = json.loads(_requests_file.read_text()) or []
+        existing.append(record)
+        _requests_file.write_text(json.dumps(existing, indent=2))
+    except Exception as exc:  # noqa: BLE001
+        print(f"[DEMO REQUEST] failed to persist to disk: {exc}", flush=True)
 
     # Attempt email notification if Gmail app password is configured
     gmail_user     = os.environ.get("GMAIL_USER", "").strip()
@@ -681,9 +702,11 @@ def handle_demo_request(payload: dict) -> dict:
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
                 smtp.login(gmail_user, gmail_password)
                 smtp.sendmail(gmail_user, _NOTIFY_EMAIL, msg.as_string())
+            print("[DEMO REQUEST] email notification sent OK", flush=True)
         except Exception as exc:  # noqa: BLE001
-            # Email failure is non-fatal — request is already logged above
             print(f"[DEMO REQUEST] email notification failed: {exc}", flush=True)
+    else:
+        print("[DEMO REQUEST] GMAIL_USER/GMAIL_APP_PASSWORD not set — email skipped", flush=True)
 
     return {"ok": True}
 
@@ -776,7 +799,7 @@ class DashboardHandler(SimpleHTTPRequestHandler):
                     # HttpOnly + SameSite=Strict keeps the cookie off JS and same-origin only
                     self.send_header(
                         "Set-Cookie",
-                        f"{_COOKIE_NAME}={_COOKIE_VALUE}; Path=/; SameSite=Lax; HttpOnly; Max-Age=43200",
+                        f"{_COOKIE_NAME}={_COOKIE_VALUE}; Path=/; SameSite=Lax; HttpOnly; Secure; Max-Age=43200",
                     )
                     self.send_header("Content-Length", str(len(body)))
                     self.end_headers()
