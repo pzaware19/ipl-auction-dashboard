@@ -322,32 +322,74 @@ def build_match_brief_response(payload: dict) -> dict:
             "cached": True,
         }
 
-    # Detect innings-break / chase scenario: first innings complete when we have
-    # exactly one score entry with overs == 20 or wickets == 10.
-    scores = (live_score or {}).get("scores", [])
-    first_innings_done = any(
-        (float(s.get("overs", 0)) >= 19.6 or int(s.get("wickets", 0)) >= 10)
-        for s in scores
-    )
-    chase_target = None
-    if first_innings_done and scores:
-        # Pick the innings with the most runs as the completed batting innings
-        bat_innings = max(scores, key=lambda s: int(s.get("runs", 0)))
-        chase_target = int(bat_innings.get("runs", 0)) + 1  # runs needed
+    # Map team abbreviations to keywords present in CricAPI inning strings
+    # e.g. "Rajasthan Royals Inning 1" contains "rajasthan"
+    _TEAM_KEYWORDS: dict[str, str] = {
+        "RR":   "rajasthan",
+        "CSK":  "chennai",
+        "MI":   "mumbai",
+        "KKR":  "kolkata",
+        "RCB":  "bangalore",
+        "SRH":  "hyderabad",
+        "PBKS": "punjab",
+        "DC":   "delhi",
+        "GT":   "gujarat",
+        "LSG":  "lucknow",
+    }
 
-    if chase_target:
+    # Detect innings-break / second innings live scenario.
+    # First innings is "done" when any score entry has wickets==10 or overs>=19.6
+    scores = (live_score or {}).get("scores", [])
+    completed = [
+        s for s in scores
+        if int(s.get("wickets", 0)) >= 10 or float(s.get("overs", 0)) >= 19.6
+    ]
+    first_innings_done = bool(completed)
+
+    chase_target = None
+    team_lens_batted_first = False
+
+    if first_innings_done and scores:
+        # The completed innings is the one that finished batting
+        bat_innings = completed[0]
+        chase_target = int(bat_innings.get("runs", 0)) + 1
+
+        # Determine whether team_lens batted first by checking if their
+        # keyword appears in the completed inning's name string
+        inning_name = bat_innings.get("inning", "").lower()
+        tl_keyword  = _TEAM_KEYWORDS.get(team_lens, "").lower()
+        team_lens_batted_first = bool(tl_keyword and tl_keyword in inning_name)
+
+    if chase_target and team_lens_batted_first:
+        # team_lens batted first — they are now DEFENDING
+        rrr = round((chase_target - 1) / 20, 2)
         chase_block = (
-            f"INNINGS BREAK / CHASE MODE: The first innings is complete. "
-            f"The target is {chase_target} runs. "
-            f"Switch entirely to a second-innings chase brief for the team_lens side. "
+            f"SECOND INNINGS — DEFEND MODE: {team_lens} batted first and set a target of {chase_target} runs "
+            f"(RRR for opposition: {rrr} per over). "
+            f"Write a BOWLING AND FIELD-PLACEMENT BRIEF for {team_lens} — how to defend this total. "
+            f"Use live_match_context.playing_xi to name the actual bowlers available. "
+            f"In tactical_plan.bowling_plan give over-by-over bowling rotation checkpoints and which bowlers "
+            f"to protect for the death overs. "
+            f"In tactical_plan.batting_plan note key opposition threats from their confirmed XI that {team_lens} must dismiss early. "
+            f"recommended_plan must be defence-specific: wicket windows, fielding pressure, powerplay strategy. "
+            f"Do not write a chasing brief. Every sentence must assume {team_lens} is in the field. "
+        )
+    elif chase_target and not team_lens_batted_first:
+        # team_lens is chasing
+        rrr = round(chase_target / 20, 2)
+        chase_block = (
+            f"SECOND INNINGS — CHASE MODE: {team_lens} need {chase_target} runs to win "
+            f"(required run rate: {rrr} per over). "
+            f"Write a BATTING CHASE BRIEF for {team_lens}. "
             f"Use live_match_context.playing_xi as the confirmed batting lineup — name the actual openers, "
             f"middle-order anchors, and death hitters from that XI. "
             f"In tactical_plan.batting_plan give over-by-over pacing checkpoints "
-            f"(e.g. PP target, 10-over target, 15-over target) based on the required run rate. "
+            f"(powerplay target ~{round(rrr*6)}, 10-over target ~{round(rrr*10)}, 15-over target ~{round(rrr*15)}) "
+            f"based on the required run rate. "
             f"In tactical_plan.bowling_plan describe how the opposition will try to defend — "
             f"name their key bowlers from the confirmed XI and how the batting side should attack them. "
             f"recommended_plan must be chase-specific action points. "
-            f"Do not write a pre-match brief. Every sentence must assume the chase is about to begin. "
+            f"Do not write a pre-match or defending brief. Every sentence must assume {team_lens} is chasing. "
         )
     else:
         chase_block = (
