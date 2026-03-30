@@ -613,21 +613,38 @@ def fetch_live_score() -> dict:
         None,
     )
 
+    def infer_score_team(inning_name: str, teams: list[str]) -> str:
+        inning_lower = str(inning_name or "").lower()
+        team_list = [str(team or "") for team in teams or []]
+        for team in team_list:
+            team_lower = team.lower()
+            if team_lower and team_lower in inning_lower:
+                return team
+            tokens = [token for token in re.split(r"[^a-z]+", team_lower) if token]
+            if tokens and all(token in inning_lower for token in tokens[:2]):
+                return team
+            initials = "".join(token[0] for token in tokens if token)
+            if initials and initials in inning_lower.replace(" ", ""):
+                return team
+        return str(inning_name or "").split(" Inning")[0].strip()
+
     if not rr_match:
         result: dict = {"live": False}
     else:
         started = rr_match.get("matchStarted", False)
         ended   = rr_match.get("matchEnded", False)
+        teams = rr_match.get("teams", [])
         result = {
             "live":      started and not ended,
             "completed": ended,
             "name":      rr_match.get("name", ""),
             "status":    rr_match.get("status", ""),
             "venue":     rr_match.get("venue", ""),
-            "teams":     rr_match.get("teams", []),
+            "teams":     teams,
             "scores": [
                 {
                     "inning":   s.get("inning", ""),
+                    "team":     infer_score_team(s.get("inning", ""), teams),
                     "runs":     s.get("r", 0),
                     "wickets":  s.get("w", 0),
                     "overs":    s.get("o", 0),

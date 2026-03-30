@@ -1472,6 +1472,26 @@
       return name && name.toLowerCase().includes("rajasthan");
     }
 
+    function teamShortName(name) {
+      if (!name) return "";
+      if (isRRTeam(name)) return "RR";
+      const normalized = String(name).trim();
+      return normalized.split(" ").map(w => w[0]).join("").slice(0, 4).toUpperCase();
+    }
+
+    function inferTeamFromInning(inningName, teams) {
+      const inning = String(inningName || "").toLowerCase();
+      const teamList = Array.isArray(teams) ? teams : [];
+      for (const team of teamList) {
+        const lowered = String(team || "").toLowerCase();
+        if (lowered && inning.includes(lowered)) return team;
+        const tokens = lowered.split(/[^a-z]+/).filter(Boolean);
+        const initials = tokens.map(t => t[0]).join("");
+        if (initials && inning.replace(/\s+/g, "").includes(initials)) return team;
+      }
+      return String(inningName || "").split(" Inning")[0];
+    }
+
     function renderLiveScore(data) {
       if (!data || (!data.live && !data.completed)) {
         banner.classList.remove("visible", "completed");
@@ -1499,12 +1519,10 @@
 
       let html = "";
       scores.forEach((s, i) => {
-        const teamGuess = teams[i] || s.inning.split(" Inning")[0];
+        const teamGuess = s.team || inferTeamFromInning(s.inning, teams) || teams[i] || s.inning.split(" Inning")[0];
         const isRR = isRRTeam(teamGuess);
         const nameClass = isRR ? "score-team-name rr-team" : "score-team-name";
-        const displayName = isRR
-          ? "RR"
-          : teamGuess.split(" ").map(w => w[0]).join("").slice(0, 4).toUpperCase();
+        const displayName = teamShortName(teamGuess);
 
         html += `<div class="score-inning">
           <span class="${nameClass}">${displayName}</span>
