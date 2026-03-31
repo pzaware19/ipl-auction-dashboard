@@ -102,6 +102,30 @@
     "note": "Joins CSK for TATA IPL 2026"
   },
   {
+    "player": "Donovan Ferreira",
+    "team": "DC",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "16 May, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Currently unavailable"
+  },
+  {
+    "player": "Faf du Plessis",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "16 May, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Rejoined the squad for remainder of IPL 2025"
+  },
+  {
     "player": "Harry Brook",
     "team": "DC",
     "status": "ruled_out",
@@ -114,6 +138,18 @@
       "Sediqullah Atal"
     ],
     "note": "Replaced by Sediqullah Atal"
+  },
+  {
+    "player": "Mitchell Starc",
+    "team": "DC",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "16 May, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Currently unavailable"
   },
   {
     "player": "Mustafizur Rahman",
@@ -398,6 +434,30 @@
     "note": "mentioned as part of KKR's spin twins"
   },
   {
+    "player": "Akash Deep",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "10 Nov, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Joins the Indian Test squad after his stellar outing in England"
+  },
+  {
+    "player": "Akshat Raghuwanshi",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "31 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned in the Akshat-Mukul-Naman story as part of the trio set to live the IPL dream"
+  },
+  {
     "player": "Arjun Tendulkar",
     "team": "LSG",
     "status": "available",
@@ -420,6 +480,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Traded in by LSG ahead of IPL 2026"
+  },
+  {
+    "player": "Mukul Choudhary",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "31 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned in the Akshat-Mukul-Naman story as part of the trio set to live the IPL dream"
+  },
+  {
+    "player": "Naman Tiwari",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "31 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned in the Akshat-Mukul-Naman story as part of the trio set to live the IPL dream"
   },
   {
     "player": "Nicholas Pooran",
