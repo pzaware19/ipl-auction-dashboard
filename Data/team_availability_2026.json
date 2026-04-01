@@ -370,6 +370,18 @@
     "note": "played in the opening match"
   },
   {
+    "player": "Ajinkya Rahane",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in team's official website and match preview"
+  },
+  {
     "player": "Akash Deep",
     "team": "KKR",
     "status": "ruled_out",
@@ -446,6 +458,66 @@
     "note": "joins KKR as replacement for Harshit Rana"
   },
   {
+    "player": "Rachin Ravindra",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Listed in team's player roster"
+  },
+  {
+    "player": "Ramandeep Singh",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in team's news article as finding fresh inspiration in the dugout"
+  },
+  {
+    "player": "Rinku Singh",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.6,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Listed in team's player roster"
+  },
+  {
+    "player": "Rovman Powell",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.6,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Listed in team's player roster"
+  },
+  {
+    "player": "Sarthak Ranjan",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Listed in team's player roster"
+  },
+  {
     "player": "Saurabh Dubey",
     "team": "KKR",
     "status": "available",
@@ -468,6 +540,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "mentioned as part of KKR's spin twins"
+  },
+  {
+    "player": "Tim Seifert",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.6,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Listed in team's player roster"
+  },
+  {
+    "player": "Vaibhav Arora",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned in team's news article as eager to evolve with KKR"
   },
   {
     "player": "Varun Chakravarthy",
@@ -826,10 +922,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "2026-03-29T16:06:13+00:00",
+    "source_date": "29 Mar, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Played a major role in RCB's quick chase against SRH"
+    "note": "Played in the IPL 2026 season opener and contributed to the team's win"
   },
   {
     "player": "Jacob Duffy",
@@ -838,10 +934,22 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "2026-03-29T16:06:13+00:00",
+    "source_date": "29 Mar, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in recent match against SRH"
+    "note": "Mentioned in the context of the IPL 2026 season opener, implying his participation"
+  },
+  {
+    "player": "Phil Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took a catch in the IPL 2026 season opener"
   },
   {
     "player": "Rajat Patidar",
@@ -850,10 +958,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "2026-03-29T16:06:13+00:00",
+    "source_date": "29 Mar, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Labelled team's collective brilliance as 'positive' sign for IPL 2026"
+    "note": "Participated in the IPL 2026 season opener and gave a post-match interview"
   },
   {
     "player": "Virat Kohli",
@@ -862,10 +970,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "2026-03-29T16:06:13+00:00",
+    "source_date": "29 Mar, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Opened up on his preparations for IPL 2026"
+    "note": "Virat Kohli has returned to action in IPL 2026 and has started the campaign with a strong performance."
   },
   {
     "player": "Dasun Shanaka",
@@ -1105,14 +1213,14 @@
   {
     "player": "Pat Cummins",
     "team": "SRH",
-    "status": "available",
+    "status": "overseas_unavailable",
     "confidence": "official",
-    "selection_probability": 1.0,
+    "selection_probability": 0.0,
     "best_source": "Sunrisers Hyderabad Official",
-    "source_date": "2026-03-29T16:06:15+00:00",
-    "expected_absence_window": null,
+    "source_date": "2026-04-01T07:43:26+00:00",
+    "expected_absence_window": "first few games",
     "replacement_candidates": [],
-    "note": ""
+    "note": "unavailable for selection for the first few games"
   },
   {
     "player": "Shivam Mavi",
