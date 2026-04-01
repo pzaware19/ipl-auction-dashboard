@@ -176,6 +176,18 @@
     "note": "Signed as a replacement for Harry Brook"
   },
   {
+    "player": "Shardul Thakur",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "IPL Official News",
+    "source_date": "01 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "traded for Aman Khan"
+  },
+  {
     "player": "Tristan Stubbs",
     "team": "DC",
     "status": "available",
@@ -188,16 +200,40 @@
     "note": "Rejoined the squad for remainder of IPL 2025"
   },
   {
+    "player": "Ashok Sharma",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "31 March, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the opening match"
+  },
+  {
+    "player": "Dasun Shanaka",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "IPL Official News",
+    "source_date": "01 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "picked as a replacement for Glenn Phillips"
+  },
+  {
     "player": "Glenn Phillips",
     "team": "GT",
     "status": "available",
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the opening match"
   },
   {
     "player": "Jos Buttler",
@@ -206,10 +242,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the opening match"
   },
   {
     "player": "Kagiso Rabada",
@@ -254,10 +290,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the opening match"
   },
   {
     "player": "Prithviraj Yarra",
@@ -292,10 +328,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the opening match"
   },
   {
     "player": "Sai Sudharsan",
@@ -304,10 +340,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "27 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Captain Shubman Gill confirmed that Sai Sudharsan will be his opening partner for the Titans in the TATA IPL 2026 season."
+    "note": "played in the opening match"
   },
   {
     "player": "Shubman Gill",
@@ -316,10 +352,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "27 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Captain Shubman Gill addressed the media in a pre-season press conference, indicating his availability for the TATA IPL 2026 season."
+    "note": "played in the opening match"
   },
   {
     "player": "Washington Sundar",
@@ -328,10 +364,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "31 March, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the opening match"
   },
   {
     "player": "Akash Deep",
@@ -346,6 +382,18 @@
       "Saurabh Dubey"
     ],
     "note": "lumbar stress injury"
+  },
+  {
+    "player": "Aman Khan",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "IPL Official News",
+    "source_date": "01 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "traded for Shardul Thakur"
   },
   {
     "player": "Cameron Green",
@@ -744,6 +792,32 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in the women's squad"
+  },
+  {
+    "player": "Glenn Maxwell",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "01 Apr, 2026",
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Mitch Owen"
+    ],
+    "note": "injured, replaced by Mitch Owen"
+  },
+  {
+    "player": "Shreyas Iyer",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "01 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "fined for slow over-rate"
   },
   {
     "player": "Devdutt Padikkal",
