@@ -140,6 +140,42 @@
     "note": "Replaced by Sediqullah Atal"
   },
   {
+    "player": "KL Rahul",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Got out for a golden duck"
+  },
+  {
+    "player": "Kuldeep Yadav",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took two wickets"
+  },
+  {
+    "player": "Lungi Ngidi",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took three wickets"
+  },
+  {
     "player": "Mitchell Starc",
     "team": "DC",
     "status": "overseas_unavailable",
@@ -164,6 +200,18 @@
     "note": "Signed as a replacement"
   },
   {
+    "player": "Sameer Rizvi",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Played a match-winning innings"
+  },
+  {
     "player": "Sediqullah Atal",
     "team": "DC",
     "status": "available",
@@ -174,6 +222,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Signed as a replacement for Harry Brook"
+  },
+  {
+    "player": "Shami",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took a wicket"
   },
   {
     "player": "Shardul Thakur",
@@ -626,6 +686,18 @@
     "note": "Traded in by LSG ahead of IPL 2026"
   },
   {
+    "player": "Mohsin Khan",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took a wicket"
+  },
+  {
     "player": "Mukul Choudhary",
     "team": "LSG",
     "status": "available",
@@ -662,6 +734,18 @@
     "note": "Mentioned in the retention list for IPL 2026"
   },
   {
+    "player": "Prince Yadav",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took two wickets"
+  },
+  {
     "player": "Rishabh Pant",
     "team": "LSG",
     "status": "available",
@@ -672,6 +756,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned in the retention list for IPL 2026"
+  },
+  {
+    "player": "T Natarajan",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "IPL Official News",
+    "source_date": "02 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took three wickets"
   },
   {
     "player": "Amanjot Kaur",
