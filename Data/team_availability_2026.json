@@ -140,6 +140,20 @@
     "note": "Replaced by Sediqullah Atal"
   },
   {
+    "player": "Jake Fraser-McGurk",
+    "team": "DC",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "14 May, 2025",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Mustafizur Rahman"
+    ],
+    "note": "unavailable for the remainder of the TATA IPL 2025 season"
+  },
+  {
     "player": "KL Rahul",
     "team": "DC",
     "status": "available",
@@ -296,6 +310,42 @@
     "note": "played in the opening match"
   },
   {
+    "player": "Ishant Sharma",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "2026-03-28",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of the squad"
+  },
+  {
+    "player": "Jason Holder",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "2026-03-28",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of the squad"
+  },
+  {
+    "player": "Jayant Yadav",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "2026-03-28",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of the squad"
+  },
+  {
     "player": "Jos Buttler",
     "team": "GT",
     "status": "available",
@@ -330,6 +380,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "joins GT as replacement for Prithviraj Yarra"
+  },
+  {
+    "player": "Luke Wood",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "2026-03-28",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of the squad"
   },
   {
     "player": "Mohammed Siraj",
@@ -416,6 +478,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the opening match"
+  },
+  {
+    "player": "Tom Banton",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "2026-03-28",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of the squad"
   },
   {
     "player": "Washington Sundar",
@@ -1036,6 +1110,18 @@
     "note": "Mentioned in the context of the IPL 2026 season opener, implying his participation"
   },
   {
+    "player": "Jitesh Sharma",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "29 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played a match for RCB"
+  },
+  {
     "player": "Phil Salt",
     "team": "RCB",
     "status": "available",
@@ -1171,6 +1257,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as one of the candidates for the captaincy role"
+  },
+  {
+    "player": "Sanju Samson",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "best_source": "Rajasthan Royals Official",
+    "source_date": "30 Mar, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "previously recovering from an injury, but deemed fit enough to bat"
   },
   {
     "player": "Shimron Hetmyer",
