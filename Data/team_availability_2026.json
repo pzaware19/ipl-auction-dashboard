@@ -62,7 +62,9 @@
     "best_source": "Chennai Super Kings Official",
     "source_date": "2026-03-29T16:57:15+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Ayush Mhatre"
+    ],
     "note": "Captain Ruturaj Returns"
   },
   {
@@ -1307,6 +1309,20 @@
     "note": ""
   },
   {
+    "player": "Adam Zampa",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "03 Apr, 2026",
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Smaran Ravichandran"
+    ],
+    "note": "Injury replacement announced by the team"
+  },
+  {
     "player": "David Payne",
     "team": "SRH",
     "status": "available",
@@ -1427,6 +1443,20 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": ""
+  },
+  {
+    "player": "Smaran Ravichandran",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "03 Apr, 2026",
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Harsh Dubey"
+    ],
+    "note": "Injury replacement announced by the team"
   },
   {
     "player": "Jack Edwards",

@@ -3297,5 +3297,117 @@
     "note": "Captain for the opening match",
     "source_date": "28 March, 2026",
     "extracted_at": "2026-04-02T07:23:54+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Smaran Ravichandran",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Harsh Dubey"
+    ],
+    "note": "Injury replacement announced by the team",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-03T04:07:52+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ruturaj Gaikwad",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Ayush Mhatre"
+    ],
+    "note": "Injury replacement announced by the team",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-03T04:07:52+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report_claim_3",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Adam Zampa",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Smaran Ravichandran"
+    ],
+    "note": "Injury replacement announced by the team",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-03T04:07:52+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report_claim_4",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Harshit Rana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Navdeep Saini"
+    ],
+    "note": "Replacement announced by the team",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-03T04:07:52+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report_claim_5",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4264_tata_ipl_2026_match_6_kkr_vs_srh_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Prithviraj Yarra",
+    "team": "GT",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "Kulwant Khejroliya"
+    ],
+    "note": "Replacement announced by the team",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-03T04:07:52+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_when_i_come_back_to_rcb_i_feel_very_happy_jitesh_sharma_rcb_cricket_news_news_when_i_come_back_to_rcb__claim_1",
+    "source_item_id": "rcb_official_site_when_i_come_back_to_rcb_i_feel_very_happy_jitesh_sharma_rcb_cricket_news_news_when_i_come_back_to_rcb_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jitesh Sharma",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Jitesh Sharma expresses happiness about returning to RCB, implying his availability for the team.",
+    "source_date": "01 Apr, 2026",
+    "extracted_at": "2026-04-03T04:08:40+00:00"
   }
 ]
