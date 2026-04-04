@@ -104,6 +104,30 @@
     "note": "Joins CSK for TATA IPL 2026"
   },
   {
+    "player": "Axar Patel",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Led the spinners in the recent match"
+  },
+  {
+    "player": "David Miller",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Finished the game in style with a boundary in the 19th over"
+  },
+  {
     "player": "Donovan Ferreira",
     "team": "DC",
     "status": "overseas_unavailable",
@@ -160,12 +184,12 @@
     "team": "DC",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.9,
+    "selection_probability": 1.0,
     "best_source": "IPL Official News",
-    "source_date": "02 Apr, 2026",
+    "source_date": "05 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Got out for a golden duck"
+    "note": "Dismissed in the very first over of the recent match"
   },
   {
     "player": "Kuldeep Yadav",
@@ -204,6 +228,18 @@
     "note": "Currently unavailable"
   },
   {
+    "player": "Mukesh Kumar",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took 2 wickets in the recent match"
+  },
+  {
     "player": "Mustafizur Rahman",
     "team": "DC",
     "status": "available",
@@ -216,16 +252,40 @@
     "note": "Signed as a replacement"
   },
   {
+    "player": "Nitish Rana",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dismissed cheaply in the recent match"
+  },
+  {
+    "player": "Pathum Nissanka",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Played a quick-fire 44 off 30 balls in the recent match"
+  },
+  {
     "player": "Sameer Rizvi",
     "team": "DC",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.8,
+    "selection_probability": 1.0,
     "best_source": "IPL Official News",
-    "source_date": "02 Apr, 2026",
+    "source_date": "05 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Played a match-winning innings"
+    "note": "Played in the recent match and performed well"
   },
   {
     "player": "Sediqullah Atal",
@@ -276,6 +336,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Rejoined the squad for remainder of IPL 2025"
+  },
+  {
+    "player": "Vipraj Nigam",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Stifled the scoring rate in the middle period of the recent match"
   },
   {
     "player": "Ashok Sharma",
@@ -872,6 +944,30 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Corbin Bosch",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took a wicket in the recent match"
+  },
+  {
+    "player": "Deepak Chahar",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dismissed KL Rahul in the very first over of the recent match"
+  },
+  {
     "player": "Harmanpreet Kaur",
     "team": "MI",
     "status": "available",
@@ -894,6 +990,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in the women's squad"
+  },
+  {
+    "player": "Jasprit Bumrah",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took a brilliant run out in the recent match"
   },
   {
     "player": "Kamalini G",
@@ -980,6 +1088,30 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Scored a fluent 35 off 26 balls in the recent match"
+  },
+  {
+    "player": "Ryan Rickelton",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dismissed in the third over of the recent match"
+  },
+  {
     "player": "Saika Ishaque",
     "team": "MI",
     "status": "available",
@@ -1040,6 +1172,18 @@
     "note": "Traded to Mumbai Indians from Gujarat Titans"
   },
   {
+    "player": "Surya Kumar Yadav",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Anchored the middle overs with a composed 51 off 36 deliveries"
+  },
+  {
     "player": "Suryakumar Yadav",
     "team": "MI",
     "status": "available",
@@ -1050,6 +1194,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Featured in article about Indian cricket folklore"
+  },
+  {
+    "player": "Tilak Varma",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "05 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dismissed shortly after Ryan Rickelton in the recent match"
   },
   {
     "player": "Triveni Vasistha",
