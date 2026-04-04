@@ -3568,5 +3568,138 @@
     "note": "No indication of injury or unavailability",
     "source_date": "19 Aug, 2023",
     "extracted_at": "2026-04-03T07:19:49+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Glenn Maxwell",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Mitch Owen"
+    ],
+    "note": "injured, replaced by Mitch Owen",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:34+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Harshit Rana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Navdeep Saini"
+    ],
+    "note": "replaced by Navdeep Saini",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:34+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report_claim_3",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Prithviraj Yarra",
+    "team": "GT",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Kulwant Khejroliya"
+    ],
+    "note": "replaced by Kulwant Khejroliya",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:34+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report_claim_4",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4267_tata_ipl_2026_match_7_csk_vs_pbks_match_report",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Shardul Thakur",
+    "team": "DC",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Aman Khan"
+    ],
+    "note": "traded to KKR",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:34+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Glenn Maxwell",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Mitch Owen"
+    ],
+    "note": "injured, replaced by Mitch Owen",
+    "source_date": "01 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:36+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc_claim_2",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Harshit Rana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Navdeep Saini"
+    ],
+    "note": "replaced by Navdeep Saini",
+    "source_date": "01 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:36+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc_claim_3",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_4_pbks_vs_gt_01_apr_2026_3_min_read_news_4262_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Prithviraj Yarra",
+    "team": "GT",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Kulwant Khejroliya"
+    ],
+    "note": "replaced by Kulwant Khejroliya",
+    "source_date": "01 Apr, 2026",
+    "extracted_at": "2026-04-04T03:56:36+00:00"
   }
 ]

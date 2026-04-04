@@ -254,14 +254,16 @@
   {
     "player": "Shardul Thakur",
     "team": "DC",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "official",
-    "selection_probability": 0.5,
+    "selection_probability": 0.0,
     "best_source": "IPL Official News",
-    "source_date": "01 Apr, 2026",
-    "expected_absence_window": null,
-    "replacement_candidates": [],
-    "note": "traded for Aman Khan"
+    "source_date": "04 Apr, 2026",
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Aman Khan"
+    ],
+    "note": "traded to KKR"
   },
   {
     "player": "Tristan Stubbs",
@@ -1068,7 +1070,7 @@
     "confidence": "official",
     "selection_probability": 0.0,
     "best_source": "IPL Official News",
-    "source_date": "01 Apr, 2026",
+    "source_date": "04 Apr, 2026",
     "expected_absence_window": "entire season",
     "replacement_candidates": [
       "Mitch Owen"
