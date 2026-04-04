@@ -1040,6 +1040,18 @@
     "note": "Traded to Mumbai Indians from Gujarat Titans"
   },
   {
+    "player": "Suryakumar Yadav",
+    "team": "MI",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-01T10:35:20+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in article about Indian cricket folklore"
+  },
+  {
     "player": "Triveni Vasistha",
     "team": "MI",
     "status": "available",
@@ -1062,6 +1074,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in the women's squad"
+  },
+  {
+    "player": "Cooper Connolly",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.9,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-01T10:35:20+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Scored 72* against GT"
   },
   {
     "player": "Glenn Maxwell",
@@ -1126,6 +1150,18 @@
     "note": "Recently played a match for RCB"
   },
   {
+    "player": "Josh Hazlewood",
+    "team": "RCB",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-03-31T07:26:07+00:00",
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "Wasn't match-fit for the opener"
+  },
+  {
     "player": "Phil Salt",
     "team": "RCB",
     "status": "available",
@@ -1148,6 +1184,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Participated in the IPL 2026 season opener and gave a post-match interview"
+  },
+  {
+    "player": "Romario Shepherd",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "04 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent RCB content, implying availability"
   },
   {
     "player": "Virat Kohli",
@@ -1210,6 +1258,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as part of the squad"
+  },
+  {
+    "player": "Prasidh Krishna",
+    "team": "RR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-01T10:35:20+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Took 3-fer against PBKS"
   },
   {
     "player": "Ravindra Jadeja",
