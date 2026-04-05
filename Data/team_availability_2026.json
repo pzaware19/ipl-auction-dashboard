@@ -2,30 +2,33 @@
   {
     "player": "Dewald Brevis",
     "team": "CSK",
-    "status": "ruled_out",
+    "status": "doubtful",
     "confidence": "major_media",
-    "selection_probability": 0.0,
+    "selection_probability": 0.5,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-03-29T16:57:50+00:00",
-    "expected_absence_window": "at least 1 match",
-    "replacement_candidates": [],
-    "note": "side strain"
+    "source_date": "2026-04-04T17:34:36+00:00",
+    "expected_absence_window": "1-2 matches",
+    "replacement_candidates": [
+      "Akeal Hosein",
+      "Matthew Short"
+    ],
+    "note": "Question marks surround Dewald Brevis' availability"
   },
   {
     "player": "MS Dhoni",
     "team": "CSK",
-    "status": "doubtful",
+    "status": "ruled_out",
     "confidence": "major_media",
-    "selection_probability": 0.2,
-    "best_source": "Cricbuzz",
-    "source_date": "2026-03-29",
-    "expected_absence_window": "first two weeks of IPL 2026",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-04T17:34:36+00:00",
+    "expected_absence_window": "at least 2 weeks",
     "replacement_candidates": [
       "Sanju Samson",
       "Kartik Sharma",
       "Urvil Patel"
     ],
-    "note": "recovering from a calf strain"
+    "note": "MS Dhoni could sit this marquee fixture out given the initial assessment of him missing at least two weeks of action"
   },
   {
     "player": "Nathan Ellis",
@@ -1312,10 +1315,13 @@
     "confidence": "major_media",
     "selection_probability": 0.5,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-03-31T07:26:07+00:00",
-    "expected_absence_window": "",
-    "replacement_candidates": [],
-    "note": "Wasn't match-fit for the opener"
+    "source_date": "2026-04-04T17:34:36+00:00",
+    "expected_absence_window": "1 match",
+    "replacement_candidates": [
+      "Jacob Duffy",
+      "Bhuvneshwar Kumar"
+    ],
+    "note": "Josh Hazlewood will be keenly watched, RCB will be guarded against rushing back the talismanic seamer"
   },
   {
     "player": "Phil Salt",
