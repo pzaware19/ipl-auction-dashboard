@@ -4355,5 +4355,22 @@
     "note": "MS Dhoni could sit this marquee fixture out given the initial assessment of him missing at least two weeks of action",
     "source_date": "2026-04-04T17:34:36+00:00",
     "extracted_at": "2026-04-05T07:17:55+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_6_kkr_vs_srh_03_apr_2026_3_min_read_news_4265_code_of_conduct_breach_matc_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_6_kkr_vs_srh_03_apr_2026_3_min_read_news_4265_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Abhishek Sharma",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined 25% of match fees and received 1 demerit point for breaching IPL Code of Conduct",
+    "source_date": "03 Apr, 2026",
+    "extracted_at": "2026-04-05T17:36:07+00:00"
   }
 ]
