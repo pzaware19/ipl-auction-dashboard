@@ -4228,5 +4228,22 @@
     "note": "Ensured no further hiccups in the recent match",
     "source_date": "05 Apr, 2026",
     "extracted_at": "2026-04-04T17:34:39+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_victory_is_the_accumulation_of_hard_work_virat_kohli_rcb_cricket_news_news_victory_is_the_accumulation_claim_1",
+    "source_item_id": "rcb_official_site_victory_is_the_accumulation_of_hard_work_virat_kohli_rcb_cricket_news_news_victory_is_the_accumulation",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent team news and quoted, implying availability",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-05T04:17:43+00:00"
   }
 ]
