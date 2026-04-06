@@ -1273,6 +1273,18 @@
     "note": "Fined for slow over-rate offence"
   },
   {
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently achieved a milestone and was interviewed about the team's win against CSK"
+  },
+  {
     "player": "Devdutt Padikkal",
     "team": "RCB",
     "status": "available",
@@ -1358,6 +1370,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Featured in recent RCB content, implying availability"
+  },
+  {
+    "player": "Tim David",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played and praised by captain Rajat Patidar"
   },
   {
     "player": "Virat Kohli",
