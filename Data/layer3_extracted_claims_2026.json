@@ -4372,5 +4372,22 @@
     "note": "Fined 25% of match fees and received 1 demerit point for breaching IPL Code of Conduct",
     "source_date": "03 Apr, 2026",
     "extracted_at": "2026-04-05T17:36:07+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_7_csk_v_pbks_03_apr_2026_3_min_read_news_4266_code_of_conduct_breach_matc_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_7_csk_v_pbks_03_apr_2026_3_min_read_news_4266_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Shreyas Iyer",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined for slow over-rate offence",
+    "source_date": "04 Apr, 2026",
+    "extracted_at": "2026-04-06T04:23:44+00:00"
   }
 ]
