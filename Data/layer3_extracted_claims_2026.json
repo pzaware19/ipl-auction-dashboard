@@ -4542,5 +4542,117 @@
     "note": "still not match-fit to bowl",
     "source_date": "2026-04-05T13:55:29+00:00",
     "extracted_at": "2026-04-07T04:13:24+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_chennai_super_kings_vs_punjab_kings_live_7th_match_live_cricket_scores_149684_csk_vs_pbks_7th_match_claim_1",
+    "source_item_id": "cricbuzz_latest_news_chennai_super_kings_vs_punjab_kings_live_7th_match_live_cricket_scores_149684_csk_vs_pbks_7th_match",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Shreyas Iyer",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Leading the team and looked fit during practice",
+    "source_date": "2026-04-03T14:02:26+00:00",
+    "extracted_at": "2026-04-07T07:28:51+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_chennai_super_kings_vs_punjab_kings_live_7th_match_live_cricket_scores_149684_csk_vs_pbks_7th_match_claim_2",
+    "source_item_id": "cricbuzz_latest_news_chennai_super_kings_vs_punjab_kings_live_7th_match_live_cricket_scores_149684_csk_vs_pbks_7th_match",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Jamie Overton",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "team_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "Sunday (RCB fixture)",
+    "replacement_candidates": [],
+    "note": "CSK's top-scorer of the last game, might not be rushed to play tonight",
+    "source_date": "2026-04-03T14:02:26+00:00",
+    "extracted_at": "2026-04-07T07:28:51+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Dewald Brevis",
+    "team": "CSK",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [
+      "Matthew Short",
+      "Akeal Hosein"
+    ],
+    "note": "Question marks surround Dewald Brevis' availability",
+    "source_date": "2026-04-05T13:55:29+00:00",
+    "extracted_at": "2026-04-07T07:29:07+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2_claim_2",
+    "source_item_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Josh Hazlewood",
+    "team": "RCB",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.2,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [
+      "Jacob Duffy",
+      "Bhuvneshwar Kumar"
+    ],
+    "note": "Josh Hazlewood will be keenly watched; he only did a few minor warm-up routines on the eve of the match",
+    "source_date": "2026-04-05T13:55:29+00:00",
+    "extracted_at": "2026-04-07T07:29:07+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2_claim_3",
+    "source_item_id": "cricbuzz_latest_news_rcb_vs_csk_csk_opt_to_bowl_live_cricket_scores_149721_rcb_vs_csk_11th_match_indian_premier_league_2",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "MS Dhoni",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "long-term",
+    "replacement_candidates": [
+      "Sanju Samson"
+    ],
+    "note": "MS Dhoni too could sit this marquee fixture out given the initial assessment of him missing at least two weeks of action",
+    "source_date": "2026-04-05T13:55:29+00:00",
+    "extracted_at": "2026-04-07T07:29:07+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_mi_vs_dc_dc_opt_to_bowl_live_cricket_scores_149695_mi_vs_dc_8th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_mi_vs_dc_dc_opt_to_bowl_live_cricket_scores_149695_mi_vs_dc_8th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Hardik",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "coach_quote",
+    "selection_probability": 0.0,
+    "expected_absence_window": "at least 1 match",
+    "replacement_candidates": [
+      "Mitchell Santner"
+    ],
+    "note": "Suryakumar Yadav mentioned that Hardik is not well and was not fit for the game",
+    "source_date": "2026-04-04T10:03:06+00:00",
+    "extracted_at": "2026-04-07T07:29:23+00:00"
   }
 ]
