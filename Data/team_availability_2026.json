@@ -353,6 +353,18 @@
     "note": "Stifled the scoring rate in the middle period of the recent match"
   },
   {
+    "player": "All players",
+    "team": "GT",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-04T13:53:42+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Gujarat Titans Injuries/Unavailability: No injuries have been reported"
+  },
+  {
     "player": "Ashok Sharma",
     "team": "GT",
     "status": "available",
@@ -741,6 +753,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "replacement for Akash Deep"
+  },
+  {
+    "player": "Shreyas Iyer",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.9,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-05T13:55:29+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "recovered from hand injury"
   },
   {
     "player": "Sunil Narine",
@@ -1394,6 +1418,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Virat Kohli has returned to action in IPL 2026 and has started the campaign with a strong performance."
+  },
+  {
+    "player": "All players",
+    "team": "RR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-04T13:53:42+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Rajasthan Royals Injuries/Unavailability: All players are fit and available for selection"
   },
   {
     "player": "Dasun Shanaka",
