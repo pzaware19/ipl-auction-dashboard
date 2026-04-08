@@ -3,16 +3,16 @@
     "player": "Dewald Brevis",
     "team": "CSK",
     "status": "doubtful",
-    "confidence": "major_media",
-    "selection_probability": 0.5,
+    "confidence": "team_media",
+    "selection_probability": 0.7,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-05T13:55:29+00:00",
-    "expected_absence_window": "short-term",
+    "source_date": "2026-04-02T17:52:38+00:00",
+    "expected_absence_window": "unknown",
     "replacement_candidates": [
       "Matthew Short",
       "Akeal Hosein"
     ],
-    "note": "Question marks surround Dewald Brevis' availability"
+    "note": "Missed the Rajasthan Royals clash with a side strain, but has started practicing with no visible discomfort"
   },
   {
     "player": "Jamie Overton",
@@ -29,18 +29,19 @@
   {
     "player": "MS Dhoni",
     "team": "CSK",
-    "status": "ruled_out",
-    "confidence": "major_media",
-    "selection_probability": 0.0,
+    "status": "doubtful",
+    "confidence": "team_media",
+    "selection_probability": 0.7,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-05T13:55:29+00:00",
-    "expected_absence_window": "long-term",
+    "source_date": "2026-04-02T17:52:38+00:00",
+    "expected_absence_window": "1-2 weeks",
     "replacement_candidates": [
+      "Sarfaraz Khan",
       "Sanju Samson",
       "Kartik Sharma",
       "Urvil Patel"
     ],
-    "note": "MS Dhoni too could sit this marquee fixture out given the initial assessment of him missing at least two weeks of action"
+    "note": "Initially ruled out for the first two weeks of the season following a calf strain, but has started practicing"
   },
   {
     "player": "Nathan Ellis",
@@ -1475,9 +1476,9 @@
     "status": "ruled_out",
     "confidence": "major_media",
     "selection_probability": 0.0,
-    "best_source": "Cricbuzz",
-    "source_date": "2026-03-29",
-    "expected_absence_window": "at least one match",
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-03-29T16:57:50+00:00",
+    "expected_absence_window": "short-term",
     "replacement_candidates": [
       "unknown"
     ],
