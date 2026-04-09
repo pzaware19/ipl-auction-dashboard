@@ -4743,5 +4743,39 @@
     "note": "Missed the Rajasthan Royals clash with a side strain, but has started practicing with no visible discomfort",
     "source_date": "2026-04-02T17:52:38+00:00",
     "extracted_at": "2026-04-08T07:45:52+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_a_man_on_a_mission_dinesh_karthik_opens_up_on_devdutt_padikkal_s_homecoming_to_rcb_ahead_of_ipl_2025_r_claim_1",
+    "source_item_id": "rcb_official_site_a_man_on_a_mission_dinesh_karthik_opens_up_on_devdutt_padikkal_s_homecoming_to_rcb_ahead_of_ipl_2025_r",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Devdutt Padikkal",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently picked by RCB in the 2025 Mega Auction and featured in a recent match",
+    "source_date": "08 Apr, 2026",
+    "extracted_at": "2026-04-09T04:11:22+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_a_man_on_a_mission_dinesh_karthik_on_devdutt_padikkal_s_sensational_return_to_rcb_rcb_cricket_news_new_claim_1",
+    "source_item_id": "rcb_official_site_a_man_on_a_mission_dinesh_karthik_on_devdutt_padikkal_s_sensational_return_to_rcb_rcb_cricket_news_new",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Devdutt Padikkal",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent RCB news and mentioned as part of the team",
+    "source_date": "08 Apr, 2026",
+    "extracted_at": "2026-04-09T04:11:30+00:00"
   }
 ]
