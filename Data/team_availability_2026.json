@@ -904,6 +904,18 @@
     "note": "Traded in by LSG ahead of IPL 2026"
   },
   {
+    "player": "George Linde",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "10 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for Wanindu Hasaranga"
+  },
+  {
     "player": "Mohammad Shami",
     "team": "LSG",
     "status": "available",
@@ -998,6 +1010,20 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Took three wickets"
+  },
+  {
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "10 Apr, 2026",
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "hamstring injury"
   },
   {
     "player": "Amanjot Kaur",
