@@ -698,6 +698,18 @@
     "note": "replaced by Navdeep Saini"
   },
   {
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-08T18:08:18+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Pathirana continues to be absent"
+  },
+  {
     "player": "Navdeep Saini",
     "team": "KKR",
     "status": "available",
@@ -828,6 +840,20 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned in team's news article as eager to evolve with KKR"
+  },
+  {
+    "player": "Varun Chakaravarthy",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.7,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-08T18:08:18+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Navdeep Saini"
+    ],
+    "note": "Chakaravarthy has been recovering from an injury to his left little finger"
   },
   {
     "player": "Varun Chakravarthy",
