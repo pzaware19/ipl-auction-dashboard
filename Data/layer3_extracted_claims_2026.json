@@ -5134,5 +5134,39 @@
     "note": "signed as replacement for Wanindu Hasaranga",
     "source_date": "10 Apr, 2026",
     "extracted_at": "2026-04-11T04:01:32+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rr_vs_gt_rr_opt_to_bat_live_cricket_scores_149699_rr_vs_gt_9th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rr_vs_gt_rr_opt_to_bat_live_cricket_scores_149699_rr_vs_gt_9th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "All players",
+    "team": "RR",
+    "status": "available",
+    "confidence": "team_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Rajasthan Royals Injuries/Unavailability: All players are fit and available for selection",
+    "source_date": "2026-04-04T13:53:42+00:00",
+    "extracted_at": "2026-04-11T07:09:50+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rr_vs_gt_rr_opt_to_bat_live_cricket_scores_149699_rr_vs_gt_9th_match_indian_premier_league_2026_claim_2",
+    "source_item_id": "cricbuzz_latest_news_rr_vs_gt_rr_opt_to_bat_live_cricket_scores_149699_rr_vs_gt_9th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "All players",
+    "team": "GT",
+    "status": "available",
+    "confidence": "team_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Gujarat Titans Injuries/Unavailability: No injuries have been reported",
+    "source_date": "2026-04-04T13:53:42+00:00",
+    "extracted_at": "2026-04-11T07:09:50+00:00"
   }
 ]
