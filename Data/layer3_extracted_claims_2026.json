@@ -5168,5 +5168,41 @@
     "note": "Gujarat Titans Injuries/Unavailability: No injuries have been reported",
     "source_date": "2026-04-04T13:53:42+00:00",
     "extracted_at": "2026-04-11T07:09:50+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_14_dc_vs_gt_09_apr_2026_3_min_read_news_4278_code_of_conduct_breach_match_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_14_dc_vs_gt_09_apr_2026_3_min_read_news_4278_code_of_conduct_breach_match",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "LSG sign George Linde as a replacement for Wanindu Hasaranga",
+    "source_date": "09 Apr, 2026",
+    "extracted_at": "2026-04-11T17:34:47+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_14_dc_vs_gt_09_apr_2026_3_min_read_news_4278_code_of_conduct_breach_match_claim_2",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_14_dc_vs_gt_09_apr_2026_3_min_read_news_4278_code_of_conduct_breach_match",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Shubman Gill",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined for slow over-rate, no indication of injury or unavailability",
+    "source_date": "09 Apr, 2026",
+    "extracted_at": "2026-04-11T17:34:47+00:00"
   }
 ]
