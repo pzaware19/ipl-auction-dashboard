@@ -5062,5 +5062,77 @@
     "note": "signed as replacement for Wanindu Hasaranga",
     "source_date": "10 Apr, 2026",
     "extracted_at": "2026-04-10T14:18:12+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_tata_ipl_2026_kkr_vs_lsg_report_mukul_s_heroics_pull_off_last_ball_heist_in_kolkata_www_lucknowsupergi_claim_1",
+    "source_item_id": "lsg_official_site_tata_ipl_2026_kkr_vs_lsg_report_mukul_s_heroics_pull_off_last_ball_heist_in_kolkata_www_lucknowsupergi",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "Injured, replaced by George Linde",
+    "source_date": "09 Apr, 2026",
+    "extracted_at": "2026-04-11T04:01:25+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_tata_ipl_2026_kkr_vs_lsg_report_mukul_s_heroics_pull_off_last_ball_heist_in_kolkata_www_lucknowsupergi_claim_2",
+    "source_item_id": "lsg_official_site_tata_ipl_2026_kkr_vs_lsg_report_mukul_s_heroics_pull_off_last_ball_heist_in_kolkata_www_lucknowsupergi",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "George Linde",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named as replacement for Wanindu Hasaranga",
+    "source_date": "09 Apr, 2026",
+    "extracted_at": "2026-04-11T04:01:25+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_lsg_sign_george_linde_as_a_replacement_for_wanindu_hasaranga_news_claim_1",
+    "source_item_id": "ipl_official_news_copy_article_lsg_sign_george_linde_as_a_replacement_for_wanindu_hasaranga_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "signed as replacement",
+    "source_date": "10 Apr, 2026",
+    "extracted_at": "2026-04-11T04:01:32+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_lsg_sign_george_linde_as_a_replacement_for_wanindu_hasaranga_news_claim_2",
+    "source_item_id": "ipl_official_news_copy_article_lsg_sign_george_linde_as_a_replacement_for_wanindu_hasaranga_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "George Linde",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for Wanindu Hasaranga",
+    "source_date": "10 Apr, 2026",
+    "extracted_at": "2026-04-11T04:01:32+00:00"
   }
 ]
