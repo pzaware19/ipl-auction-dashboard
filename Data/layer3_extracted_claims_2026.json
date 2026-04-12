@@ -5204,5 +5204,60 @@
     "note": "Fined for slow over-rate, no indication of injury or unavailability",
     "source_date": "09 Apr, 2026",
     "extracted_at": "2026-04-11T17:34:47+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo_claim_1",
+    "source_item_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Suyash Sharma",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Venkatesh Iyer"
+    ],
+    "note": "Missed out on selection in the last match",
+    "source_date": "11 Apr, 2026",
+    "extracted_at": "2026-04-12T04:27:41+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo_claim_2",
+    "source_item_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Venkatesh Iyer",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Suyash Sharma"
+    ],
+    "note": "Included in the team in the last match",
+    "source_date": "11 Apr, 2026",
+    "extracted_at": "2026-04-12T04:27:41+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo_claim_3",
+    "source_item_id": "rcb_official_site_you_have_to_learn_from_your_mistakes_rajat_patidar_on_rcb_s_defeat_against_rr_rcb_cricket_news_news_yo",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Rajat Patidar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Played in the last match and performed well",
+    "source_date": "11 Apr, 2026",
+    "extracted_at": "2026-04-12T04:27:41+00:00"
   }
 ]

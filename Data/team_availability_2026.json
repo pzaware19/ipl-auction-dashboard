@@ -1491,6 +1491,20 @@
     "note": "Featured in recent RCB content, implying availability"
   },
   {
+    "player": "Suyash Sharma",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "11 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Venkatesh Iyer"
+    ],
+    "note": "Missed out on selection in the last match"
+  },
+  {
     "player": "Tim David",
     "team": "RCB",
     "status": "available",
@@ -1501,6 +1515,20 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Recently played and praised by captain Rajat Patidar"
+  },
+  {
+    "player": "Venkatesh Iyer",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "11 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Suyash Sharma"
+    ],
+    "note": "Included in the team in the last match"
   },
   {
     "player": "Virat Kohli",
