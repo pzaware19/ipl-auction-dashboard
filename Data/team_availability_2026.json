@@ -1445,17 +1445,17 @@
   {
     "player": "Josh Hazlewood",
     "team": "RCB",
-    "status": "doubtful",
-    "confidence": "major_media",
-    "selection_probability": 0.2,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-05T13:55:29+00:00",
-    "expected_absence_window": "short-term",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "12 Apr, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [
       "Jacob Duffy",
       "Bhuvneshwar Kumar"
     ],
-    "note": "Josh Hazlewood will be keenly watched; he only did a few minor warm-up routines on the eve of the match"
+    "note": "Returned from an unspecified absence and played in the previous match"
   },
   {
     "player": "Phil Salt",
