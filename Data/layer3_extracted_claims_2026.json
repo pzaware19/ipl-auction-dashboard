@@ -5868,5 +5868,22 @@
     "note": "played in the recent match",
     "source_date": "12 April, 2026",
     "extracted_at": "2026-04-13T11:03:54+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_18_csk_vs_dc_11_apr_2026_3_min_read_news_4284_code_of_conduct_breach_matc_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_18_csk_vs_dc_11_apr_2026_3_min_read_news_4284_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Nitish Rana",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined 25% of match fee and accumulated 1 demerit point for breaching Level 1 of IPL's Code of Conduct",
+    "source_date": "12 Apr, 2026",
+    "extracted_at": "2026-04-13T14:48:38+00:00"
   }
 ]
