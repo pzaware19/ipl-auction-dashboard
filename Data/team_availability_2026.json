@@ -1153,6 +1153,18 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Mitchell Santner",
+    "team": "MI",
+    "status": "available",
+    "confidence": "coach_quote",
+    "selection_probability": 0.8,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T17:34:47+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Missed the previous match but confirmed available for this game"
+  },
+  {
     "player": "Nalla Reddy",
     "team": "MI",
     "status": "available",
@@ -1355,6 +1367,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in the women's squad"
+  },
+  {
+    "player": "Will Jacks",
+    "team": "MI",
+    "status": "unknown",
+    "confidence": "team_media",
+    "selection_probability": 0.2,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T17:34:47+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Yet to report, no update on availability"
   },
   {
     "player": "Cooper Connolly",
