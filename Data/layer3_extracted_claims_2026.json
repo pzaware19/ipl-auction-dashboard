@@ -5488,5 +5488,41 @@
     "note": "In good form and expected to play",
     "source_date": "12 Apr, 2026",
     "extracted_at": "2026-04-12T10:09:15+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_tata_ipl_2026_lsg_vs_gt_report_not_the_result_we_wanted_at_ekana_www_lucknowsupergiants_in_news_tata_i_claim_1",
+    "source_item_id": "lsg_official_site_tata_ipl_2026_lsg_vs_gt_report_not_the_result_we_wanted_at_ekana_www_lucknowsupergiants_in_news_tata_i",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "TATA IPL 2026",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "Injured, replaced by George Linde",
+    "source_date": "12 Apr, 2026",
+    "extracted_at": "2026-04-13T04:40:11+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_tata_ipl_2026_lsg_vs_gt_report_not_the_result_we_wanted_at_ekana_www_lucknowsupergiants_in_news_tata_i_claim_2",
+    "source_item_id": "lsg_official_site_tata_ipl_2026_lsg_vs_gt_report_not_the_result_we_wanted_at_ekana_www_lucknowsupergiants_in_news_tata_i",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "George Linde",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named as replacement for Wanindu Hasaranga, made debut",
+    "source_date": "12 Apr, 2026",
+    "extracted_at": "2026-04-13T04:40:11+00:00"
   }
 ]
