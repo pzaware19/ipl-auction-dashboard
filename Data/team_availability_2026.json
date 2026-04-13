@@ -1381,16 +1381,28 @@
     "note": "Yet to report, no update on availability"
   },
   {
+    "player": "Ben Dwarshuis",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.6,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Dec, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Experienced Australian left-arm pace-bowling all-rounder, previously represented Punjab Kings in IPL 2018"
+  },
+  {
     "player": "Cooper Connolly",
     "team": "PBKS",
     "status": "available",
-    "confidence": "major_media",
-    "selection_probability": 0.9,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-01T10:35:20+00:00",
+    "confidence": "official",
+    "selection_probability": 0.7,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Dec, 2025",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Scored 72* against GT"
+    "note": "New signing, captained Australia's Under-19 side at the 2022 World Cup"
   },
   {
     "player": "Glenn Maxwell",
@@ -1407,6 +1419,18 @@
     "note": "injured, replaced by Mitch Owen"
   },
   {
+    "player": "Pravin Dubey",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Dec, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Re-signed at his base price of INR 30 lakh"
+  },
+  {
     "player": "Shreyas Iyer",
     "team": "PBKS",
     "status": "available",
@@ -1417,6 +1441,32 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Leading the team and looked fit during practice"
+  },
+  {
+    "player": "Vishal Nishad",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Dec, 2025",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Promising young Indian talent, joins the PBKS squad"
+  },
+  {
+    "player": "Abhinandan Singh",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "13 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Suyash Sharma"
+    ],
+    "note": "was replaced by Suyash Sharma in the recent match"
   },
   {
     "player": "Bhuvneshwar Kumar",
@@ -1471,15 +1521,15 @@
     "team": "RCB",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.9,
+    "selection_probability": 0.5,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "12 Apr, 2026",
+    "source_date": "13 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Jacob Duffy",
       "Bhuvneshwar Kumar"
     ],
-    "note": "Returned from an unspecified absence and played in the previous match"
+    "note": "was replaced by Jacob Duffy in the recent match"
   },
   {
     "player": "Phil Salt",
@@ -1522,14 +1572,14 @@
     "team": "RCB",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.5,
+    "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "11 Apr, 2026",
+    "source_date": "13 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Venkatesh Iyer"
     ],
-    "note": "Missed out on selection in the last match"
+    "note": "played in the recent match"
   },
   {
     "player": "Tim David",
