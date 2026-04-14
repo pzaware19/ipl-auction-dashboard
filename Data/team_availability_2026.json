@@ -1156,13 +1156,13 @@
     "player": "Mitchell Santner",
     "team": "MI",
     "status": "available",
-    "confidence": "coach_quote",
+    "confidence": "team_media",
     "selection_probability": 0.8,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-11T17:34:47+00:00",
+    "source_date": "2026-04-12T14:00:15+00:00",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Missed the previous match but confirmed available for this game"
+    "note": "Available for the game after missing the previous match"
   },
   {
     "player": "Nalla Reddy",
@@ -1375,10 +1375,10 @@
     "confidence": "team_media",
     "selection_probability": 0.2,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-11T17:34:47+00:00",
+    "source_date": "2026-04-12T14:00:15+00:00",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Yet to report, no update on availability"
+    "note": "Yet to report"
   },
   {
     "player": "Ben Dwarshuis",
@@ -1419,6 +1419,20 @@
     "note": "injured, replaced by Mitch Owen"
   },
   {
+    "player": "Nehal Wadhera",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T10:05:29+00:00",
+    "expected_absence_window": "at least one match",
+    "replacement_candidates": [
+      "Priyansh Arya"
+    ],
+    "note": "Replaced by Priyansh Arya in the playing XI"
+  },
+  {
     "player": "Pravin Dubey",
     "team": "PBKS",
     "status": "available",
@@ -1429,6 +1443,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Re-signed at his base price of INR 30 lakh"
+  },
+  {
+    "player": "Priyansh Arya",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T10:05:29+00:00",
+    "expected_absence_window": "none",
+    "replacement_candidates": [],
+    "note": "Included in the playing XI, replacing Nehal Wadhera"
   },
   {
     "player": "Shreyas Iyer",
@@ -1554,6 +1580,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Participated in the IPL 2026 season opener and gave a post-match interview"
+  },
+  {
+    "player": "Rasikh Salam",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "13 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played and featured as Big Basket Player of the Match"
   },
   {
     "player": "Rickelton",
@@ -1901,7 +1939,9 @@
     "best_source": "Sunrisers Hyderabad Official",
     "source_date": "2026-03-29T16:06:15+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Praful Hinge"
+    ],
     "note": ""
   },
   {
@@ -1913,7 +1953,9 @@
     "best_source": "Sunrisers Hyderabad Official",
     "source_date": "2026-03-29T16:06:15+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Salil Arora"
+    ],
     "note": ""
   },
   {
@@ -1939,6 +1981,30 @@
     "expected_absence_window": "first few games",
     "replacement_candidates": [],
     "note": "unavailable for selection for the first few games"
+  },
+  {
+    "player": "Praful Hinge",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T10:05:29+00:00",
+    "expected_absence_window": "none",
+    "replacement_candidates": [],
+    "note": "Making debut, included in the playing XI"
+  },
+  {
+    "player": "Salil Arora",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T10:05:29+00:00",
+    "expected_absence_window": "none",
+    "replacement_candidates": [],
+    "note": "Included in the playing XI, replacing Liam Livingstone"
   },
   {
     "player": "Shivam Mavi",
