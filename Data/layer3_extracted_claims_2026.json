@@ -6301,5 +6301,41 @@
     "note": "Included in the playing XI, replacing Nehal Wadhera",
     "source_date": "2026-04-11T10:05:29+00:00",
     "extracted_at": "2026-04-14T07:58:10+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_george_linde_to_replace_wanindu_hasaranga_in_ipl_2026_for_lucknow_super_giants_www_lucknowsupergiants__claim_1",
+    "source_item_id": "lsg_official_site_george_linde_to_replace_wanindu_hasaranga_in_ipl_2026_for_lucknow_super_giants_www_lucknowsupergiants_",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "Injured, replaced by George Linde",
+    "source_date": "10 Apr, 2026",
+    "extracted_at": "2026-04-14T10:47:05+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_george_linde_to_replace_wanindu_hasaranga_in_ipl_2026_for_lucknow_super_giants_www_lucknowsupergiants__claim_2",
+    "source_item_id": "lsg_official_site_george_linde_to_replace_wanindu_hasaranga_in_ipl_2026_for_lucknow_super_giants_www_lucknowsupergiants_",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "George Linde",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named as replacement for Wanindu Hasaranga",
+    "source_date": "10 Apr, 2026",
+    "extracted_at": "2026-04-14T10:47:05+00:00"
   }
 ]
