@@ -6373,5 +6373,41 @@
     "note": "Injury replacement for Brydon Carse",
     "source_date": "14 Apr, 2026",
     "extracted_at": "2026-04-14T14:51:14+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_pick_dilshan_madushanka_as_injury_replacement_for_brydon_carse_news_claim_1",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_pick_dilshan_madushanka_as_injury_replacement_for_brydon_carse_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Brydon Carse",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Dilshan Madushanka"
+    ],
+    "note": "injury replacement announced",
+    "source_date": "14 Apr, 2026",
+    "extracted_at": "2026-04-14T18:08:01+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_pick_dilshan_madushanka_as_injury_replacement_for_brydon_carse_news_claim_2",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_pick_dilshan_madushanka_as_injury_replacement_for_brydon_carse_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Dilshan Madushanka",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as injury replacement",
+    "source_date": "14 Apr, 2026",
+    "extracted_at": "2026-04-14T18:08:01+00:00"
   }
 ]
