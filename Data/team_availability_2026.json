@@ -1556,6 +1556,18 @@
     "note": "Participated in the IPL 2026 season opener and gave a post-match interview"
   },
   {
+    "player": "Rickelton",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "13 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
+  },
+  {
     "player": "Romario Shepherd",
     "team": "RCB",
     "status": "available",
@@ -1566,6 +1578,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Featured in recent RCB content, implying availability"
+  },
+  {
+    "player": "SKY",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "13 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
   },
   {
     "player": "Suyash Sharma",
@@ -1588,10 +1612,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "06 Apr, 2026",
+    "source_date": "13 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Recently played and praised by captain Rajat Patidar"
+    "note": "played in the recent match"
   },
   {
     "player": "Venkatesh Iyer",
