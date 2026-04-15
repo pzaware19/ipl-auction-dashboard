@@ -6606,5 +6606,28 @@
     "note": "being replaced by George Linde",
     "source_date": "2026-04-10T14:17:08+00:00",
     "extracted_at": "2026-04-15T07:59:21+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_vs_gt_gt_opt_to_bowl_live_cricket_scores_149801_lsg_vs_gt_19th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lsg_vs_gt_gt_opt_to_bowl_live_cricket_scores_149801_lsg_vs_gt_19th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mitchell Marsh",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Manimaran Siddharth",
+      "George Linde",
+      "Matthew Breetzke",
+      "Shahbaz Ahmad",
+      "Mayank Yadav"
+    ],
+    "note": "Caught by Shubman Gill off Kagiso Rabada",
+    "source_date": "2026-04-12T10:08:38+00:00",
+    "extracted_at": "2026-04-15T10:44:56+00:00"
   }
 ]
