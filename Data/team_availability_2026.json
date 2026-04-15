@@ -919,6 +919,24 @@
     "note": "Named as replacement for Wanindu Hasaranga, made debut"
   },
   {
+    "player": "Mitchell Marsh",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-12T10:08:38+00:00",
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Manimaran Siddharth",
+      "George Linde",
+      "Matthew Breetzke",
+      "Shahbaz Ahmad",
+      "Mayank Yadav"
+    ],
+    "note": "Caught by Shubman Gill off Kagiso Rabada"
+  },
+  {
     "player": "Mohammad Shami",
     "team": "LSG",
     "status": "available",
@@ -1156,7 +1174,7 @@
     "player": "Mitchell Santner",
     "team": "MI",
     "status": "available",
-    "confidence": "team_media",
+    "confidence": "official",
     "selection_probability": 0.8,
     "best_source": "Cricbuzz Latest News",
     "source_date": "2026-04-12T14:00:15+00:00",
