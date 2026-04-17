@@ -1583,7 +1583,9 @@
     "best_source": "Royal Challengers Bengaluru Official",
     "source_date": "29 Mar, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Josh Hazlewood"
+    ],
     "note": "Mentioned in the context of the IPL 2026 season opener, implying his participation"
   },
   {
@@ -1648,6 +1650,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Recently played and featured as Big Basket Player of the Match"
+  },
+  {
+    "player": "Rasikh Salam Dar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "16 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dar has been training well and has been selected in the last couple of games"
   },
   {
     "player": "Rickelton",
