@@ -1894,7 +1894,9 @@
     "best_source": "Rajasthan Royals Official",
     "source_date": "30 Mar, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Ravindra Jadeja"
+    ],
     "note": "Named as the Royals' full-time captain for the upcoming season"
   },
   {
@@ -1945,8 +1947,24 @@
     "best_source": "Rajasthan Royals Official",
     "source_date": "30 Mar, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Riyan Parag"
+    ],
     "note": "Mentioned as part of the squad"
+  },
+  {
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-10T17:52:10+00:00",
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Shimron Hetmyer"
+    ],
+    "note": "Caught by Virat Kohli off Krunal Pandya"
   },
   {
     "player": "Yashasvi Jaiswal",

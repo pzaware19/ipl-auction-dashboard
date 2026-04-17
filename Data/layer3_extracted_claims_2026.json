@@ -7365,5 +7365,62 @@
     "note": "signed as injury replacement",
     "source_date": "15 Apr, 2026",
     "extracted_at": "2026-04-17T07:59:54+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r_claim_1",
+    "source_item_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Riyan Parag",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Ravindra Jadeja"
+    ],
+    "note": "Caught by Krunal Pandya off Josh Hazlewood",
+    "source_date": "2026-04-10T17:52:10+00:00",
+    "extracted_at": "2026-04-17T10:39:42+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r_claim_2",
+    "source_item_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Shimron Hetmyer",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Riyan Parag"
+    ],
+    "note": "Caught by Josh Hazlewood off Krunal Pandya",
+    "source_date": "2026-04-10T17:52:10+00:00",
+    "extracted_at": "2026-04-17T10:39:42+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r_claim_3",
+    "source_item_id": "cricbuzz_latest_news_royal_challengers_bengaluru_vs_rajasthan_royals_live_16th_match_live_cricket_scores_149768_rcb_vs_r",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Shimron Hetmyer"
+    ],
+    "note": "Caught by Virat Kohli off Krunal Pandya",
+    "source_date": "2026-04-10T17:52:10+00:00",
+    "extracted_at": "2026-04-17T10:39:42+00:00"
   }
 ]
