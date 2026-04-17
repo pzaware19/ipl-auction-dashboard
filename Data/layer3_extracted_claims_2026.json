@@ -7422,5 +7422,58 @@
     "note": "Caught by Virat Kohli off Krunal Pandya",
     "source_date": "2026-04-10T17:52:10+00:00",
     "extracted_at": "2026-04-17T10:39:42+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_22_csk_vs_kkr_14_apr_2026_3_min_read_news_4293_code_of_conduct_breach_mat_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_22_csk_vs_kkr_14_apr_2026_3_min_read_news_4293_code_of_conduct_breach_mat",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ajinkya Rahane",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined for slow over-rate offence",
+    "source_date": "15 Apr, 2026",
+    "extracted_at": "2026-04-17T14:20:57+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4297_gujarat_titans_sign_connor_esterhuizen_as_a_replacement_for_tom_banton_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4297_gujarat_titans_sign_connor_esterhuizen_as_a_replacement_for_tom_banton",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Tom Banton",
+    "team": "GT",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Connor Esterhuizen"
+    ],
+    "note": "ruled out due to a finger injury",
+    "source_date": "17 Apr, 2026",
+    "extracted_at": "2026-04-17T14:20:59+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4297_gujarat_titans_sign_connor_esterhuizen_as_a_replacement_for_tom_banton_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4297_gujarat_titans_sign_connor_esterhuizen_as_a_replacement_for_tom_banton",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Connor Esterhuizen",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Tom Banton",
+    "source_date": "17 Apr, 2026",
+    "extracted_at": "2026-04-17T14:20:59+00:00"
   }
 ]
