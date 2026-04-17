@@ -1437,6 +1437,18 @@
     "note": "Yet to report"
   },
   {
+    "player": "Arshdeep Singh",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "returned to form in style"
+  },
+  {
     "player": "Ben Dwarshuis",
     "team": "PBKS",
     "status": "available",
@@ -1489,6 +1501,18 @@
     "note": "Replaced by Priyansh Arya in the playing XI"
   },
   {
+    "player": "Prabhsimran Singh",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "anchoring the chase with an unbeaten 80 off just 39 deliveries"
+  },
+  {
     "player": "Pravin Dubey",
     "team": "PBKS",
     "status": "available",
@@ -1535,6 +1559,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Promising young Indian talent, joins the PBKS squad"
+  },
+  {
+    "player": "Xavier Bartlett",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "16 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "involved in a stunning piece of fielding"
   },
   {
     "player": "Abhinandan Singh",
