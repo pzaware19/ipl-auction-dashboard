@@ -601,6 +601,18 @@
     "note": "played in the opening match"
   },
   {
+    "player": "Shahrukh Khan",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "17 April, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
+  },
+  {
     "player": "Shubman Gill",
     "team": "GT",
     "status": "available",
@@ -2041,7 +2053,9 @@
     "best_source": "IPL Official News",
     "source_date": "24 Mar, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Gerald Coetzee"
+    ],
     "note": "injury replacement for Jack Edwards"
   },
   {
@@ -2055,6 +2069,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Injury replacement for Brydon Carse"
+  },
+  {
+    "player": "Gerald Coetzee",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "18 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for David Payne"
   },
   {
     "player": "Harshal Patel",
