@@ -1919,6 +1919,18 @@
     "note": "Took 3-fer against PBKS"
   },
   {
+    "player": "Ravi Bishnoi",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Rajasthan Royals Official",
+    "source_date": "18 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as part of the team"
+  },
+  {
     "player": "Ravindra Jadeja",
     "team": "RR",
     "status": "available",
