@@ -41,6 +41,21 @@
     "note": "CSK's top-scorer of the last game, might not be rushed to play tonight"
   },
   {
+    "player": "Khaleel Ahmed",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-16T07:58:02+00:00",
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "to be decided in consultation with captain",
+      "coach"
+    ],
+    "note": "season-ending injury"
+  },
+  {
     "player": "MS Dhoni",
     "team": "CSK",
     "status": "doubtful",
@@ -51,6 +66,7 @@
     "expected_absence_window": "1-2 weeks",
     "replacement_candidates": [
       "Sarfaraz Khan",
+      "not specified",
       "Sanju Samson",
       "Kartik Sharma",
       "Urvil Patel"
@@ -64,12 +80,13 @@
     "confidence": "major_media",
     "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-03-29T16:57:50+00:00",
-    "expected_absence_window": "entire tournament",
+    "source_date": "2026-04-16T07:58:02+00:00",
+    "expected_absence_window": "not specified",
     "replacement_candidates": [
+      "Spencer Johnson (but injured)",
       "Registered Available Player Pool (RAPP)"
     ],
-    "note": "hamstring injury"
+    "note": "lost for the season"
   },
   {
     "player": "Prashant Veer",
@@ -130,7 +147,9 @@
     "best_source": "IPL Official News",
     "source_date": "2026-03-29T16:06:07+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "not specified"
+    ],
     "note": "Joins CSK for TATA IPL 2026"
   },
   {
@@ -2207,6 +2226,18 @@
     "expected_absence_window": "none",
     "replacement_candidates": [],
     "note": "Included in the playing XI, replacing Liam Livingstone"
+  },
+  {
+    "player": "Shashank Singh",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T13:56:31+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "picked two crucial wickets in the first innings and hit the winning runs"
   },
   {
     "player": "Shivam Mavi",
