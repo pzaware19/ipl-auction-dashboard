@@ -952,6 +952,18 @@
     "note": "Traded in by LSG ahead of IPL 2026"
   },
   {
+    "player": "Ayush Badoni",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "19 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match against PBKS"
+  },
+  {
     "player": "Digvesh Rathi",
     "team": "LSG",
     "status": "available",
@@ -976,14 +988,26 @@
     "note": "Named as replacement for Wanindu Hasaranga, made debut"
   },
   {
+    "player": "Manimaran Siddharth",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "19 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match against PBKS"
+  },
+  {
     "player": "Mitchell Marsh",
     "team": "LSG",
-    "status": "ruled_out",
-    "confidence": "major_media",
-    "selection_probability": 0.0,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-12T10:08:38+00:00",
-    "expected_absence_window": "remainder of the match",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "19 Apr, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [
       "Manimaran Siddharth",
       "George Linde",
@@ -991,7 +1015,7 @@
       "Shahbaz Ahmad",
       "Mayank Yadav"
     ],
-    "note": "Caught by Shubman Gill off Kagiso Rabada"
+    "note": "played in the recent match against PBKS"
   },
   {
     "player": "Mohammad Shami",
@@ -1058,12 +1082,12 @@
     "team": "LSG",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.7,
-    "best_source": "IPL Official News",
-    "source_date": "02 Apr, 2026",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "19 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Took two wickets"
+    "note": "played in the recent match against PBKS"
   },
   {
     "player": "Rishabh Pant",
