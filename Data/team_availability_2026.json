@@ -2364,6 +2364,20 @@
     "note": "Injury replacement announced by the team"
   },
   {
+    "player": "Ayush Mhatre",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-19T10:08:57+00:00",
+    "expected_absence_window": "medium_to_long_term",
+    "replacement_candidates": [
+      "Unknown"
+    ],
+    "note": "Suffers torn hamstring"
+  },
+  {
     "player": "Jack Edwards",
     "team": "UNKNOWN",
     "status": "ruled_out",

@@ -8554,5 +8554,24 @@
     "note": "Declared fit by Tom Moody ahead of the RCB game",
     "source_date": "2026-04-19T14:00:30+00:00",
     "extracted_at": "2026-04-20T08:21:13+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_kolkata_knight_riders_live_28th_match_live_cricket_scores_151829_rr_vs_kkr_28th_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_kolkata_knight_riders_live_28th_match_live_cricket_scores_151829_rr_vs_kkr_28th",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ayush Mhatre",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "medium_to_long_term",
+    "replacement_candidates": [
+      "Unknown"
+    ],
+    "note": "Suffers torn hamstring",
+    "source_date": "2026-04-19T10:08:57+00:00",
+    "extracted_at": "2026-04-20T11:06:13+00:00"
   }
 ]
