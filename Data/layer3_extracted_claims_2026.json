@@ -8573,5 +8573,60 @@
     "note": "Suffers torn hamstring",
     "source_date": "2026-04-19T10:08:57+00:00",
     "extracted_at": "2026-04-20T11:06:13+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_pick_gerald_coetzee_as_injury_replacement_for_david_payne_18_apr_2026_3_min_read_n_claim_1",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_pick_gerald_coetzee_as_injury_replacement_for_david_payne_18_apr_2026_3_min_read_n",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "David Payne",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Gerald Coetzee"
+    ],
+    "note": "Ankle injury",
+    "source_date": "18 Apr, 2026",
+    "extracted_at": "2026-04-21T04:27:44+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_pick_gerald_coetzee_as_injury_replacement_for_david_payne_18_apr_2026_3_min_read_n_claim_2",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_pick_gerald_coetzee_as_injury_replacement_for_david_payne_18_apr_2026_3_min_read_n",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Gerald Coetzee",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for David Payne",
+    "source_date": "18 Apr, 2026",
+    "extracted_at": "2026-04-21T04:27:44+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rr_vs_rcb_delay_live_cricket_scores_149768_rr_vs_rcb_16th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rr_vs_rcb_delay_live_cricket_scores_149768_rr_vs_rcb_16th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [
+      "George Linde"
+    ],
+    "note": "Replaced by George Linde at LSG",
+    "source_date": "2026-04-10T14:17:08+00:00",
+    "extracted_at": "2026-04-21T04:28:34+00:00"
   }
 ]
