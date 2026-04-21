@@ -2364,6 +2364,18 @@
     "note": "Injury replacement announced by the team"
   },
   {
+    "player": "Travis Head",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-13T14:48:37+00:00",
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [],
+    "note": "Dismissed for 18(18)"
+  },
+  {
     "player": "Ayush Mhatre",
     "team": "UNKNOWN",
     "status": "ruled_out",
