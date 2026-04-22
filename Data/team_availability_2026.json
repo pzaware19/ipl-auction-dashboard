@@ -2171,7 +2171,8 @@
     "source_date": "24 Mar, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
-      "Gerald Coetzee"
+      "Gerald Coetzee",
+      "not yet named"
     ],
     "note": "injury replacement for Jack Edwards"
   },
@@ -2245,7 +2246,9 @@
     "source_date": "24 Mar, 2026",
     "expected_absence_window": "entire season",
     "replacement_candidates": [
-      "David Payne"
+      "David Payne",
+      "David Payne (initially)",
+      "now unknown"
     ],
     "note": "injury replacement"
   },
@@ -2298,7 +2301,9 @@
     "best_source": "Sunrisers Hyderabad Official",
     "source_date": "2026-04-01T07:43:26+00:00",
     "expected_absence_window": "first few games",
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "none"
+    ],
     "note": "unavailable for selection for the first few games"
   },
   {

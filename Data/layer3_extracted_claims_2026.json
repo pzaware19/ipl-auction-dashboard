@@ -8730,5 +8730,82 @@
     "note": "Has already made an appearance for RCB this season",
     "source_date": "21 Apr, 2026",
     "extracted_at": "2026-04-22T04:26:34+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules__claim_1",
+    "source_item_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "David Payne",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "not yet named"
+    ],
+    "note": "Ankle injury",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "extracted_at": "2026-04-22T08:00:37+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules__claim_2",
+    "source_item_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Pat Cummins",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": "none",
+    "replacement_candidates": [
+      "none"
+    ],
+    "note": "Cleared to rejoin the squad after undergoing scans on his back",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "extracted_at": "2026-04-22T08:00:37+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules__claim_3",
+    "source_item_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Jack Edwards",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "not specified",
+    "replacement_candidates": [
+      "David Payne (initially)",
+      "now unknown"
+    ],
+    "note": "Foot injury",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "extracted_at": "2026-04-22T08:00:37+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules__claim_4",
+    "source_item_id": "cricbuzz_latest_news_ankle_injury_rules_david_payne_out_of_ipl_2026_cricbuzz_com_cricket_news_138398_ankle_injury_rules_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Brydon Carse",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "not specified",
+    "replacement_candidates": [
+      "Dilshan Madushanka"
+    ],
+    "note": "Hand injury",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "extracted_at": "2026-04-22T08:00:37+00:00"
   }
 ]
