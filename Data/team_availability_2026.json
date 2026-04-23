@@ -624,9 +624,9 @@
     "team": "GT",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 1.0,
+    "selection_probability": 0.5,
     "best_source": "Gujarat Titans Official",
-    "source_date": "17 April, 2026",
+    "source_date": "20 April, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match"
@@ -1018,7 +1018,7 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "19 Apr, 2026",
+    "source_date": "22 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Manimaran Siddharth",
@@ -1027,7 +1027,7 @@
       "Shahbaz Ahmad",
       "Mayank Yadav"
     ],
-    "note": "played in the recent match against PBKS"
+    "note": "played in the recent match against RR"
   },
   {
     "player": "Mohammad Shami",
@@ -1046,12 +1046,12 @@
     "team": "LSG",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.7,
-    "best_source": "IPL Official News",
-    "source_date": "02 Apr, 2026",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "22 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Took a wicket"
+    "note": "played in the recent match against RR"
   },
   {
     "player": "Mukul Choudhary",
@@ -1096,10 +1096,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "19 Apr, 2026",
+    "source_date": "22 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "played in the recent match against PBKS"
+    "note": "played in the recent match against RR"
   },
   {
     "player": "Rishabh Pant",
