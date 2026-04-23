@@ -191,6 +191,20 @@
     "note": "Led the spinners in the recent match"
   },
   {
+    "player": "Ben Duckett",
+    "team": "DC",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "23 Apr, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Rehan Ahmed"
+    ],
+    "note": "Injured and replaced by Rehan Ahmed"
+  },
+  {
     "player": "David Miller",
     "team": "DC",
     "status": "available",
@@ -352,6 +366,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Played a quick-fire 44 off 30 balls in the recent match"
+  },
+  {
+    "player": "Rehan Ahmed",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "23 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Ben Duckett"
   },
   {
     "player": "Sameer Rizvi",
