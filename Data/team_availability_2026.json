@@ -1,5 +1,31 @@
 [
   {
+    "player": "Akash Madhwal",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "23 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Ayush Mhatre"
+  },
+  {
+    "player": "Ayush Mhatre",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "23 Apr, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Akash Madhwal"
+    ],
+    "note": "left hamstring injury"
+  },
+  {
     "player": "Dewald Brevis",
     "team": "CSK",
     "status": "ruled_out",

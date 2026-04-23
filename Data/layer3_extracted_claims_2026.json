@@ -9045,5 +9045,41 @@
     "note": "Walked off injured but returned later",
     "source_date": "67 inns, 1816",
     "extracted_at": "2026-04-23T08:06:05+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4309_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4309_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ayush Mhatre",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Akash Madhwal"
+    ],
+    "note": "left hamstring injury",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-23T10:54:31+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4309_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4309_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Akash Madhwal",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Ayush Mhatre",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-23T10:54:31+00:00"
   }
 ]
