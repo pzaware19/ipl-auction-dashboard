@@ -450,6 +450,18 @@
     "note": "picked as a replacement for Glenn Phillips"
   },
   {
+    "player": "David Miller",
+    "team": "GT",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "67 inns, 1816",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Walked off injured but returned later"
+  },
+  {
     "player": "Glenn Phillips",
     "team": "GT",
     "status": "available",

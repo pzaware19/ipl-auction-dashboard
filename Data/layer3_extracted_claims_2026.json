@@ -9028,5 +9028,22 @@
     "note": "Featured in recent match",
     "source_date": "22 Apr, 2026",
     "extracted_at": "2026-04-23T04:30:48+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_gujarat_titans_vs_delhi_capitals_14th_match_live_cricket_scores_149746_gt_vs_dc_14th_match_ipl_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_gujarat_titans_vs_delhi_capitals_14th_match_live_cricket_scores_149746_gt_vs_dc_14th_match_ipl_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "David Miller",
+    "team": "GT",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Walked off injured but returned later",
+    "source_date": "67 inns, 1816",
+    "extracted_at": "2026-04-23T08:06:05+00:00"
   }
 ]
