@@ -9419,5 +9419,22 @@
     "note": "No sign yet of his availability",
     "source_date": "2026-04-19T17:38:17+00:00",
     "extracted_at": "2026-04-24T08:14:35+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_rcb_seek_return_to_winning_ways_against_wounded_gujarat_titans_rcb_cricket_news_news_rcb_seek_return_t_claim_1",
+    "source_item_id": "rcb_official_site_rcb_seek_return_to_winning_ways_against_wounded_gujarat_titans_rcb_cricket_news_news_rcb_seek_return_t",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Phil Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as finding solid momentum in the game",
+    "source_date": "24 Apr, 2026",
+    "extracted_at": "2026-04-24T10:52:14+00:00"
   }
 ]
