@@ -1751,14 +1751,14 @@
     "team": "RCB",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.5,
+    "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "13 Apr, 2026",
+    "source_date": "24 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Suyash Sharma"
     ],
-    "note": "was replaced by Suyash Sharma in the recent match"
+    "note": "Mentioned as one of the young bowlers used by RCB"
   },
   {
     "player": "Bhuvneshwar Kumar",
@@ -1767,10 +1767,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "16 Apr, 2026",
+    "source_date": "24 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Mentioned as part of the opening bowling stand"
+    "note": "Mentioned as part of the bowling unit"
   },
   {
     "player": "Devdutt Padikkal",
@@ -1817,13 +1817,13 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "18 Apr, 2026",
+    "source_date": "24 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Jacob Duffy",
       "Bhuvneshwar Kumar"
     ],
-    "note": "Returned from injury and performed well against LSG"
+    "note": "Mentioned as part of the bowling unit"
   },
   {
     "player": "Phil Salt",
@@ -1866,12 +1866,12 @@
     "team": "RCB",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.8,
+    "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "21 Apr, 2026",
+    "source_date": "24 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Has recovered from a double injury and is now available for selection"
+    "note": "Mentioned as one of the young bowlers used by RCB"
   },
   {
     "player": "Rickelton",
@@ -1940,12 +1940,12 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "13 Apr, 2026",
+    "source_date": "24 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Venkatesh Iyer"
     ],
-    "note": "played in the recent match"
+    "note": "Mentioned as one of the young bowlers used by RCB"
   },
   {
     "player": "Tim David",
