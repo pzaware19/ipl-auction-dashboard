@@ -9555,5 +9555,24 @@
     "note": "Mentioned as part of the bowling unit",
     "source_date": "24 Apr, 2026",
     "extracted_at": "2026-04-25T04:16:19+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lucknow_super_giants_vs_rajasthan_royals_32nd_match_live_cricket_scores_151867_lsg_vs_rr_32nd_match_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lucknow_super_giants_vs_rajasthan_royals_32nd_match_live_cricket_scores_151867_lsg_vs_rr_32nd_match",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ayush Mhatre",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "Unknown"
+    ],
+    "note": "Injured",
+    "source_date": "2026-04-21T14:47:31+00:00",
+    "extracted_at": "2026-04-25T07:28:39+00:00"
   }
 ]

@@ -2454,12 +2454,12 @@
     "confidence": "major_media",
     "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-19T10:08:57+00:00",
-    "expected_absence_window": "medium_to_long_term",
+    "source_date": "2026-04-21T14:47:31+00:00",
+    "expected_absence_window": "remainder of IPL 2026",
     "replacement_candidates": [
       "Unknown"
     ],
-    "note": "Suffers torn hamstring"
+    "note": "Injured"
   },
   {
     "player": "Jack Edwards",
