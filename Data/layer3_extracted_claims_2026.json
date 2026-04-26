@@ -9574,5 +9574,58 @@
     "note": "Injured",
     "source_date": "2026-04-21T14:47:31+00:00",
     "extracted_at": "2026-04-25T07:28:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_23_apr_2026_3_min_read_news_4309_csk_sign_aka_claim_1",
+    "source_item_id": "ipl_official_news_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_23_apr_2026_3_min_read_news_4309_csk_sign_aka",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ayush Mhatre",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Akash Madhwal"
+    ],
+    "note": "left hamstring injury",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-26T04:40:55+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_23_apr_2026_3_min_read_news_4309_csk_sign_aka_claim_2",
+    "source_item_id": "ipl_official_news_csk_sign_akash_madhwal_as_a_replacement_for_ayush_mhatre_23_apr_2026_3_min_read_news_4309_csk_sign_aka",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Akash Madhwal",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Ayush Mhatre",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-26T04:40:55+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rr_vs_srh_srh_opt_to_bowl_live_cricket_scores_151902_rr_vs_srh_36th_match_indian_premier_league_202_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rr_vs_srh_srh_opt_to_bowl_live_cricket_scores_151902_rr_vs_srh_36th_match_indian_premier_league_202",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Pat Cummins",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returning from injury and will lead the team",
+    "source_date": "2026-04-25T14:02:56+00:00",
+    "extracted_at": "2026-04-26T04:41:49+00:00"
   }
 ]

@@ -2362,16 +2362,16 @@
   {
     "player": "Pat Cummins",
     "team": "SRH",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
-    "best_source": "Sunrisers Hyderabad Official",
-    "source_date": "2026-04-01T07:43:26+00:00",
-    "expected_absence_window": "first few games",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-25T14:02:56+00:00",
+    "expected_absence_window": null,
     "replacement_candidates": [
       "none"
     ],
-    "note": "unavailable for selection for the first few games"
+    "note": "Returning from injury and will lead the team"
   },
   {
     "player": "Praful Hinge",
