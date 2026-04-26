@@ -9780,5 +9780,41 @@
     "note": "Recently played but got out early in the innings",
     "source_date": "26 Apr, 2026",
     "extracted_at": "2026-04-26T07:48:53+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_delhi_capitals_sign_rehan_ahmed_as_replacement_for_ben_duckett_23_apr_2026_3_min_read_news_4310_delhi__claim_1",
+    "source_item_id": "ipl_official_news_delhi_capitals_sign_rehan_ahmed_as_replacement_for_ben_duckett_23_apr_2026_3_min_read_news_4310_delhi_",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ben Duckett",
+    "team": "DC",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Rehan Ahmed"
+    ],
+    "note": "Replaced by Rehan Ahmed due to unavailability",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-26T17:41:46+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_delhi_capitals_sign_rehan_ahmed_as_replacement_for_ben_duckett_23_apr_2026_3_min_read_news_4310_delhi__claim_2",
+    "source_item_id": "ipl_official_news_delhi_capitals_sign_rehan_ahmed_as_replacement_for_ben_duckett_23_apr_2026_3_min_read_news_4310_delhi_",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Rehan Ahmed",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Ben Duckett",
+    "source_date": "23 Apr, 2026",
+    "extracted_at": "2026-04-26T17:41:46+00:00"
   }
 ]
