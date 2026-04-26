@@ -1785,6 +1785,18 @@
     "note": "Played in the IPL 2026 season opener and contributed to the team's win"
   },
   {
+    "player": "Jacob Bethell",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "26 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played but got out early in the innings"
+  },
+  {
     "player": "Jacob Duffy",
     "team": "RCB",
     "status": "available",
@@ -1824,6 +1836,18 @@
       "Bhuvneshwar Kumar"
     ],
     "note": "Mentioned as part of the bowling unit"
+  },
+  {
+    "player": "Krunal Pandya",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "26 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played and contributed to RCB's win"
   },
   {
     "player": "Phil Salt",
