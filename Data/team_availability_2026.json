@@ -1344,6 +1344,18 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Keshav Maharaj",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "IPL Official News",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Mitchell Santner"
+  },
+  {
     "player": "Krish Bhagat",
     "team": "MI",
     "status": "available",
@@ -1370,14 +1382,16 @@
   {
     "player": "Mitchell Santner",
     "team": "MI",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "official",
-    "selection_probability": 0.8,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-12T14:00:15+00:00",
-    "expected_absence_window": null,
-    "replacement_candidates": [],
-    "note": "Available for the game after missing the previous match"
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Keshav Maharaj"
+    ],
+    "note": "Left shoulder injury"
   },
   {
     "player": "Nalla Reddy",

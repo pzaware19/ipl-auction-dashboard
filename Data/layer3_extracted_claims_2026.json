@@ -9986,5 +9986,41 @@
     "note": "currently batting",
     "source_date": "2026-04-13T14:48:37+00:00",
     "extracted_at": "2026-04-27T08:36:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4318_mumbai_indians_sign_keshav_maharaj_as_replacement_for_injured_mitchell_san_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4318_mumbai_indians_sign_keshav_maharaj_as_replacement_for_injured_mitchell_san",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Mitchell Santner",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Keshav Maharaj"
+    ],
+    "note": "Left shoulder injury",
+    "source_date": "28 Apr, 2026",
+    "extracted_at": "2026-04-27T15:08:22+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4318_mumbai_indians_sign_keshav_maharaj_as_replacement_for_injured_mitchell_san_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4318_mumbai_indians_sign_keshav_maharaj_as_replacement_for_injured_mitchell_san",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Keshav Maharaj",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Mitchell Santner",
+    "source_date": "28 Apr, 2026",
+    "extracted_at": "2026-04-27T15:08:22+00:00"
   }
 ]
