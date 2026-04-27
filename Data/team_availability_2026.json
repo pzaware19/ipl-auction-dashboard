@@ -980,6 +980,18 @@
     "note": "mentioned as part of KKR's spin twins"
   },
   {
+    "player": "Aiden Markram",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "26 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match against KKR"
+  },
+  {
     "player": "Akash Deep",
     "team": "LSG",
     "status": "available",
@@ -1046,10 +1058,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "12 Apr, 2026",
+    "source_date": "26 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Named as replacement for Wanindu Hasaranga, made debut"
+    "note": "played in the recent match against KKR"
   },
   {
     "player": "Manimaran Siddharth",
@@ -1112,10 +1124,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "22 Apr, 2026",
+    "source_date": "26 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "played in the recent match against RR"
+    "note": "played in the recent match against KKR"
   },
   {
     "player": "Mukul Choudhary",
@@ -1170,14 +1182,14 @@
     "team": "LSG",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.9,
+    "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "2026-03-29T16:06:13+00:00",
+    "source_date": "26 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Nicholas Pooran"
     ],
-    "note": "Mentioned in the retention list for IPL 2026"
+    "note": "played in the recent match against KKR"
   },
   {
     "player": "T Natarajan",
