@@ -1466,6 +1466,18 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Rohit",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-23T15:12:45+00:00",
+    "expected_absence_window": "next match",
+    "replacement_candidates": [],
+    "note": "Wankhede tie"
+  },
+  {
     "player": "Rohit Sharma",
     "team": "MI",
     "status": "available",
@@ -1874,6 +1886,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Recently played and contributed to RCB's win"
+  },
+  {
+    "player": "Nuwan Thushara",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "team_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-23T15:12:45+00:00",
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [],
+    "note": "continued unavailability"
   },
   {
     "player": "Phil Salt",
