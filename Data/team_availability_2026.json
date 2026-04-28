@@ -734,6 +734,18 @@
     "note": "played in the opening match"
   },
   {
+    "player": "Abhishek Nayar",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in Train Like a Knight series as support staff"
+  },
+  {
     "player": "Ajinkya Rahane",
     "team": "KKR",
     "status": "available",
@@ -770,6 +782,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "traded for Shardul Thakur"
+  },
+  {
+    "player": "Angkrish Raghuvanshi",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in Train Like a Knight series"
+  },
+  {
+    "player": "Anukul Roy",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned in recent match review"
   },
   {
     "player": "Cameron Green",
@@ -906,6 +942,18 @@
     "note": "replacement for Akash Deep"
   },
   {
+    "player": "Shane Watson",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in Train Like a Knight series as support staff"
+  },
+  {
     "player": "Shreyas Iyer",
     "team": "KKR",
     "status": "available",
@@ -940,6 +988,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in team's player roster"
+  },
+  {
+    "player": "Tim Southee",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Kolkata Knight Riders Official",
+    "source_date": "28 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in Train Like a Knight series"
   },
   {
     "player": "Vaibhav Arora",
@@ -1689,14 +1749,14 @@
   {
     "player": "Lockie Ferguson",
     "team": "PBKS",
-    "status": "ruled_out",
+    "status": "available",
     "confidence": "major_media",
-    "selection_probability": 0.0,
+    "selection_probability": 1.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-19T14:00:30+00:00",
-    "expected_absence_window": null,
+    "source_date": "2026-04-27T15:08:21+00:00",
+    "expected_absence_window": "",
     "replacement_candidates": [],
-    "note": "Has still not joined the team"
+    "note": "joined the squad in New Delhi"
   },
   {
     "player": "Nehal Wadhera",
