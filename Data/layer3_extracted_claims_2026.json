@@ -10578,5 +10578,22 @@
     "note": "Recently played and took 4/12 from 3.3 overs against DC",
     "source_date": "28 Apr, 2026",
     "extracted_at": "2026-04-29T04:49:51+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rohit_sharma_working_hard_to_be_available_for_srh_game_cricbuzz_com_cricket_news_138516_rohit_sharm_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rohit_sharma_working_hard_to_be_available_for_srh_game_cricbuzz_com_cricket_news_138516_rohit_sharm",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": "until April 29",
+    "replacement_candidates": [],
+    "note": "recovering from a right hamstring injury, working hard to be available for the next game",
+    "source_date": "2026-04-25T04:15:27+00:00",
+    "extracted_at": "2026-04-29T08:28:42+00:00"
   }
 ]
