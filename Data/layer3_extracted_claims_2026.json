@@ -10680,5 +10680,39 @@
     "note": "Mentioned as combining with Harpreet Brar for three wickets",
     "source_date": "29 Apr, 2026",
     "extracted_at": "2026-04-30T04:53:22+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_mumbai_indians_claim_1",
+    "source_item_id": "mi_official_site_mumbai_indians",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent match",
+    "source_date": "29 Mar, 2026",
+    "extracted_at": "2026-04-30T08:31:01+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_mumbai_indians_claim_2",
+    "source_item_id": "mi_official_site_mumbai_indians",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Shardul Thakur",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent match",
+    "source_date": "29 Mar, 2026",
+    "extracted_at": "2026-04-30T08:31:01+00:00"
   }
 ]
