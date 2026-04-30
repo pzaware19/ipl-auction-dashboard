@@ -1703,10 +1703,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Punjab Kings Official",
-    "source_date": "16 Apr, 2026",
+    "source_date": "29 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "returned to form in style"
+    "note": "Mentioned as delivering a key breakthrough"
   },
   {
     "player": "Ben Dwarshuis",
@@ -1747,6 +1747,18 @@
     "note": "injured, replaced by Mitch Owen"
   },
   {
+    "player": "Harpreet Brar",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "29 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as combining with Yuzvendra Chahal for three wickets"
+  },
+  {
     "player": "Lockie Ferguson",
     "team": "PBKS",
     "status": "available",
@@ -1757,6 +1769,18 @@
     "expected_absence_window": "",
     "replacement_candidates": [],
     "note": "joined the squad in New Delhi"
+  },
+  {
+    "player": "Marcus Stoinis",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "29 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as providing a late surge for PBKS"
   },
   {
     "player": "Nehal Wadhera",
@@ -1779,10 +1803,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Punjab Kings Official",
-    "source_date": "16 Apr, 2026",
+    "source_date": "29 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "anchoring the chase with an unbeaten 80 off just 39 deliveries"
+    "note": "Mentioned as setting the tone for PBKS"
   },
   {
     "player": "Pravin Dubey",
@@ -1843,6 +1867,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "involved in a stunning piece of fielding"
+  },
+  {
+    "player": "Yuzvendra Chahal",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "29 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as combining with Harpreet Brar for three wickets"
   },
   {
     "player": "Abhinandan Singh",
