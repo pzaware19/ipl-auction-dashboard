@@ -734,6 +734,18 @@
     "note": "played in the opening match"
   },
   {
+    "player": "Anuj Rawat",
+    "team": "GUJARAT TITANS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "30 Apr, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No availability concerns mentioned"
+  },
+  {
     "player": "Abhishek Nayar",
     "team": "KKR",
     "status": "available",
@@ -2174,10 +2186,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "29 Mar, 2026",
+    "source_date": "30 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Virat Kohli has returned to action in IPL 2026 and has started the campaign with a strong performance."
+    "note": "No availability concerns mentioned"
   },
   {
     "player": "All players",

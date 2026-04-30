@@ -10714,5 +10714,39 @@
     "note": "Featured in recent match",
     "source_date": "29 Mar, 2026",
     "extracted_at": "2026-04-30T08:31:01+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_dream_come_true_for_me_anuj_rawat_on_sharing_the_dressing_room_with_virat_kohli_rcb_cricket_news_news__claim_1",
+    "source_item_id": "rcb_official_site_dream_come_true_for_me_anuj_rawat_on_sharing_the_dressing_room_with_virat_kohli_rcb_cricket_news_news_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Anuj Rawat",
+    "team": "GUJARAT TITANS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No availability concerns mentioned",
+    "source_date": "30 Apr, 2026",
+    "extracted_at": "2026-04-30T11:16:06+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_dream_come_true_for_me_anuj_rawat_on_sharing_the_dressing_room_with_virat_kohli_rcb_cricket_news_news__claim_2",
+    "source_item_id": "rcb_official_site_dream_come_true_for_me_anuj_rawat_on_sharing_the_dressing_room_with_virat_kohli_rcb_cricket_news_news_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No availability concerns mentioned",
+    "source_date": "30 Apr, 2026",
+    "extracted_at": "2026-04-30T11:16:06+00:00"
   }
 ]
