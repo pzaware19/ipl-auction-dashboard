@@ -100,6 +100,18 @@
     "note": "Initially ruled out for the first two weeks of the season following a calf strain, but has started practicing"
   },
   {
+    "player": "Mukesh Choudhary",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-26T10:13:10+00:00",
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "In the Impact subs list"
+  },
+  {
     "player": "Nathan Ellis",
     "team": "CSK",
     "status": "ruled_out",
@@ -153,6 +165,18 @@
     "note": "Day 1: Sanju Samson as a Super King"
   },
   {
+    "player": "Sarfaraz Khan",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-26T10:13:10+00:00",
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "In the Impact subs list"
+  },
+  {
     "player": "Shivam Dube",
     "team": "CSK",
     "status": "available",
@@ -177,6 +201,18 @@
       "not specified"
     ],
     "note": "Joins CSK for TATA IPL 2026"
+  },
+  {
+    "player": "Urvil Patel",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-26T10:13:10+00:00",
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "Brought into the team"
   },
   {
     "player": "Axar Patel",
