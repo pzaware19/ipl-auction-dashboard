@@ -315,7 +315,9 @@
     "expected_absence_window": null,
     "replacement_candidates": [
       "Vipraj Nigam",
-      "Ashutosh Sharma"
+      "Ashutosh Sharma",
+      "Kyle Jamieson",
+      "Lungi Ngidi"
     ],
     "note": "Currently unavailable"
   },
@@ -366,6 +368,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Played a quick-fire 44 off 30 balls in the recent match"
+  },
+  {
+    "player": "Prithvi Shaw",
+    "team": "DC",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-30T15:10:23+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "listed in the squad"
   },
   {
     "player": "Rehan Ahmed",
@@ -466,6 +480,18 @@
     "note": "Gujarat Titans Injuries/Unavailability: No injuries have been reported"
   },
   {
+    "player": "Arshad Khan",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "30 April, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
+  },
+  {
     "player": "Ashok Sharma",
     "team": "GT",
     "status": "available",
@@ -542,12 +568,12 @@
     "team": "GT",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.5,
+    "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "2026-03-28",
+    "source_date": "30 April, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Part of the squad"
+    "note": "played in the recent match and was adjudged Player of the Match"
   },
   {
     "player": "Jayant Yadav",
@@ -654,10 +680,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "30 April, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played in the recent match"
   },
   {
     "player": "Rashid Khan",
