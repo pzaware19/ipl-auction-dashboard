@@ -2642,6 +2642,18 @@
     "note": "Making debut, included in the playing XI"
   },
   {
+    "player": "RS Ambrish",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "01 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as injury replacement for Shivam Mavi"
+  },
+  {
     "player": "Salil Arora",
     "team": "SRH",
     "status": "available",
@@ -2674,7 +2686,9 @@
     "best_source": "Sunrisers Hyderabad Official",
     "source_date": "2026-03-29T16:06:15+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "RS Ambrish"
+    ],
     "note": ""
   },
   {
