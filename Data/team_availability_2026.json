@@ -944,6 +944,18 @@
     "note": "joins KKR as replacement for Harshit Rana"
   },
   {
+    "player": "Prince Yadav",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-27T04:48:27+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
+  },
+  {
     "player": "Rachin Ravindra",
     "team": "KKR",
     "status": "available",
@@ -1198,6 +1210,18 @@
     "note": "played in the recent match against KKR"
   },
   {
+    "player": "Kartik Tyagi",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-27T04:48:27+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
+  },
+  {
     "player": "Manimaran Siddharth",
     "team": "LSG",
     "status": "available",
@@ -1250,6 +1274,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Traded in by LSG ahead of IPL 2026"
+  },
+  {
+    "player": "Mohammed Shami",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-27T04:48:27+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match"
   },
   {
     "player": "Mohsin Khan",
