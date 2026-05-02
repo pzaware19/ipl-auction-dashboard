@@ -642,10 +642,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
+    "source_date": "26 April, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "played against CSK"
   },
   {
     "player": "Kulwant Khejroliya",
@@ -2461,12 +2461,14 @@
     "confidence": "official",
     "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-10T17:52:10+00:00",
-    "expected_absence_window": "remainder of the match",
+    "source_date": "2026-05-01T14:17:46+00:00",
+    "expected_absence_window": "entire match",
     "replacement_candidates": [
+      "Riyan Parag",
+      "Dhruv Jurel",
       "Shimron Hetmyer"
     ],
-    "note": "Caught by Virat Kohli off Krunal Pandya"
+    "note": "dismissed by Kyle Jamieson"
   },
   {
     "player": "Yashasvi Jaiswal",
