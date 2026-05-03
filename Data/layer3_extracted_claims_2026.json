@@ -11703,5 +11703,22 @@
     "note": "dismissed by Kyle Jamieson",
     "source_date": "2026-05-01T14:17:46+00:00",
     "extracted_at": "2026-05-02T10:30:37+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_virat_kohli_is_one_for_the_folklore_dinesh_karthik_rcb_cricket_news_news_virat_kohli_is_one_for_the_fo_claim_1",
+    "source_item_id": "rcb_official_site_virat_kohli_is_one_for_the_folklore_dinesh_karthik_rcb_cricket_news_news_virat_kohli_is_one_for_the_fo",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "02 May, 2026",
+    "extracted_at": "2026-05-03T04:57:17+00:00"
   }
 ]
