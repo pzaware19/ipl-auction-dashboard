@@ -215,6 +215,18 @@
     "note": "Brought into the team"
   },
   {
+    "player": "Auqib Nabi Dar",
+    "team": "DC",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-18T10:08:59+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Playing in the current match"
+  },
+  {
     "player": "Axar Patel",
     "team": "DC",
     "status": "available",
@@ -478,6 +490,18 @@
       "Aman Khan"
     ],
     "note": "traded to KKR"
+  },
+  {
+    "player": "T Natarajan",
+    "team": "DC",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-18T10:08:59+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Playing in the current match"
   },
   {
     "player": "Tristan Stubbs",
@@ -2130,6 +2154,18 @@
     "note": "Took a catch in the IPL 2026 season opener"
   },
   {
+    "player": "Philip Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-18T10:08:59+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Playing in the current match"
+  },
+  {
     "player": "Rajat Patidar",
     "team": "RCB",
     "status": "available",
@@ -2663,6 +2699,8 @@
     "source_date": "2026-04-25T14:02:56+00:00",
     "expected_absence_window": null,
     "replacement_candidates": [
+      "Praful Hinge",
+      "Sakib Hussain",
       "none"
     ],
     "note": "Returning from injury and will lead the team"
