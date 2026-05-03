@@ -2678,6 +2678,20 @@
     "note": ""
   },
   {
+    "player": "Mitchell Santner",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-01T14:17:46+00:00",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "RS Ambrish"
+    ],
+    "note": "Santner suffers grade three ACL shoulder injury"
+  },
+  {
     "player": "Nitish Kumar Reddy",
     "team": "SRH",
     "status": "available",

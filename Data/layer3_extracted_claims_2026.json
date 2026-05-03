@@ -12029,5 +12029,77 @@
     "note": "Expected to join the team on April 17 but will be available to play only from April 25",
     "source_date": "2026-04-17T14:20:56+00:00",
     "extracted_at": "2026-05-03T10:33:14+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_chennai_super_kings_vs_mumbai_indians_44th_match_live_cricket_scores_151987_csk_vs_mi_44th_match_ip_claim_1",
+    "source_item_id": "cricbuzz_latest_news_chennai_super_kings_vs_mumbai_indians_44th_match_live_cricket_scores_151987_csk_vs_mi_44th_match_ip",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mitchell Santner",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "RS Ambrish"
+    ],
+    "note": "Santner suffers grade three ACL shoulder injury",
+    "source_date": "2026-05-01T14:17:46+00:00",
+    "extracted_at": "2026-05-03T14:12:28+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh__claim_1",
+    "source_item_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "David Payne",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Gerald Coetzee"
+    ],
+    "note": "Ankle injury",
+    "source_date": "2026-04-18T04:10:23+00:00",
+    "extracted_at": "2026-05-03T14:12:42+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh__claim_2",
+    "source_item_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Gerald Coetzee",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as injury replacement for David Payne",
+    "source_date": "2026-04-18T04:10:23+00:00",
+    "extracted_at": "2026-05-03T14:12:42+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh__claim_3",
+    "source_item_id": "cricbuzz_latest_news_srh_pick_gerald_coetzee_as_injury_replacement_for_david_payne_cricbuzz_com_cricket_news_138424_srh_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Pat Cummins",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Arrived at the team",
+    "source_date": "2026-04-18T04:10:23+00:00",
+    "extracted_at": "2026-05-03T14:12:42+00:00"
   }
 ]
