@@ -956,6 +956,18 @@
     "note": "Pathirana continues to be absent"
   },
   {
+    "player": "Mustafizur Rahman",
+    "team": "KKR",
+    "status": "overseas_unavailable",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-01T17:53:22+00:00",
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [],
+    "note": "Released by the team"
+  },
+  {
     "player": "Navdeep Saini",
     "team": "KKR",
     "status": "available",
