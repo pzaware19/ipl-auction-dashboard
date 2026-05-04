@@ -1474,6 +1474,18 @@
     "note": "Dismissed KL Rahul in the very first over of the recent match"
   },
   {
+    "player": "Dhir",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Mumbai Indians Official",
+    "source_date": "03 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as a potential contributor in upcoming games"
+  },
+  {
     "player": "Hardik",
     "team": "MI",
     "status": "ruled_out",
@@ -1488,6 +1500,18 @@
       "Sherfane Rutherford"
     ],
     "note": "Suryakumar Yadav mentioned that Hardik is not well and was not fit for the game"
+  },
+  {
+    "player": "Hardik Pandya",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "best_source": "Mumbai Indians Official",
+    "source_date": "03 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as part of the team's past performances"
   },
   {
     "player": "Harmanpreet Kaur",
@@ -1786,13 +1810,13 @@
     "player": "Suryakumar Yadav",
     "team": "MI",
     "status": "available",
-    "confidence": "major_media",
-    "selection_probability": 0.8,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-01T10:35:20+00:00",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "best_source": "Mumbai Indians Official",
+    "source_date": "03 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in article about Indian cricket folklore"
+    "note": "mentioned as part of the team's past performances"
   },
   {
     "player": "Tilak Varma",
@@ -1833,14 +1857,14 @@
   {
     "player": "Will Jacks",
     "team": "MI",
-    "status": "unknown",
-    "confidence": "team_media",
-    "selection_probability": 0.2,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-12T14:00:15+00:00",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Mumbai Indians Official",
+    "source_date": "03 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Yet to report"
+    "note": "mentioned as part of the team's past performances"
   },
   {
     "player": "Arshdeep Singh",
@@ -2200,6 +2224,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as one of the young bowlers used by RCB"
+  },
+  {
+    "player": "Ravindra Jadeja",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T04:00:26+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the recent match against RR"
   },
   {
     "player": "Rickelton",
