@@ -12101,5 +12101,41 @@
     "note": "Arrived at the team",
     "source_date": "2026-04-18T04:10:23+00:00",
     "extracted_at": "2026-05-03T14:12:42+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_sign_rs_ambrish_as_injury_replacement_for_shivam_mavi_01_may_2026_3_min_read_news__claim_1",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_sign_rs_ambrish_as_injury_replacement_for_shivam_mavi_01_may_2026_3_min_read_news_",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Shivam Mavi",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "RS Ambrish"
+    ],
+    "note": "groin injury",
+    "source_date": "01 May, 2026",
+    "extracted_at": "2026-05-04T04:57:01+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_sunrisers_hyderabad_sign_rs_ambrish_as_injury_replacement_for_shivam_mavi_01_may_2026_3_min_read_news__claim_2",
+    "source_item_id": "ipl_official_news_sunrisers_hyderabad_sign_rs_ambrish_as_injury_replacement_for_shivam_mavi_01_may_2026_3_min_read_news_",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "RS Ambrish",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as injury replacement for Shivam Mavi",
+    "source_date": "01 May, 2026",
+    "extracted_at": "2026-05-04T04:57:01+00:00"
   }
 ]
