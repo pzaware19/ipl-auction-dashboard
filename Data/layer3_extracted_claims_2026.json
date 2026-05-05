@@ -12562,5 +12562,60 @@
     "note": "played in the match against KKR",
     "source_date": "26 Apr, 2026",
     "extracted_at": "2026-05-05T04:39:17+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_04_may_2026_mivlsg_report_rohit_sharma_shows_exactly_why_he_is_mumbai_cha_raja_news_mivlsg_report_rohit_claim_1",
+    "source_item_id": "mi_official_site_04_may_2026_mivlsg_report_rohit_sharma_shows_exactly_why_he_is_mumbai_cha_raja_news_mivlsg_report_rohit",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Back from injury and played in the recent match",
+    "source_date": "04 May, 2026",
+    "extracted_at": "2026-05-05T08:21:19+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_may_move_on_from_hasaranga_pathirana_s_return_in_sight_for_kkr_cricbuzz_com_cricket_news_138276_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lsg_may_move_on_from_hasaranga_pathirana_s_return_in_sight_for_kkr_cricbuzz_com_cricket_news_138276",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Wanindu Hasaranga",
+    "team": "LSG",
+    "status": "unknown",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "overseas spinners in the RAPP list"
+    ],
+    "note": "no clear information on participation, may be replaced",
+    "source_date": "2026-04-06T14:11:04+00:00",
+    "extracted_at": "2026-05-05T08:21:33+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_may_move_on_from_hasaranga_pathirana_s_return_in_sight_for_kkr_cricbuzz_com_cricket_news_138276_claim_2",
+    "source_item_id": "cricbuzz_latest_news_lsg_may_move_on_from_hasaranga_pathirana_s_return_in_sight_for_kkr_cricbuzz_com_cricket_news_138276",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": "none",
+    "replacement_candidates": [
+      "none"
+    ],
+    "note": "making progress, expected to be available this season",
+    "source_date": "2026-04-06T14:11:04+00:00",
+    "extracted_at": "2026-05-05T08:21:33+00:00"
   }
 ]

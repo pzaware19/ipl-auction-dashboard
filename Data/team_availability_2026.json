@@ -952,7 +952,9 @@
     "best_source": "Cricbuzz Latest News",
     "source_date": "2026-04-08T18:08:18+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "none"
+    ],
     "note": "Pathirana continues to be absent"
   },
   {
@@ -1431,7 +1433,8 @@
     "source_date": "12 Apr, 2026",
     "expected_absence_window": "TATA IPL 2026",
     "replacement_candidates": [
-      "George Linde"
+      "George Linde",
+      "overseas spinners in the RAPP list"
     ],
     "note": "Injured, replaced by George Linde"
   },
