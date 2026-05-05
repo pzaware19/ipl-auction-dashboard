@@ -12617,5 +12617,44 @@
     "note": "making progress, expected to be available this season",
     "source_date": "2026-04-06T14:11:04+00:00",
     "extracted_at": "2026-05-05T08:21:33+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_mumbai_indians_vs_punjab_kings_24th_match_live_cricket_scores_151785_mi_vs_pbks_24th_match_ipl_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_mumbai_indians_vs_punjab_kings_24th_match_live_cricket_scores_151785_mi_vs_pbks_24th_match_ipl_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "1 match",
+    "replacement_candidates": [
+      "Ryan Rickelton",
+      "Suryakumar Yadav"
+    ],
+    "note": "Rohit Sharma likely to miss Punjab Kings match",
+    "source_date": "2026-04-15T14:45:13+00:00",
+    "extracted_at": "2026-05-05T18:13:41+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_fleming_throws_weight_behind_ruturaj_gaikwad_amidst_poor_returns_cricbuzz_com_cricket_news_138421_f_claim_1",
+    "source_item_id": "cricbuzz_latest_news_fleming_throws_weight_behind_ruturaj_gaikwad_amidst_poor_returns_cricbuzz_com_cricket_news_138421_f",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ruturaj Gaikwad",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "coach_quote",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Ayush Mhatre"
+    ],
+    "note": "Fleming expressed confidence in Gaikwad's form turning around",
+    "source_date": "2026-04-18T04:10:23+00:00",
+    "extracted_at": "2026-05-05T18:13:50+00:00"
   }
 ]
