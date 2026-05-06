@@ -12656,5 +12656,39 @@
     "note": "Fleming expressed confidence in Gaikwad's form turning around",
     "source_date": "2026-04-18T04:10:23+00:00",
     "extracted_at": "2026-05-05T18:13:50+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_gujarat_titans_vs_kolkata_knight_riders_25th_match_live_cricket_scores_151796_gt_vs_kkr_25th_match__claim_1",
+    "source_item_id": "cricbuzz_latest_news_gujarat_titans_vs_kolkata_knight_riders_25th_match_live_cricket_scores_151796_gt_vs_kkr_25th_match_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "David Payne",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [],
+    "note": "Ankle injury",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "extracted_at": "2026-05-06T08:36:32+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_not_something_i_crave_fleming_on_lack_of_credit_for_csk_s_success_cricbuzz_com_cricket_news_138327__claim_1",
+    "source_item_id": "cricbuzz_latest_news_not_something_i_crave_fleming_on_lack_of_credit_for_csk_s_success_cricbuzz_com_cricket_news_138327_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Dewald Brevis",
+    "team": "CSK",
+    "status": "doubtful",
+    "confidence": "coach_quote",
+    "selection_probability": 0.5,
+    "expected_absence_window": "1-2 matches",
+    "replacement_candidates": [],
+    "note": "Fleming remained coy on Dewald Brevis' availability for the clash against DC",
+    "source_date": "2026-04-11T04:00:26+00:00",
+    "extracted_at": "2026-05-06T08:36:39+00:00"
   }
 ]

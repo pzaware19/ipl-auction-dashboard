@@ -2414,6 +2414,18 @@
     "note": "Mentioned as part of the squad"
   },
   {
+    "player": "David Payne",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-16T14:56:35+00:00",
+    "expected_absence_window": "entire tournament",
+    "replacement_candidates": [],
+    "note": "Ankle injury"
+  },
+  {
     "player": "Dewald Brevis",
     "team": "RR",
     "status": "ruled_out",
