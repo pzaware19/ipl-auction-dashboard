@@ -12795,5 +12795,58 @@
     "note": "recovering from a finger injury",
     "source_date": "2026-05-06T15:27:29+00:00",
     "extracted_at": "2026-05-07T04:53:42+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rcb_vs_dc_dc_opt_to_bowl_live_cricket_scores_151807_rcb_vs_dc_26th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rcb_vs_dc_dc_opt_to_bowl_live_cricket_scores_151807_rcb_vs_dc_26th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Playing in the current match",
+    "source_date": "2026-04-18T10:09:00+00:00",
+    "extracted_at": "2026-05-07T08:44:04+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rcb_vs_dc_dc_opt_to_bowl_live_cricket_scores_151807_rcb_vs_dc_26th_match_indian_premier_league_2026_claim_2",
+    "source_item_id": "cricbuzz_latest_news_rcb_vs_dc_dc_opt_to_bowl_live_cricket_scores_151807_rcb_vs_dc_26th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Philip Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Playing in the current match",
+    "source_date": "2026-04-18T10:09:00+00:00",
+    "extracted_at": "2026-05-07T08:44:04+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lungi_ngidi_stable_to_be_discharged_from_hospital_after_head_injury_cricbuzz_com_cricket_news_13852_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lungi_ngidi_stable_to_be_discharged_from_hospital_after_head_injury_cricbuzz_com_cricket_news_13852",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Lungi Ngidi",
+    "team": "DC",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.2,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [
+      "Vipraj Nigam"
+    ],
+    "note": "Suffered a severe head injury while attempting to take a catch",
+    "source_date": "2026-04-25T17:40:46+00:00",
+    "extracted_at": "2026-05-07T08:44:12+00:00"
   }
 ]
