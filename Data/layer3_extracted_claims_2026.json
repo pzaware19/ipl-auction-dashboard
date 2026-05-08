@@ -12984,5 +12984,24 @@
     "note": "Played in the recent match against RCB",
     "source_date": "07 May, 2026",
     "extracted_at": "2026-05-08T04:32:38+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lungi_ngidi_stable_after_head_injury_to_be_discharged_from_hospital_soon_cricbuzz_com_cricket_news__claim_1",
+    "source_item_id": "cricbuzz_latest_news_lungi_ngidi_stable_after_head_injury_to_be_discharged_from_hospital_soon_cricbuzz_com_cricket_news_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Lungi Ngidi",
+    "team": "DC",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.2,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [
+      "Vipraj Nigam"
+    ],
+    "note": "Suffered a severe head injury while attempting to take a catch",
+    "source_date": "2026-04-26T04:40:54+00:00",
+    "extracted_at": "2026-05-08T07:50:40+00:00"
   }
 ]
