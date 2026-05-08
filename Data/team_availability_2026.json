@@ -1414,6 +1414,18 @@
     "note": "played in the recent match against KKR"
   },
   {
+    "player": "Shahbaz Ahamad",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "07 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Played in the recent match against RCB"
+  },
+  {
     "player": "T Natarajan",
     "team": "LSG",
     "status": "available",
