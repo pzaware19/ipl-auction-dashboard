@@ -1008,6 +1008,18 @@
     "note": "Listed in team's player roster"
   },
   {
+    "player": "Ramakrishna Ghosh",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-03T17:50:52+00:00",
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [],
+    "note": "Foot fracture"
+  },
+  {
     "player": "Ramandeep Singh",
     "team": "KKR",
     "status": "available",
@@ -1128,6 +1140,18 @@
     "note": "Featured in Train Like a Knight series"
   },
   {
+    "player": "Towhid Hridoy",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-03T17:50:52+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returned from tennis elbow injury"
+  },
+  {
     "player": "Vaibhav Arora",
     "team": "KKR",
     "status": "available",
@@ -1144,14 +1168,14 @@
     "team": "KKR",
     "status": "available",
     "confidence": "major_media",
-    "selection_probability": 0.7,
+    "selection_probability": 0.9,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-08T18:08:18+00:00",
+    "source_date": "2026-05-03T17:50:52+00:00",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Navdeep Saini"
     ],
-    "note": "Chakaravarthy has been recovering from an injury to his left little finger"
+    "note": "Returned to form after an underwhelming start to the campaign"
   },
   {
     "player": "Varun Chakravarthy",
