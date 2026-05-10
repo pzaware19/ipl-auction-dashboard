@@ -13343,5 +13343,24 @@
     "note": "bowled in the 46th match",
     "source_date": "2026-05-04T04:57:00+00:00",
     "extracted_at": "2026-05-09T08:04:46+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_why_is_yashasvi_jaiswal_captaining_rajasthan_royals_against_gujarat_titans_in_the_pink_promise_match_ya_claim_1",
+    "source_item_id": "rr_official_site_why_is_yashasvi_jaiswal_captaining_rajasthan_royals_against_gujarat_titans_in_the_pink_promise_match_ya",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Riyan Parag",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "at least 1 match",
+    "replacement_candidates": [
+      "Yashasvi Jaiswal"
+    ],
+    "note": "hamstring injury",
+    "source_date": "09 May, 2026",
+    "extracted_at": "2026-05-10T05:00:51+00:00"
   }
 ]
