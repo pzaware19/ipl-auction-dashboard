@@ -215,6 +215,18 @@
     "note": "Brought into the team"
   },
   {
+    "player": "Ashutosh Sharma",
+    "team": "DC",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-11T17:34:47+00:00",
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [],
+    "note": "dismissed for 19(10)"
+  },
+  {
     "player": "Auqib Nabi Dar",
     "team": "DC",
     "status": "available",
