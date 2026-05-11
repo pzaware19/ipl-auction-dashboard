@@ -1791,14 +1791,17 @@
   {
     "player": "Ryan Rickelton",
     "team": "MI",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "official",
-    "selection_probability": 1.0,
-    "best_source": "IPL Official News",
-    "source_date": "05 Apr, 2026",
-    "expected_absence_window": null,
-    "replacement_candidates": [],
-    "note": "Dismissed in the third over of the recent match"
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-10T14:20:12+00:00",
+    "expected_absence_window": "entire match",
+    "replacement_candidates": [
+      "Ishan Kishan",
+      "Tristan Stubbs"
+    ],
+    "note": "Caught by Rajat Patidar off Bhuvneshwar Kumar"
   },
   {
     "player": "Saika Ishaque",

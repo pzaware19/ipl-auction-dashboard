@@ -13770,5 +13770,25 @@
     "note": "Played in the recent match against RCB",
     "source_date": "07 May, 2026",
     "extracted_at": "2026-05-11T05:14:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_mi_vs_rcb_rcb_opt_to_bowl_live_cricket_scores_152097_mi_vs_rcb_54th_match_indian_premier_league_202_claim_1",
+    "source_item_id": "cricbuzz_latest_news_mi_vs_rcb_rcb_opt_to_bowl_live_cricket_scores_152097_mi_vs_rcb_54th_match_indian_premier_league_202",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ryan Rickelton",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire match",
+    "replacement_candidates": [
+      "Ishan Kishan",
+      "Tristan Stubbs"
+    ],
+    "note": "Caught by Rajat Patidar off Bhuvneshwar Kumar",
+    "source_date": "2026-05-10T14:20:12+00:00",
+    "extracted_at": "2026-05-11T09:53:09+00:00"
   }
 ]
