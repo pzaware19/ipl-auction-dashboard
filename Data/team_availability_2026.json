@@ -1809,6 +1809,18 @@
     "note": "Listed in the women's squad"
   },
   {
+    "player": "Raj Bawa",
+    "team": "MI",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-11T05:13:26+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the match"
+  },
+  {
     "player": "Rohit",
     "team": "MI",
     "status": "doubtful",
@@ -2062,12 +2074,12 @@
     "team": "PBKS",
     "status": "available",
     "confidence": "major_media",
-    "selection_probability": 1.0,
+    "selection_probability": 0.8,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-27T15:08:21+00:00",
-    "expected_absence_window": "",
+    "source_date": "2026-05-02T14:10:30+00:00",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "joined the squad in New Delhi"
+    "note": "Returned to the IPL after missing the first half of the season"
   },
   {
     "player": "Marcus Stoinis",
@@ -2216,6 +2228,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Played in the IPL 2026 season opener and contributed to the team's win"
+  },
+  {
+    "player": "Dinesh Karthik",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-11T05:13:26+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the match"
   },
   {
     "player": "Jacob Bethell",
