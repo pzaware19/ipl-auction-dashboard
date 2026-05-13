@@ -14657,5 +14657,22 @@
     "note": "played in the match",
     "source_date": "2026-05-11T05:13:26+00:00",
     "extracted_at": "2026-05-12T15:41:20+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_i_believe_it_was_god_gifted_bhuvneshwar_kumar_on_his_ability_to_swing_the_ball_rcb_cricket_news_news_i_claim_1",
+    "source_item_id": "rcb_official_site_i_believe_it_was_god_gifted_bhuvneshwar_kumar_on_his_ability_to_swing_the_ball_rcb_cricket_news_news_i",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-13T05:06:58+00:00"
   }
 ]
