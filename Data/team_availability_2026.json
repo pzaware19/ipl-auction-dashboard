@@ -100,6 +100,18 @@
     "note": "Initially ruled out for the first two weeks of the season following a calf strain, but has started practicing"
   },
   {
+    "player": "Macneil Noronha",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "13 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named as a replacement for injured Ramakrishna Ghosh"
+  },
+  {
     "player": "Mukesh Choudhary",
     "team": "CSK",
     "status": "available",
@@ -137,6 +149,20 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Prashant Veer in Focus"
+  },
+  {
+    "player": "Ramakrishna Ghosh",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "13 May, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Macneil Noronha"
+    ],
+    "note": "Injured his right foot during the game against Mumbai Indians on May 3rd"
   },
   {
     "player": "Ruturaj Gaikwad",
