@@ -14746,5 +14746,41 @@
     "note": "Named as a replacement for injured Ramakrishna Ghosh",
     "source_date": "13 May, 2026",
     "extracted_at": "2026-05-13T11:40:52+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_news_claim_1",
+    "source_item_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ramakrishna Ghosh",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Macneil Noronha"
+    ],
+    "note": "injured",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-13T18:59:00+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_news_claim_2",
+    "source_item_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Macneil Noronha",
+    "team": "UNKNOWN",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": "none",
+    "replacement_candidates": [],
+    "note": "named as replacement for Ramakrishna Ghosh",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-13T18:59:00+00:00"
   }
 ]
