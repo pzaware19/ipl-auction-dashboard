@@ -14674,5 +14674,41 @@
     "note": "No indication of injury or unavailability",
     "source_date": "13 May, 2026",
     "extracted_at": "2026-05-13T05:06:58+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_winning_the_purple_cap_twice_means_you_ve_had_an_extraordinary_year_bhuvneshwar_kumar_rcb_cricket_news_claim_1",
+    "source_item_id": "rcb_official_site_winning_the_purple_cap_twice_means_you_ve_had_an_extraordinary_year_bhuvneshwar_kumar_rcb_cricket_news",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No injury mentioned, recently gave an interview",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-13T08:52:55+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_mumbai_indians_vs_royal_challengers_bengaluru_live_54th_match_live_cricket_scores_152097_mi_vs_rcb__claim_1",
+    "source_item_id": "cricbuzz_latest_news_mumbai_indians_vs_royal_challengers_bengaluru_live_54th_match_live_cricket_scores_152097_mi_vs_rcb_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ryan Rickelton",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire match",
+    "replacement_candidates": [
+      "Naman Dhir"
+    ],
+    "note": "Caught by Rajat Patidar off Bhuvneshwar Kumar",
+    "source_date": "2026-05-10T14:20:12+00:00",
+    "extracted_at": "2026-05-13T08:53:09+00:00"
   }
 ]
