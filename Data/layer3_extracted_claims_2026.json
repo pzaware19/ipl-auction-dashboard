@@ -14782,5 +14782,151 @@
     "note": "named as replacement for Ramakrishna Ghosh",
     "source_date": "13 May, 2026",
     "extracted_at": "2026-05-13T18:59:00+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_live_53rd_match_live_cricket_scores_152086_lsg_vs_csk_5_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_live_53rd_match_live_cricket_scores_152086_lsg_vs_csk_5",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Nicholas Pooran",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Other LSG wicket-keepers or middle-order batsmen"
+    ],
+    "note": "Caught by (sub)Sarfaraz Khan off Noor Ahmad",
+    "source_date": "2026-05-10T10:46:05+00:00",
+    "extracted_at": "2026-05-14T08:46:14+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_live_53rd_match_live_cricket_scores_152086_lsg_vs_csk_5_claim_2",
+    "source_item_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_live_53rd_match_live_cricket_scores_152086_lsg_vs_csk_5",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mitchell Marsh",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Other LSG middle-order batsmen"
+    ],
+    "note": "Fell for a run-a-ball 10; Kamboj with the wicket",
+    "source_date": "2026-05-10T10:46:05+00:00",
+    "extracted_at": "2026-05-14T08:46:14+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_1",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ramakrishna Ghosh",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "Macneil Noronha"
+    ],
+    "note": "sustained a season-ending foot fracture on his IPL debut",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_2",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Nathan Ellis",
+    "team": "CSK",
+    "status": "overseas_unavailable",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Spencer Johnson"
+    ],
+    "note": "unavailable before the start of the season",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_3",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Spencer Johnson",
+    "team": "CSK",
+    "status": "managed",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": "recently returned from injury",
+    "replacement_candidates": [],
+    "note": "was unavailable until recently due to an injury",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_4",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "MS Dhoni",
+    "team": "CSK",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "since the start of the season",
+    "replacement_candidates": [],
+    "note": "battling a calf strain",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_5",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Khaleel Ahmed",
+    "team": "CSK",
+    "status": "unknown",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "CSK yet to name a replacement",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c_claim_6",
+    "source_item_id": "cricbuzz_latest_news_csk_rope_in_macneil_noronha_as_replacement_for_ramakrishna_ghosh_cricbuzz_com_cricket_news_138759_c",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mhatre",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Akash Madhwal"
+    ],
+    "note": "replaced by Akash Madhwal",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "extracted_at": "2026-05-14T08:46:22+00:00"
   }
 ]

@@ -112,6 +112,20 @@
     "note": "Named as a replacement for injured Ramakrishna Ghosh"
   },
   {
+    "player": "Mhatre",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Akash Madhwal"
+    ],
+    "note": "replaced by Akash Madhwal"
+  },
+  {
     "player": "Mukesh Choudhary",
     "team": "CSK",
     "status": "available",
@@ -126,17 +140,18 @@
   {
     "player": "Nathan Ellis",
     "team": "CSK",
-    "status": "ruled_out",
+    "status": "overseas_unavailable",
     "confidence": "major_media",
     "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-16T07:58:02+00:00",
-    "expected_absence_window": "not specified",
+    "source_date": "2026-05-12T18:58:04+00:00",
+    "expected_absence_window": "entire season",
     "replacement_candidates": [
+      "Spencer Johnson",
       "Spencer Johnson (but injured)",
       "Registered Available Player Pool (RAPP)"
     ],
-    "note": "lost for the season"
+    "note": "unavailable before the start of the season"
   },
   {
     "player": "Prashant Veer",
@@ -1393,6 +1408,7 @@
     "source_date": "22 Apr, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
+      "Other LSG middle-order batsmen",
       "Manimaran Siddharth",
       "George Linde",
       "Matthew Breetzke",
@@ -1470,7 +1486,9 @@
     "best_source": "Lucknow Super Giants Official",
     "source_date": "2026-03-29T16:06:13+00:00",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Other LSG wicket-keepers or middle-order batsmen"
+    ],
     "note": "Mentioned in the retention list for IPL 2026"
   },
   {
