@@ -14928,5 +14928,58 @@
     "note": "replaced by Akash Madhwal",
     "source_date": "2026-05-12T18:58:04+00:00",
     "extracted_at": "2026-05-14T08:46:22+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4350_dian_forrester_named_replacement_for_injured_jamie_overton_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4350_dian_forrester_named_replacement_for_injured_jamie_overton",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Jamie Overton",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Dian Forrester"
+    ],
+    "note": "right thigh injury",
+    "source_date": "14 May, 2026",
+    "extracted_at": "2026-05-14T11:27:01+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4350_dian_forrester_named_replacement_for_injured_jamie_overton_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4350_dian_forrester_named_replacement_for_injured_jamie_overton",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Dian Forrester",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "joined as replacement for Jamie Overton",
+    "source_date": "14 May, 2026",
+    "extracted_at": "2026-05-14T11:27:01+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_55_pbks_vs_dc_12_may_2026_3_min_read_news_4342_code_of_conduct_breach_mat_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_55_pbks_vs_dc_12_may_2026_3_min_read_news_4342_code_of_conduct_breach_mat",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Axar Patel",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined for slow over rate",
+    "source_date": "12 May, 2026",
+    "extracted_at": "2026-05-14T11:27:02+00:00"
   }
 ]

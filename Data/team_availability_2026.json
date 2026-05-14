@@ -41,6 +41,18 @@
     "note": "side strain injury"
   },
   {
+    "player": "Dian Forrester",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "14 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "joined as replacement for Jamie Overton"
+  },
+  {
     "player": "Gurjapneet Singh",
     "team": "CSK",
     "status": "ruled_out",
@@ -57,14 +69,16 @@
   {
     "player": "Jamie Overton",
     "team": "CSK",
-    "status": "available",
-    "confidence": "team_media",
-    "selection_probability": 0.5,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-03T14:02:26+00:00",
-    "expected_absence_window": "Sunday (RCB fixture)",
-    "replacement_candidates": [],
-    "note": "CSK's top-scorer of the last game, might not be rushed to play tonight"
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "IPL Official News",
+    "source_date": "14 May, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Dian Forrester"
+    ],
+    "note": "right thigh injury"
   },
   {
     "player": "Khaleel Ahmed",
@@ -286,10 +300,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "IPL Official News",
-    "source_date": "05 Apr, 2026",
+    "source_date": "12 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Led the spinners in the recent match"
+    "note": "Fined for slow over rate"
   },
   {
     "player": "Ben Duckett",
