@@ -91,9 +91,22 @@
     "expected_absence_window": "remainder of IPL 2026",
     "replacement_candidates": [
       "to be decided in consultation with captain",
-      "coach"
+      "coach",
+      "Kuldip Yadav"
     ],
     "note": "season-ending injury"
+  },
+  {
+    "player": "Kuldip Yadav",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "15 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Khaleel Ahmed"
   },
   {
     "player": "MS Dhoni",
@@ -2369,13 +2382,15 @@
     "player": "Nuwan Thushara",
     "team": "RCB",
     "status": "ruled_out",
-    "confidence": "team_media",
+    "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-23T15:12:45+00:00",
-    "expected_absence_window": "entire season",
-    "replacement_candidates": [],
-    "note": "continued unavailability"
+    "best_source": "IPL Official News",
+    "source_date": "15 May, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Richard Gleeson"
+    ],
+    "note": "Injured, replaced by Richard Gleeson"
   },
   {
     "player": "Phil Salt",
@@ -2451,6 +2466,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match against RR"
+  },
+  {
+    "player": "Richard Gleeson",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "15 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Nuwan Thushara"
   },
   {
     "player": "Rickelton",
