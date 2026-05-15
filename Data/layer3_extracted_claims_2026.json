@@ -14981,5 +14981,136 @@
     "note": "Fined for slow over rate",
     "source_date": "12 May, 2026",
     "extracted_at": "2026-05-14T11:27:02+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc_claim_1",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Shivam Mavi",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "RS Ambrish"
+    ],
+    "note": "injury replacement signed",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:06+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc_claim_2",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "David Payne",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Gerald Coetzee"
+    ],
+    "note": "injury replacement signed",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:06+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc_claim_3",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Brydon Carse",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "entire season",
+    "replacement_candidates": [
+      "Dilshan Madushanka"
+    ],
+    "note": "injury replacement signed",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:06+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc_claim_4",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Jamie Overton",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [
+      "Dian Forrester"
+    ],
+    "note": "injury replacement signed",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:06+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc_claim_5",
+    "source_item_id": "ipl_official_news_code_of_conduct_breach_match_56_gt_vs_srh_13_may_2026_3_min_read_news_4346_code_of_conduct_breach_matc",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ramakrishna Ghosh",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [
+      "Macneil Noronha"
+    ],
+    "note": "injury replacement signed",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:06+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_13_may_2026_3_min_read_news_4347_macne_claim_1",
+    "source_item_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_13_may_2026_3_min_read_news_4347_macne",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ramakrishna Ghosh",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Macneil Noronha"
+    ],
+    "note": "Injured his right foot during the game against Mumbai Indians on May 3rd",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:07+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_13_may_2026_3_min_read_news_4347_macne_claim_2",
+    "source_item_id": "ipl_official_news_macneil_noronha_named_replacement_for_injured_ramakrishna_ghosh_13_may_2026_3_min_read_news_4347_macne",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Macneil Noronha",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named as replacement for injured Ramakrishna Ghosh",
+    "source_date": "13 May, 2026",
+    "extracted_at": "2026-05-15T05:09:07+00:00"
   }
 ]
