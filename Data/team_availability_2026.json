@@ -3110,6 +3110,18 @@
     "note": "Injured"
   },
   {
+    "player": "Dian Forrester",
+    "team": "UNKNOWN",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "14 May, 2026",
+    "expected_absence_window": "none",
+    "replacement_candidates": [],
+    "note": "named as replacement for Jamie Overton"
+  },
+  {
     "player": "Jack Edwards",
     "team": "UNKNOWN",
     "status": "ruled_out",
@@ -3130,12 +3142,12 @@
     "confidence": "official",
     "selection_probability": 0.0,
     "best_source": "IPL Official News",
-    "source_date": "13 May, 2026",
+    "source_date": "14 May, 2026",
     "expected_absence_window": "unknown",
     "replacement_candidates": [
       "Dian Forrester"
     ],
-    "note": "injury replacement signed"
+    "note": "injured"
   },
   {
     "player": "Macneil Noronha",
