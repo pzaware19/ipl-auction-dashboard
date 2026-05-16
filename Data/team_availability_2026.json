@@ -1294,6 +1294,18 @@
     "note": "played in the recent match against KKR"
   },
   {
+    "player": "Akash",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "10 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as part of a stunning show"
+  },
+  {
     "player": "Akash Deep",
     "team": "LSG",
     "status": "available",
@@ -1390,6 +1402,18 @@
     "note": "played in the recent match against MI"
   },
   {
+    "player": "Josh Inglis",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "10 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as part of the batting display"
+  },
+  {
     "player": "Kartik Tyagi",
     "team": "LSG",
     "status": "available",
@@ -1412,6 +1436,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match against PBKS"
+  },
+  {
+    "player": "Marsh",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "10 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as part of a stunning show"
   },
   {
     "player": "Mayank Yadav",
@@ -1557,16 +1593,28 @@
     "note": "played in the recent match against KKR"
   },
   {
+    "player": "Sanju Samson",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Lucknow Super Giants Official",
+    "source_date": "10 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "mentioned as being dismissed in the powerplay"
+  },
+  {
     "player": "Shahbaz Ahamad",
     "team": "LSG",
     "status": "available",
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "07 May, 2026",
+    "source_date": "10 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Played in the recent match against RCB"
+    "note": "mentioned as part of the batting display"
   },
   {
     "player": "T Natarajan",
