@@ -2092,6 +2092,18 @@
     "note": "Mentioned as delivering a key breakthrough"
   },
   {
+    "player": "Azmatullah Omarzai",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "14 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Impressive all-round display"
+  },
+  {
     "player": "Ben Dwarshuis",
     "team": "PBKS",
     "status": "available",
@@ -2238,6 +2250,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Promising young Indian talent, joins the PBKS squad"
+  },
+  {
+    "player": "Vishnu Vinod",
+    "team": "PBKS",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Punjab Kings Official",
+    "source_date": "14 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Promising debut"
   },
   {
     "player": "Xavier Bartlett",
