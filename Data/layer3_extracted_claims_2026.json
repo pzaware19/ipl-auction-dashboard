@@ -15999,5 +15999,77 @@
     "note": "named as injury replacement",
     "source_date": "15 May, 2026",
     "extracted_at": "2026-05-17T08:29:26+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th_claim_1",
+    "source_item_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Khaleel Ahmed",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Kuldip Yadav"
+    ],
+    "note": "injury replacement named",
+    "source_date": "15 May, 2026",
+    "extracted_at": "2026-05-17T10:53:22+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th_claim_2",
+    "source_item_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Nuwan Thushara",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Richard Gleeson"
+    ],
+    "note": "injury replacement named",
+    "source_date": "15 May, 2026",
+    "extracted_at": "2026-05-17T10:53:22+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th_claim_3",
+    "source_item_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Kuldip Yadav",
+    "team": "UNKNOWN",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "named as injury replacement",
+    "source_date": "15 May, 2026",
+    "extracted_at": "2026-05-17T10:53:22+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th_claim_4",
+    "source_item_id": "ipl_official_news_copy_article_kuldip_yadav_and_richard_gleeson_named_injury_replacements_for_khaleel_ahmed_and_nuwan_th",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Richard Gleeson",
+    "team": "UNKNOWN",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "named as injury replacement",
+    "source_date": "15 May, 2026",
+    "extracted_at": "2026-05-17T10:53:22+00:00"
   }
 ]
