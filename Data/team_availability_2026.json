@@ -1944,14 +1944,14 @@
   {
     "player": "Quinton de Kock",
     "team": "MI",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "official",
-    "selection_probability": 1.0,
+    "selection_probability": 0.0,
     "best_source": "Mumbai Indians Official",
-    "source_date": "18 Apr, 2026",
-    "expected_absence_window": null,
+    "source_date": "19 May, 2026",
+    "expected_absence_window": "remainder of IPL 2026",
     "replacement_candidates": [],
-    "note": "Recently played a match for Mumbai Indians"
+    "note": "Tendon injury in his left wrist"
   },
   {
     "player": "Rahila Firdous",
@@ -1964,6 +1964,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Listed in the women's squad"
+  },
+  {
+    "player": "Raj Angad Bawa",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Mumbai Indians Official",
+    "source_date": "19 May, 2026",
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [],
+    "note": "Ligament tear to his right thumb"
   },
   {
     "player": "Raj Bawa",
