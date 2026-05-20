@@ -16415,5 +16415,39 @@
     "note": "Ruled out of remainder of IPL 2026",
     "source_date": "18 May, 2026",
     "extracted_at": "2026-05-19T09:58:40+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_19_may_2026_quinton_de_kock_and_raj_angad_bawa_ruled_out_of_remainder_of_ipl_2026_news_quinton_de_kock__claim_1",
+    "source_item_id": "mi_official_site_19_may_2026_quinton_de_kock_and_raj_angad_bawa_ruled_out_of_remainder_of_ipl_2026_news_quinton_de_kock_",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Quinton de Kock",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [],
+    "note": "Tendon injury in his left wrist",
+    "source_date": "19 May, 2026",
+    "extracted_at": "2026-05-20T05:38:37+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_19_may_2026_quinton_de_kock_and_raj_angad_bawa_ruled_out_of_remainder_of_ipl_2026_news_quinton_de_kock__claim_2",
+    "source_item_id": "mi_official_site_19_may_2026_quinton_de_kock_and_raj_angad_bawa_ruled_out_of_remainder_of_ipl_2026_news_quinton_de_kock_",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Raj Angad Bawa",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [],
+    "note": "Ligament tear to his right thumb",
+    "source_date": "19 May, 2026",
+    "extracted_at": "2026-05-20T05:38:37+00:00"
   }
 ]
