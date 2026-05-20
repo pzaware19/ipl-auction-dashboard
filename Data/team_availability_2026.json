@@ -1350,10 +1350,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "15 May, 2026",
+    "source_date": "19 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Featured in his first game of the season"
+    "note": "mentioned as having broken a stand in the recent match against RR"
   },
   {
     "player": "Akshat Raghuwanshi",
@@ -1446,10 +1446,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Lucknow Super Giants Official",
-    "source_date": "15 May, 2026",
+    "source_date": "19 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Provided solid support with a steady 36 off 32"
+    "note": "played in the recent match against RR"
   },
   {
     "player": "Kartik Tyagi",
@@ -1813,11 +1813,11 @@
     "status": "available",
     "confidence": "official",
     "selection_probability": 1.0,
-    "best_source": "IPL Official News",
-    "source_date": "05 Apr, 2026",
+    "best_source": "Mumbai Indians Official",
+    "source_date": "18 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Took a brilliant run out in the recent match"
+    "note": "mentioned in the bowling department"
   },
   {
     "player": "Kamalini G",
@@ -2135,11 +2135,11 @@
     "status": "available",
     "confidence": "official",
     "selection_probability": 1.0,
-    "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "11 May, 2026",
+    "best_source": "Mumbai Indians Official",
+    "source_date": "18 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Played in the recent match"
+    "note": "mentioned as key player in middle overs"
   },
   {
     "player": "Triveni Vasistha",
