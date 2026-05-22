@@ -16840,5 +16840,39 @@
     "note": "Ruled out of remainder of IPL 2026",
     "source_date": "18 May, 2026",
     "extracted_at": "2026-05-21T09:54:35+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_rajat_s_good_to_go_mo_bobat_opens_up_on_rcb_skipper_s_fitness_ahead_of_srh_challenge_in_ipl_2026_rcb_c_claim_1",
+    "source_item_id": "rcb_official_site_rajat_s_good_to_go_mo_bobat_opens_up_on_rcb_skipper_s_fitness_ahead_of_srh_challenge_in_ipl_2026_rcb_c",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Rajat Patidar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "RCB Director of Cricket Mo Bobat confirmed Rajat Patidar's availability for the match against SRH",
+    "source_date": "22 May, 2026",
+    "extracted_at": "2026-05-22T12:07:13+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_rajat_s_good_to_go_mo_bobat_on_rcb_captain_s_fitness_ahead_of_srh_clash_rcb_cricket_news_news_rajats_g_claim_1",
+    "source_item_id": "rcb_official_site_rajat_s_good_to_go_mo_bobat_on_rcb_captain_s_fitness_ahead_of_srh_clash_rcb_cricket_news_news_rajats_g",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Rajat Patidar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "RCB Director of Cricket, Mo Bobat, confirmed Patidar's availability for the match against SRH",
+    "source_date": "22 May, 2026",
+    "extracted_at": "2026-05-22T12:07:21+00:00"
   }
 ]
