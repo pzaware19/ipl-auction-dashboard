@@ -1776,12 +1776,12 @@
     "team": "MI",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 0.9,
-    "best_source": "Mumbai Indians Official",
-    "source_date": "03 May, 2026",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "21 May, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "mentioned as part of the team's past performances"
+    "note": "Fined 10% of his match fee and accumulated one Demerit Point for breaching Level 1 of the IPL’s Code of Conduct"
   },
   {
     "player": "Harmanpreet Kaur",
@@ -1854,6 +1854,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Joined as injury replacement for Atharva Ankolekar"
+  },
+  {
+    "player": "Mahipal Lomror",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Quinton de Kock"
   },
   {
     "player": "Milly Illingworth",
@@ -1947,11 +1959,13 @@
     "status": "ruled_out",
     "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Mumbai Indians Official",
-    "source_date": "19 May, 2026",
-    "expected_absence_window": "remainder of IPL 2026",
-    "replacement_candidates": [],
-    "note": "Tendon injury in his left wrist"
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Mahipal Lomror"
+    ],
+    "note": "ruled out due to injury"
   },
   {
     "player": "Rahila Firdous",
@@ -1971,11 +1985,13 @@
     "status": "ruled_out",
     "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Mumbai Indians Official",
-    "source_date": "19 May, 2026",
-    "expected_absence_window": "remainder of IPL 2026",
-    "replacement_candidates": [],
-    "note": "Ligament tear to his right thumb"
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Ruchit Ahir"
+    ],
+    "note": "ruled out due to injury"
   },
   {
     "player": "Raj Bawa",
@@ -2016,6 +2032,18 @@
       "Suryakumar Yadav"
     ],
     "note": "Featured in recent match"
+  },
+  {
+    "player": "Ruchit Ahir",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Raj Angad Bawa"
   },
   {
     "player": "Ryan Rickelton",
