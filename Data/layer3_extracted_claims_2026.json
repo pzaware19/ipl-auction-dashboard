@@ -17232,5 +17232,39 @@
     "note": "signed as a replacement for Mitchell Santner",
     "source_date": "24 May, 2026",
     "extracted_at": "2026-05-23T18:03:32+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_jacob_bethell_set_to_miss_ipl_2026_playoffs_due_to_finger_injury_rcb_cricket_news_news_jacob_bethell_s_claim_1",
+    "source_item_id": "rcb_official_site_jacob_bethell_set_to_miss_ipl_2026_playoffs_due_to_finger_injury_rcb_cricket_news_news_jacob_bethell_s",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jacob Bethell",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "IPL 2026 playoffs",
+    "replacement_candidates": [],
+    "note": "Finger injury sustained during RCB’s away game against the Punjab Kings",
+    "source_date": "23 May, 2026",
+    "extracted_at": "2026-05-24T08:38:43+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_jacob_bethell_set_to_miss_ipl_2026_playoffs_due_to_injury_rcb_cricket_news_news_jacob_bethell_set_to_m_claim_1",
+    "source_item_id": "rcb_official_site_jacob_bethell_set_to_miss_ipl_2026_playoffs_due_to_injury_rcb_cricket_news_news_jacob_bethell_set_to_m",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jacob Bethell",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "IPL 2026 playoffs",
+    "replacement_candidates": [],
+    "note": "Finger injury sustained during RCB’s away game against the Punjab Kings",
+    "source_date": "23 May, 2026",
+    "extracted_at": "2026-05-24T08:38:47+00:00"
   }
 ]
