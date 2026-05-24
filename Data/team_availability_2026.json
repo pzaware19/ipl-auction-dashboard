@@ -1064,18 +1064,31 @@
     "note": "replaced by Navdeep Saini"
   },
   {
+    "player": "Luvnith Sisodia",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for Matheesha Pathirana"
+  },
+  {
     "player": "Matheesha Pathirana",
     "team": "KKR",
     "status": "ruled_out",
-    "confidence": "major_media",
+    "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-08T18:08:18+00:00",
-    "expected_absence_window": null,
+    "best_source": "IPL Official News",
+    "source_date": "24 May, 2026",
+    "expected_absence_window": "remainder of the season",
     "replacement_candidates": [
+      "Luvnith Sisodia",
       "none"
     ],
-    "note": "Pathirana continues to be absent"
+    "note": "hamstring injury"
   },
   {
     "player": "Mustafizur Rahman",

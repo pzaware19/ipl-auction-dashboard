@@ -17266,5 +17266,79 @@
     "note": "Finger injury sustained during RCB’s away game against the Punjab Kings",
     "source_date": "23 May, 2026",
     "extracted_at": "2026-05-24T08:38:47+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4371_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_claim_1",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4371_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Luvnith Sisodia"
+    ],
+    "note": "hamstring injury",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-24T10:56:19+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_ipl_official_news_news_4371_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_claim_2",
+    "source_item_id": "ipl_official_news_ipl_official_news_news_4371_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Luvnith Sisodia",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for Matheesha Pathirana",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-24T10:56:19+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_news_claim_1",
+    "source_item_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ravi Singh",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Emanjot Chahal"
+    ],
+    "note": "injured",
+    "source_date": "23 May, 2026",
+    "extracted_at": "2026-05-24T10:57:25+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_news_claim_1",
+    "source_item_id": "ipl_official_news_copy_article_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ravi Singh",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Emanjot Chahal"
+    ],
+    "note": "injured",
+    "source_date": "23 May, 2026",
+    "extracted_at": "2026-05-24T10:57:26+00:00"
   }
 ]
