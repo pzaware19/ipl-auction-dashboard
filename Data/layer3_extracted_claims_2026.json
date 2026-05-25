@@ -17376,5 +17376,132 @@
     "note": "signed as a replacement for Ravi Singh",
     "source_date": "24 May, 2026",
     "extracted_at": "2026-05-25T05:56:14+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa_claim_1",
+    "source_item_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Quinton de Kock",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Mahipal Lomror"
+    ],
+    "note": "Injured",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:20:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa_claim_2",
+    "source_item_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Raj Angad Bawa",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Ruchit Ahir"
+    ],
+    "note": "Injured",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:20:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa_claim_3",
+    "source_item_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Mahipal Lomror",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Quinton de Kock",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:20:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa_claim_4",
+    "source_item_id": "ipl_official_news_mi_sign_mahipal_lomror_and_ruchit_ahir_as_replacements_23_may_2026_3_min_read_news_4369_mi_sign_mahipa",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ruchit Ahir",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Signed as replacement for Raj Angad Bawa",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:20:39+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news_claim_1",
+    "source_item_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Luvnith Sisodia"
+    ],
+    "note": "injured",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:21:43+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news_claim_1",
+    "source_item_id": "ipl_official_news_copy_article_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Luvnith Sisodia"
+    ],
+    "note": "injured",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:21:45+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_copy_article_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news_claim_2",
+    "source_item_id": "ipl_official_news_copy_article_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_news",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Luvnith Sisodia",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "replacement for Matheesha Pathirana",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T10:21:45+00:00"
   }
 ]
