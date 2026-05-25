@@ -17340,5 +17340,41 @@
     "note": "injured",
     "source_date": "23 May, 2026",
     "extracted_at": "2026-05-24T10:57:26+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_23_may_2026_3_min_read_ne_claim_1",
+    "source_item_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_23_may_2026_3_min_read_ne",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ravi Singh",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Emanjot Chahal"
+    ],
+    "note": "hamstring injury",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T05:56:14+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_23_may_2026_3_min_read_ne_claim_2",
+    "source_item_id": "ipl_official_news_rajasthan_royals_sign_emanjot_chahal_as_a_replacement_for_injured_ravi_singh_23_may_2026_3_min_read_ne",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Emanjot Chahal",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as a replacement for Ravi Singh",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-25T05:56:14+00:00"
   }
 ]
