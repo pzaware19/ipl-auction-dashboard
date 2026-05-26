@@ -17707,5 +17707,39 @@
     "note": "Featured in recent matches and praised by teammate Rajat Patidar",
     "source_date": "26 May, 2026",
     "extracted_at": "2026-05-26T10:08:41+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_lucknow_super_giants_64th_match_live_cricket_scores_152207_rr_vs_lsg_64th_match_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_lucknow_super_giants_64th_match_live_cricket_scores_152207_rr_vs_lsg_64th_match",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ravindra Jadeja",
+    "team": "RR",
+    "status": "available",
+    "confidence": "coach_quote",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "missed the previous game due to a niggle in his knee, but likely to be available for the match against LSG",
+    "source_date": "2026-05-18T16:22:48+00:00",
+    "extracted_at": "2026-05-26T19:23:36+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_lucknow_super_giants_64th_match_live_cricket_scores_152207_rr_vs_lsg_64th_match_claim_2",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_lucknow_super_giants_64th_match_live_cricket_scores_152207_rr_vs_lsg_64th_match",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mohsin Khan",
+    "team": "LSG",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "has missed the last few games due to an injury, no clarity yet on his availability",
+    "source_date": "2026-05-18T16:22:48+00:00",
+    "extracted_at": "2026-05-26T19:23:36+00:00"
   }
 ]
