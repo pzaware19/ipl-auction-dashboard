@@ -17860,5 +17860,41 @@
     "note": "played in the recent match",
     "source_date": "2026-05-27T05:48:54+00:00",
     "extracted_at": "2026-05-27T10:06:21+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_24_may_2026_3_min_read_news_43_claim_1",
+    "source_item_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_24_may_2026_3_min_read_news_43",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Matheesha Pathirana",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Luvnith Sisodia"
+    ],
+    "note": "hamstring injury",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-27T19:28:43+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_24_may_2026_3_min_read_news_43_claim_2",
+    "source_item_id": "ipl_official_news_kkr_pick_luvnith_sisodia_as_replacement_for_injured_matheesha_pathirana_24_may_2026_3_min_read_news_43",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Luvnith Sisodia",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "signed as replacement for Matheesha Pathirana",
+    "source_date": "24 May, 2026",
+    "extracted_at": "2026-05-27T19:28:43+00:00"
   }
 ]
