@@ -18083,5 +18083,22 @@
     "note": "briefly walked off the field due to an injury concern",
     "source_date": "29 May, 2026",
     "extracted_at": "2026-05-29T19:32:10+00:00"
+  },
+  {
+    "claim_id": "lsg_official_site_rishabh_pant_steps_down_as_lucknow_super_giants_captain_www_lucknowsupergiants_in_news_rishabh_pant_st_claim_1",
+    "source_item_id": "lsg_official_site_rishabh_pant_steps_down_as_lucknow_super_giants_captain_www_lucknowsupergiants_in_news_rishabh_pant_st",
+    "source_id": "lsg_official_site",
+    "source_name": "Lucknow Super Giants Official",
+    "priority": "official",
+    "player": "Rishabh Pant",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Stepped down as captain, no indication of unavailability",
+    "source_date": "29 May, 2026",
+    "extracted_at": "2026-05-30T08:35:50+00:00"
   }
 ]
