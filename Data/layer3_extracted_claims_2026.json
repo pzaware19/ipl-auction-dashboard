@@ -18100,5 +18100,58 @@
     "note": "Stepped down as captain, no indication of unavailability",
     "source_date": "29 May, 2026",
     "extracted_at": "2026-05-30T08:35:50+00:00"
+  },
+  {
+    "claim_id": "gt_official_site_three_finals_in_five_seasons_gujarat_titans_relentless_pursuit_of_greatness_news_gujarat_titans_five_se_claim_1",
+    "source_item_id": "gt_official_site_three_finals_in_five_seasons_gujarat_titans_relentless_pursuit_of_greatness_news_gujarat_titans_five_se",
+    "source_id": "gt_official_site",
+    "source_name": "Gujarat Titans Official",
+    "priority": "official",
+    "player": "Shubman Gill",
+    "team": "GT",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Captain and key player, led the team to the final",
+    "source_date": "30 May, 2026",
+    "extracted_at": "2026-05-31T08:55:18+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_rajasthan_royals_eliminator_live_cricket_scores_155387_srh_vs_rr_eliminator__claim_1",
+    "source_item_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_rajasthan_royals_eliminator_live_cricket_scores_155387_srh_vs_rr_eliminator_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Riyan Parag",
+    "team": "RR",
+    "status": "doubtful",
+    "confidence": "coach_quote",
+    "selection_probability": 0.7,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Dasun Shanaka mentioned Riyan Parag has \"a few niggles\"",
+    "source_date": "2026-05-26T16:42:30+00:00",
+    "extracted_at": "2026-05-31T08:55:32+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_rajasthan_royals_eliminator_live_cricket_scores_155387_srh_vs_rr_eliminator__claim_2",
+    "source_item_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_rajasthan_royals_eliminator_live_cricket_scores_155387_srh_vs_rr_eliminator_",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ravindra Jadeja",
+    "team": "RR",
+    "status": "doubtful",
+    "confidence": "coach_quote",
+    "selection_probability": 0.7,
+    "expected_absence_window": null,
+    "replacement_candidates": [
+      "Ravi Bishnoi"
+    ],
+    "note": "Dasun Shanaka mentioned Ravindra Jadeja has \"a few niggles\"",
+    "source_date": "2026-05-26T16:42:30+00:00",
+    "extracted_at": "2026-05-31T08:55:32+00:00"
   }
 ]
