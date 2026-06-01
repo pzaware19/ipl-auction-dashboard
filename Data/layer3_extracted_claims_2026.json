@@ -18187,5 +18187,39 @@
     "note": "Fined for slow over-rate offence",
     "source_date": "22 May, 2026",
     "extracted_at": "2026-06-01T15:40:49+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_west_indies_squad_for_sri_lanka_odi_series_2026_shimron_hetmyer_returns_to_wi_s_50_over_setup_with_2027_claim_1",
+    "source_item_id": "rr_official_site_west_indies_squad_for_sri_lanka_odi_series_2026_shimron_hetmyer_returns_to_wi_s_50_over_setup_with_2027",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Shimron Hetmyer",
+    "team": "RR",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "June 3-7",
+    "replacement_candidates": [],
+    "note": "Selected for West Indies ODI squad, will join on June 8",
+    "source_date": "01 Jun, 2026",
+    "extracted_at": "2026-06-01T18:39:27+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_shimron_hetmyer_returns_to_wi_s_50_over_setup_with_2027_world_cup_in_focus_latest_news_claim_1",
+    "source_item_id": "rr_official_site_shimron_hetmyer_returns_to_wi_s_50_over_setup_with_2027_world_cup_in_focus_latest_news",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Shimron Hetmyer",
+    "team": "RR",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [],
+    "note": "Returning to WI’s 50-over setup with 2027 World Cup in focus, implying potential unavailability for RR",
+    "source_date": "01 Jun, 2026",
+    "extracted_at": "2026-06-01T18:39:29+00:00"
   }
 ]
