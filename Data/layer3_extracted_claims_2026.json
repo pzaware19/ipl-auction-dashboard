@@ -18153,5 +18153,22 @@
     "note": "Dasun Shanaka mentioned Ravindra Jadeja has \"a few niggles\"",
     "source_date": "2026-05-26T16:42:30+00:00",
     "extracted_at": "2026-05-31T08:55:32+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_as_a_leader_he_s_absorbed_pressure_well_dinesh_karthik_on_rajat_patidar_rcb_cricket_news_news_as_a_lea_claim_1",
+    "source_item_id": "rcb_official_site_as_a_leader_he_s_absorbed_pressure_well_dinesh_karthik_on_rajat_patidar_rcb_cricket_news_news_as_a_lea",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Rajat Patidar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Expected to play in the IPL 2026 final",
+    "source_date": "31 May, 2026",
+    "extracted_at": "2026-06-01T11:48:02+00:00"
   }
 ]
