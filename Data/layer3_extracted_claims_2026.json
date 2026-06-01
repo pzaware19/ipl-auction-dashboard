@@ -18170,5 +18170,22 @@
     "note": "Expected to play in the IPL 2026 final",
     "source_date": "31 May, 2026",
     "extracted_at": "2026-06-01T11:48:02+00:00"
+  },
+  {
+    "claim_id": "ipl_official_news_match_66_gt_vs_csk_code_of_conduct_21_may_2026_3_min_read_news_4366_match_66_gt_vs_csk_code_of_conduct_claim_1",
+    "source_item_id": "ipl_official_news_match_66_gt_vs_csk_code_of_conduct_21_may_2026_3_min_read_news_4366_match_66_gt_vs_csk_code_of_conduct",
+    "source_id": "ipl_official_news",
+    "source_name": "IPL Official News",
+    "priority": "official",
+    "player": "Ruturaj Gaikwad",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Fined for slow over-rate offence",
+    "source_date": "22 May, 2026",
+    "extracted_at": "2026-06-01T15:40:49+00:00"
   }
 ]
