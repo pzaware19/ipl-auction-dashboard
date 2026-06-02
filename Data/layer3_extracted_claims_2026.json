@@ -18272,5 +18272,22 @@
     "note": "Participated in the IPL 2026 final",
     "source_date": "02 Jun, 2026",
     "extracted_at": "2026-06-02T10:47:33+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_stuff_that_you_dream_of_virat_kohli_on_rcb_s_second_consecutive_ipl_title_rcb_cricket_news_news_stuff__claim_1",
+    "source_item_id": "rcb_official_site_stuff_that_you_dream_of_virat_kohli_on_rcb_s_second_consecutive_ipl_title_rcb_cricket_news_news_stuff_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Participated in recent team activities and interviews, indicating availability.",
+    "source_date": "01 Jun, 2026",
+    "extracted_at": "2026-06-02T12:57:48+00:00"
   }
 ]
