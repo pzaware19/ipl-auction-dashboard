@@ -18723,5 +18723,39 @@
     "note": "Suffered a finger injury during the innings",
     "source_date": "2026-05-21T16:16:15+00:00",
     "extracted_at": "2026-06-06T08:42:35+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_vaibhav_sooryavanshi_set_for_india_debut_with_2026_t20_tour_of_ireland_england_vaibhav_sooryavanshi_ind_claim_1",
+    "source_item_id": "rr_official_site_vaibhav_sooryavanshi_set_for_india_debut_with_2026_t20_tour_of_ireland_england_vaibhav_sooryavanshi_ind",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RR",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Ireland and England T20 tours",
+    "replacement_candidates": [],
+    "note": "Selected for India T20 squad for Ireland and England tours",
+    "source_date": "06 Jun, 2026",
+    "extracted_at": "2026-06-07T05:59:19+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_vaibhav_sooryavanshi_set_for_india_debut_with_2026_t20_tour_of_ireland_england_vaibhav_sooryavanshi_ind_claim_2",
+    "source_item_id": "rr_official_site_vaibhav_sooryavanshi_set_for_india_debut_with_2026_t20_tour_of_ireland_england_vaibhav_sooryavanshi_ind",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Yashasvi Jaiswal",
+    "team": "RR",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "India vs Afghanistan ODI series",
+    "replacement_candidates": [],
+    "note": "Called up as replacement for Virat Kohli for India vs Afghanistan ODI series",
+    "source_date": "06 Jun, 2026",
+    "extracted_at": "2026-06-07T05:59:19+00:00"
   }
 ]
