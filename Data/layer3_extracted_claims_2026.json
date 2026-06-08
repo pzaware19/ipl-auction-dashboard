@@ -18961,5 +18961,39 @@
     "note": "Part of India squad for Afghanistan Test series",
     "source_date": "06 Jun, 2026",
     "extracted_at": "2026-06-08T11:09:10+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_i_was_a_very_big_fan_of_virat_kohli_vaibhav_sooryavanshi_rcb_cricket_news_news_i_was_a_very_big_fan_of_claim_1",
+    "source_item_id": "rcb_official_site_i_was_a_very_big_fan_of_virat_kohli_vaibhav_sooryavanshi_rcb_cricket_news_news_i_was_a_very_big_fan_of",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently interacted with Vaibhav Sooryavanshi and participated in post-match celebrations",
+    "source_date": "07 Jun, 2026",
+    "extracted_at": "2026-06-08T13:52:00+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_i_was_a_very_big_fan_of_virat_kohli_vaibhav_sooryavanshi_rcb_cricket_news_news_i_was_a_very_big_fan_of_claim_2",
+    "source_item_id": "rcb_official_site_i_was_a_very_big_fan_of_virat_kohli_vaibhav_sooryavanshi_rcb_cricket_news_news_i_was_a_very_big_fan_of",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently won the Orange Cap and interacted with Virat Kohli",
+    "source_date": "07 Jun, 2026",
+    "extracted_at": "2026-06-08T13:52:00+00:00"
   }
 ]
