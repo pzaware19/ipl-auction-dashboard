@@ -2693,6 +2693,18 @@
     "note": "Mentioned in the article as part of RCB's bowling unit"
   },
   {
+    "player": "KL Rahul",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
     "player": "Krunal Pandya",
     "team": "RCB",
     "status": "available",
@@ -2703,6 +2715,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Recently played and contributed to RCB's win"
+  },
+  {
+    "player": "Kuldeep Yadav",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
+    "player": "Mohd. Siraj",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test"
   },
   {
     "player": "Nuwan Thushara",
@@ -2744,6 +2780,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Playing in the current match"
+  },
+  {
+    "player": "Prasidh Krishna",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test"
   },
   {
     "player": "Rajat Patidar",
@@ -2818,6 +2866,18 @@
     "note": "played in the recent match"
   },
   {
+    "player": "Rishabh Pant",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
     "player": "Romario Shepherd",
     "team": "RCB",
     "status": "available",
@@ -2842,6 +2902,18 @@
     "note": "played in the recent match"
   },
   {
+    "player": "Sai Sudharsan",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
     "player": "Salt",
     "team": "RCB",
     "status": "available",
@@ -2852,6 +2924,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as part of the team's starting lineup"
+  },
+  {
+    "player": "Shubman Gill",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
   },
   {
     "player": "Suyash",
@@ -2928,6 +3012,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "No availability concerns mentioned"
+  },
+  {
+    "player": "Washington Sundar",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
+    "player": "Yashasvi Jaiswal",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "06 Jun, 2026",
+    "expected_absence_window": "India vs Afghanistan Test series",
+    "replacement_candidates": [],
+    "note": "Part of India squad for Afghanistan Test series"
   },
   {
     "player": "All players",
