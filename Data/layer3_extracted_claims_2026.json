@@ -19046,5 +19046,39 @@
     "note": "Featured in the article as one of RCB's top bowlers",
     "source_date": "10 Jun, 2026",
     "extracted_at": "2026-06-11T10:48:17+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_riyan_parag_vows_to_return_soon_after_successful_shoulder_surgery_riyan_parag_shoulder_injury_surgery_claim_1",
+    "source_item_id": "rr_official_site_riyan_parag_vows_to_return_soon_after_successful_shoulder_surgery_riyan_parag_shoulder_injury_surgery",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Riyan Parag",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "medium-term",
+    "replacement_candidates": [],
+    "note": "Undergone successful shoulder surgery, beginning rehabilitation period",
+    "source_date": "11 Jun, 2026",
+    "extracted_at": "2026-06-11T16:54:55+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_re_whatsapp_rajasthan_royals_news_more_reset_filters_adjust_filters_cancel_filter_by_category_all_close_claim_1",
+    "source_item_id": "rr_official_site_re_whatsapp_rajasthan_royals_news_more_reset_filters_adjust_filters_cancel_filter_by_category_all_close",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Riyan Parag",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [],
+    "note": "Undergone successful shoulder surgery",
+    "source_date": "11 Jun, 2026",
+    "extracted_at": "2026-06-11T16:55:34+00:00"
   }
 ]
