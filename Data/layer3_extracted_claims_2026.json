@@ -19250,5 +19250,22 @@
     "note": "Injury",
     "source_date": "12 Jun, 2026",
     "extracted_at": "2026-06-14T09:46:48+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_jofra_archer_makes_red_ball_return_where_to_watch_live_latest_news_claim_1",
+    "source_item_id": "rr_official_site_jofra_archer_makes_red_ball_return_where_to_watch_live_latest_news",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Jofra Archer",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Making red-ball return",
+    "source_date": "16 Jun, 2026",
+    "extracted_at": "2026-06-16T11:23:23+00:00"
   }
 ]
