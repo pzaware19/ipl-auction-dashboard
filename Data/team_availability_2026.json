@@ -3639,6 +3639,20 @@
     "note": "played in the recent match"
   },
   {
+    "player": "Angkrish Raghuvanshi",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-22T15:48:28+00:00",
+    "expected_absence_window": "Rest of the season",
+    "replacement_candidates": [
+      "Unknown"
+    ],
+    "note": "Concussion and finger fracture"
+  },
+  {
     "player": "Ayush Mhatre",
     "team": "UNKNOWN",
     "status": "ruled_out",

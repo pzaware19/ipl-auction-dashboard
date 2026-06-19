@@ -19441,5 +19441,24 @@
     "note": "Currently playing for New Zealand in a Test match against England",
     "source_date": "18 June, 2026",
     "extracted_at": "2026-06-19T06:37:29+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lucknow_super_giants_vs_punjab_kings_68th_match_live_cricket_scores_152241_lsg_vs_pbks_68th_match_i_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lucknow_super_giants_vs_punjab_kings_68th_match_live_cricket_scores_152241_lsg_vs_pbks_68th_match_i",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Angkrish Raghuvanshi",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Rest of the season",
+    "replacement_candidates": [
+      "Unknown"
+    ],
+    "note": "Concussion and finger fracture",
+    "source_date": "2026-05-22T15:48:28+00:00",
+    "extracted_at": "2026-06-19T13:00:51+00:00"
   }
 ]
