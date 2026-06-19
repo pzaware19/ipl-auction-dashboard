@@ -19422,5 +19422,24 @@
     "note": "Recently played for India in a Test match",
     "source_date": "08 June, 2026",
     "extracted_at": "2026-06-18T19:32:45+00:00"
+  },
+  {
+    "claim_id": "gt_official_site_our_titan_glenn_phillips_shines_with_a_maiden_test_hundred_against_england_news_glenn_phillips_maiden_t_claim_1",
+    "source_item_id": "gt_official_site_our_titan_glenn_phillips_shines_with_a_maiden_test_hundred_against_england_news_glenn_phillips_maiden_t",
+    "source_id": "gt_official_site",
+    "source_name": "Gujarat Titans Official",
+    "priority": "official",
+    "player": "Glenn Phillips",
+    "team": "GT",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [
+      "unknown"
+    ],
+    "note": "Currently playing for New Zealand in a Test match against England",
+    "source_date": "18 June, 2026",
+    "extracted_at": "2026-06-19T06:37:29+00:00"
   }
 ]
