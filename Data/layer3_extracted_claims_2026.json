@@ -19496,5 +19496,41 @@
     "note": "Called up as an injury replacement for Shreyanka Patil",
     "source_date": "19 Jun, 2026",
     "extracted_at": "2026-06-20T05:52:06+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_prema_rawat_replaces_injured_shreyanka_patil_in_t20_world_cup_squad_ahead_of_challenge_against_south_a_claim_1",
+    "source_item_id": "rcb_official_site_prema_rawat_replaces_injured_shreyanka_patil_in_t20_world_cup_squad_ahead_of_challenge_against_south_a",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Shreyanka Patil",
+    "team": "INDIA",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "ICC Women’s T20 World Cup",
+    "replacement_candidates": [
+      "Prema Rawat"
+    ],
+    "note": "Ankle ligament injury",
+    "source_date": "19 Jun, 2026",
+    "extracted_at": "2026-06-20T09:28:23+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_prema_rawat_replaces_injured_shreyanka_patil_in_t20_world_cup_squad_ahead_of_challenge_against_south_a_claim_2",
+    "source_item_id": "rcb_official_site_prema_rawat_replaces_injured_shreyanka_patil_in_t20_world_cup_squad_ahead_of_challenge_against_south_a",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Prema Rawat",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Called up as an injury replacement for Shreyanka Patil",
+    "source_date": "19 Jun, 2026",
+    "extracted_at": "2026-06-20T09:28:23+00:00"
   }
 ]
