@@ -1014,6 +1014,18 @@
     "note": "Workload management, may be given a break for the Afghanistan series"
   },
   {
+    "player": "Prema Rawat",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "19 Jun, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Called up as an injury replacement for Shreyanka Patil"
+  },
+  {
     "player": "Rishabh Pant",
     "team": "INDIA",
     "status": "available",
@@ -1041,6 +1053,20 @@
       "Yashasvi Jaiswal"
     ],
     "note": "Hamstring injury, may open up an opportunity for Jaiswal"
+  },
+  {
+    "player": "Shreyanka Patil",
+    "team": "INDIA",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "19 Jun, 2026",
+    "expected_absence_window": "ICC Women’s T20 World Cup 2026",
+    "replacement_candidates": [
+      "Prema Rawat"
+    ],
+    "note": "Ankle ligament injury"
   },
   {
     "player": "Virat Kohli",
