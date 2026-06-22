@@ -153,6 +153,21 @@
     "note": "replaced by Akash Madhwal"
   },
   {
+    "player": "Mitchell Santner",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-01T14:17:46+00:00",
+    "expected_absence_window": "indefinite",
+    "replacement_candidates": [
+      "RS Ambrish",
+      "other players in the CSK squad"
+    ],
+    "note": "suffers grade three ACL shoulder injury"
+  },
+  {
     "player": "Mukesh Choudhary",
     "team": "CSK",
     "status": "available",
@@ -3357,6 +3372,7 @@
     "replacement_candidates": [
       "Riyan Parag",
       "Dhruv Jurel",
+      "other batsmen in the RR squad",
       "Shimron Hetmyer"
     ],
     "note": "dismissed by Kyle Jamieson"
