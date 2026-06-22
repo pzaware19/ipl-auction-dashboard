@@ -19674,5 +19674,24 @@
     "note": "suffers grade three ACL shoulder injury",
     "source_date": "2026-05-01T14:17:46+00:00",
     "extracted_at": "2026-06-22T12:16:00+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_delhi_capitals_live_62nd_match_live_cricket_scores_152185_rr_vs_dc_62nd_match_i_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_delhi_capitals_live_62nd_match_live_cricket_scores_152185_rr_vs_dc_62nd_match_i",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Yashasvi Jaiswal",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Dhruv Jurel"
+    ],
+    "note": "c Mitchell Starc b Lungi Ngidi 12(9)",
+    "source_date": "2026-05-17T14:25:38+00:00",
+    "extracted_at": "2026-06-22T15:06:26+00:00"
   }
 ]
