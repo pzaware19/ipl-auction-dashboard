@@ -565,6 +565,18 @@
     "note": "Signed as replacement for Ben Duckett"
   },
   {
+    "player": "Rishabh Pant",
+    "team": "DC",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "23 Jun, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returned to Delhi Capitals from Lucknow Super Giants"
+  },
+  {
     "player": "Sameer Rizvi",
     "team": "DC",
     "status": "available",
@@ -1631,6 +1643,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match"
+  },
+  {
+    "player": "Kuldeep Yadav",
+    "team": "LSG",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Delhi Capitals Official",
+    "source_date": "23 Jun, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Moved to Lucknow Super Giants from Delhi Capitals"
   },
   {
     "player": "Manimaran Siddharth",
@@ -2806,6 +2830,18 @@
     "expected_absence_window": "India vs Afghanistan Test series",
     "replacement_candidates": [],
     "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
+    "player": "Luvnith Sisodia",
+    "team": "RCB",
+    "status": "unknown",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "23 Jun, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as a player who was replaced by Rajat Patidar due to injury in 2022, but no current availability information"
   },
   {
     "player": "Mohd. Siraj",
