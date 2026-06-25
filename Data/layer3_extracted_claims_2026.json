@@ -19795,5 +19795,22 @@
     "note": "Traded from DC to LSG",
     "source_date": "23 Jun, 2026",
     "extracted_at": "2026-06-24T09:42:20+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_he_allows_the_superstars_to_get_the_spotlight_dinesh_karthik_and_mo_bobat_why_rajat_patidar_is_a_great_claim_1",
+    "source_item_id": "rcb_official_site_he_allows_the_superstars_to_get_the_spotlight_dinesh_karthik_and_mo_bobat_why_rajat_patidar_is_a_great",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Rajat Patidar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No injury or availability concerns mentioned",
+    "source_date": "23 Jun, 2026",
+    "extracted_at": "2026-06-25T09:34:03+00:00"
   }
 ]
