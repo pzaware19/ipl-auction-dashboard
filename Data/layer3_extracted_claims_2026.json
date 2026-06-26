@@ -19812,5 +19812,39 @@
     "note": "No injury or availability concerns mentioned",
     "source_date": "23 Jun, 2026",
     "extracted_at": "2026-06-25T09:34:03+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_incredibly_impressed_with_him_as_a_bowler_mo_bobat_explains_how_bhuvneshwar_kumar_evolved_in_ipl_2026__claim_1",
+    "source_item_id": "rcb_official_site_incredibly_impressed_with_him_as_a_bowler_mo_bobat_explains_how_bhuvneshwar_kumar_evolved_in_ipl_2026_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mo Bobat praises Bhuvneshwar Kumar's performance in IPL 2026, indicating he is fit and available",
+    "source_date": "25 Jun, 2026",
+    "extracted_at": "2026-06-26T09:39:00+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_he_ll_create_magic_for_you_dinesh_karthik_and_mo_bobat_on_what_unlocks_the_best_in_virat_kohli_rcb_cri_claim_1",
+    "source_item_id": "rcb_official_site_he_ll_create_magic_for_you_dinesh_karthik_and_mo_bobat_on_what_unlocks_the_best_in_virat_kohli_rcb_cri",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Completed 19th season with RCB and led the charge for the side",
+    "source_date": "25 Jun, 2026",
+    "extracted_at": "2026-06-26T09:39:08+00:00"
   }
 ]
