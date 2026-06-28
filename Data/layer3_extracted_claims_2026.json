@@ -19846,5 +19846,22 @@
     "note": "Completed 19th season with RCB and led the charge for the side",
     "source_date": "25 Jun, 2026",
     "extracted_at": "2026-06-26T09:39:08+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_india_suffer_shock_defeat_at_the_hands_of_ireland_in_t20i_series_opener_rcb_cricket_news_news_india_su_claim_1",
+    "source_item_id": "rcb_official_site_india_suffer_shock_defeat_at_the_hands_of_ireland_in_t20i_series_opener_rcb_cricket_news_news_india_su",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Harshit Rana",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recovered from long-standing injury",
+    "source_date": "27 Jun, 2026",
+    "extracted_at": "2026-06-28T09:20:33+00:00"
   }
 ]
