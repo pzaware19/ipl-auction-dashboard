@@ -19948,5 +19948,24 @@
     "note": "acted as stand-in skipper in the recent match against PBKS",
     "source_date": "2026-05-17T14:25:38+00:00",
     "extracted_at": "2026-06-29T13:53:06+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_59th_match_live_cricket_scores_152152_lsg_vs_csk_59th_m_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lucknow_super_giants_vs_chennai_super_kings_59th_match_live_cricket_scores_152152_lsg_vs_csk_59th_m",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Overton",
+    "team": "CSK",
+    "status": "overseas_unavailable",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Dian Forrester"
+    ],
+    "note": "CSK rope in Dian Forrester as Overton replacement",
+    "source_date": "2026-05-14T15:18:06+00:00",
+    "extracted_at": "2026-06-30T09:52:22+00:00"
   }
 ]

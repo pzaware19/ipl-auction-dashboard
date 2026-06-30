@@ -196,6 +196,20 @@
     "note": "unavailable before the start of the season"
   },
   {
+    "player": "Overton",
+    "team": "CSK",
+    "status": "overseas_unavailable",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-14T15:18:06+00:00",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [
+      "Dian Forrester"
+    ],
+    "note": "CSK rope in Dian Forrester as Overton replacement"
+  },
+  {
     "player": "Prashant Veer",
     "team": "CSK",
     "status": "available",
