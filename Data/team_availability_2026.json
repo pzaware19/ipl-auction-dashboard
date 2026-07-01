@@ -2659,6 +2659,18 @@
     "note": "Mentioned as one of the young bowlers used by RCB"
   },
   {
+    "player": "Arshdeep Singh",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.2,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "01 Jul, 2026",
+    "expected_absence_window": "1st July - end of T20I series",
+    "replacement_candidates": [],
+    "note": "Part of India's squad for the T20I series against England"
+  },
+  {
     "player": "Axar Patel",
     "team": "RCB",
     "status": "available",
@@ -2971,6 +2983,18 @@
     "note": "Mentioned as one of the young bowlers used by RCB"
   },
   {
+    "player": "Ravi Bishnoi",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.2,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "01 Jul, 2026",
+    "expected_absence_window": "1st July - end of T20I series",
+    "replacement_candidates": [],
+    "note": "Part of India's squad for the T20I series against England"
+  },
+  {
     "player": "Ravindra Jadeja",
     "team": "RCB",
     "status": "available",
@@ -3065,6 +3089,30 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as part of the team's starting lineup"
+  },
+  {
+    "player": "Shivam Dube",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.2,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "01 Jul, 2026",
+    "expected_absence_window": "1st July - end of T20I series",
+    "replacement_candidates": [],
+    "note": "Part of India's squad for the T20I series against England"
+  },
+  {
+    "player": "Shreyas Iyer",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.2,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "01 Jul, 2026",
+    "expected_absence_window": "1st July - end of T20I series",
+    "replacement_candidates": [],
+    "note": "Captain of India's squad for the T20I series against England"
   },
   {
     "player": "Shubman Gill",
