@@ -3257,10 +3257,10 @@
     "confidence": "major_media",
     "selection_probability": 1.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-05-09T14:17:36+00:00",
+    "source_date": "2026-05-27T19:28:42+00:00",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Bowling in the current match"
+    "note": "played in the Eliminator match"
   },
   {
     "player": "Dasun Shanaka",
@@ -3457,6 +3457,18 @@
       "Riyan Parag"
     ],
     "note": "Mentioned as part of the squad"
+  },
+  {
+    "player": "Sushant Mishra",
+    "team": "RR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-27T19:28:42+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the Eliminator match"
   },
   {
     "player": "Tushar Deshpande",
@@ -3788,6 +3800,18 @@
       "RS Ambrish"
     ],
     "note": ""
+  },
+  {
+    "player": "Shivang Kumar",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-27T19:28:42+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the Eliminator match"
   },
   {
     "player": "Smaran Ravichandran",
