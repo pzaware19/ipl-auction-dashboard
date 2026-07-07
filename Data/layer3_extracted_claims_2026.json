@@ -20511,5 +20511,22 @@
     "note": "No indication of injury or unavailability",
     "source_date": "06 Jul, 2026",
     "extracted_at": "2026-07-07T05:31:23+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_willingness_to_stand_on_my_own_two_feet_phil_salt_reveals_the_blueprint_behind_his_aggressive_mindset__claim_1",
+    "source_item_id": "rcb_official_site_willingness_to_stand_on_my_own_two_feet_phil_salt_reveals_the_blueprint_behind_his_aggressive_mindset_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Phil Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent team news, indicating his involvement with the team",
+    "source_date": "06 Jul, 2026",
+    "extracted_at": "2026-07-07T09:53:14+00:00"
   }
 ]
