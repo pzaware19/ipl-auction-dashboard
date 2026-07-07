@@ -20477,5 +20477,39 @@
     "note": "played in the Eliminator match",
     "source_date": "2026-05-27T19:28:42+00:00",
     "extracted_at": "2026-07-06T13:05:45+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_the_most_complete_player_phil_salt_heaps_praise_on_virat_kohli_rcb_cricket_news_news_the_most_complete_claim_1",
+    "source_item_id": "rcb_official_site_the_most_complete_player_phil_salt_heaps_praise_on_virat_kohli_rcb_cricket_news_news_the_most_complete",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "06 Jul, 2026",
+    "extracted_at": "2026-07-07T05:31:23+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_the_most_complete_player_phil_salt_heaps_praise_on_virat_kohli_rcb_cricket_news_news_the_most_complete_claim_2",
+    "source_item_id": "rcb_official_site_the_most_complete_player_phil_salt_heaps_praise_on_virat_kohli_rcb_cricket_news_news_the_most_complete",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Phil Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "06 Jul, 2026",
+    "extracted_at": "2026-07-07T05:31:23+00:00"
   }
 ]
