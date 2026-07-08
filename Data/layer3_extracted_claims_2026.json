@@ -20528,5 +20528,22 @@
     "note": "Featured in recent team news, indicating his involvement with the team",
     "source_date": "06 Jul, 2026",
     "extracted_at": "2026-07-07T09:53:14+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_india_squad_for_zimbabwe_t20_2026_vaibhav_sooryavanshi_selected_for_three_match_series_vaibhav_sooryava_claim_1",
+    "source_item_id": "rr_official_site_india_squad_for_zimbabwe_t20_2026_vaibhav_sooryavanshi_selected_for_three_match_series_vaibhav_sooryava",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RR",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "July 23 onwards",
+    "replacement_candidates": [],
+    "note": "Selected for India squad for Zimbabwe T20 2026 series",
+    "source_date": "06 Jul, 2026",
+    "extracted_at": "2026-07-08T04:43:47+00:00"
   }
 ]
