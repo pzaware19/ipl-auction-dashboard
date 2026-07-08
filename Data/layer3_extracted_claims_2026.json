@@ -20562,5 +20562,39 @@
     "note": "Featured in recent team news article, implying availability",
     "source_date": "06 Jul, 2026",
     "extracted_at": "2026-07-08T08:38:30+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_kkr_vs_gt_gt_opt_to_bowl_live_cricket_scores_152163_kkr_vs_gt_60th_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_kkr_vs_gt_gt_opt_to_bowl_live_cricket_scores_152163_kkr_vs_gt_60th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ajinkya Rahane",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [],
+    "note": "dismissed by Mohammed Siraj",
+    "source_date": "2026-05-16T14:22:10+00:00",
+    "extracted_at": "2026-07-08T15:22:23+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_kkr_vs_gt_gt_opt_to_bowl_live_cricket_scores_152163_kkr_vs_gt_60th_match_indian_premier_league_2026_claim_2",
+    "source_item_id": "cricbuzz_latest_news_kkr_vs_gt_gt_opt_to_bowl_live_cricket_scores_152163_kkr_vs_gt_60th_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Finn Allen",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "currently batting",
+    "source_date": "2026-05-16T14:22:10+00:00",
+    "extracted_at": "2026-07-08T15:22:23+00:00"
   }
 ]
