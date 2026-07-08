@@ -20545,5 +20545,22 @@
     "note": "Selected for India squad for Zimbabwe T20 2026 series",
     "source_date": "06 Jul, 2026",
     "extracted_at": "2026-07-08T04:43:47+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_skill_level_is_the_is_the_biggest_part_of_it_phil_salt_on_what_makes_ipl_a_hotbed_of_talent_rcb_cricke_claim_1",
+    "source_item_id": "rcb_official_site_skill_level_is_the_is_the_biggest_part_of_it_phil_salt_on_what_makes_ipl_a_hotbed_of_talent_rcb_cricke",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Phil Salt",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in recent team news article, implying availability",
+    "source_date": "06 Jul, 2026",
+    "extracted_at": "2026-07-08T08:38:30+00:00"
   }
 ]
