@@ -20647,5 +20647,24 @@
     "note": "Currently batting",
     "source_date": "2026-05-19T16:19:26+00:00",
     "extracted_at": "2026-07-09T10:01:18+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_pakistan_vs_australia_2026_mitchell_marsh_out_of_series_with_ankle_injury_cricbuzz_com_cricket_news_claim_1",
+    "source_item_id": "cricbuzz_latest_news_pakistan_vs_australia_2026_mitchell_marsh_out_of_series_with_ankle_injury_cricbuzz_com_cricket_news",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mitchell Marsh",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Pakistan series and potentially Bangladesh tour",
+    "replacement_candidates": [
+      "Not named"
+    ],
+    "note": "Ankle injury",
+    "source_date": "2026-05-26T16:42:30+00:00",
+    "extracted_at": "2026-07-10T09:47:00+00:00"
   }
 ]
