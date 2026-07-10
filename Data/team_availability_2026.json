@@ -72,13 +72,14 @@
     "status": "ruled_out",
     "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "IPL Official News",
-    "source_date": "14 May, 2026",
-    "expected_absence_window": "remainder of the season",
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-13T18:58:08+00:00",
+    "expected_absence_window": "remainder of IPL 2026",
     "replacement_candidates": [
+      "Spencer Johnson",
       "Dian Forrester"
     ],
-    "note": "right thigh injury"
+    "note": "Returning home for further assessment and management of right thigh injury"
   },
   {
     "player": "Khaleel Ahmed",

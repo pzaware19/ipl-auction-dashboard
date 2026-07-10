@@ -20666,5 +20666,24 @@
     "note": "Ankle injury",
     "source_date": "2026-05-26T16:42:30+00:00",
     "extracted_at": "2026-07-10T09:47:00+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_jamie_overton_returns_home_after_sustaining_right_thigh_injury_cricbuzz_com_cricket_news_138774_jam_claim_1",
+    "source_item_id": "cricbuzz_latest_news_jamie_overton_returns_home_after_sustaining_right_thigh_injury_cricbuzz_com_cricket_news_138774_jam",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Jamie Overton",
+    "team": "CSK",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "Spencer Johnson"
+    ],
+    "note": "Returning home for further assessment and management of right thigh injury",
+    "source_date": "2026-05-13T18:58:08+00:00",
+    "extracted_at": "2026-07-10T12:15:22+00:00"
   }
 ]
