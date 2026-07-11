@@ -20685,5 +20685,62 @@
     "note": "Returning home for further assessment and management of right thigh injury",
     "source_date": "2026-05-13T18:58:08+00:00",
     "extracted_at": "2026-07-10T12:15:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik_claim_1",
+    "source_item_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Hardik Pandya",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.2,
+    "expected_absence_window": "1 game",
+    "replacement_candidates": [
+      "Jasprit Bumrah",
+      "Tilak Varma"
+    ],
+    "note": "troubled by back spasms",
+    "source_date": "2026-05-14T11:27:00+00:00",
+    "extracted_at": "2026-07-11T08:06:07+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik_claim_2",
+    "source_item_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Suryakumar Yadav",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.2,
+    "expected_absence_window": "1 game",
+    "replacement_candidates": [
+      "Jasprit Bumrah",
+      "Tilak Varma"
+    ],
+    "note": "recently blessed with a baby girl, franchise sensitive towards family matters",
+    "source_date": "2026-05-14T11:27:00+00:00",
+    "extracted_at": "2026-07-11T08:06:07+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik_claim_3",
+    "source_item_id": "cricbuzz_latest_news_hardik_suryakumar_unlikely_for_pbks_game_bumrah_may_lead_mi_cricbuzz_com_cricket_news_138779_hardik",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Jasprit Bumrah",
+    "team": "MI",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "leading candidate to lead the side",
+    "source_date": "2026-05-14T11:27:00+00:00",
+    "extracted_at": "2026-07-11T08:06:07+00:00"
   }
 ]

@@ -1989,7 +1989,10 @@
     "best_source": "IPL Official News",
     "source_date": "21 May, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Jasprit Bumrah",
+      "Tilak Varma"
+    ],
     "note": "Fined 10% of his match fee and accumulated one Demerit Point for breaching Level 1 of the IPL’s Code of Conduct"
   },
   {
@@ -2363,7 +2366,10 @@
     "best_source": "Mumbai Indians Official",
     "source_date": "03 May, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Jasprit Bumrah",
+      "Tilak Varma"
+    ],
     "note": "mentioned as part of the team's past performances"
   },
   {
