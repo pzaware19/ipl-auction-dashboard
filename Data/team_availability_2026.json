@@ -2739,6 +2739,18 @@
     "note": "Recently featured in RCB Insider Show"
   },
   {
+    "player": "Grace",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "11 Jul, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Has played with absolute mastery, implying she is available and performing well"
+  },
+  {
     "player": "Harshit Rana",
     "team": "RCB",
     "status": "available",
@@ -2876,6 +2888,18 @@
     "expected_absence_window": "India vs Afghanistan Test series",
     "replacement_candidates": [],
     "note": "Part of India squad for Afghanistan Test series"
+  },
+  {
+    "player": "Lauren Bell",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "11 Jul, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Had a huge impact, implying she is available and performing well"
   },
   {
     "player": "Luvnith Sisodia",

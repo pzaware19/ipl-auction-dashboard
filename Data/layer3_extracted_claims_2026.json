@@ -20742,5 +20742,39 @@
     "note": "leading candidate to lead the side",
     "source_date": "2026-05-14T11:27:00+00:00",
     "extracted_at": "2026-07-11T08:06:07+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_you_can_take_well_informed_punt_across_roles_malolan_rangarajan_on_balance_between_domestic_and_overse_claim_1",
+    "source_item_id": "rcb_official_site_you_can_take_well_informed_punt_across_roles_malolan_rangarajan_on_balance_between_domestic_and_overse",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Lauren Bell",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Had a huge impact, implying she is available and performing well",
+    "source_date": "11 Jul, 2026",
+    "extracted_at": "2026-07-12T08:26:23+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_you_can_take_well_informed_punt_across_roles_malolan_rangarajan_on_balance_between_domestic_and_overse_claim_2",
+    "source_item_id": "rcb_official_site_you_can_take_well_informed_punt_across_roles_malolan_rangarajan_on_balance_between_domestic_and_overse",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Grace",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Has played with absolute mastery, implying she is available and performing well",
+    "source_date": "11 Jul, 2026",
+    "extracted_at": "2026-07-12T08:26:23+00:00"
   }
 ]
