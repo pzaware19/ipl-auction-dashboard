@@ -20793,5 +20793,39 @@
     "note": "Selected as injury replacement for three-match series",
     "source_date": "12 Jul, 2026",
     "extracted_at": "2026-07-13T04:57:08+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_endvind_odis_preview_the_return_of_experience_reset_mumbai_indians_news_engvind_odis_preview_the_return_claim_1",
+    "source_item_id": "mi_official_site_endvind_odis_preview_the_return_of_experience_reset_mumbai_indians_news_engvind_odis_preview_the_return",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as part of the Indian team for the ODI series",
+    "source_date": "13 Jul, 2026",
+    "extracted_at": "2026-07-14T04:25:24+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_endvind_odis_preview_the_return_of_experience_reset_mumbai_indians_news_engvind_odis_preview_the_return_claim_2",
+    "source_item_id": "mi_official_site_endvind_odis_preview_the_return_of_experience_reset_mumbai_indians_news_engvind_odis_preview_the_return",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Jasprit Bumrah",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as part of the Indian team for the ODI series",
+    "source_date": "13 Jul, 2026",
+    "extracted_at": "2026-07-14T04:25:24+00:00"
   }
 ]
