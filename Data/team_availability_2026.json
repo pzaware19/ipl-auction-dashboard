@@ -2856,14 +2856,14 @@
   {
     "player": "KL Rahul",
     "team": "RCB",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
+    "selection_probability": 0.9,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "06 Jun, 2026",
-    "expected_absence_window": "India vs Afghanistan Test series",
+    "source_date": "14 Jul, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Part of India squad for Afghanistan Test series"
+    "note": "Mentioned as part of the Indian team for the 1st ODI against England"
   },
   {
     "player": "Krunal Pandya",
@@ -3075,6 +3075,18 @@
     "note": "Part of India squad for Afghanistan Test series"
   },
   {
+    "player": "Rohit Sharma",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "14 Jul, 2026",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returning to action for India against England"
+  },
+  {
     "player": "Romario Shepherd",
     "team": "RCB",
     "status": "available",
@@ -3149,14 +3161,14 @@
   {
     "player": "Shubman Gill",
     "team": "RCB",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
+    "selection_probability": 0.9,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "06 Jun, 2026",
-    "expected_absence_window": "India vs Afghanistan Test series",
+    "source_date": "14 Jul, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Part of India squad for Afghanistan Test series"
+    "note": "Mentioned as part of the Indian team for the 1st ODI against England"
   },
   {
     "player": "Suyash",
