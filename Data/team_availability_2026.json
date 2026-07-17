@@ -862,14 +862,14 @@
   {
     "player": "Manav Suthar",
     "team": "GT",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
+    "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "08 June, 2026",
-    "expected_absence_window": "one-off Test vs Afghanistan",
+    "source_date": "24 April, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Selected for India's one-off Test vs Afghanistan"
+    "note": "Played in the recent match against RCB"
   },
   {
     "player": "Mohammed Siraj",
