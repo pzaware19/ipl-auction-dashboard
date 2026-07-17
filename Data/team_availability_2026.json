@@ -3597,6 +3597,18 @@
     "note": "Injury replacement announced by the team"
   },
   {
+    "player": "Angkrish Raghuvanshi",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-22T15:48:28+00:00",
+    "expected_absence_window": "remainder of the season",
+    "replacement_candidates": [],
+    "note": "concussion, finger fracture"
+  },
+  {
     "player": "Brydon Carse",
     "team": "SRH",
     "status": "ruled_out",
