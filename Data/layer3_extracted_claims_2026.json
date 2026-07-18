@@ -21288,5 +21288,24 @@
     "note": "Played in the recent match against RCB",
     "source_date": "24 April, 2026",
     "extracted_at": "2026-07-17T18:07:59+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_angkrish_raghuvanshi_ruled_out_of_ipl_2026_with_concussion_finger_fracture_cricbuzz_com_cricket_new_claim_1",
+    "source_item_id": "cricbuzz_latest_news_angkrish_raghuvanshi_ruled_out_of_ipl_2026_with_concussion_finger_fracture_cricbuzz_com_cricket_new",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Angkrish Raghuvanshi",
+    "team": "KKR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "Tejasvi Dahiya"
+    ],
+    "note": "Concussion and left finger fracture",
+    "source_date": "2026-05-22T15:48:28+00:00",
+    "extracted_at": "2026-07-18T08:02:20+00:00"
   }
 ]
