@@ -1249,6 +1249,18 @@
     "note": "replaced by Navdeep Saini"
   },
   {
+    "player": "Kartik Tyagi",
+    "team": "KKR",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-02T17:52:38+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the match"
+  },
+  {
     "player": "Luvnith Sisodia",
     "team": "KKR",
     "status": "available",
@@ -3662,6 +3674,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match"
+  },
+  {
+    "player": "Finn Allen",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-02T17:52:38+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "played in the match"
   },
   {
     "player": "Gerald Coetzee",
