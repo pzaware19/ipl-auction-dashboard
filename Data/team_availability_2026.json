@@ -3437,10 +3437,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Rajasthan Royals Official",
-    "source_date": "18 Apr, 2026",
+    "source_date": "22 Jul, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "mentioned as part of the team"
+    "note": "Drafted into Indian cricket team as injury replacement for Varun Chakaravarthy"
   },
   {
     "player": "Ravi Singh",
@@ -3567,19 +3567,33 @@
   {
     "player": "Vaibhav Sooryavanshi",
     "team": "RR",
-    "status": "ruled_out",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-05-01T14:17:46+00:00",
-    "expected_absence_window": "entire match",
+    "selection_probability": 1.0,
+    "best_source": "Rajasthan Royals Official",
+    "source_date": "22 Jul, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [
       "Riyan Parag",
       "Dhruv Jurel",
       "other batsmen in the RR squad",
       "Shimron Hetmyer"
     ],
-    "note": "dismissed by Kyle Jamieson"
+    "note": "Part of Indian cricket team for Zimbabwe series"
+  },
+  {
+    "player": "Varun Chakaravarthy",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Rajasthan Royals Official",
+    "source_date": "22 Jul, 2026",
+    "expected_absence_window": "medium-term",
+    "replacement_candidates": [
+      "Ravi Bishnoi"
+    ],
+    "note": "Grade 2 hamstring injury"
   },
   {
     "player": "Yashasvi Jaiswal",

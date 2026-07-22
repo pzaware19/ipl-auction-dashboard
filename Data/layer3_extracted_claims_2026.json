@@ -21600,5 +21600,58 @@
     "note": "played in the match and was the captain",
     "source_date": "2026-03-30T17:56:29+00:00",
     "extracted_at": "2026-07-21T08:38:32+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs__claim_1",
+    "source_item_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs_",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Varun Chakaravarthy",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "medium-term",
+    "replacement_candidates": [
+      "Ravi Bishnoi"
+    ],
+    "note": "Grade 2 hamstring injury",
+    "source_date": "22 Jul, 2026",
+    "extracted_at": "2026-07-22T11:26:05+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs__claim_2",
+    "source_item_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs_",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Vaibhav Sooryavanshi",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Part of Indian cricket team for Zimbabwe series",
+    "source_date": "22 Jul, 2026",
+    "extracted_at": "2026-07-22T11:26:05+00:00"
+  },
+  {
+    "claim_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs__claim_3",
+    "source_item_id": "rr_official_site_zimbabwe_vs_india_t20_2026_vaibhav_sooryavanshi_and_ravi_bishnoi_return_to_happy_hunting_ground_zim_vs_",
+    "source_id": "rr_official_site",
+    "source_name": "Rajasthan Royals Official",
+    "priority": "official",
+    "player": "Ravi Bishnoi",
+    "team": "RR",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Drafted into Indian cricket team as injury replacement for Varun Chakaravarthy",
+    "source_date": "22 Jul, 2026",
+    "extracted_at": "2026-07-22T11:26:05+00:00"
   }
 ]
