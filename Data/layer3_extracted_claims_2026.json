@@ -21704,5 +21704,22 @@
     "note": "Returning to play",
     "source_date": "22 Jul, 2026",
     "extracted_at": "2026-07-23T04:48:58+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_four_days_with_bharat_arun_one_new_variation_shami_s_srh_payoff_cricbuzz_com_cricket_news_138294_fo_claim_1",
+    "source_item_id": "cricbuzz_latest_news_four_days_with_bharat_arun_one_new_variation_shami_s_srh_payoff_cricbuzz_com_cricket_news_138294_fo",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Mohammed Shami",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "2026-04-08T14:46:22+00:00",
+    "extracted_at": "2026-07-23T08:39:55+00:00"
   }
 ]

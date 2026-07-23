@@ -3820,6 +3820,18 @@
     "note": "Santner suffers grade three ACL shoulder injury"
   },
   {
+    "player": "Mohammed Shami",
+    "team": "SRH",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.9,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-08T14:46:22+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability"
+  },
+  {
     "player": "Nitish Kumar Reddy",
     "team": "SRH",
     "status": "available",
