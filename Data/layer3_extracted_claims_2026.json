@@ -21721,5 +21721,22 @@
     "note": "No indication of injury or unavailability",
     "source_date": "2026-04-08T14:46:22+00:00",
     "extracted_at": "2026-07-23T08:39:55+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_mumbai_indians_live_13th_match_live_cricket_scores_149743_rr_vs_mi_13th_match_i_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_mumbai_indians_live_13th_match_live_cricket_scores_149743_rr_vs_mi_13th_match_i",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "MS Dhoni",
+    "team": "CSK",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "short-term",
+    "replacement_candidates": [],
+    "note": "Doubtful for Delhi Capitals clash",
+    "source_date": "2026-04-07T17:59:30+00:00",
+    "extracted_at": "2026-07-24T08:35:49+00:00"
   }
 ]
