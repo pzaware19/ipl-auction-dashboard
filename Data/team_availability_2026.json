@@ -3175,14 +3175,14 @@
   {
     "player": "Shreyas Iyer",
     "team": "RCB",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.2,
+    "selection_probability": 1.0,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "01 Jul, 2026",
-    "expected_absence_window": "1st July - end of T20I series",
+    "source_date": "24 Jul, 2026",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Captain of India's squad for the T20I series against England"
+    "note": "Recently played for India and led the team to a win"
   },
   {
     "player": "Shubman Gill",
