@@ -1943,6 +1943,18 @@
     "note": "Injured and replaced by Krish Bhagat"
   },
   {
+    "player": "Cameron Green",
+    "team": "MI",
+    "status": "unknown",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-04-14T14:51:12+00:00",
+    "expected_absence_window": "",
+    "replacement_candidates": [],
+    "note": "quoted pre-match, no update on availability"
+  },
+  {
     "player": "Corbin Bosch",
     "team": "MI",
     "status": "available",
