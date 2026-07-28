@@ -21908,5 +21908,39 @@
     "note": "batting at the time of report",
     "source_date": "2026-04-14T14:51:12+00:00",
     "extracted_at": "2026-07-27T10:02:13+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_zimvind_3rd_t20i_report_sooryavanshi_mayank_accomplish_mission_whitewash_mumbai_indians_news_zimvind_3r_claim_1",
+    "source_item_id": "mi_official_site_zimvind_3rd_t20i_report_sooryavanshi_mayank_accomplish_mission_whitewash_mumbai_indians_news_zimvind_3r",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Mayank",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played for India in the ZIMvIND T20I series",
+    "source_date": "26 Jul, 2026",
+    "extracted_at": "2026-07-28T04:40:04+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_zimvind_3rd_t20i_report_sooryavanshi_mayank_accomplish_mission_whitewash_mumbai_indians_news_zimvind_3r_claim_2",
+    "source_item_id": "mi_official_site_zimvind_3rd_t20i_report_sooryavanshi_mayank_accomplish_mission_whitewash_mumbai_indians_news_zimvind_3r",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Sooryavanshi",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Recently played for India in the ZIMvIND T20I series",
+    "source_date": "26 Jul, 2026",
+    "extracted_at": "2026-07-28T04:40:04+00:00"
   }
 ]
