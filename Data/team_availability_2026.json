@@ -766,14 +766,14 @@
   {
     "player": "Gurnoor Brar",
     "team": "GT",
-    "status": "overseas_unavailable",
+    "status": "available",
     "confidence": "official",
-    "selection_probability": 0.0,
+    "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "04 June, 2026",
-    "expected_absence_window": "one-off Test vs Afghanistan",
+    "source_date": "28 July, 2026",
+    "expected_absence_window": "",
     "replacement_candidates": [],
-    "note": "Received first-ever Test call-up"
+    "note": "Named in India's Test squad"
   },
   {
     "player": "Ishant Sharma",
@@ -798,6 +798,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "played in the recent match and was adjudged Player of the Match"
+  },
+  {
+    "player": "Jasprit Bumrah",
+    "team": "GT",
+    "status": "doubtful",
+    "confidence": "official",
+    "selection_probability": 0.5,
+    "best_source": "Gujarat Titans Official",
+    "source_date": "28 July, 2026",
+    "expected_absence_window": "August 2026",
+    "replacement_candidates": [],
+    "note": "Availability subject to fitness clearance from BCCI COE"
   },
   {
     "player": "Jayant Yadav",
@@ -866,10 +878,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 April, 2026",
-    "expected_absence_window": null,
+    "source_date": "28 July, 2026",
+    "expected_absence_window": "",
     "replacement_candidates": [],
-    "note": "Played in the recent match against RCB"
+    "note": "Named in India's Test squad"
   },
   {
     "player": "Mohammed Siraj",
@@ -878,10 +890,10 @@
     "confidence": "official",
     "selection_probability": 1.0,
     "best_source": "Gujarat Titans Official",
-    "source_date": "24 March, 2026",
-    "expected_absence_window": null,
+    "source_date": "28 July, 2026",
+    "expected_absence_window": "",
     "replacement_candidates": [],
-    "note": "Featured in conversations during the Shubharambh event"
+    "note": "Named in India's Test squad"
   },
   {
     "player": "Prasidh Krishna",
