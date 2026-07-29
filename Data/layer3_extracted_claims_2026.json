@@ -22163,5 +22163,39 @@
     "note": "Returns to the squad after injury",
     "source_date": "28 Jul, 2026",
     "extracted_at": "2026-07-29T04:43:45+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_sooryavanshi_mayank_accomplish_mission_whitewash_news_claim_1",
+    "source_item_id": "mi_official_site_sooryavanshi_mayank_accomplish_mission_whitewash_news",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Sooryavanshi",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as accomplishing Mission Whitewash in official team news",
+    "source_date": "25 Jul, 2026",
+    "extracted_at": "2026-07-29T08:49:32+00:00"
+  },
+  {
+    "claim_id": "mi_official_site_sooryavanshi_mayank_accomplish_mission_whitewash_news_claim_2",
+    "source_item_id": "mi_official_site_sooryavanshi_mayank_accomplish_mission_whitewash_news",
+    "source_id": "mi_official_site",
+    "source_name": "Mumbai Indians Official",
+    "priority": "official",
+    "player": "Mayank",
+    "team": "MI",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Mentioned as accomplishing Mission Whitewash in official team news",
+    "source_date": "25 Jul, 2026",
+    "extracted_at": "2026-07-29T08:49:32+00:00"
   }
 ]
