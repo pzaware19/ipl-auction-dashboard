@@ -22197,5 +22197,39 @@
     "note": "Mentioned as accomplishing Mission Whitewash in official team news",
     "source_date": "25 Jul, 2026",
     "extracted_at": "2026-07-29T08:49:32+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_just_take_it_as_it_comes_josh_hazlewood_on_his_return_to_test_cricket_rcb_cricket_news_news_just_take__claim_1",
+    "source_item_id": "rcb_official_site_just_take_it_as_it_comes_josh_hazlewood_on_his_return_to_test_cricket_rcb_cricket_news_news_just_take_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Josh Hazlewood",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returning from a long injury, but no indication of current unavailability",
+    "source_date": "30 Jul, 2026",
+    "extracted_at": "2026-07-31T04:56:19+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_josh_hazlewood_focused_on_taking_it_one_day_at_a_time_as_he_returns_to_test_cricket_rcb_cricket_news_n_claim_1",
+    "source_item_id": "rcb_official_site_josh_hazlewood_focused_on_taking_it_one_day_at_a_time_as_he_returns_to_test_cricket_rcb_cricket_news_n",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Josh Hazlewood",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returning from a long injury, but no indication of current unavailability",
+    "source_date": "30 Jul, 2026",
+    "extracted_at": "2026-07-31T04:56:22+00:00"
   }
 ]

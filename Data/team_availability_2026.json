@@ -2917,15 +2917,15 @@
     "team": "RCB",
     "status": "available",
     "confidence": "official",
-    "selection_probability": 1.0,
+    "selection_probability": 0.8,
     "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "28 Apr, 2026",
+    "source_date": "30 Jul, 2026",
     "expected_absence_window": null,
     "replacement_candidates": [
       "Jacob Duffy",
       "Bhuvneshwar Kumar"
     ],
-    "note": "Mentioned in the article as part of RCB's bowling unit"
+    "note": "Returning from a long injury, but no indication of current unavailability"
   },
   {
     "player": "KL Rahul",
