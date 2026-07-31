@@ -2645,14 +2645,14 @@
   {
     "player": "Priyansh Arya",
     "team": "PBKS",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "major_media",
-    "selection_probability": 1.0,
+    "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-04-11T10:05:29+00:00",
-    "expected_absence_window": "none",
+    "source_date": "2026-05-03T14:11:31+00:00",
+    "expected_absence_window": "remainder of the match",
     "replacement_candidates": [],
-    "note": "Included in the playing XI, replacing Nehal Wadhera"
+    "note": "Caught by Nishant Sindhu off Mohammed Siraj"
   },
   {
     "player": "Shashank Singh",

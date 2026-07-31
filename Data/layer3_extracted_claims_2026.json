@@ -22231,5 +22231,39 @@
     "note": "Returning from a long injury, but no indication of current unavailability",
     "source_date": "30 Jul, 2026",
     "extracted_at": "2026-07-31T04:56:22+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_punjab_kings_vs_gujarat_titans_live_46th_match_live_cricket_scores_152009_pbks_vs_gt_46th_match_ipl_claim_1",
+    "source_item_id": "cricbuzz_latest_news_punjab_kings_vs_gujarat_titans_live_46th_match_live_cricket_scores_152009_pbks_vs_gt_46th_match_ipl",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Priyansh Arya",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [],
+    "note": "Caught by Nishant Sindhu off Mohammed Siraj",
+    "source_date": "2026-05-03T14:11:31+00:00",
+    "extracted_at": "2026-07-31T08:58:51+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_punjab_kings_vs_gujarat_titans_live_46th_match_live_cricket_scores_152009_pbks_vs_gt_46th_match_ipl_claim_2",
+    "source_item_id": "cricbuzz_latest_news_punjab_kings_vs_gujarat_titans_live_46th_match_live_cricket_scores_152009_pbks_vs_gt_46th_match_ipl",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Cooper Connolly",
+    "team": "PBKS",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [],
+    "note": "Caught by Jos Buttler off Mohammed Siraj",
+    "source_date": "2026-05-03T14:11:31+00:00",
+    "extracted_at": "2026-07-31T08:58:51+00:00"
   }
 ]
