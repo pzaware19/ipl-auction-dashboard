@@ -237,6 +237,18 @@
     "note": "Injured his right foot during the game against Mumbai Indians on May 3rd"
   },
   {
+    "player": "Ravindra Jadeja",
+    "team": "CSK",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-07-28T04:39:11+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returns to the squad"
+  },
+  {
     "player": "Ruturaj Gaikwad",
     "team": "CSK",
     "status": "available",
@@ -978,7 +990,9 @@
     "best_source": "Gujarat Titans Official",
     "source_date": "31 March, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Devdutt Padikkal"
+    ],
     "note": "played in the opening match"
   },
   {
@@ -2066,7 +2080,10 @@
     "best_source": "Mumbai Indians Official",
     "source_date": "18 May, 2026",
     "expected_absence_window": null,
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "Mohammed Siraj",
+      "Prasidh Krishna"
+    ],
     "note": "mentioned in the bowling department"
   },
   {
@@ -2545,14 +2562,14 @@
   {
     "player": "Cooper Connolly",
     "team": "PBKS",
-    "status": "available",
+    "status": "ruled_out",
     "confidence": "official",
-    "selection_probability": 0.7,
-    "best_source": "Punjab Kings Official",
-    "source_date": "16 Dec, 2025",
-    "expected_absence_window": null,
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-03T14:11:31+00:00",
+    "expected_absence_window": "remainder of the match",
     "replacement_candidates": [],
-    "note": "New signing, captained Australia's Under-19 side at the 2022 World Cup"
+    "note": "Caught by Jos Buttler off Mohammed Siraj"
   },
   {
     "player": "Glenn Maxwell",
@@ -2646,7 +2663,7 @@
     "player": "Priyansh Arya",
     "team": "PBKS",
     "status": "ruled_out",
-    "confidence": "major_media",
+    "confidence": "official",
     "selection_probability": 0.0,
     "best_source": "Cricbuzz Latest News",
     "source_date": "2026-05-03T14:11:31+00:00",
@@ -4020,6 +4037,20 @@
     "note": "played in the recent match"
   },
   {
+    "player": "Washington Sundar",
+    "team": "SRH",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-07-28T04:39:11+00:00",
+    "expected_absence_window": "first Test",
+    "replacement_candidates": [
+      "Saransh Jain"
+    ],
+    "note": "Ruled out of the first Test due to hamstring injury"
+  },
+  {
     "player": "Angkrish Raghuvanshi",
     "team": "UNKNOWN",
     "status": "ruled_out",
@@ -4124,6 +4155,18 @@
     "expected_absence_window": "none",
     "replacement_candidates": [],
     "note": "named as replacement for Ramakrishna Ghosh"
+  },
+  {
+    "player": "Nat Sciver-Brunt",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-05-03T14:11:31+00:00",
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [],
+    "note": "Ruled out of New Zealand ODIs"
   },
   {
     "player": "Nuwan Thushara",
