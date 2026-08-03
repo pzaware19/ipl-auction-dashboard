@@ -22425,5 +22425,22 @@
     "note": "Ruled out of New Zealand ODIs",
     "source_date": "2026-05-03T14:11:31+00:00",
     "extracted_at": "2026-08-02T08:32:08+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_follow_the_process_day_in_day_out_bhuvneshwar_kumar_on_his_longevity_in_the_ipl_rcb_cricket_news_news__claim_1",
+    "source_item_id": "rcb_official_site_follow_the_process_day_in_day_out_bhuvneshwar_kumar_on_his_longevity_in_the_ipl_rcb_cricket_news_news_",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.9,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "02 Aug, 2026",
+    "extracted_at": "2026-08-03T05:01:04+00:00"
   }
 ]
