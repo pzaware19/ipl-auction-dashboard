@@ -22544,5 +22544,41 @@
     "note": "Caught by Rovman Powell off Sunil Narine",
     "source_date": "2026-05-08T14:51:46+00:00",
     "extracted_at": "2026-08-03T12:44:15+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_auqib_nabi_earns_india_call_up_on_the_back_of_a_prolific_ranji_trophy_season_replaces_injured_bumrah_r_claim_1",
+    "source_item_id": "rcb_official_site_auqib_nabi_earns_india_call_up_on_the_back_of_a_prolific_ranji_trophy_season_replaces_injured_bumrah_r",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jasprit Bumrah",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Sri Lanka series",
+    "replacement_candidates": [
+      "Auqib Nabi"
+    ],
+    "note": "Knee injury",
+    "source_date": "03 Aug, 2026",
+    "extracted_at": "2026-08-04T04:41:24+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_i_felt_they_wanted_to_achieve_something_bhuvneshwar_kumar_on_his_first_impression_upon_returning_to_rc_claim_1",
+    "source_item_id": "rcb_official_site_i_felt_they_wanted_to_achieve_something_bhuvneshwar_kumar_on_his_first_impression_upon_returning_to_rc",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "03 Aug, 2026",
+    "extracted_at": "2026-08-04T04:41:32+00:00"
   }
 ]
