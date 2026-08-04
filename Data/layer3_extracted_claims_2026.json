@@ -22580,5 +22580,24 @@
     "note": "No indication of injury or unavailability",
     "source_date": "03 Aug, 2026",
     "extracted_at": "2026-08-04T04:41:32+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_they_had_a_vision_bhuvneshwar_kumar_lauds_ravi_shastri_and_virat_kohli_for_india_s_pace_bowling_transi_claim_1",
+    "source_item_id": "rcb_official_site_they_had_a_vision_bhuvneshwar_kumar_lauds_ravi_shastri_and_virat_kohli_for_india_s_pace_bowling_transi",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jasprit Bumrah",
+    "team": "INDIA",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Sri Lanka series",
+    "replacement_candidates": [
+      "Auqib Nabi"
+    ],
+    "note": "Ruled out of Sri Lanka series",
+    "source_date": "03 Aug, 2026",
+    "extracted_at": "2026-08-04T08:47:57+00:00"
   }
 ]

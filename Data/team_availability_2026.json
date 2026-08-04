@@ -1072,14 +1072,16 @@
   {
     "player": "Jasprit Bumrah",
     "team": "INDIA",
-    "status": "doubtful",
-    "confidence": "major_media",
-    "selection_probability": 0.5,
-    "best_source": "Cricbuzz Latest News",
-    "source_date": "2026-05-18T16:22:48+00:00",
-    "expected_absence_window": "Afghanistan series",
-    "replacement_candidates": [],
-    "note": "Workload management, may be given a break for the Afghanistan series"
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "03 Aug, 2026",
+    "expected_absence_window": "Sri Lanka series",
+    "replacement_candidates": [
+      "Auqib Nabi"
+    ],
+    "note": "Ruled out of Sri Lanka series"
   },
   {
     "player": "Prema Rawat",
