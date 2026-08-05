@@ -22599,5 +22599,58 @@
     "note": "Ruled out of Sri Lanka series",
     "source_date": "03 Aug, 2026",
     "extracted_at": "2026-08-04T08:47:57+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_auqib_nabi_earns_maiden_india_test_call_up_as_jasprit_bumrah_ruled_out_of_sri_lanka_series_rcb_cricket_claim_1",
+    "source_item_id": "rcb_official_site_auqib_nabi_earns_maiden_india_test_call_up_as_jasprit_bumrah_ruled_out_of_sri_lanka_series_rcb_cricket",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Jasprit Bumrah",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Sri Lanka series",
+    "replacement_candidates": [
+      "Auqib Nabi"
+    ],
+    "note": "Knee injury",
+    "source_date": "03 Aug, 2026",
+    "extracted_at": "2026-08-05T08:44:18+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_haddin_thakur_play_down_rumours_as_pbks_slump_deepens_cricbuzz_com_cricket_news_138788_haddin_thaku_claim_1",
+    "source_item_id": "cricbuzz_latest_news_haddin_thakur_play_down_rumours_as_pbks_slump_deepens_cricbuzz_com_cricket_news_138788_haddin_thaku",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Hardik Pandya",
+    "team": "MI",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Injured, missed two games, now training in Mumbai",
+    "source_date": "2026-05-15T18:25:06+00:00",
+    "extracted_at": "2026-08-05T08:44:49+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_haddin_thakur_play_down_rumours_as_pbks_slump_deepens_cricbuzz_com_cricket_news_138788_haddin_thaku_claim_2",
+    "source_item_id": "cricbuzz_latest_news_haddin_thakur_play_down_rumours_as_pbks_slump_deepens_cricbuzz_com_cricket_news_138788_haddin_thaku",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Suryakumar Yadav",
+    "team": "MI",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 0.8,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Absent in the last game, no update on current status",
+    "source_date": "2026-05-15T18:25:06+00:00",
+    "extracted_at": "2026-08-05T08:44:49+00:00"
   }
 ]
