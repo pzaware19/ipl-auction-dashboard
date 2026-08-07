@@ -22756,5 +22756,78 @@
     "note": "No indication of injury or unavailability",
     "source_date": "03 Aug, 2026",
     "extracted_at": "2026-08-07T04:09:16+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu_claim_1",
+    "source_item_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Nicholas Pooran",
+    "team": "LSG",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Ayush Badoni"
+    ],
+    "note": "dismissed by Marco Jansen",
+    "source_date": "2026-05-23T14:28:58+00:00",
+    "extracted_at": "2026-08-07T07:25:15+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu_claim_2",
+    "source_item_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ayush Badoni",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "currently batting",
+    "source_date": "2026-05-23T14:28:58+00:00",
+    "extracted_at": "2026-08-07T07:25:15+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu_claim_3",
+    "source_item_id": "cricbuzz_latest_news_lsg_vs_pbks_pbks_opt_to_bowl_live_cricket_scores_152241_lsg_vs_pbks_68th_match_indian_premier_leagu",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Josh Inglis",
+    "team": "LSG",
+    "status": "available",
+    "confidence": "major_media",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "currently batting",
+    "source_date": "2026-05-23T14:28:58+00:00",
+    "extracted_at": "2026-08-07T07:25:15+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_jacob_bethell_to_miss_ipl_2026_playoffs_for_rcb_due_to_finger_injury_cricbuzz_com_cricket_news_1389_claim_1",
+    "source_item_id": "cricbuzz_latest_news_jacob_bethell_to_miss_ipl_2026_playoffs_for_rcb_due_to_finger_injury_cricbuzz_com_cricket_news_1389",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Jacob Bethell",
+    "team": "RCB",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "IPL 2026 playoffs",
+    "replacement_candidates": [
+      "Phil Salt",
+      "Venkatesh Iyer"
+    ],
+    "note": "Left finger injury",
+    "source_date": "2026-05-23T18:03:28+00:00",
+    "extracted_at": "2026-08-07T07:25:23+00:00"
   }
 ]
