@@ -22739,5 +22739,22 @@
     "note": "currently batting",
     "source_date": "2026-05-23T14:28:58+00:00",
     "extracted_at": "2026-08-06T08:47:06+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_credit_goes_to_red_ball_bhuvneshwar_kumar_lauds_test_cricket_for_shaping_up_individuals_better_rcb_cri_claim_1",
+    "source_item_id": "rcb_official_site_credit_goes_to_red_ball_bhuvneshwar_kumar_lauds_test_cricket_for_shaping_up_individuals_better_rcb_cri",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Bhuvneshwar Kumar",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "03 Aug, 2026",
+    "extracted_at": "2026-08-07T04:09:16+00:00"
   }
 ]
