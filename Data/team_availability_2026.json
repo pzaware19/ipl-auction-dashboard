@@ -1060,28 +1060,53 @@
   {
     "player": "Hardik Pandya",
     "team": "INDIA",
-    "status": "ruled_out",
+    "status": "available",
     "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Mumbai Indians Official",
-    "source_date": "12 Jun, 2026",
-    "expected_absence_window": "ODI series",
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
     "replacement_candidates": [],
-    "note": "Injury"
+    "note": "Left out of T20 squads"
+  },
+  {
+    "player": "Harshit Rana",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Returns to the squad"
   },
   {
     "player": "Jasprit Bumrah",
     "team": "INDIA",
-    "status": "ruled_out",
+    "status": "managed",
     "confidence": "official",
     "selection_probability": 0.0,
-    "best_source": "Royal Challengers Bengaluru Official",
-    "source_date": "03 Aug, 2026",
-    "expected_absence_window": "Sri Lanka series",
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
     "replacement_candidates": [
+      "Prince Yadav",
       "Auqib Nabi"
     ],
-    "note": "Ruled out of Sri Lanka series"
+    "note": "Resting"
+  },
+  {
+    "player": "Kuldeep Yadav",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Left out of T20 squads in favour of Ravi Bishnoi"
   },
   {
     "player": "Prema Rawat",
@@ -1094,6 +1119,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Called up as an injury replacement for Shreyanka Patil"
+  },
+  {
+    "player": "Rinku Singh",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Displaced by Vaibhav Sooryavanshi"
   },
   {
     "player": "Rishabh Pant",
@@ -1137,6 +1174,54 @@
       "Prema Rawat"
     ],
     "note": "Ankle ligament injury"
+  },
+  {
+    "player": "Shreyas Iyer",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named new T20I captain"
+  },
+  {
+    "player": "Suryakumar Yadav",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Replaced as T20I captain"
+  },
+  {
+    "player": "Tilak Varma",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Named vice-captain"
+  },
+  {
+    "player": "Vaibhav Sooryavanshi",
+    "team": "INDIA",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "best_source": "Cricbuzz Latest News",
+    "source_date": "2026-06-06T08:41:19+00:00",
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Received maiden call-up"
   },
   {
     "player": "Virat Kohli",
