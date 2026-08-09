@@ -22984,5 +22984,22 @@
     "note": "Resting",
     "source_date": "2026-06-06T08:41:19+00:00",
     "extracted_at": "2026-08-08T07:02:37+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_first_wicket_was_not_out_josh_hazlewood_s_hilarious_story_on_his_maiden_test_scalp_rcb_cricket_news_ne_claim_1",
+    "source_item_id": "rcb_official_site_first_wicket_was_not_out_josh_hazlewood_s_hilarious_story_on_his_maiden_test_scalp_rcb_cricket_news_ne",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Josh Hazlewood",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "No indication of injury or unavailability",
+    "source_date": "08 Aug, 2026",
+    "extracted_at": "2026-08-09T03:14:38+00:00"
   }
 ]
