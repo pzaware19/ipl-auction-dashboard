@@ -23088,5 +23088,39 @@
     "note": "Named in squad for England ODIs, but was initially injured and replaced by Jaiswal for Afghanistan ODIs",
     "source_date": "2026-06-22T12:14:40+00:00",
     "extracted_at": "2026-08-10T07:51:41+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_he_always_liked_people_coming_after_him_ajinkya_rahane_on_his_bond_with_virat_kohli_rcb_cricket_news_n_claim_1",
+    "source_item_id": "rcb_official_site_he_always_liked_people_coming_after_him_ajinkya_rahane_on_his_bond_with_virat_kohli_rcb_cricket_news_n",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Virat Kohli",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Featured in discussion about top order",
+    "source_date": "07 Aug, 2026",
+    "extracted_at": "2026-08-10T10:44:53+00:00"
+  },
+  {
+    "claim_id": "rcb_official_site_he_always_liked_people_coming_after_him_ajinkya_rahane_on_his_bond_with_virat_kohli_rcb_cricket_news_n_claim_2",
+    "source_item_id": "rcb_official_site_he_always_liked_people_coming_after_him_ajinkya_rahane_on_his_bond_with_virat_kohli_rcb_cricket_news_n",
+    "source_id": "rcb_official_site",
+    "source_name": "Royal Challengers Bengaluru Official",
+    "priority": "official",
+    "player": "Ajinkya Rahane",
+    "team": "RCB",
+    "status": "available",
+    "confidence": "official",
+    "selection_probability": 1.0,
+    "expected_absence_window": null,
+    "replacement_candidates": [],
+    "note": "Discussed his camaraderie with Virat Kohli",
+    "source_date": "07 Aug, 2026",
+    "extracted_at": "2026-08-10T10:44:53+00:00"
   }
 ]
