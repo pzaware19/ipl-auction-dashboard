@@ -23604,5 +23604,61 @@
     "note": "Currently batting",
     "source_date": "2026-04-17T14:20:56+00:00",
     "extracted_at": "2026-08-13T07:43:18+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_kkr_vs_mi_need_58_off_42b_live_cricket_scores_149629_kkr_vs_mi_2nd_match_indian_premier_league_2026_claim_1",
+    "source_item_id": "cricbuzz_latest_news_kkr_vs_mi_need_58_off_42b_live_cricket_scores_149629_kkr_vs_mi_2nd_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Rohit Sharma",
+    "team": "MI",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of the match",
+    "replacement_candidates": [
+      "Suryakumar Yadav",
+      "Ryan Rickelton"
+    ],
+    "note": "Caught by Anukul Roy off Vaibhav Arora",
+    "source_date": "2026-03-29T17:09:32+00:00",
+    "extracted_at": "2026-08-14T07:41:10+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_kkr_vs_mi_need_58_off_42b_live_cricket_scores_149629_kkr_vs_mi_2nd_match_indian_premier_league_2026_claim_2",
+    "source_item_id": "cricbuzz_latest_news_kkr_vs_mi_need_58_off_42b_live_cricket_scores_149629_kkr_vs_mi_2nd_match_indian_premier_league_2026",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Dewald Brevis",
+    "team": "RR",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "at least one match",
+    "replacement_candidates": [],
+    "note": "Side strain",
+    "source_date": "2026-03-29T17:09:32+00:00",
+    "extracted_at": "2026-08-14T07:41:10+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_rajasthan_royals_vs_kolkata_knight_riders_28th_match_live_cricket_scores_151829_rr_vs_kkr_28th_matc_claim_1",
+    "source_item_id": "cricbuzz_latest_news_rajasthan_royals_vs_kolkata_knight_riders_28th_match_live_cricket_scores_151829_rr_vs_kkr_28th_matc",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ayush Mhatre",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "unknown",
+    "replacement_candidates": [
+      "unknown"
+    ],
+    "note": "suffers torn hamstring",
+    "source_date": "2026-04-19T14:00:30+00:00",
+    "extracted_at": "2026-08-14T07:41:24+00:00"
   }
 ]
