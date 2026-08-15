@@ -23660,5 +23660,22 @@
     "note": "suffers torn hamstring",
     "source_date": "2026-04-19T14:00:30+00:00",
     "extracted_at": "2026-08-14T07:41:24+00:00"
+  },
+  {
+    "claim_id": "gt_official_site_skipper_shubman_gill_reclaims_the_icc_odi_no_1_batting_ranking_news_shubman_gill_regains_icc_odi_no_1_b_claim_1",
+    "source_item_id": "gt_official_site_skipper_shubman_gill_reclaims_the_icc_odi_no_1_batting_ranking_news_shubman_gill_regains_icc_odi_no_1_b",
+    "source_id": "gt_official_site",
+    "source_name": "Gujarat Titans Official",
+    "priority": "official",
+    "player": "Shubman Gill",
+    "team": "GT",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "expected_absence_window": "Sri Lanka Test series",
+    "replacement_candidates": [],
+    "note": "Shubman Gill is part of the Indian team for the Sri Lanka Test series",
+    "source_date": "29 July, 2026",
+    "extracted_at": "2026-08-15T02:32:06+00:00"
   }
 ]
