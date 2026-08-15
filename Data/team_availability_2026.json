@@ -3135,6 +3135,18 @@
     "note": "Mentioned as a player who was replaced by Rajat Patidar due to injury in 2022, but no current availability information"
   },
   {
+    "player": "Mohammed Siraj",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "14 Aug, 2026",
+    "expected_absence_window": "1st Test, 2026",
+    "replacement_candidates": [],
+    "note": "Part of India squad for 1st Test against Sri Lanka"
+  },
+  {
     "player": "Mohd. Siraj",
     "team": "RCB",
     "status": "ruled_out",
@@ -3354,6 +3366,18 @@
     "expected_absence_window": null,
     "replacement_candidates": [],
     "note": "Mentioned as part of the team's starting lineup"
+  },
+  {
+    "player": "Sarfaraz Khan",
+    "team": "RCB",
+    "status": "overseas_unavailable",
+    "confidence": "official",
+    "selection_probability": 0.0,
+    "best_source": "Royal Challengers Bengaluru Official",
+    "source_date": "14 Aug, 2026",
+    "expected_absence_window": "1st Test, 2026",
+    "replacement_candidates": [],
+    "note": "Part of India squad for 1st Test against Sri Lanka"
   },
   {
     "player": "Shivam Dube",
