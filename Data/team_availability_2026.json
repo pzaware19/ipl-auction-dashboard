@@ -2409,7 +2409,9 @@
     "best_source": "Cricbuzz Latest News",
     "source_date": "2026-04-23T15:12:45+00:00",
     "expected_absence_window": "next match",
-    "replacement_candidates": [],
+    "replacement_candidates": [
+      "alternative MI batsmen"
+    ],
     "note": "Wankhede tie"
   },
   {

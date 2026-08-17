@@ -23986,5 +23986,43 @@
     "note": "Ruled out of the current match due to being bowled",
     "source_date": "2026-04-22T18:01:32+00:00",
     "extracted_at": "2026-08-16T06:50:17+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_delhi_capitals_live_31st_match_live_cricket_scores_151856_srh_vs_dc_31st_mat_claim_1",
+    "source_item_id": "cricbuzz_latest_news_sunrisers_hyderabad_vs_delhi_capitals_live_31st_match_live_cricket_scores_151856_srh_vs_dc_31st_mat",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Ayush Mhatre",
+    "team": "UNKNOWN",
+    "status": "ruled_out",
+    "confidence": "major_media",
+    "selection_probability": 0.0,
+    "expected_absence_window": "remainder of IPL 2026",
+    "replacement_candidates": [
+      "unknown"
+    ],
+    "note": "Injured",
+    "source_date": "2026-04-21T14:47:31+00:00",
+    "extracted_at": "2026-08-17T07:05:56+00:00"
+  },
+  {
+    "claim_id": "cricbuzz_latest_news_chennai_super_kings_vs_mumbai_indians_live_33rd_match_live_cricket_scores_151878_csk_vs_mi_33rd_mat_claim_1",
+    "source_item_id": "cricbuzz_latest_news_chennai_super_kings_vs_mumbai_indians_live_33rd_match_live_cricket_scores_151878_csk_vs_mi_33rd_mat",
+    "source_id": "cricbuzz_latest_news",
+    "source_name": "Cricbuzz Latest News",
+    "priority": "major_media",
+    "player": "Rohit",
+    "team": "MI",
+    "status": "doubtful",
+    "confidence": "major_media",
+    "selection_probability": 0.5,
+    "expected_absence_window": "1-2 matches",
+    "replacement_candidates": [
+      "alternative MI batsmen"
+    ],
+    "note": "Rohit doubtful for Wankhede tie",
+    "source_date": "2026-04-23T15:12:45+00:00",
+    "extracted_at": "2026-08-17T07:06:10+00:00"
   }
 ]
