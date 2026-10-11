@@ -1356236,7 +1356236,7 @@ window.DASHBOARD_DATA = {
         }
       ],
       "registry_entry_count": 346,
-      "latest_ingest_at": "2026-10-11T07:31:48+00:00"
+      "latest_ingest_at": "2026-10-11T15:53:52+00:00"
     },
     "methodology": {
       "summary": "Match Planning combines final 2026 squads with active-player phase impact, skill radar context, wins-added proxies, venue-level IPL evidence, and Layer 3 availability intelligence. Only players with active 2025-tagged evidence are used for the quantitative SWOT and tactical recommendations.",
